@@ -1,0 +1,15 @@
+state = {
+	id = 10215
+	name = "STATE_10215"
+	manpower = 57853
+	buildings_max_level_factor = 1.000
+	state_category = p2s_village
+	history = {
+		owner = SIA
+		add_core_of = SIA
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 7572 }
+}

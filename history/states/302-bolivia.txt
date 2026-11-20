@@ -1,0 +1,26 @@
+state = {
+	id = 302
+	name = "STATE_302"
+	manpower = 971861
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = town
+	resources = {
+		tungsten = 1
+	}
+	history = {
+		owner = BOL
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 2
+		}
+		add_core_of = BOL
+		add_to_array = {
+			state_victory_points = 5230
+		}
+		victory_points = { 5230 5 }
+	}
+	provinces = { 5230 13174 }
+}

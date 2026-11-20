@@ -1,0 +1,27 @@
+state = {
+	id = 1357
+	name = "STATE_1357"
+	manpower = 325544
+	local_supplies = 15.0
+	state_category = p2s_village
+	resources = {
+		steel = 4
+		aluminium = 1
+		coal = 3
+	}
+	history = {
+		owner = FRA
+		victory_points = { 575 3 }
+		buildings = {
+			infrastructure = 4
+			575 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = FRA
+		add_to_array = {
+			state_victory_points = 575
+		}
+	}
+	provinces = { 575 }
+}

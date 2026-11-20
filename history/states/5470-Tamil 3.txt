@@ -1,0 +1,26 @@
+state = {
+	id = 5470
+	name = "STATE_5470"
+	manpower = 1874497
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		rubber = 1
+	}
+	history = {
+		owner = RAJ
+		add_core_of = RAS
+		add_to_array = {
+			state_victory_points = 7244
+		}
+		victory_points = { 7244 1 }
+		buildings = {
+			infrastructure = 2
+			7244 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces = { 7244 }
+}

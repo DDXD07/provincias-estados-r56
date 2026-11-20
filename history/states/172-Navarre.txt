@@ -1,0 +1,21 @@
+state = {
+	id = 172
+	name = "STATE_172"
+	manpower = 154233
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = SPR
+		add_core_of = NAV
+		victory_points = { 3933 1 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SPR
+		add_to_array = {
+			state_victory_points = 3933
+		}
+	}
+	provinces = { 3933 }
+}

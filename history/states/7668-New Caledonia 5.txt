@@ -1,0 +1,19 @@
+state = {
+	id = 7668
+	name = "STATE_7668"
+	manpower = 6375
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = small_island
+	resources = {
+		chromium = 15
+	}
+	history = {
+		owner = FRA
+		add_core_of = VAN
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 7264 }
+}

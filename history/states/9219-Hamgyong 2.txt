@@ -1,0 +1,19 @@
+state = {
+	id = 9219
+	name = "STATE_9219"
+	manpower = 73847
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = JAP
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = KOR
+	}
+	provinces = { 898 }
+}

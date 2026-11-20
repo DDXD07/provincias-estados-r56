@@ -1,0 +1,15 @@
+state = {
+	id = 5851
+	name = "STATE_5851"
+	manpower = 156256
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = FRA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ALG
+	}
+	provinces = { 7166 }
+}

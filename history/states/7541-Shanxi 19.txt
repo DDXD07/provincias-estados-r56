@@ -1,0 +1,21 @@
+state = {
+	id = 7541
+	name = "STATE_7541"
+	manpower = 386700
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = SHX
+		add_core_of = SHX
+		add_core_of = CHI
+		add_core_of = PRC
+		set_state_flag = CHI_taiyuan_arsenal_organization_flag
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 10480 }
+}

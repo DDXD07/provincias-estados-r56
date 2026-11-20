@@ -1,0 +1,23 @@
+state = {
+	id = 2407
+	name = "STATE_2407"
+	manpower = 95480
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 2
+	}
+	history = {
+		owner = SPR
+		victory_points = { 7213 1 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SPR
+		add_to_array = {
+			state_victory_points = 7213
+		}
+	}
+	provinces = { 7213 }
+}

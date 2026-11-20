@@ -1,0 +1,26 @@
+state = {
+	id = 978
+	name = "STATE_978"
+	manpower = 223743
+	buildings_max_level_factor = 1
+	local_supplies = 1
+	state_category = pastoral
+	resources = {
+		rubber = 1
+	}
+	history = {
+		owner = INS
+		add_core_of = POK
+		add_to_array = {
+			state_victory_points = 4279
+		}
+		victory_points = { 4279 1 }
+		buildings = {
+			infrastructure = 1
+			4279 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces = { 4279 }
+}

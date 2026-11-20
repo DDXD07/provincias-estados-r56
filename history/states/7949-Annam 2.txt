@@ -1,0 +1,25 @@
+state = {
+	id = 7949
+	name = "STATE_7949"
+	manpower = 442719
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		chromium = 1
+		tungsten = 3
+		coal = 1
+	}
+	history = {
+		add_core_of = VIN
+		add_core_of = FRI
+		owner = FRI
+		add_to_array = {
+			state_victory_points = 10075
+		}
+		victory_points = { 10075 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 10075 }
+}

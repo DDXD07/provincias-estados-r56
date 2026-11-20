@@ -1,0 +1,27 @@
+state = {
+	id = 464
+	name = "STATE_464"
+	manpower = 220908
+	local_supplies = 11.0
+	state_category = rural
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = CAN
+		victory_points = { 7361 4 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 3
+			7361 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = CAN
+		add_to_array = {
+			state_victory_points = 7361
+		}
+	}
+	provinces = { 7361 }
+}

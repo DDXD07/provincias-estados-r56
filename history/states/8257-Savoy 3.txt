@@ -1,0 +1,20 @@
+state = {
+	id = 8257
+	name = "STATE_8257"
+	manpower = 39457
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = FRA
+		add_core_of = OCC
+		add_core_of = FRA
+		buildings = {
+			infrastructure = 2
+			3764 = {
+				bunker = 1
+			}
+		}
+	}
+	provinces = { 3764 }
+}

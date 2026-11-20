@@ -1,0 +1,26 @@
+state = {
+	id = 3050
+	name = "STATE_3050"
+	manpower = 554994
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = SOV
+		victory_points = { 3653 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			3653 = {
+				naval_base = 2
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = SOV
+		add_core_of = GEO
+		add_to_array = {
+			state_victory_points = 3653
+		}
+	}
+	provinces = { 3653 }
+}

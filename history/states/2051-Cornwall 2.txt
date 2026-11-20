@@ -1,0 +1,19 @@
+state = {
+	id = 2051
+	name = "STATE_2051"
+	manpower = 118408
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = ENG
+		victory_points = { 6526 1 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = ENG
+		add_to_array = {
+			state_victory_points = 6526
+		}
+	}
+	provinces = { 6526 }
+}

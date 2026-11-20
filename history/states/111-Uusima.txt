@@ -1,0 +1,26 @@
+state = {
+	id = 111
+	name = "STATE_111"
+	manpower = 412590
+	local_supplies = 0.0
+	state_category = town
+	history = {
+		owner = FIN
+		add_core_of = FIN
+		add_to_array = {
+			state_victory_points = 11105
+		}
+		victory_points = { 11105 15 }
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 1
+			air_base = 3
+			11105 = {
+				naval_base = 5
+				coastal_bunker = 2
+			}
+		}
+	}
+	provinces = { 11105 }
+}

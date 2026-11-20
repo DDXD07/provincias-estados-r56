@@ -1,0 +1,24 @@
+state = {
+	id = 928
+	name = "STATE_928"
+	manpower = 1162686
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = FRI
+		add_core_of = FRI
+		add_core_of = VIN
+		add_to_array = {
+			state_victory_points = 4397
+		}
+		victory_points = { 4397 1 }
+		buildings = {
+			infrastructure = 2
+			4397 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces = { 4397 }
+}

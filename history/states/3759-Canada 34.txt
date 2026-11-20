@@ -1,0 +1,18 @@
+state = {
+	id = 3759
+	name = "STATE_3759"
+	manpower = 22752
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = CAN
+		buildings = {
+			infrastructure = 4
+			749 = {
+				dam = 1
+			}
+		}
+		add_core_of = CAN
+	}
+	provinces = { 749 }
+}

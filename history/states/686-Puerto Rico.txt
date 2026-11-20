@@ -1,0 +1,25 @@
+state = {
+	id = 686
+	name = "STATE_686"
+	manpower = 1157934
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = rural
+	history = {
+		add_core_of = PUE
+		owner = USA
+		add_to_array = {
+			state_victory_points = 1440
+		}
+		victory_points = { 1440 1 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 4
+			1440 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces = { 1440 }
+}

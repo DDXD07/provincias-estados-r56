@@ -1,0 +1,24 @@
+state = {
+	id = 1130
+	name = "STATE_1130"
+	manpower = 527237
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		tungsten = 13
+		rubber = 36
+	}
+	history = {
+		owner = MAL
+		add_core_of = MAL
+		victory_points = { 10297 5 }
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 1
+		}
+		add_to_array = {
+			state_victory_points = 10297
+		}
+	}
+	provinces = { 10297 }
+}

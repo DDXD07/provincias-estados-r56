@@ -1,0 +1,20 @@
+state = {
+	id = 1489
+	name = "STATE_1489"
+	manpower = 23185
+	buildings_max_level_factor = 1.000
+	local_supplies = 5.0
+	state_category = p2s_village
+	resources = {
+		oil = 1
+	}
+	history = {
+		owner = ALB
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ALB
+		add_claim_by = ITA
+	}
+	provinces = { 3884 }
+}

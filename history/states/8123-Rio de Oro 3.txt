@@ -1,0 +1,16 @@
+state = {
+	id = 8123
+	name = "STATE_8123"
+	manpower = 4827
+	local_supplies = 0.0
+	state_category = wasteland
+	history = {
+		owner = SPR
+		add_core_of = WES
+		add_claim_by = MOR
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 5012 }
+}

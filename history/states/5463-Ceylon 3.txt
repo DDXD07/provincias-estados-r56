@@ -1,0 +1,26 @@
+state = {
+	id = 5463
+	name = "STATE_5463"
+	manpower = 982143
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		rubber = 8
+	}
+	history = {
+		add_core_of = SRL
+		owner = ENG
+		add_to_array = {
+			state_victory_points = 7260
+		}
+		victory_points = { 7260 2 }
+		buildings = {
+			infrastructure = 2
+			7260 = {
+				naval_base = 3
+				coastal_bunker = 3
+			}
+		}
+	}
+	provinces = { 7260 }
+}

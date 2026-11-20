@@ -1,0 +1,32 @@
+state = {
+	id = 431
+	name = "STATE_431"
+	manpower = 10596427
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = developed_rural
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = RAJ
+		add_to_array = {
+			state_victory_points = 4245
+		}
+		add_to_array = {
+			state_victory_points = 12338
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 2
+			4245 = {
+				naval_base = 6
+			}
+		}
+		victory_points = { 4245 5 }
+		victory_points = { 12338 3 }
+	}
+	provinces = { 4245 }
+}

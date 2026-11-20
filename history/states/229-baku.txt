@@ -1,0 +1,30 @@
+state = {
+	id = 229
+	name = "STATE_229"
+	manpower = 1648249
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = town
+	resources = {
+		oil = 4
+	}
+	history = {
+		owner = SOV
+		victory_points = { 7661 10 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			fuel_silo = 1
+			air_base = 1
+			7661 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = SOV
+		add_core_of = AZR
+		add_to_array = {
+			state_victory_points = 7661
+		}
+	}
+	provinces = { 7661 }
+}

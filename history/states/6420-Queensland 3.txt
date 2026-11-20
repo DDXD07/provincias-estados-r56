@@ -1,0 +1,26 @@
+state = {
+	id = 6420
+	name = "STATE_6420"
+	manpower = 37698
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	resources = {
+		tungsten = 1
+	}
+	history = {
+		owner = AST
+		buildings = {
+			infrastructure = 3
+			7566 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 7566 1 }
+		add_core_of = AST
+		add_to_array = {
+			state_victory_points = 7566
+		}
+	}
+	provinces = { 7566 }
+}

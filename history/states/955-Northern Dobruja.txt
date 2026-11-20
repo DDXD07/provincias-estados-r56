@@ -1,0 +1,24 @@
+state = {
+	id = 955
+	name = "STATE_955"
+	manpower = 352301
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = ROM
+		victory_points = { 657 3 }
+		buildings = {
+			infrastructure = 3
+			657 = {
+				naval_base = 8
+			}
+			dockyard = 1
+		}
+		add_core_of = ROM
+		add_to_array = {
+			state_victory_points = 657
+		}
+	}
+	provinces = { 657 }
+}

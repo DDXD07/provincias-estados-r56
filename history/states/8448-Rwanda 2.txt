@@ -1,0 +1,24 @@
+state = {
+	id = 8448
+	name = "STATE_8448"
+	manpower = 429141
+	buildings_max_level_factor = 1.000
+	local_supplies = 1.0
+	state_category = p2s_village
+	history = {
+		owner = COG
+		add_core_of = RWA
+		IF = {
+			limit = {
+				has_dlc = "Gotterdammerung"
+			}
+			add_dynamic_modifier = {
+				modifier = COG_rwandan_separatism_modifier
+			}
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 13477 }
+}

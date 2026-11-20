@@ -1,0 +1,22 @@
+state = {
+	id = 4704
+	name = "STATE_4704"
+	manpower = 20159
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		oil = 1
+		aluminium = 3
+		tungsten = 1
+		coal = 1
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+		add_claim_by = CSA
+	}
+	provinces = { 12552 }
+}

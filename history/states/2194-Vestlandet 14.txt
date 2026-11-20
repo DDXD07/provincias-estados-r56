@@ -1,0 +1,18 @@
+state = {
+	id = 2194
+	name = "STATE_2194"
+	manpower = 14251
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = NOR
+		buildings = {
+			infrastructure = 3
+			65 = {
+				dam_mountain = 1
+			}
+		}
+		add_core_of = NOR
+	}
+	provinces = { 65 }
+}

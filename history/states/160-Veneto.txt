@@ -1,0 +1,32 @@
+state = {
+	id = 160
+	name = "STATE_160"
+	manpower = 2340186
+	buildings_max_level_factor = 1.000
+	local_supplies = 5.0
+	state_category = city
+	resources = {
+		steel = 7
+	}
+	history = {
+		owner = ITA
+		victory_points = { 11584 10 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 3
+			dockyard = 1
+			air_base = 3
+			11584 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = ITA
+		add_core_of = VNZ
+		add_to_array = {
+			state_victory_points = 11584
+		}
+		add_extra_state_shared_building_slots = 1
+	}
+	provinces = { 11584 }
+}

@@ -1,0 +1,15 @@
+state = {
+	id = 4352
+	name = "STATE_4352"
+	manpower = 39720
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = TUR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = TUR
+	}
+	provinces = { 975 }
+}

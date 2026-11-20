@@ -1,0 +1,25 @@
+state = {
+	id = 285
+	name = "STATE_285"
+	manpower = 1042312
+	local_supplies = 0.0
+	state_category = developed_rural
+	history = {
+		owner = AST
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 5
+			7859 = {
+				bunker = 1
+			}
+		}
+		victory_points = { 7859 30 }
+		add_core_of = AST
+		add_to_array = {
+			state_victory_points = 7859
+		}
+	}
+	provinces = { 7859 }
+}

@@ -1,0 +1,22 @@
+state = {
+	id = 8798
+	name = "STATE_8798"
+	manpower = 360801
+	buildings_max_level_factor = 1.000
+	local_supplies = 2.0
+	state_category = p2s_village
+	history = {
+		owner = SOV
+		victory_points = { 10671 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = UZB
+		add_core_of = BUK
+		add_to_array = {
+			state_victory_points = 10671
+		}
+	}
+	provinces = { 10671 }
+}

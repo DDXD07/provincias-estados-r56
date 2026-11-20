@@ -1,0 +1,33 @@
+state = {
+	id = 282
+	name = "STATE_282"
+	manpower = 9865759
+	local_supplies = 0.0
+	state_category = metropolis
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		add_to_array = {
+			state_victory_points = 1182
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 6
+			aluminum_mill = 1
+			steel_mill = 1
+			industrial_complex = 3
+			arms_factory = 2
+			dockyard = 3
+			1182 = {
+				landmark_tokyo_imperial_palace = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		victory_points = { 1182 50 }
+	}
+	provinces = { 1182 }
+}

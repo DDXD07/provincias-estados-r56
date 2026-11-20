@@ -1,0 +1,16 @@
+state = {
+	id = 5803
+	name = "STATE_5803"
+	manpower = 24693
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = MPL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ISR
+	}
+	provinces = { 1201 }
+}

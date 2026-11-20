@@ -1,0 +1,22 @@
+state = {
+	id = 584
+	name = "STATE_584"
+	manpower = 64794
+	buildings_max_level_factor = 1.000
+	local_supplies = 4.000
+	state_category = pastoral
+	history = {
+		add_core_of = TMS
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = { 10742 1 }
+		add_core_of = SOV
+		add_to_array = {
+			state_victory_points = 10742
+		}
+	}
+	provinces = { 10742 }
+}

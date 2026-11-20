@@ -1,0 +1,16 @@
+state = {
+	id = 2378
+	name = "STATE_2378"
+	manpower = 139236
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = ITA
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = ITA
+		add_core_of = PAP
+	}
+	provinces = { 3773 }
+}

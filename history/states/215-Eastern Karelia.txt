@@ -1,0 +1,24 @@
+state = {
+	id = 215
+	name = "STATE_215"
+	manpower = 7397
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 1
+	}
+	history = {
+		victory_points = { 9195 1 }
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = KAR
+		add_to_array = {
+			state_victory_points = 9195
+		}
+	}
+	provinces = { 9195 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 9686
+	name = "STATE_9686"
+	manpower = 13211
+	local_supplies = 0.0
+	state_category = wasteland
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 11976 1 }
+		add_core_of = JOR
+		add_to_array = {
+			state_victory_points = 11976
+		}
+	}
+	provinces = { 11976 }
+}

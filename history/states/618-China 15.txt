@@ -1,0 +1,23 @@
+state = {
+	id = 618
+	name = "STATE_618"
+	manpower = 111798
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		victory_points = { 4823 1 }
+		owner = SIK
+		add_core_of = SIK
+		add_core_of = CHI
+		add_core_of = PRC
+		add_claim_by = KHM
+		add_to_array = {
+			state_victory_points = 4823
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+	}
+	provinces = { 4823 }
+}

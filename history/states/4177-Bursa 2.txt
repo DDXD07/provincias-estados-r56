@@ -1,0 +1,23 @@
+state = {
+	id = 4177
+	name = "STATE_4177"
+	manpower = 296408
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		chromium = 3
+	}
+	history = {
+		owner = TUR
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 9799 5 }
+		add_core_of = TUR
+		add_to_array = {
+			state_victory_points = 9799
+		}
+		set_demilitarized_zone = yes
+	}
+	provinces = { 9799 }
+}

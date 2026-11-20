@@ -1,0 +1,15 @@
+state = {
+	id = 7626
+	name = "STATE_7626"
+	manpower = 18468
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = PHI
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = PHI
+	}
+	provinces = { 10145 }
+}

@@ -1,0 +1,25 @@
+state = {
+	id = 61
+	name = "STATE_61"
+	manpower = 511102
+	local_supplies = 0.0
+	state_category = town
+	history = {
+		owner = GER
+		victory_points = { 321 5 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			321 = {
+				naval_base = 6
+			}
+			air_base = 3
+		}
+		add_core_of = GER
+		add_core_of = MEK
+		add_to_array = {
+			state_victory_points = 321
+		}
+	}
+	provinces = { 321 }
+}

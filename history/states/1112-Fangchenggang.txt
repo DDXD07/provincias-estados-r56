@@ -1,0 +1,31 @@
+state = {
+	id = 1112
+	name = "STATE_1112"
+	manpower = 1243499
+	local_supplies = 1.0
+	state_category = rural
+	history = {
+		owner = GXC
+		add_core_of = GXC
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 10004
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			10004 = {
+				naval_base = 1
+				coastal_bunker = 1
+			}
+		}
+		victory_points = { 10004 1 }
+		1938.10.25 = {
+			remove_core_of = GDC
+			owner = CHI
+			controller = JAP
+		}
+	}
+	provinces = { 10004 }
+}

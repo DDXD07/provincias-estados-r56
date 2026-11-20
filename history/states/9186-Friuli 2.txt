@@ -1,0 +1,21 @@
+state = {
+	id = 9186
+	name = "STATE_9186"
+	manpower = 148952
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		victory_points = { 628 1 }
+		owner = ITA
+		add_core_of = ITA
+		add_core_of = VNZ
+		add_to_array = {
+			state_victory_points = 628
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 628 }
+}

@@ -1,0 +1,22 @@
+state = {
+	id = 8674
+	name = "STATE_8674"
+	manpower = 87668
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		oil = 1
+		steel = 1
+		coal = 8
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = USA
+		add_claim_by = CSA
+	}
+	provinces = { 3941 }
+}

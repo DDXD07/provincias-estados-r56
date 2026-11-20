@@ -1,0 +1,30 @@
+state = {
+	id = 9180
+	name = "STATE_9180"
+	manpower = 80001
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		set_variable = {
+			908.ETH_state_development_production_speed = -0.3
+		}
+		set_variable = {
+			ETH_state_development_local_building_slots_factor = -0.3
+		}
+		add_dynamic_modifier = {
+			modifier = ETH_state_development_dynamic_modifier
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		owner = AFA
+		add_core_of = ETH
+		add_core_of = AFA
+		1936.6.1 = {
+			owner = ITA
+			controller = ITA
+		}
+	}
+	provinces = { 5041 }
+}

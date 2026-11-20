@@ -1,0 +1,26 @@
+state = {
+	id = 1063
+	name = "STATE_1063"
+	manpower = 561497
+	local_supplies = 0.0
+	state_category = developed_rural
+	resources = {
+		steel = 7
+	}
+	history = {
+		owner = CHL
+		add_core_of = CHL
+		add_to_array = {
+			state_victory_points = 5121
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			5121 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 5121 3 }
+	}
+	provinces = { 5121 }
+}

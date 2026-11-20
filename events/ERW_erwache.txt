@@ -1,0 +1,395 @@
+﻿#ERWACHE FOCUS MOD EVENTS
+
+add_namespace = erwache
+
+country_event = { #Reichsbank President/Econ Minister
+	id = erwache.1
+	title = erwache.1.t
+	desc = erwache.1.desc
+	picture = GFX_erwache_reichsbank
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #Hjalmar Schacht
+		name = erwache.1.a
+		ai_chance = {
+			base = 60
+		}
+		trigger = {
+			has_character = GER_hjalmar_schacht
+		}
+		add_ideas = hjalmar_schacht
+
+	}
+
+	option = { #Walther Funk
+		name = erwache.1.b
+		ai_chance = {
+			base = 40
+		}
+		trigger = {
+			has_character = GER_walther_funk
+		}
+		add_ideas = walther_funk
+	}
+
+	option = { #Andreas Hermes
+		name = erwache.1.c
+		ai_chance = {
+			base = 40
+		}
+		trigger = {
+			has_character = GER_Andreas_Hermes
+			has_government = democratic
+		}
+		add_ideas = GER_Andreas_Hermes
+	}
+
+	option = { #Fritz Schäffer
+		name = erwache.1.d
+		ai_chance = {
+			base = 40
+		}
+		trigger = {
+			has_character = GER_fritz_schaffer
+			has_government = democratic
+			if = {
+				limit = {
+					original_tag = GER
+				}
+				BAY = {
+					exists = no
+				}					
+			}
+		}
+		add_ideas = GER_fritz_schaffer
+	}
+
+	option = { #Franz Dahlem
+		name = erwache.1.e
+		ai_chance = {
+			base = 40
+		}
+		trigger = {
+			has_character = GER_Franz_Dahlem
+			has_government = communism
+		}
+		add_ideas = GER_Franz_Dahlem
+	}
+
+	option = { #Walter Ulbricht
+		name = erwache.1.f
+		ai_chance = {
+			base = 40
+		}
+		trigger = {
+			has_character = GER_Walter_Ulbricht
+			has_government = communism
+			OR = {
+				has_completed_focus = GER_industrial_collectivization
+				has_completed_focus = GER_collectivize_industry
+			}
+		}
+		add_ideas = GER_Walter_Ulbricht
+	}
+
+	option = { #Franz Jacob
+		name = erwache.1.g
+		ai_chance = {
+			base = 40
+		}
+		trigger = {
+			has_character = GER_franz_jacob
+			has_government = communism
+		}
+		add_ideas = GER_franz_jacob
+	}
+
+	option = { #Carl Friedrich Goerdeler
+		name = erwache.1.h
+		ai_chance = {
+			base = 40
+		}
+		trigger = {
+			has_character = GER_carl_friedrich_goerdeler
+			has_government = neutrality
+		}
+		add_ideas = GER_carl_friedrich_goerdeler
+	}
+
+	option = { #Paul Lejeune-Jung
+		name = erwache.1.i
+		ai_chance = {
+			base = 40
+		}
+		trigger = {
+			has_character = GER_Paul_Lejeune_Jung
+			has_government = neutrality
+		}
+		add_ideas = GER_Paul_Lejeune_Jung
+	}
+}
+
+country_event = {#Reviving Brest Litovsk
+	id = erwache.7
+	title = erwache.7.t
+	desc = erwache.7.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = erwache.7.a
+		ai_chance = {
+			base = 90
+		}
+		news_event = erwache_news.2
+	}
+	option = {
+		name = erwache.7.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 3
+				surrender_progress > 0.3
+			}
+			modifier = {
+				factor = 7
+				surrender_progress > 0.7
+			}
+		}
+		GER = { white_peace	= SOV}
+		if = {
+			limit = {
+				SOV = {owns_state = 11}
+			}
+			GER = {transfer_state = 11 transfer_state = 1202 transfer_state = 1203 transfer_state = 1204 transfer_state = 1205}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 188}
+			}
+			GER = {transfer_state = 188 transfer_state = 2575}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 189}
+			}
+			GER = {transfer_state = 189 transfer_state = 2576 transfer_state = 2577 transfer_state = 2578 transfer_state = 2579 transfer_state = 2580}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 13}
+			}
+			GER = {transfer_state = 13 transfer_state = 1210 transfer_state = 1211 transfer_state = 1212 transfer_state = 1213 transfer_state = 1214}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 191}
+			}
+			GER = {transfer_state = 191 transfer_state = 2586 transfer_state = 2587 transfer_state = 2588 transfer_state = 2589}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 12}
+			}
+			GER = {transfer_state = 12 transfer_state = 1206 transfer_state = 1207 transfer_state = 1208 transfer_state = 1209}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 190}
+			}
+			GER = {transfer_state = 190 transfer_state = 2581 transfer_state = 2582 transfer_state = 2583 transfer_state = 2584 transfer_state = 2585}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 111}
+			}
+			FIN = {transfer_state = 111 transfer_state = 1976 transfer_state = 1977 transfer_state = 1978 transfer_state = 1979 transfer_state = 1980 transfer_state = 1981 transfer_state = 1982}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 145}
+			}
+			FIN = {transfer_state = 145}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 146}
+			}
+			FIN = {transfer_state = 146 transfer_state = 2228 transfer_state = 2229 transfer_state = 2230 transfer_state = 2231 transfer_state = 2232 transfer_state = 2233 transfer_state = 2234 transfer_state = 2235 transfer_state = 2236 transfer_state = 2237 transfer_state = 2238 transfer_state = 2239 transfer_state = 2240 transfer_state = 2241}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 147}
+			}
+			FIN = {transfer_state = 147 transfer_state = 2242 transfer_state = 2243}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 148}
+			}
+			FIN = {transfer_state = 148 transfer_state = 2244 transfer_state = 2245 transfer_state = 2246 transfer_state = 2247 transfer_state = 2248 transfer_state = 2249 transfer_state = 2250 transfer_state = 2251 transfer_state = 2252 transfer_state = 2253 transfer_state = 2254 transfer_state = 2255 transfer_state = 2256 transfer_state = 2257 transfer_state = 2258 transfer_state = 2259 transfer_state = 2260 transfer_state = 2261 transfer_state = 2262 transfer_state = 2263 transfer_state = 2264 transfer_state = 2265 transfer_state = 2266 transfer_state = 2267 transfer_state = 2268 transfer_state = 2269 transfer_state = 2270 transfer_state = 2271}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 149}
+			}
+			FIN = {transfer_state = 149 transfer_state = 2272 transfer_state = 2273 transfer_state = 2274 transfer_state = 2275 transfer_state = 2276 transfer_state = 2277 transfer_state = 2278 transfer_state = 2279 transfer_state = 2280 transfer_state = 2281 transfer_state = 2282 transfer_state = 2283 transfer_state = 2284 transfer_state = 2285 transfer_state = 2286 transfer_state = 2287}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 150}
+			}
+			FIN = {transfer_state = 150 transfer_state = 2288 transfer_state = 2289 transfer_state = 2290 transfer_state = 2291 transfer_state = 2292 transfer_state = 2293 transfer_state = 2294 transfer_state = 2295 transfer_state = 2296 transfer_state = 2297 transfer_state = 2298 transfer_state = 2299 transfer_state = 2300 transfer_state = 2301 transfer_state = 2302 transfer_state = 2303 transfer_state = 2304 transfer_state = 2305 transfer_state = 2306 transfer_state = 2307}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 722}
+			}
+			FIN = {transfer_state = 722 transfer_state = 8204 transfer_state = 8205 transfer_state = 8206}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 199}
+			}
+			UKR = {transfer_state = 199 transfer_state = 2640 transfer_state = 2641 transfer_state = 2642 transfer_state = 2643 transfer_state = 2644}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 198}
+			}
+			UKR = {transfer_state = 198 transfer_state = 2637 transfer_state = 2638 transfer_state = 2639}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 198}
+			}
+			UKR = {transfer_state = 198 transfer_state = 2637 transfer_state = 2638 transfer_state = 2639}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 201}
+			}
+			UKR = {transfer_state = 201 transfer_state = 2653 transfer_state = 2654 transfer_state = 2655 transfer_state = 2656 transfer_state = 2657 transfer_state = 2658 transfer_state = 2659 transfer_state = 2660 transfer_state = 2661 transfer_state = 2662 transfer_state = 2663 transfer_state = 2664}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 202}
+			}
+			UKR = {transfer_state = 202 transfer_state = 2665 transfer_state = 2666 transfer_state = 2667 transfer_state = 2668 transfer_state = 2669 transfer_state = 2670 transfer_state = 2671 transfer_state = 2672 transfer_state = 2673 transfer_state = 2674}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 192}
+			}
+			UKR = {transfer_state = 192 transfer_state = 2590 transfer_state = 2591 transfer_state = 2592 transfer_state = 2593 transfer_state = 2594 transfer_state = 2595}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 197}
+			}
+			UKR = {transfer_state = 197 transfer_state = 2630 transfer_state = 2631 transfer_state = 2632 transfer_state = 2633 transfer_state = 2634 transfer_state = 2635 transfer_state = 2636}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 203}
+			}
+			UKR = {transfer_state = 203 transfer_state = 2675 transfer_state = 2676 transfer_state = 2677 transfer_state = 2678 transfer_state = 2679 transfer_state = 2680 transfer_state = 2681 transfer_state = 2682 transfer_state = 2683 transfer_state = 2684 transfer_state = 2685 transfer_state = 2686 transfer_state = 2687 transfer_state = 2688}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 193}
+			}
+			UKR = {transfer_state = 193 transfer_state = 2596 transfer_state = 2597 transfer_state = 2598 transfer_state = 2599 transfer_state = 2600 transfer_state = 2601 transfer_state = 2602 transfer_state = 2603 transfer_state = 2604 transfer_state = 2605 transfer_state = 2606 transfer_state = 2607 transfer_state = 2608}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 196}
+			}
+			UKR = {transfer_state = 196 transfer_state = 2622 transfer_state = 2623 transfer_state = 2624 transfer_state = 2625 transfer_state = 2626 transfer_state = 2627 transfer_state = 2628 transfer_state = 2629}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 226}
+			}
+			UKR = {transfer_state = 226 transfer_state = 2998 transfer_state = 2999 transfer_state = 3000 transfer_state = 3001 transfer_state = 3002 transfer_state = 3003 transfer_state = 3004 transfer_state = 3005 transfer_state = 3006 transfer_state = 3007 transfer_state = 3008}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 259}
+			}
+			UKR = {transfer_state = 259 transfer_state = 3564 transfer_state = 3565 transfer_state = 3566 transfer_state = 3567 transfer_state = 3568 transfer_state = 3569 transfer_state = 3570 transfer_state = 3571 transfer_state = 3572}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 225}
+			}
+			UKR = {transfer_state = 225 transfer_state = 2988 transfer_state = 2989 transfer_state = 2990 transfer_state = 2991 transfer_state = 2992 transfer_state = 2993 transfer_state = 2994 transfer_state = 2995 transfer_state = 2996 transfer_state = 2997}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 221}
+			}
+			UKR = {transfer_state = 221 transfer_state = 2937 transfer_state = 2938 transfer_state = 2939 transfer_state = 2940 transfer_state = 2941 transfer_state = 2942 transfer_state = 2943 transfer_state = 2944 transfer_state = 2945 transfer_state = 2946}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 200}
+			}
+			UKR = {transfer_state = 200 transfer_state = 2645 transfer_state = 2646 transfer_state = 2647 transfer_state = 2648 transfer_state = 2649 transfer_state = 2650 transfer_state = 2651 transfer_state = 2652}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 227}
+			}
+			UKR = {transfer_state = 227 transfer_state = 3009 transfer_state = 3010 transfer_state = 3011 transfer_state = 3012 transfer_state = 3013 transfer_state = 3014 transfer_state = 3015 transfer_state = 3016 transfer_state = 3017}
+		}
+		if = {
+			limit = {
+				SOV = {owns_state = 228}
+			}
+			UKR = {transfer_state = 228 transfer_state = 3018 transfer_state = 3019 transfer_state = 3020 transfer_state = 3021 transfer_state = 3022 transfer_state = 3023 transfer_state = 3024 transfer_state = 3025 transfer_state = 3026}
+		}
+	}
+}
+
+##################NEWS EVENTS####################
+add_namespace = erwache_news
+
+news_event = {
+	id = erwache_news.2
+	title = erwache_news.2.t
+	desc = erwache_news.2.d
+	picture = GFX_news_event_german_inspect_troops
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = erwache_news.2.a
+		trigger = {
+			TAG = GER
+		}
+	}
+	option = {
+		name = erwache_news.2.b
+		trigger = {
+			TAG = SOV
+		}
+	}
+	option = {
+		name = erwache_news.2.c
+		trigger = {
+			OR = {
+				TAG = GER
+				TAG = SOV
+			}
+		}
+	}
+}

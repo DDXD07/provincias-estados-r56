@@ -1,0 +1,21 @@
+state = {
+	id = 5292
+	name = "STATE_5292"
+	manpower = 243426
+	buildings_max_level_factor = 1.000
+	local_supplies = 2.0
+	state_category = pastoral
+	resources = {
+		steel = 2
+		oil = 1
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SOV
+		add_core_of = UZB
+	}
+	provinces = { 4629 }
+}

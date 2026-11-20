@@ -1,0 +1,19 @@
+state = {
+	id = 1363
+	name = "STATE_1363"
+	manpower = 136682
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = FRA
+		victory_points = { 3509 1 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = FRA
+		add_to_array = {
+			state_victory_points = 3509
+		}
+	}
+	provinces = { 3509 }
+}

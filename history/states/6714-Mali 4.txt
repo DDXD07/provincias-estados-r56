@@ -1,0 +1,16 @@
+state = {
+	id = 6714
+	name = "STATE_6714"
+	manpower = 277065
+	buildings_max_level_factor = 1.000
+	local_supplies = 2.000
+	state_category = p2s_village
+	history = {
+		owner = FRA
+		add_core_of = MLI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 8116 }
+}

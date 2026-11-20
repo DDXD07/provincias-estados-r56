@@ -1,0 +1,16 @@
+state = {
+	id = 9335
+	name = "STATE_9335"
+	manpower = 99040
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = SAF
+		add_core_of = SAF
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 12064 }
+}

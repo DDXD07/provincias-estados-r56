@@ -1,0 +1,25 @@
+state = {
+	id = 138
+	name = "STATE_138"
+	manpower = 426838
+	local_supplies = 0.0
+	state_category = town
+	history = {
+		owner = SWE
+		victory_points = { 9279 5 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			dockyard = 1
+			9279 = {
+				naval_base = 5
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = SWE
+		add_to_array = {
+			state_victory_points = 9279
+		}
+	}
+	provinces = { 9279 }
+}

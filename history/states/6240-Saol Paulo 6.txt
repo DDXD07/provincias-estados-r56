@@ -1,0 +1,19 @@
+state = {
+	id = 6240
+	name = "STATE_6240"
+	manpower = 405637
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = BRA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = BRA
+		add_to_array = {
+			state_victory_points = 7636
+		}
+		victory_points = { 7636 3 }
+	}
+	provinces = { 7636 }
+}

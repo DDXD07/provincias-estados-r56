@@ -1,0 +1,19 @@
+state = {
+	id = 3877
+	name = "STATE_3877"
+	manpower = 515890
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		add_core_of = BRM
+		owner = RAJ
+		add_to_array = {
+			state_victory_points = 12284
+		}
+		victory_points = { 12284 2 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 12284 }
+}

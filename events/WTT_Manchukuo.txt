@@ -1,0 +1,194 @@
+add_namespace = manchukuo_events
+
+country_event = {
+	id = manchukuo_events.1
+	title = "The Kwantung Connection"
+	desc = manchukuo_events.1.d
+	picture = GFX_report_event_journalists_speech
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Tojo and Itagaki support our appeal, the KMT has no future."
+	#	JAP = {
+	#		set_autonomy = {
+	#				target = MAN
+	#				autonomy_state = autonomy_wtt_imperial_associate
+	#				end_wars = no
+	#			}
+	#		}
+		custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = MAN_itagaki_seishiro_hc
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = MAN_kenkichi_ueda
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = MAN_toshizo_nishio
+	}
+}
+country_event = {
+	id = manchukuo_events.2
+	title = "The Mukden Convention"
+	desc = manchukuo_events.2.d
+	picture = GFX_report_event_journalists_speech
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Claim it all, the liberation of Asia is our destiny!"
+		ai_chance = {
+			base = 10
+		}
+		set_country_flag = asian_liberation
+			add_stability = -0.1
+			add_state_claim = 408 add_state_claim = 5351 add_state_claim = 5352 add_state_claim = 5353 add_state_claim = 5354 add_state_claim = 5355 add_state_claim = 5356 add_state_claim = 5357 add_state_claim = 5358 add_state_claim = 5359 add_state_claim = 5360 add_state_claim = 5361 add_state_claim = 5362 add_state_claim = 5363 add_state_claim = 5364 add_state_claim = 5365 add_state_claim = 5366 add_state_claim = 5367 add_state_claim = 5368 add_state_claim = 5369 add_state_claim = 5370 add_state_claim = 5371 add_state_claim = 5372 add_state_claim = 5373 add_state_claim = 5374 add_state_claim = 5375 add_state_claim = 5376 add_state_claim = 5377 add_state_claim = 5378 add_state_claim = 5379 add_state_claim = 5380 add_state_claim = 5381 add_state_claim = 5382 add_state_claim = 5383 add_state_claim = 5384
+			add_state_claim = 409 add_state_claim = 5385 add_state_claim = 5386 add_state_claim = 5387 add_state_claim = 5388 add_state_claim = 5389 add_state_claim = 5390 add_state_claim = 5391 add_state_claim = 5392 add_state_claim = 5393 add_state_claim = 5394 add_state_claim = 5395 add_state_claim = 5396 add_state_claim = 5397 add_state_claim = 5398 add_state_claim = 5399 add_state_claim = 5400 add_state_claim = 5401 add_state_claim = 5402 add_state_claim = 5403 add_state_claim = 5404 add_state_claim = 5405 add_state_claim = 5406 add_state_claim = 5407 add_state_claim = 5408 add_state_claim = 5409
+			add_state_claim = 560 add_state_claim = 6734 add_state_claim = 6735 add_state_claim = 6736 add_state_claim = 6737 add_state_claim = 6738 add_state_claim = 6739 add_state_claim = 6740 add_state_claim = 6741 add_state_claim = 6742 add_state_claim = 6743 add_state_claim = 6744 add_state_claim = 6745 add_state_claim = 6746 add_state_claim = 6747 add_state_claim = 6748
+			add_state_claim = 657 add_state_claim = 7774 add_state_claim = 7775 add_state_claim = 7776 add_state_claim = 7777 add_state_claim = 7778 add_state_claim = 7779 add_state_claim = 7780 add_state_claim = 7781 add_state_claim = 7782 add_state_claim = 7783 add_state_claim = 7784 add_state_claim = 7785 add_state_claim = 7786 add_state_claim = 7787 add_state_claim = 7788 add_state_claim = 7789 add_state_claim = 7790 add_state_claim = 7791
+			add_state_claim = 561 add_state_claim = 6749 add_state_claim = 6750 add_state_claim = 6751 add_state_claim = 6752 add_state_claim = 6753 add_state_claim = 6754 add_state_claim = 6755 add_state_claim = 6756 add_state_claim = 6757 add_state_claim = 6758 add_state_claim = 6759 add_state_claim = 6760 add_state_claim = 6761
+			add_state_claim = 563 add_state_claim = 6772 add_state_claim = 6773 add_state_claim = 6774 add_state_claim = 6775 add_state_claim = 6776 add_state_claim = 6777 add_state_claim = 6778 add_state_claim = 6779 add_state_claim = 6780 add_state_claim = 6781 add_state_claim = 6782 add_state_claim = 6783 add_state_claim = 6784 add_state_claim = 6785 add_state_claim = 6786 add_state_claim = 6787 add_state_claim = 6788 add_state_claim = 6789 add_state_claim = 6790 add_state_claim = 6791 add_state_claim = 6792 add_state_claim = 6793
+			add_state_claim = 564 add_state_claim = 6794 add_state_claim = 6795 add_state_claim = 6796 add_state_claim = 6797 add_state_claim = 6798 add_state_claim = 6799 add_state_claim = 6800 add_state_claim = 6801 add_state_claim = 6802 add_state_claim = 6803 add_state_claim = 6804 add_state_claim = 6805 add_state_claim = 6806 add_state_claim = 6807 add_state_claim = 6808 add_state_claim = 6809
+			add_state_claim = 819 add_state_claim = 8724 add_state_claim = 8725 add_state_claim = 8726 add_state_claim = 8727 add_state_claim = 8728 add_state_claim = 8729 add_state_claim = 8730 add_state_claim = 8731 add_state_claim = 8732 add_state_claim = 8733 add_state_claim = 8734 add_state_claim = 8735
+			add_state_claim = 817 add_state_claim = 8685 add_state_claim = 8686 add_state_claim = 8687 add_state_claim = 8688 add_state_claim = 8689 add_state_claim = 8690 add_state_claim = 8691 add_state_claim = 8692 add_state_claim = 8693 add_state_claim = 8694 add_state_claim = 8695 add_state_claim = 8696 add_state_claim = 8697 add_state_claim = 8698 add_state_claim = 8699 add_state_claim = 8700 add_state_claim = 8701 add_state_claim = 8702 add_state_claim = 8703 add_state_claim = 8704 add_state_claim = 8705 add_state_claim = 8706 add_state_claim = 8707 add_state_claim = 8708 add_state_claim = 8709 add_state_claim = 8710 add_state_claim = 8711 add_state_claim = 8712
+			add_state_claim = 330 add_state_claim = 4109 add_state_claim = 4110 add_state_claim = 4111 add_state_claim = 4112 add_state_claim = 4113 add_state_claim = 4114 add_state_claim = 4115 add_state_claim = 4116 add_state_claim = 4117 add_state_claim = 4118 add_state_claim = 4119 add_state_claim = 4120 add_state_claim = 4121
+			add_state_claim = 820 add_state_claim = 8736 add_state_claim = 8737 add_state_claim = 8738 add_state_claim = 8739 add_state_claim = 8740 add_state_claim = 8741 add_state_claim = 8742
+			add_state_claim = 818 add_state_claim = 8713 add_state_claim = 8714 add_state_claim = 8715 add_state_claim = 8716 add_state_claim = 8717 add_state_claim = 8718 add_state_claim = 8719 add_state_claim = 8720 add_state_claim = 8721 add_state_claim = 8722 add_state_claim = 8723
+			add_state_claim = 329 add_state_claim = 4098 add_state_claim = 4099 add_state_claim = 4100 add_state_claim = 4101 add_state_claim = 4102 add_state_claim = 4103 add_state_claim = 4104 add_state_claim = 4105 add_state_claim = 4106 add_state_claim = 4107 add_state_claim = 4108
+			add_state_claim = 566 add_state_claim = 6819 add_state_claim = 6820 add_state_claim = 6821 add_state_claim = 6822 add_state_claim = 6823 add_state_claim = 6824 add_state_claim = 6825 add_state_claim = 6826 add_state_claim = 6827 add_state_claim = 6828
+	}
+	option = {
+		name = "We will not antagonize a friendly nation of our Overlord."
+		ai_chance = {
+			base = 90
+		}
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = manchukuo_events.3
+	title = "A Meeting in Seoul"
+	desc = manchukuo_events.3.d
+	picture = GFX_report_event_journalists_speech
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "The Kwantung Army is right, the General Affairs State Council will officially take over."
+		ai_chance = {
+			base = 45
+		}
+			promote_character =	MAN_doihara_kenji
+			set_politics = {
+				ruling_party = fascism
+			}
+			add_popularity = {
+   				ideology = fascism
+    			popularity = 0.5
+			}
+	}
+	option = {
+		name = "There must be a compromise, Kishi will be Chief Executive."
+		ai_chance = {
+			base = 10 
+		}
+			promote_character =	MAN_kishi_nobosuke
+			set_politics = {
+				ruling_party = fascism
+			}
+			add_popularity = {
+   				ideology = fascism
+    			popularity = 0.5
+			}
+	}
+	option = {
+		name = "Aikawa and Naori are right, civillian rule of the Concordia Association will provide legitimacy."
+		ai_chance = {
+			base = 45
+		}
+			promote_character =	MAN_ruan_zhenduo
+			set_politics = {
+				ruling_party = fascism
+			}
+			add_popularity = {
+   				ideology = fascism
+    			popularity = 0.5
+			}
+	}
+}
+country_event = {
+	id = manchukuo_events.4
+	title = "The Imperial Tianjin Conference"
+	desc = manchukuo_events.4.d
+	picture = GFX_report_event_journalists_speech
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "The legitimacy of the Qing is important, Pujie will succeed his brother."
+		ai_chance = {
+			base = 70
+		}
+			set_country_flag = pujie_wins
+			promote_character =	MAN_aisin_gioro_pujie
+			add_stability = 0.05
+			add_political_power = 120
+			
+	}
+	option = {
+		name = "A loyal and capabable general is needed, Qi Xieyuan will assume the Presidency."
+		ai_chance = {
+			base = 30
+		}
+			set_country_flag = xieyuan_wins
+			promote_character =	MAN_qi_xieyuan
+			add_stability = 0.05
+			add_political_power = 120
+	}
+}
+country_event = {
+	id = manchukuo_events.5
+	title = "The [MAN.GetName] requests control over continental territory"
+	desc = manchukuo_events.5.d
+	picture = GFX_report_event_journalists_speech
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Their loyalty is assured. Let them have it."
+		ai_chance = {
+			base = 95
+		}
+			if = {
+				limit = {
+					has_full_control_of_state = 621
+				}
+				MAN = {
+					transfer_state = 621 transfer_state = 7596 transfer_state = 7597 transfer_state = 7598 transfer_state = 7599 transfer_state = 7600 transfer_state = 7601 transfer_state = 7602 transfer_state = 7603
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 609
+				}
+				MAN = {
+					transfer_state = 609 transfer_state = 7463 transfer_state = 7464 transfer_state = 7465 transfer_state = 7466 transfer_state = 7467 transfer_state = 7468 transfer_state = 7469 transfer_state = 7470
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 745
+				}
+				MAN = {
+					transfer_state = 745 transfer_state = 8328
+				}
+			}		
+	}
+	option = {
+		name = "We cannot trust them, we shall remain in control."
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+	

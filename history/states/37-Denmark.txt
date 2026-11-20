@@ -1,0 +1,27 @@
+state = {
+	id = 37
+	name = "STATE_37"
+	manpower = 1247754
+	buildings_max_level_factor = 1.000
+	local_supplies = 15.000
+	state_category = large_city
+	history = {
+		owner = DEN
+		add_core_of = DEN
+		add_to_array = {
+			state_victory_points = 6287
+		}
+		victory_points = { 6287 20 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 4
+			dockyard = 2
+			air_base = 6
+			6287 = {
+				naval_base = 8
+			}
+		}
+	}
+	provinces = { 6287 }
+}

@@ -1,0 +1,37 @@
+state = {
+	id = 8368
+	name = "STATE_8368"
+	manpower = 81817
+	buildings_max_level_factor = 1.000
+	local_supplies = 1.0
+	state_category = p2s_village
+	history = {
+		owner = SIC
+		add_core_of = CHI
+		add_core_of = PRC
+		add_core_of = SIC
+		victory_points = { 4999 1 }
+		buildings = {
+			infrastructure = 1
+		}
+		1938.10.25 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				remove_core_of = SIC
+			}
+			owner = CHI
+			add_to_array = {
+				state_victory_points = 4999
+			}
+			controller = CHI
+		}
+		1939.1.1 = {
+			buildings = {
+				infrastructure = 1
+			}
+		}
+	}
+	provinces = { 4999 }
+}

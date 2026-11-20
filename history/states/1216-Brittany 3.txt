@@ -1,0 +1,21 @@
+state = {
+	id = 1216
+	name = "STATE_1216"
+	manpower = 415015
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = FRA
+		victory_points = { 11465 5 }
+		buildings = {
+			infrastructure = 4
+			dockyard = 2
+		}
+		add_core_of = FRA
+		add_core_of = BRI
+		add_to_array = {
+			state_victory_points = 11465
+		}
+	}
+	provinces = { 11465 }
+}

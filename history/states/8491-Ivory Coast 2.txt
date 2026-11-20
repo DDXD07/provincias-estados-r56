@@ -1,0 +1,19 @@
+state = {
+	id = 8491
+	name = "STATE_8491"
+	manpower = 888630
+	local_supplies = 1.0
+	state_category = p2s_village
+	history = {
+		owner = FRA
+		add_core_of = IVO
+		add_to_array = {
+			state_victory_points = 8065
+		}
+		victory_points = { 8065 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 8065 }
+}

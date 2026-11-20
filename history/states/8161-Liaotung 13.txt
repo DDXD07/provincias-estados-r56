@@ -1,0 +1,23 @@
+state = {
+	id = 8161
+	name = "STATE_8161"
+	manpower = 242154
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 2
+		coal = 1
+	}
+	history = {
+		owner = MAN
+		add_core_of = MAN
+		add_core_of = CHI
+		add_core_of = PRC
+		set_state_flag = CHI_mukden_arsenal_organization_flag
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 6905 }
+}

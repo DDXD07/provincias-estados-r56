@@ -1,0 +1,43 @@
+state = {
+	id = 1115
+	name = "STATE_1115"
+	manpower = 4290987
+	buildings_max_level_factor = 1.000
+	local_supplies = 2.0
+	state_category = large_town
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		set_state_flag = CHI_hanyan_arsenal_organization_flag
+		add_to_array = {
+			state_victory_points = 4619
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 1
+		}
+		victory_points = { 4619 10 }
+		1938.10.25 = {
+			buildings = {
+				industrial_complex = 2
+				infrastructure = 3
+				air_base = 2
+				arms_factory = 2
+			}
+			JAP = {
+				set_province_controller = 1036
+			}
+			controller = JAP
+			JAP = {
+				set_province_controller = 4631
+			}
+			JAP = {
+				set_province_controller = 10462
+			}
+		}
+	}
+	provinces = { 4619 }
+}

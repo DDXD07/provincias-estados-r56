@@ -1,0 +1,38 @@
+PROVINCIAS COMO ESTADOS (Road to 56) - generado para HOI4 1.19.5 + The Road to 56 (noviembre 2026)
+
+QUE HACE
+- Cada provincia terrestre del mapa de Road to 56 pasa a ser su propio estado (10 278 estados).
+- La provincia principal de cada estado original (la de mayor punto de victoria) conserva el ID original,
+  asi que capitales, focos, eventos y decisiones de Road to 56 siguen apuntando al lugar correcto.
+- Manpower, recursos, fabricas y slots se reparten entre las provincias sin cambiar los totales.
+- Infraestructura se copia a todas; base aerea, antiaereo y radar quedan en la provincia principal.
+- Los efectos transfer_state / add_state_core / add_state_claim / remove_state_* / listas "states = { }"
+  y bloques de nucleos/reclamaciones de Road to 56 y del juego base se expanden para cubrir
+  todas las provincias del estado original (393 archivos parcheados).
+
+ACTIVAR
+1. En el launcher, agrega "Provincias como Estados (Road to 56)" a tu playset.
+2. Debe ir DESPUES de The Road to 56 en el orden de carga.
+3. Partida nueva (no es compatible con partidas guardadas).
+
+REGENERAR (cuando Road to 56 o HOI4 se actualicen)
+  pip install numpy pillow
+  python gen.py "D:\SteamLibrary\steamapps\common\Hearts of Iron IV" "D:\SteamLibrary\steamapps\workshop\content\394360\820260968" "C:\ruta\nueva\carpeta_del_mod"
+  Usa una carpeta vacia como salida y luego reemplaza las carpetas history, map, common, events y localisation del mod.
+  validate.py <carpeta_del_mod> comprueba que no falten provincias ni se pierdan fabricas/manpower.
+
+AJUSTES (al inicio de gen.py)
+  MIN_SLOTS_PER_PROVINCE = 0   -> pon 1 si quieres que cada provincia tenga al menos un slot de construccion.
+
+NOMBRES REALES DE LAS PROVINCIAS (agregado)
+- Cada provincia lleva el nombre de la ciudad/municipio mas poblado que cae dentro de ella en el mundo real
+  (base GeoNames cities500, CC BY 4.0, geonames.org). Las provincias con punto de victoria conservan
+  el nombre que les da el juego (traducido a cada idioma).
+- La provincia principal de cada estado original tambien se renombra (ej. Zulia -> Maracaibo) mediante
+  localisation/<idioma>/replace/.
+- nombres_provincias.csv: una fila por provincia con la ciudad elegida, region real, pais, poblacion,
+  coordenadas, confianza (probabilidad de que la ciudad este dentro de esa provincia) y avisos.
+- Para regenerar: coloca p2s_cities500.zip, p2s_admin1CodesASCII.txt y p2s_admin2Codes.txt de
+  https://download.geonames.org/export/dump/ en una carpeta y ejecuta
+    python naming2.py <HOI4> <Road to 56> <carpeta del mod> <carpeta geonames>
+    python write_loc.py <HOI4> <Road to 56> <carpeta del mod>

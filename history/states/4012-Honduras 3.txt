@@ -1,0 +1,23 @@
+state = {
+	id = 4012
+	name = "STATE_4012"
+	manpower = 163089
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = HON
+		buildings = {
+			infrastructure = 2
+			8017 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = HON
+		add_to_array = {
+			state_victory_points = 8017
+		}
+		victory_points = { 8017 1 }
+	}
+	provinces = { 8017 }
+}

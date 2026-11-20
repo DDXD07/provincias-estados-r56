@@ -1,0 +1,18 @@
+state = {
+	id = 3926
+	name = "STATE_3926"
+	manpower = 53144
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 4
+	}
+	history = {
+		owner = SPR
+		add_core_of = MOR
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 12087 }
+}

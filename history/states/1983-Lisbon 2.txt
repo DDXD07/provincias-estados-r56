@@ -1,0 +1,23 @@
+state = {
+	id = 1983
+	name = "STATE_1983"
+	manpower = 136842
+	buildings_max_level_factor = 1.000
+	local_supplies = 12.0
+	state_category = p2s_village
+	resources = {
+		tungsten = 10
+	}
+	history = {
+		owner = POR
+		victory_points = { 3798 1 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POR
+		add_to_array = {
+			state_victory_points = 3798
+		}
+	}
+	provinces = { 3798 }
+}

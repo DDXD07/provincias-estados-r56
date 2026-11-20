@@ -1,0 +1,19 @@
+state = {
+	id = 5426
+	name = "STATE_5426"
+	manpower = 53158
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		oil = 12
+	}
+	history = {
+		owner = PER
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = PER
+	}
+	provinces = { 1922 }
+}

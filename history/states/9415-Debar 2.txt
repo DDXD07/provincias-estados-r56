@@ -1,0 +1,19 @@
+state = {
+	id = 9415
+	name = "STATE_9415"
+	manpower = 60550
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = YUG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = YUG
+		add_core_of = MAC
+		add_claim_by = SER
+		add_claim_by = ALB
+	}
+	provinces = { 833 }
+}

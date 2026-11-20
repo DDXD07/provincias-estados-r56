@@ -1,0 +1,23 @@
+state = {
+	id = 1822
+	name = "STATE_1822"
+	manpower = 173100
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = POL
+		victory_points = { 9412 1 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+		add_to_array = {
+			state_victory_points = 9412
+		}
+	}
+	provinces = { 9412 }
+}

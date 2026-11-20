@@ -1,0 +1,25 @@
+state = {
+	id = 4001
+	name = "STATE_4001"
+	manpower = 138632
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		oil = 4
+	}
+	history = {
+		owner = VEN
+		buildings = {
+			infrastructure = 2
+			10912 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = VEN
+		add_to_array = {
+			state_victory_points = 10912
+		}
+		victory_points = { 10912 1 }
+	}
+	provinces = { 10912 }
+}

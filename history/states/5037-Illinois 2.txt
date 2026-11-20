@@ -1,0 +1,22 @@
+state = {
+	id = 5037
+	name = "STATE_5037"
+	manpower = 414709
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 12697
+		}
+		victory_points = { 12697 2 }
+	}
+	provinces = { 12697 }
+}

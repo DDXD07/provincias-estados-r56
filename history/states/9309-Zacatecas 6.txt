@@ -1,0 +1,16 @@
+state = {
+	id = 9309
+	name = "STATE_9309"
+	manpower = 29979
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = MEX
+	}
+	provinces = { 13259 }
+}

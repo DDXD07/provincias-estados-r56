@@ -1,0 +1,24 @@
+state = {
+	id = 332
+	name = "STATE_332"
+	manpower = 9504
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = wasteland
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+			12503 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 12503 1 }
+		add_core_of = CAN
+		add_core_of = NFL
+		add_to_array = {
+			state_victory_points = 12503
+		}
+	}
+	provinces = { 12503 13165 13180 }
+}

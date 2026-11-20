@@ -1,0 +1,20 @@
+state = {
+	id = 670
+	name = "STATE_670"
+	manpower = 194560
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = FRI
+		add_core_of = LAO
+		add_core_of = FRI
+		add_to_array = {
+			state_victory_points = 1464
+		}
+		victory_points = { 1464 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 1464 }
+}

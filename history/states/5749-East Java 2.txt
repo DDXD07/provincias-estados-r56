@@ -1,0 +1,23 @@
+state = {
+	id = 5749
+	name = "STATE_5749"
+	manpower = 2611213
+	local_supplies = 5.000
+	state_category = pastoral
+	resources = {
+		oil = 2
+	}
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_claim_by = JVA
+		add_to_array = {
+			state_victory_points = 10479
+		}
+		victory_points = { 10479 3 }
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 10479 }
+}

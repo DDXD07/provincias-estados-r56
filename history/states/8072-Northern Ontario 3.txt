@@ -1,0 +1,21 @@
+state = {
+	id = 8072
+	name = "STATE_8072"
+	manpower = 6077
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 1
+		aluminium = 1
+		coal = 1
+	}
+	history = {
+		owner = CAN
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = CAN
+	}
+	provinces = { 4875 }
+}

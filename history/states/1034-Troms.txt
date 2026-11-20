@@ -1,0 +1,27 @@
+state = {
+	id = 1034
+	name = "STATE_1034"
+	manpower = 38753
+	local_supplies = 0.000
+	state_category = pastoral
+	resources = {
+		tungsten = 1
+	}
+	history = {
+		victory_points = { 11050 1 }
+		owner = NOR
+		add_core_of = NOR
+		add_core_of = SMI
+		add_to_array = {
+			state_victory_points = 11050
+		}
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			11050 = {
+				naval_base = 2
+			}
+		}
+	}
+	provinces = { 11050 }
+}

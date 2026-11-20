@@ -1,0 +1,26 @@
+state = {
+	id = 156
+	name = "STATE_156"
+	manpower = 759428
+	local_supplies = 0.0
+	state_category = developed_rural
+	history = {
+		owner = ITA
+		victory_points = { 9990 1 }
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			fuel_silo = 1
+			9990 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = ITA
+		add_core_of = TTS
+		add_core_of = NAP
+		add_to_array = {
+			state_victory_points = 9990
+		}
+	}
+	provinces = { 9990 }
+}

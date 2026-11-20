@@ -1,0 +1,15 @@
+state = {
+	id = 9634
+	name = "STATE_9634"
+	manpower = 46998
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = AFG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = AFG
+	}
+	provinces = { 1948 }
+}

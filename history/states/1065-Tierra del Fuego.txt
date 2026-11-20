@@ -1,0 +1,23 @@
+state = {
+	id = 1065
+	name = "STATE_1065"
+	manpower = 37313
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = ARG
+		add_core_of = ARG
+		add_claim_by = CHL
+		add_to_array = {
+			state_victory_points = 13358
+		}
+		buildings = {
+			infrastructure = 1
+			13358 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 13358 1 }
+	}
+	provinces = { 13358 }
+}

@@ -1,0 +1,26 @@
+state = {
+	id = 1646
+	name = "STATE_1646"
+	manpower = 245964
+	local_supplies = 7.0
+	state_category = pastoral
+	resources = {
+		steel = 2
+		aluminium = 1
+	}
+	history = {
+		owner = GER
+		victory_points = { 11372 3 }
+		buildings = {
+			infrastructure = 3
+			11372 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = GER
+		add_to_array = {
+			state_victory_points = 11372
+		}
+	}
+	provinces = { 11372 }
+}

@@ -1,0 +1,17 @@
+state = {
+	id = 5924
+	name = "STATE_5924"
+	manpower = 886
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = CAN
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = CAN
+		add_core_of = QUE
+	}
+	provinces = { 1712 }
+}

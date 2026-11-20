@@ -1,0 +1,20 @@
+state = {
+	id = 9432
+	name = "STATE_9432"
+	manpower = 165519
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		aluminium = 1
+	}
+	history = {
+		owner = ITA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ITA
+		add_core_of = PAP
+	}
+	provinces = { 11790 }
+}

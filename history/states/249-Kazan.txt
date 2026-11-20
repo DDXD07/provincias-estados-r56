@@ -1,0 +1,24 @@
+state = {
+	id = 249
+	name = "STATE_249"
+	manpower = 1059462
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+		}
+		victory_points = { 6338 10 }
+		add_core_of = SOV
+		add_core_of = TAT
+		add_to_array = {
+			state_victory_points = 6338
+		}
+	}
+	provinces = { 6338 }
+}

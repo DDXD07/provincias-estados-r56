@@ -1,0 +1,19 @@
+state = {
+	id = 2095
+	name = "STATE_2095"
+	manpower = 77980
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 7
+		coal = 8
+	}
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = ENG
+	}
+	provinces = { 6335 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 9918
+	name = "STATE_9918"
+	manpower = 44126
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		aluminium = 2
+	}
+	history = {
+		owner = BRA
+		add_core_of = BRA
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 13338 }
+}

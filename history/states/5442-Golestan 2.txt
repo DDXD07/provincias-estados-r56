@@ -1,0 +1,19 @@
+state = {
+	id = 5442
+	name = "STATE_5442"
+	manpower = 242381
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = PER
+		victory_points = { 8040 3 }
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = PER
+		add_to_array = {
+			state_victory_points = 8040
+		}
+	}
+	provinces = { 8040 }
+}

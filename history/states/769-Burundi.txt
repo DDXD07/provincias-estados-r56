@@ -1,0 +1,28 @@
+state = {
+	id = 769
+	name = "STATE_769"
+	manpower = 1609298
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = COG
+		add_core_of = BRD
+		add_to_array = {
+			state_victory_points = 2220
+		}
+		IF = {
+			limit = {
+				has_dlc = "Gotterdammerung"
+			}
+			add_dynamic_modifier = {
+				modifier = COG_burundian_separatism_modifier
+			}
+		}
+		victory_points = { 2220 1 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 2220 }
+}

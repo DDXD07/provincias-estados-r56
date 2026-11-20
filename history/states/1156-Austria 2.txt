@@ -1,0 +1,19 @@
+state = {
+	id = 1156
+	name = "STATE_1156"
+	manpower = 136362
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = AUS
+		victory_points = { 704 3 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = AUS
+		add_to_array = {
+			state_victory_points = 704
+		}
+	}
+	provinces = { 704 }
+}

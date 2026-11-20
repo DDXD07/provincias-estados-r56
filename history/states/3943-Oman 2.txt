@@ -1,0 +1,19 @@
+state = {
+	id = 3943
+	name = "STATE_3943"
+	manpower = 65118
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = OMA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 8020 1 }
+		add_core_of = OMA
+		add_to_array = {
+			state_victory_points = 8020
+		}
+	}
+	provinces = { 8020 }
+}

@@ -1,0 +1,20 @@
+state = {
+	id = 1218
+	name = "STATE_1218"
+	manpower = 113187
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = FRA
+		victory_points = { 11616 1 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = FRA
+		add_core_of = BRI
+		add_to_array = {
+			state_victory_points = 11616
+		}
+	}
+	provinces = { 11616 }
+}

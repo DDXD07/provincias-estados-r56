@@ -1,0 +1,20 @@
+state = {
+	id = 1060
+	name = "STATE_1060"
+	manpower = 99632
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = URG
+		add_core_of = URG
+		add_to_array = {
+			state_victory_points = 12468
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		victory_points = { 12468 1 }
+	}
+	provinces = { 12468 }
+}

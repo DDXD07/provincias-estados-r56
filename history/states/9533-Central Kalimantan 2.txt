@@ -1,0 +1,19 @@
+state = {
+	id = 9533
+	name = "STATE_9533"
+	manpower = 74582
+	buildings_max_level_factor = 1
+	local_supplies = 1
+	state_category = pastoral
+	resources = {
+		rubber = 3
+	}
+	history = {
+		owner = INS
+		add_core_of = POK
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 2184 }
+}

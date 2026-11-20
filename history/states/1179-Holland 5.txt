@@ -1,0 +1,22 @@
+state = {
+	id = 1179
+	name = "STATE_1179"
+	manpower = 30541
+	buildings_max_level_factor = 1
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = HOL
+		add_core_of = HOL
+		buildings = {
+			infrastructure = 4
+			3314 = {
+				naval_base = 10
+			}
+		}
+	}
+	provinces = { 3314 }
+}

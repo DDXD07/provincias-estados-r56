@@ -1,0 +1,14 @@
+state = {
+	id = 9984
+	name = "STATE_9984"
+	manpower = 4963
+	buildings_max_level_factor = 1.000
+	impassable = yes
+	local_supplies = 0.000
+	state_category = wasteland
+	history = {
+		owner = BRA
+		add_core_of = BRA
+	}
+	provinces = { 5216 }
+}

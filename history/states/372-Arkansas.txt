@@ -1,0 +1,24 @@
+state = {
+	id = 372
+	name = "STATE_372"
+	manpower = 278171
+	local_supplies = 9.0
+	state_category = rural
+	resources = {
+		aluminium = 1
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_to_array = {
+			state_victory_points = 12778
+		}
+		victory_points = { 12778 1 }
+	}
+	provinces = { 12778 }
+}

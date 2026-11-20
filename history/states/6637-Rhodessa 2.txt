@@ -1,0 +1,21 @@
+state = {
+	id = 6637
+	name = "STATE_6637"
+	manpower = 146418
+	buildings_max_level_factor = 1.000
+	local_supplies = 3.0
+	state_category = p2s_village
+	resources = {
+		tungsten = 3
+		chromium = 23
+		coal = 1
+	}
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ZIM
+	}
+	provinces = { 1874 }
+}

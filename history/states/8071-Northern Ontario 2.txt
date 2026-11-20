@@ -1,0 +1,20 @@
+state = {
+	id = 8071
+	name = "STATE_8071"
+	manpower = 18227
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = CAN
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = { 6510 1 }
+		add_core_of = CAN
+		add_to_array = {
+			state_victory_points = 6510
+		}
+	}
+	provinces = { 6510 }
+}

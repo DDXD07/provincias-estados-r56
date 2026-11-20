@@ -1,0 +1,17 @@
+state = {
+	id = 9569
+	name = "STATE_9569"
+	manpower = 110493
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		buildings = {
+			infrastructure = 1
+		}
+		owner = PER
+		add_core_of = PER
+		add_core_of = AZR
+	}
+	provinces = { 10454 }
+}

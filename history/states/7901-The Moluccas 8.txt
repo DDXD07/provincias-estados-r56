@@ -1,0 +1,17 @@
+state = {
+	id = 7901
+	name = "STATE_7901"
+	manpower = 30479
+	buildings_max_level_factor = 1
+	local_supplies = 1
+	state_category = small_island
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = TNE
+		add_core_of = MLK
+		set_resistance = 0
+		set_compliance = 55
+	}
+	provinces = { 1437 }
+}

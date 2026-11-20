@@ -1,0 +1,25 @@
+state = {
+	id = 2023
+	name = "STATE_2023"
+	manpower = 15903
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	resources = {
+		tungsten = 1
+		aluminium = 1
+	}
+	history = {
+		add_core_of = SCO
+		owner = ENG
+		victory_points = { 9075 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ENG
+		add_to_array = {
+			state_victory_points = 9075
+		}
+	}
+	provinces = { 9075 }
+}

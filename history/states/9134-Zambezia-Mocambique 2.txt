@@ -1,0 +1,16 @@
+state = {
+	id = 9134
+	name = "STATE_9134"
+	manpower = 208271
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = POR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = MZB
+	}
+	provinces = { 10972 }
+}

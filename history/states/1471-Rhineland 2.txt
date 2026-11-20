@@ -1,0 +1,27 @@
+state = {
+	id = 1471
+	name = "STATE_1471"
+	manpower = 100738
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 3
+		aluminium = 1
+		coal = 2
+	}
+	history = {
+		owner = GER
+		victory_points = { 11547 1 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = GER
+		add_core_of = RHI
+		add_to_array = {
+			state_victory_points = 11547
+		}
+		set_demilitarized_zone = yes
+	}
+	provinces = { 11547 }
+}

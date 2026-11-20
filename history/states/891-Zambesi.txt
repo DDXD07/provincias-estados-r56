@@ -1,0 +1,23 @@
+state = {
+	id = 891
+	name = "STATE_891"
+	manpower = 274284
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	resources = {
+		rubber = 1
+	}
+	history = {
+		owner = POR
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = ANG
+		add_to_array = {
+			state_victory_points = 4735
+		}
+		victory_points = { 4735 1 }
+	}
+	provinces = { 4735 }
+}

@@ -1,0 +1,20 @@
+state = {
+	id = 870
+	name = "STATE_870"
+	manpower = 272
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = wasteland
+	history = {
+		buildings = {
+			infrastructure = 1
+		}
+		owner = AST
+		add_core_of = AST
+		add_to_array = {
+			state_victory_points = 8152
+		}
+		victory_points = { 8152 1 }
+	}
+	provinces = { 8152 }
+}

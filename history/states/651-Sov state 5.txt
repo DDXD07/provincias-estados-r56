@@ -1,0 +1,22 @@
+state = {
+	id = 651
+	name = "STATE_651"
+	manpower = 746050
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = { 1278 5 }
+		add_core_of = SOV
+		add_core_of = BSK
+		add_claim_by = TAT
+		add_to_array = {
+			state_victory_points = 1278
+		}
+	}
+	provinces = { 1278 }
+}

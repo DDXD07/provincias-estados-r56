@@ -1,0 +1,22 @@
+state = {
+	id = 7319
+	name = "STATE_7319"
+	manpower = 347409
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		tungsten = 2
+		steel = 2
+		chromium = 1
+	}
+	history = {
+		owner = GXC
+		add_core_of = GXC
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 7210 }
+}

@@ -1,0 +1,22 @@
+state = {
+	id = 4141
+	name = "STATE_4141"
+	manpower = 23319
+	buildings_max_level_factor = 1.000
+	local_supplies = 1.000
+	state_category = p2s_village
+	resources = {
+		rubber = 6
+		oil = 1
+		coal = 1
+	}
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = KUT
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 4323 }
+}

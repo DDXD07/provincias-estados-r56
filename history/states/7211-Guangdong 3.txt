@@ -1,0 +1,32 @@
+state = {
+	id = 7211
+	name = "STATE_7211"
+	manpower = 1411110
+	local_supplies = 1.0
+	state_category = pastoral
+	history = {
+		owner = GXC
+		add_core_of = GXC
+		add_core_of = CHI
+		add_core_of = PRC
+		set_state_flag = CHI_shaoguan_aircaft_manufacturing_factory_organization_flag
+		victory_points = { 9938 1 }
+		buildings = {
+			infrastructure = 2
+			9938 = {
+				naval_base = 1
+				coastal_bunker = 1
+				bunker = 1
+			}
+		}
+		1938.10.25 = {
+			remove_core_of = GDC
+			owner = CHI
+			add_to_array = {
+				state_victory_points = 9938
+			}
+			controller = JAP
+		}
+	}
+	provinces = { 9938 }
+}

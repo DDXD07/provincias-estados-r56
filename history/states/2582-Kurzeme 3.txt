@@ -1,0 +1,16 @@
+state = {
+	id = 2582
+	name = "STATE_2582"
+	manpower = 22537
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = LAT
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = LAT
+	}
+	provinces = { 11246 }
+}

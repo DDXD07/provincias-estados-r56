@@ -1,0 +1,18 @@
+state = {
+	id = 6505
+	name = "STATE_6505"
+	manpower = 393007
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		tungsten = 9
+	}
+	history = {
+		owner = JAP
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = KOR
+	}
+	provinces = { 7221 }
+}

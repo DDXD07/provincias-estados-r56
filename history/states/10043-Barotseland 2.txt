@@ -1,0 +1,22 @@
+state = {
+	id = 10043
+	name = "STATE_10043"
+	manpower = 67500
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		chromium = 5
+		tungsten = 1
+	}
+	history = {
+		owner = ENG
+		add_core_of = ZAM
+		add_core_of = BAR
+		add_core_of = KAT
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 10538 }
+}

@@ -1,0 +1,22 @@
+state = {
+	id = 4198
+	name = "STATE_4198"
+	manpower = 313440
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		chromium = 2
+	}
+	history = {
+		owner = TUR
+		victory_points = { 3856 3 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = TUR
+		add_to_array = {
+			state_victory_points = 3856
+		}
+	}
+	provinces = { 3856 }
+}

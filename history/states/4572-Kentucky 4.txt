@@ -1,0 +1,20 @@
+state = {
+	id = 4572
+	name = "STATE_4572"
+	manpower = 118846
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		oil = 1
+		coal = 5
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = USA
+		add_claim_by = CSA
+	}
+	provinces = { 6974 }
+}

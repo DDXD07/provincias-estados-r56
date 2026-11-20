@@ -1,0 +1,22 @@
+state = {
+	id = 4074
+	name = "STATE_4074"
+	manpower = 155253
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = PHI
+		add_core_of = PHI
+		add_to_array = {
+			state_victory_points = 4288
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = { 4288 1 }
+	}
+	provinces = { 4288 }
+}

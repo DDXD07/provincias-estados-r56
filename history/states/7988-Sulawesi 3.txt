@@ -1,0 +1,20 @@
+state = {
+	id = 7988
+	name = "STATE_7988"
+	manpower = 154412
+	buildings_max_level_factor = 1
+	local_supplies = 1
+	state_category = pastoral
+	resources = {
+		rubber = 3
+	}
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = GOW
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 10222 }
+}

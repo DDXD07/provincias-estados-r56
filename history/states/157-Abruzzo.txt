@@ -1,0 +1,25 @@
+state = {
+	id = 157
+	name = "STATE_157"
+	manpower = 1862083
+	local_supplies = 0.0
+	state_category = developed_rural
+	history = {
+		owner = ITA
+		victory_points = { 6831 2 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			6831 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = ITA
+		add_core_of = TTS
+		add_core_of = NAP
+		add_to_array = {
+			state_victory_points = 6831
+		}
+	}
+	provinces = { 6831 }
+}

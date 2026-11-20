@@ -1,0 +1,16 @@
+state = {
+	id = 6666
+	name = "STATE_6666"
+	manpower = 439453
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = UGA
+	}
+	provinces = { 7133 }
+}

@@ -1,0 +1,23 @@
+state = {
+	id = 1498
+	name = "STATE_1498"
+	manpower = 267440
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		oil = 2
+	}
+	history = {
+		owner = ROM
+		victory_points = { 11636 2 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ROM
+		add_to_array = {
+			state_victory_points = 11636
+		}
+	}
+	provinces = { 11636 }
+}

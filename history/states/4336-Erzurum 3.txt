@@ -1,0 +1,20 @@
+state = {
+	id = 4336
+	name = "STATE_4336"
+	manpower = 120816
+	buildings_max_level_factor = 1.000
+	local_supplies = 9.0
+	state_category = p2s_village
+	history = {
+		owner = TUR
+		victory_points = { 876 1 }
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = KUR
+		add_to_array = {
+			state_victory_points = 876
+		}
+	}
+	provinces = { 876 }
+}

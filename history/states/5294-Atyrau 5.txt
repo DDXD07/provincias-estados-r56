@@ -1,0 +1,20 @@
+state = {
+	id = 5294
+	name = "STATE_5294"
+	manpower = 243426
+	buildings_max_level_factor = 1.000
+	local_supplies = 2.0
+	state_category = p2s_village
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SOV
+		add_core_of = UZB
+	}
+	provinces = { 11687 }
+}

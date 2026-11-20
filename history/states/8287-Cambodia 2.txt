@@ -1,0 +1,27 @@
+state = {
+	id = 8287
+	name = "STATE_8287"
+	manpower = 320999
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		rubber = 1
+	}
+	history = {
+		add_core_of = CAM
+		add_core_of = FRI
+		owner = FRI
+		add_to_array = {
+			state_victory_points = 7432
+		}
+		buildings = {
+			7432 = {
+				naval_base = 1
+			}
+			infrastructure = 1
+		}
+		victory_points = { 7432 1 }
+	}
+	provinces = { 7432 }
+}

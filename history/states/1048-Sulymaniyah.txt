@@ -1,0 +1,23 @@
+state = {
+	id = 1048
+	name = "STATE_1048"
+	manpower = 214170
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		oil = 5
+	}
+	history = {
+		owner = IRQ
+		victory_points = { 8123 5 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = IRQ
+		add_core_of = KUR
+		add_to_array = {
+			state_victory_points = 8123
+		}
+	}
+	provinces = { 8123 }
+}

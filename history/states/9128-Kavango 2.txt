@@ -1,0 +1,17 @@
+state = {
+	id = 9128
+	name = "STATE_9128"
+	manpower = 18734
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = SAF
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SAF
+		add_core_of = NMB
+	}
+	provinces = { 10957 }
+}

@@ -1,0 +1,22 @@
+state = {
+	id = 850
+	name = "STATE_850"
+	manpower = 278054
+	local_supplies = 0.0
+	state_category = developed_rural
+	history = {
+		victory_points = { 9598 1 }
+		owner = ITA
+		buildings = {
+			infrastructure = 2
+			aluminum_mill = 1
+		}
+		add_core_of = ITA
+		add_core_of = VNZ
+		add_claim_by = AUS
+		add_to_array = {
+			state_victory_points = 9598
+		}
+	}
+	provinces = { 9598 }
+}

@@ -1,0 +1,25 @@
+state = {
+	id = 8230
+	name = "STATE_8230"
+	manpower = 182763
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		chromium = 1
+		steel = 1
+	}
+	history = {
+		owner = GRE
+		victory_points = { 3844 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = GRE
+		add_claim_by = MAC
+		add_claim_by = BUL
+		add_to_array = {
+			state_victory_points = 3844
+		}
+	}
+	provinces = { 3844 }
+}

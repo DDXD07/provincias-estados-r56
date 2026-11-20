@@ -1,0 +1,1074 @@
+###########################
+# Quebec Events
+###########################
+
+add_namespace = quebec
+add_namespace = quebec_fascism 
+add_namespace = quebec_commie
+
+country_event = {
+    id = quebec.1
+	title = quebec.1.t
+	desc = quebec.1.d
+    picture = GFX_report_event_german_italian_pact
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.1.a
+        set_country_flag = QUE_resignation
+        retire_character = QUE_louis_alexandre_taschereau
+        promote_character = QUE_adelard_godbout
+        add_ideas = QUE_liberal_legacy
+        add_stability = -0.1
+    }
+}
+
+country_event = {
+    id = quebec.2
+	title = quebec.2.t
+	desc = quebec.2.d
+    fire_only_once = yes
+    picture = GFX_report_event_german_italian_pact
+
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.2.a
+        ai_chance = { base = 80 }
+        QUE = {
+            country_event = quebec.3
+        }
+        add_ai_strategy = {
+            type = alliance
+            id = "QUE"
+            value = 200
+        }
+        FRA = {
+            create_faction = "Alliance Française"
+            add_to_faction = QUE
+        }
+    }
+
+    option = {
+        name = quebec.2.b
+        ai_chance = { base = 20 }
+        QUE = { country_event = quebec.4 }
+    }
+}
+
+country_event = {
+    id = quebec.3
+	title = quebec.3.t
+	desc = quebec.3.d
+    fire_only_once = yes
+    picture = GFX_report_event_german_inspect_troops
+
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.3.a
+    }
+}
+
+country_event = {
+    id = quebec.4
+	title = quebec.4.t
+	desc = quebec.4.d
+    fire_only_once = yes
+    picture = GFX_report_event_generic_usa_treaty
+
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.4.a
+    }
+}
+
+#economic focus events 
+country_event = {
+    id = quebec.5
+	title = quebec.5.t
+	desc = quebec.5.d
+    fire_only_once = yes
+    picture = GFX_r56i_generic_event_06
+
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.11.b
+        CAN = { country_event = quebec.6 }
+    }
+}
+#canada response
+country_event = {
+    id = quebec.6
+	title = quebec.6.t
+	desc = quebec.6.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.6.a
+        ai_chance = { base = 80 }
+        QUE = { country_event = quebec.7 }
+    }
+
+    option = {
+        name = quebec.6.b
+        ai_chance = { base = 20 }
+        QUE = { country_event = quebec.8 }
+    }
+}
+#quebec_yes
+country_event = {
+    id = quebec.7
+	title = quebec.7.t
+	desc = quebec.7.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.7.a
+        add_timed_idea = {
+            idea = QUE_border_manpower
+            days = 400
+        }
+        add_ideas = QUE_open_borders
+        CAN = {
+            add_ideas = QUE_open_borders
+        }
+    }
+}
+#quebec_no
+country_event = {
+    id = quebec.8
+	title = quebec.8.t
+	desc = quebec.8.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.8.a
+        add_timed_idea = {
+            idea = QUE_disastrous_moment
+            days = 350
+        }
+        set_country_flag = QUE_diplomatic_death
+        complete_national_focus = QUE_continue_our_independence
+    }
+}
+#puppet
+country_event = {
+    id = quebec.9
+	title = quebec.9.t
+	desc = quebec.9.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.9.a
+        CAN = {
+            country_event = quebec.15
+        }
+    }
+}
+#canada say yes
+country_event = {
+    id = quebec.10
+	title = quebec.10.t
+	desc = quebec.10.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.10.a
+        CAN = {
+            puppet = QUE
+        }
+        set_cosmetic_tag = QUE_CAN
+    }
+}
+#dont mind the order I just completely forgot about adding MORE events cuz i'm disorganised LOL
+#Canada said no
+country_event = {
+    id = quebec.14
+	title = quebec.14.t
+	desc = quebec.14.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.14.a
+    }
+}
+#Canada event 
+country_event = {
+    id = quebec.15
+	title = quebec.15.t
+	desc = quebec.15.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.15.a
+        ai_chance = { base = 80 }
+        QUE = {
+            country_event = quebec.10
+        }
+    }
+
+    option = {
+        name = quebec.15.b
+        ai_chance = { base = 20 }
+        QUE = { country_event = quebec.8 }
+    }
+}
+
+#########
+#soviet##
+#########
+country_event = {
+    id = quebec.11
+	title = quebec.11.t
+	desc = quebec.11.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.11.a
+        ai_chance = { base = 80 }
+        QUE = {
+            country_event = quebec.12
+        }
+    }
+
+    option = {
+        name = quebec.11.b
+        ai_chance = { base = 20 }
+        QUE = { country_event = quebec.13 }
+    }
+}
+#say yes
+country_event = {
+    id = quebec.12
+	title = quebec.12.t
+	desc = quebec.12.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.12.a
+        add_ai_strategy = {
+            type = alliance
+            id = "QUE"
+            value = 200
+        }
+        SOV = {
+            add_to_faction = QUE
+        }
+        set_country_flag = QUE_soviet_support
+    }
+}
+#say no
+country_event = {
+    id = quebec.13
+	title = quebec.13.t
+	desc = quebec.13.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.13.a
+        unlock_national_focus = QUE_soviet_tank_program
+    }
+}
+
+#for reference
+#QUE_a_talk_with_ottawa event
+country_event = {
+    id = quebec.16
+	title = quebec.16.t
+	desc = quebec.16.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.16.a
+        CAN = {
+            country_event = quebec.17
+        }
+    }
+}
+#canada
+country_event = {
+    id = quebec.17
+	title = quebec.17.t
+	desc = quebec.17.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.17.a
+        QUE = {
+            country_event = quebec.18
+        }
+    }
+
+    option = {
+        name = quebec.17.b
+        QUE = {
+            country_event = quebec.19
+        }
+    }
+}
+#yes
+country_event = {
+    id = quebec.18
+	title = quebec.18.t
+	desc = quebec.18.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.18.a
+        add_political_power = 50
+        add_stability = 0.05
+        add_opinion_modifier = {
+			target = CAN
+			modifier = huge_increase
+	    }
+        CAN = {
+            add_opinion_modifier = {
+			    target = QUE
+			    modifier = huge_increase
+	        } 
+        }
+    }
+}
+#no
+country_event = {
+    id = quebec.19
+	title = quebec.19.t
+	desc = quebec.19.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.19.a
+        add_political_power = -50
+        add_stability = -0.05
+    }
+}
+#cut ties
+country_event = {
+    id = quebec.20
+	title = quebec.20.t
+	desc = quebec.20.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.20.a
+    }
+}
+#independence
+country_event = {
+    id = quebec.21
+	title = quebec.21.t
+	desc = quebec.21.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.21.a
+        add_political_power = 100
+        add_stability = 0.05
+    }
+}
+#economy
+country_event = {
+    id = quebec.22
+	title = quebec.22.t
+	desc = quebec.22.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.22.a
+        swap_ideas = {
+            remove_idea = QUE_independance_economical_shock2
+            add_idea = QUE_the_quebecois_economy
+        }
+    }
+}
+
+#communist_path
+country_event = {
+    id = quebec.23
+	title = quebec.23.t
+	desc = quebec.23.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.23.a
+        add_popularity = {
+            ideology = communism
+            popularity = 0.2
+        }
+        add_ideas = { QUE_anglophone_opposition } 
+        set_politics = {
+            ruling_party = communism
+        }
+    }
+}
+
+#fascist path
+country_event = {
+    id = quebec.24
+	title = quebec.24.t
+	desc = quebec.24.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.24.a
+        custom_effect_tooltip = QUE_take_paul_bouchard
+        set_country_flag = QUE_chose_paul_bouchard
+    }
+
+    option = {
+        name = quebec.24.b
+        custom_effect_tooltip = QUE_take_lionel_groulx
+        set_country_flag = QUE_chose_lionel_groulx
+        promote_character = {
+            character = QUE_lionel_groulx
+            ideology = clerical_fascism
+        }
+        set_party_name = {
+         ideology = fascism
+         long_name = QUE_fascism_party_LARP_long
+         name = QUE_fascism_party_LARP
+        }
+    }
+}
+
+country_event = {
+    id = quebec.25
+	title = quebec.25.t
+	desc = quebec.25.d
+    fire_only_once = yes
+    picture = GFX_report_event_operatives
+    
+    is_triggered_only = yes
+
+    option = {
+        name = quebec.25.a
+        add_ideas = QUE_purge_all
+    }
+    option = {
+        name = quebec.25.b
+        add_ideas = QUE_purge_nonauth
+    }
+    option = {
+        name = quebec.25.c
+        add_ideas = QUE_purge_communism
+    }
+}
+
+country_event = {
+	id = quebec_commie.1
+	title = quebec_commie.1.t
+	desc = quebec_commie.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes	
+	
+	option = { # Accept Demand
+		name = quebec_commie.1.a
+		ai_chance = { 
+			base = 2
+			modifier = {
+				factor = 4
+				strength_ratio = { 
+					tag = QUE 
+					ratio < 0.5
+				}				
+			}
+			modifier = { 
+				factor = 2
+				has_opinion = {
+					target = QUE
+					value > 65
+				}
+			}			
+		}
+		QUE = { country_event = { id = quebec_commie.12 } }
+	}
+	
+	option = { # Refuse Demand
+		name = quebec_commie.1.b
+		ai_chance = { 
+			base = 8
+			modifier = { 
+				factor = 2
+				has_opinion = {
+					target = QUE
+					value < -40
+				}
+			}				
+		}
+		QUE = { country_event = { id = quebec_commie.13 } }
+	}
+}
+
+country_event = { #Target Submits
+	id = quebec_commie.12
+	title = quebec_commie.12.t
+	desc = quebec_commie.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept request
+		name = quebec_commie.12.a
+		QUE = {
+            transfer_state = 332 transfer_state = 4126 transfer_state = 4127 transfer_state = 4128 transfer_state = 4129
+            transfer_state = 331 transfer_state = 4122 transfer_state = 4123 transfer_state = 4124 transfer_state = 4125
+		}
+		every_state = { 
+			limit = {
+				state = 332
+                state = 331
+			}
+			add_compliance = 30
+		}				
+	}
+}
+country_event = { #Create war goal for Target
+	id = quebec_commie.13
+	title = quebec_commie.13.t
+	desc = quebec_commie.13.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Accept WAR
+		name = quebec_commie.13.a
+		create_wargoal = {
+				type = annex_everything
+				target = FROM
+		}
+	}
+    option = { # Refuse War
+		name = quebec_commie.23.b
+		add_stability = -0.05
+        add_war_support = -0.05
+        add_political_power = -50
+	}
+}
+
+country_event = {
+	id = quebec_commie.2
+	title = quebec_commie.2.t
+	desc = quebec_commie.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes	
+	
+	option = { # Accept Demand
+		name = quebec_commie.2.a
+		ai_chance = { 
+			base = 2
+			modifier = {
+				factor = 4
+				strength_ratio = { 
+					tag = QUE 
+					ratio < 0.5
+				}				
+			}
+			modifier = { 
+				factor = 2
+				has_opinion = {
+					target = QUE
+					value > 65
+				}
+			}			
+		}
+		QUE = { country_event = { id = quebec_commie.22 } }
+	}
+	
+	option = { # Refuse Demand
+		name = quebec_commie.2.b
+		ai_chance = { 
+			base = 8
+			modifier = { 
+				factor = 2
+				has_opinion = {
+					target = QUE
+					value < -40
+				}
+			}				
+		}
+		QUE = { country_event = { id = quebec_commie.23 } }
+	}
+}
+
+country_event = { #Target Submits
+	id = quebec_commie.22
+	title = quebec_commie.22.t
+	desc = quebec_commie.22.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept request
+		name = quebec_commie.22.a
+		QUE = {
+            transfer_state = 465 transfer_state = 5910 transfer_state = 5911 transfer_state = 5912 transfer_state = 5913 transfer_state = 5914 transfer_state = 5915 transfer_state = 5916
+            transfer_state = 464 transfer_state = 5903 transfer_state = 5904 transfer_state = 5905 transfer_state = 5906 transfer_state = 5907 transfer_state = 5908 transfer_state = 5909
+		}
+		every_state = { 
+			limit = {
+				state = 465
+                state = 464
+			}
+			add_compliance = 20
+		}				
+	}
+}
+country_event = { #Create war goal for Target
+	id = quebec_commie.23
+	title = quebec_commie.23.t
+	desc = quebec_commie.23.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Accept War
+		name = quebec_commie.23.a
+		create_wargoal = {
+				type = annex_everything
+				target = FROM
+		}
+	}
+    option = { # Refuse War
+		name = quebec_commie.23.b
+		add_stability = -0.05
+        add_war_support = -0.05
+        add_political_power = -50
+	}
+}
+
+country_event = { #Leader Selection
+	id = quebec_commie.24
+	title = quebec_commie.24.t
+	desc = quebec_commie.24.d
+	picture = GFX_report_event_journalists_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Fred
+		name = quebec_commie.24.a
+		if = {
+            limit = {
+                NOT = {
+                    has_country_leader = {
+                        character = QUE_fred_rose
+                        ruling_only = yes
+                    }
+                }
+            }
+            promote_character = QUE_fred_rose
+        }
+        else = {
+            add_stability = 0.01
+        }
+	}
+    option = { # Fred
+		name = quebec_commie.24.b
+		if = {
+            limit = {
+                NOT = {
+                    has_country_leader = {
+                        character = QUE_lea_roback
+                        ruling_only = yes
+                    }
+                }
+            }
+            promote_character = {
+                character = QUE_lea_roback
+                ideology = syndicalism
+            }
+        }
+        else = {
+            add_stability = 0.01
+        }
+	}
+    option = { # Fred
+		name = quebec_commie.24.c
+		if = {
+            limit = {
+                NOT = {
+                    has_country_leader = {
+                        character = QUE_henri_gagnon
+                        ruling_only = yes
+                    }
+                }
+            }
+            promote_character = {
+			    character = QUE_henri_gagnon
+			    ideology = marxism
+		    }
+        }
+        else = {
+            add_stability = 0.01
+        }
+	}
+}
+
+country_event = {
+	id = quebec_fascism.1
+	title = quebec_fascism.1.t
+	desc = quebec_fascism.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes	
+	
+	option = { # Accept Demand
+		name = quebec_fascism.1.a
+		ai_chance = { 
+			base = 2
+			modifier = {
+				factor = 4
+				strength_ratio = { 
+					tag = QUE 
+					ratio < 0.5
+				}				
+			}
+			modifier = { 
+				factor = 2
+				has_opinion = {
+					target = QUE
+					value > 65
+				}
+			}			
+		}
+		QUE = { country_event = { id = quebec_fascism.12 } }
+	}
+	
+	option = { # Refuse Demand
+		name = quebec_fascism.1.b
+		ai_chance = { 
+			base = 8
+			modifier = { 
+				factor = 2
+				has_opinion = {
+					target = QUE
+					value < -40
+				}
+			}				
+		}
+		QUE = { country_event = { id = quebec_fascism.13 } }
+	}
+}
+
+country_event = { #Target Submits
+	id = quebec_fascism.12
+	title = quebec_fascism.12.t
+	desc = quebec_fascism.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept request
+		name = quebec_fascism.12.a
+		QUE = {
+            transfer_state = 465 transfer_state = 5910 transfer_state = 5911 transfer_state = 5912 transfer_state = 5913 transfer_state = 5914 transfer_state = 5915 transfer_state = 5916
+            transfer_state = 464 transfer_state = 5903 transfer_state = 5904 transfer_state = 5905 transfer_state = 5906 transfer_state = 5907 transfer_state = 5908 transfer_state = 5909
+		}
+		every_state = { 
+			limit = {
+				state = 465
+                state = 464
+			}
+			add_compliance = 20
+		}				
+	}
+}
+country_event = { #Create war goal for Target
+	id = quebec_fascism.13
+	title = quebec_fascism.13.t
+	desc = quebec_fascism.13.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Accept War
+		name = quebec_fascism.13.a
+		create_wargoal = {
+				type = annex_everything
+				target = FROM
+		}
+	}
+    option = { # Refuse War
+		name = quebec_fascism.13.b
+		add_stability = -0.05
+        add_war_support = -0.05
+        add_political_power = -50
+	}
+}
+
+country_event = {
+	id = quebec_fascism.2
+	title = quebec_fascism.2.t
+	desc = quebec_fascism.2.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+	
+	option = { # balkanise canada
+		name = quebec_fascism.2.a
+        MET = {
+            transfer_state = 467 transfer_state = 5926 transfer_state = 5927 transfer_state = 5928 transfer_state = 5929 transfer_state = 5930 transfer_state = 5931 transfer_state = 5932 transfer_state = 5933 transfer_state = 5934 transfer_state = 5935 
+            transfer_state = 867 transfer_state = 8929 transfer_state = 8930 transfer_state = 8931 transfer_state = 8932 transfer_state = 8933 transfer_state = 8934 
+            transfer_state = 469 transfer_state = 5950 transfer_state = 5951 transfer_state = 5952 transfer_state = 5953 transfer_state = 5954 transfer_state = 5955 transfer_state = 5956 transfer_state = 5957 transfer_state = 5958 transfer_state = 5959 transfer_state = 5960 transfer_state = 5961 transfer_state = 5962 
+            transfer_state = 865 transfer_state = 8922 transfer_state = 8923 transfer_state = 8924 transfer_state = 8925 
+            add_state_core = 467 add_state_core = 5926 add_state_core = 5927 add_state_core = 5928 add_state_core = 5929 add_state_core = 5930 add_state_core = 5931 add_state_core = 5932 add_state_core = 5933 add_state_core = 5934 add_state_core = 5935
+            add_state_core = 867 add_state_core = 8929 add_state_core = 8930 add_state_core = 8931 add_state_core = 8932 add_state_core = 8933 add_state_core = 8934
+            add_state_core = 469 add_state_core = 5950 add_state_core = 5951 add_state_core = 5952 add_state_core = 5953 add_state_core = 5954 add_state_core = 5955 add_state_core = 5956 add_state_core = 5957 add_state_core = 5958 add_state_core = 5959 add_state_core = 5960 add_state_core = 5961 add_state_core = 5962
+            add_state_core = 865 add_state_core = 8922 add_state_core = 8923 add_state_core = 8924 add_state_core = 8925
+        }
+        ABT = {
+            transfer_state = 470 transfer_state = 5963 transfer_state = 5964 transfer_state = 5965 transfer_state = 5966 transfer_state = 5967 transfer_state = 5968 transfer_state = 5969 transfer_state = 5970 transfer_state = 5971 transfer_state = 5972 transfer_state = 5973 transfer_state = 5974 transfer_state = 5975 transfer_state = 5976 transfer_state = 5977 transfer_state = 5978 
+            add_state_core = 470 add_state_core = 5963 add_state_core = 5964 add_state_core = 5965 add_state_core = 5966 add_state_core = 5967 add_state_core = 5968 add_state_core = 5969 add_state_core = 5970 add_state_core = 5971 add_state_core = 5972 add_state_core = 5973 add_state_core = 5974 add_state_core = 5975 add_state_core = 5976 add_state_core = 5977 add_state_core = 5978
+        }
+        BCO = {
+            transfer_state = 473 transfer_state = 5993 transfer_state = 5994 transfer_state = 5995 transfer_state = 5996 transfer_state = 5997 transfer_state = 5998 transfer_state = 5999 transfer_state = 6000 transfer_state = 6001 transfer_state = 6002 transfer_state = 6003 transfer_state = 6004 transfer_state = 6005 transfer_state = 6006 transfer_state = 6007 transfer_state = 6008 transfer_state = 6009 transfer_state = 6010 transfer_state = 6011 transfer_state = 6012 transfer_state = 6013 
+            transfer_state = 471 transfer_state = 5979 transfer_state = 5980 transfer_state = 5981 transfer_state = 5982 transfer_state = 5983 transfer_state = 5984 transfer_state = 5985 
+            transfer_state = 740 transfer_state = 8283 transfer_state = 8284 transfer_state = 8285 transfer_state = 8286
+            transfer_state = 739 
+            set_cosmetic_tag = QUE_BCO
+            add_state_core = 473 add_state_core = 5993 add_state_core = 5994 add_state_core = 5995 add_state_core = 5996 add_state_core = 5997 add_state_core = 5998 add_state_core = 5999 add_state_core = 6000 add_state_core = 6001 add_state_core = 6002 add_state_core = 6003 add_state_core = 6004 add_state_core = 6005 add_state_core = 6006 add_state_core = 6007 add_state_core = 6008 add_state_core = 6009 add_state_core = 6010 add_state_core = 6011 add_state_core = 6012 add_state_core = 6013
+            add_state_core = 471 add_state_core = 5979 add_state_core = 5980 add_state_core = 5981 add_state_core = 5982 add_state_core = 5983 add_state_core = 5984 add_state_core = 5985
+            add_state_core = 740 add_state_core = 8283 add_state_core = 8284 add_state_core = 8285 add_state_core = 8286
+            add_state_core = 739
+        }
+        INU = {
+            transfer_state = 683 transfer_state = 8093 
+            transfer_state = 472 transfer_state = 5986 transfer_state = 5987 transfer_state = 5988 transfer_state = 5989 transfer_state = 5990 transfer_state = 5991 transfer_state = 5992 
+            transfer_state = 864 transfer_state = 8920 transfer_state = 8921 
+            add_state_core = 683 add_state_core = 8093 
+            add_state_core = 472 add_state_core = 5986 add_state_core = 5987 add_state_core = 5988 add_state_core = 5989 add_state_core = 5990 add_state_core = 5991 add_state_core = 5992
+            add_state_core = 864 add_state_core = 8920 add_state_core = 8921
+        }
+        set_country_flag = QUE_cascadia_exists
+        puppet = MET
+        puppet = ABT
+        puppet = BCO
+        puppet = INU
+	}
+    option = { # puppet canada
+		name = quebec_fascism.2.b
+		CAN = {
+            transfer_state = 467 transfer_state = 5926 transfer_state = 5927 transfer_state = 5928 transfer_state = 5929 transfer_state = 5930 transfer_state = 5931 transfer_state = 5932 transfer_state = 5933 transfer_state = 5934 transfer_state = 5935 
+            transfer_state = 867 transfer_state = 8929 transfer_state = 8930 transfer_state = 8931 transfer_state = 8932 transfer_state = 8933 transfer_state = 8934 
+            transfer_state = 469 transfer_state = 5950 transfer_state = 5951 transfer_state = 5952 transfer_state = 5953 transfer_state = 5954 transfer_state = 5955 transfer_state = 5956 transfer_state = 5957 transfer_state = 5958 transfer_state = 5959 transfer_state = 5960 transfer_state = 5961 transfer_state = 5962 
+            transfer_state = 865 transfer_state = 8922 transfer_state = 8923 transfer_state = 8924 transfer_state = 8925 
+            transfer_state = 470 transfer_state = 5963 transfer_state = 5964 transfer_state = 5965 transfer_state = 5966 transfer_state = 5967 transfer_state = 5968 transfer_state = 5969 transfer_state = 5970 transfer_state = 5971 transfer_state = 5972 transfer_state = 5973 transfer_state = 5974 transfer_state = 5975 transfer_state = 5976 transfer_state = 5977 transfer_state = 5978 
+            transfer_state = 473 transfer_state = 5993 transfer_state = 5994 transfer_state = 5995 transfer_state = 5996 transfer_state = 5997 transfer_state = 5998 transfer_state = 5999 transfer_state = 6000 transfer_state = 6001 transfer_state = 6002 transfer_state = 6003 transfer_state = 6004 transfer_state = 6005 transfer_state = 6006 transfer_state = 6007 transfer_state = 6008 transfer_state = 6009 transfer_state = 6010 transfer_state = 6011 transfer_state = 6012 transfer_state = 6013 
+            transfer_state = 471 transfer_state = 5979 transfer_state = 5980 transfer_state = 5981 transfer_state = 5982 transfer_state = 5983 transfer_state = 5984 transfer_state = 5985 
+            transfer_state = 740 transfer_state = 8283 transfer_state = 8284 transfer_state = 8285 transfer_state = 8286
+            transfer_state = 739 
+            transfer_state = 683 transfer_state = 8093 
+            transfer_state = 472 transfer_state = 5986 transfer_state = 5987 transfer_state = 5988 transfer_state = 5989 transfer_state = 5990 transfer_state = 5991 transfer_state = 5992 
+            transfer_state = 864 transfer_state = 8920 transfer_state = 8921 
+        }
+            puppet = CAN
+	}
+        option = { # annex it all
+		name = quebec_fascism.2.c
+		add_stability = -0.05
+        add_political_power = -50
+	}
+}
+
+country_event = { #partition of america
+	id = quebec_fascism.3
+	title = quebec_fascism.3.t
+	desc = quebec_fascism.3.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+	
+	option = { # smol puppet
+		name = quebec_fascism.3.a
+		USA = {
+            transfer_state = 388 transfer_state = 4919 transfer_state = 4920 transfer_state = 4921 transfer_state = 4922 transfer_state = 4923 transfer_state = 4924 transfer_state = 4925 transfer_state = 4926 transfer_state = 4927 transfer_state = 4928 transfer_state = 4929 transfer_state = 4930 transfer_state = 4931 transfer_state = 4932 transfer_state = 4933 transfer_state = 4934 transfer_state = 4935 transfer_state = 4936 transfer_state = 4937 transfer_state = 4938 transfer_state = 4939 transfer_state = 4940
+            transfer_state = 389 transfer_state = 4941 transfer_state = 4942 transfer_state = 4943 transfer_state = 4944 transfer_state = 4945 transfer_state = 4946 transfer_state = 4947 transfer_state = 4948 transfer_state = 4949 transfer_state = 4950 transfer_state = 4951
+            transfer_state = 390 transfer_state = 4952 transfer_state = 4953 transfer_state = 4954 transfer_state = 4955 transfer_state = 4956 transfer_state = 4957 transfer_state = 4958 transfer_state = 4959 transfer_state = 4960 transfer_state = 4961 transfer_state = 4962
+            transfer_state = 381 transfer_state = 4810 transfer_state = 4811 transfer_state = 4812 transfer_state = 4813 transfer_state = 4814 transfer_state = 4815 transfer_state = 4816 transfer_state = 4817 transfer_state = 4818 transfer_state = 4819 transfer_state = 4820 transfer_state = 4821
+            transfer_state = 384 transfer_state = 4852 transfer_state = 4853 transfer_state = 4854 transfer_state = 4855 transfer_state = 4856 transfer_state = 4857 transfer_state = 4858 transfer_state = 4859 transfer_state = 4860 transfer_state = 4861 transfer_state = 4862 transfer_state = 4863
+            transfer_state = 382 transfer_state = 4822 transfer_state = 4823 transfer_state = 4824 transfer_state = 4825 transfer_state = 4826 transfer_state = 4827 transfer_state = 4828 transfer_state = 4829 transfer_state = 4830 transfer_state = 4831 transfer_state = 4832 transfer_state = 4833 transfer_state = 4834 transfer_state = 4835 transfer_state = 4836 transfer_state = 4837
+            transfer_state = 383 transfer_state = 4838 transfer_state = 4839 transfer_state = 4840 transfer_state = 4841 transfer_state = 4842 transfer_state = 4843 transfer_state = 4844 transfer_state = 4845 transfer_state = 4846 transfer_state = 4847 transfer_state = 4848 transfer_state = 4849 transfer_state = 4850 transfer_state = 4851
+            transfer_state = 387 transfer_state = 4907 transfer_state = 4908 transfer_state = 4909 transfer_state = 4910 transfer_state = 4911 transfer_state = 4912 transfer_state = 4913 transfer_state = 4914 transfer_state = 4915 transfer_state = 4916 transfer_state = 4917 transfer_state = 4918
+            set_cosmetic_tag = QUE_USA
+        }
+
+        CSA = {
+            transfer_state = 371 transfer_state = 4596 transfer_state = 4597 transfer_state = 4598 transfer_state = 4599 transfer_state = 4600 transfer_state = 4601 transfer_state = 4602 transfer_state = 4603 transfer_state = 4604 transfer_state = 4605 transfer_state = 4606 transfer_state = 4607 transfer_state = 4608
+            transfer_state = 375 transfer_state = 4654 transfer_state = 4655 transfer_state = 4656 transfer_state = 4657 transfer_state = 4658 transfer_state = 4659 transfer_state = 4660 transfer_state = 4661 transfer_state = 4662 transfer_state = 4663 transfer_state = 4664 transfer_state = 4665 transfer_state = 4666 transfer_state = 4667 transfer_state = 4668 transfer_state = 4669 transfer_state = 4670 transfer_state = 4671 transfer_state = 4672 transfer_state = 4673 transfer_state = 4674 transfer_state = 4675 transfer_state = 4676 transfer_state = 4677 transfer_state = 4678 transfer_state = 4679 transfer_state = 4680 transfer_state = 4681 transfer_state = 4682 transfer_state = 4683 transfer_state = 4684 transfer_state = 4685 transfer_state = 4686 transfer_state = 4687 transfer_state = 4688 transfer_state = 4689 transfer_state = 4690 transfer_state = 4691 transfer_state = 4692 transfer_state = 4693 transfer_state = 4694 transfer_state = 4695 transfer_state = 4696 transfer_state = 4697 transfer_state = 4698 transfer_state = 4699 transfer_state = 4700 transfer_state = 4701
+            transfer_state = 374 transfer_state = 4639 transfer_state = 4640 transfer_state = 4641 transfer_state = 4642 transfer_state = 4643 transfer_state = 4644 transfer_state = 4645 transfer_state = 4646 transfer_state = 4647 transfer_state = 4648 transfer_state = 4649 transfer_state = 4650 transfer_state = 4651 transfer_state = 4652 transfer_state = 4653
+            transfer_state = 376 transfer_state = 4702 transfer_state = 4703 transfer_state = 4704 transfer_state = 4705 transfer_state = 4706 transfer_state = 4707 transfer_state = 4708 transfer_state = 4709 transfer_state = 4710 transfer_state = 4711 transfer_state = 4712 transfer_state = 4713 transfer_state = 4714 transfer_state = 4715
+            add_state_core = 371 add_state_core = 4596 add_state_core = 4597 add_state_core = 4598 add_state_core = 4599 add_state_core = 4600 add_state_core = 4601 add_state_core = 4602 add_state_core = 4603 add_state_core = 4604 add_state_core = 4605 add_state_core = 4606 add_state_core = 4607 add_state_core = 4608
+            add_state_core = 375 add_state_core = 4654 add_state_core = 4655 add_state_core = 4656 add_state_core = 4657 add_state_core = 4658 add_state_core = 4659 add_state_core = 4660 add_state_core = 4661 add_state_core = 4662 add_state_core = 4663 add_state_core = 4664 add_state_core = 4665 add_state_core = 4666 add_state_core = 4667 add_state_core = 4668 add_state_core = 4669 add_state_core = 4670 add_state_core = 4671 add_state_core = 4672 add_state_core = 4673 add_state_core = 4674 add_state_core = 4675 add_state_core = 4676 add_state_core = 4677 add_state_core = 4678 add_state_core = 4679 add_state_core = 4680 add_state_core = 4681 add_state_core = 4682 add_state_core = 4683 add_state_core = 4684 add_state_core = 4685 add_state_core = 4686 add_state_core = 4687 add_state_core = 4688 add_state_core = 4689 add_state_core = 4690 add_state_core = 4691 add_state_core = 4692 add_state_core = 4693 add_state_core = 4694 add_state_core = 4695 add_state_core = 4696 add_state_core = 4697 add_state_core = 4698 add_state_core = 4699 add_state_core = 4700 add_state_core = 4701
+            add_state_core = 374 add_state_core = 4639 add_state_core = 4640 add_state_core = 4641 add_state_core = 4642 add_state_core = 4643 add_state_core = 4644 add_state_core = 4645 add_state_core = 4646 add_state_core = 4647 add_state_core = 4648 add_state_core = 4649 add_state_core = 4650 add_state_core = 4651 add_state_core = 4652 add_state_core = 4653
+            add_state_core = 376 add_state_core = 4702 add_state_core = 4703 add_state_core = 4704 add_state_core = 4705 add_state_core = 4706 add_state_core = 4707 add_state_core = 4708 add_state_core = 4709 add_state_core = 4710 add_state_core = 4711 add_state_core = 4712 add_state_core = 4713 add_state_core = 4714 add_state_core = 4715
+            set_cosmetic_tag = QUE_CSA
+        }
+
+        USB = {
+            transfer_state = 378 transfer_state = 4729 transfer_state = 4730 transfer_state = 4731 transfer_state = 4732 transfer_state = 4733 transfer_state = 4734 transfer_state = 4735 transfer_state = 4736 transfer_state = 4737 transfer_state = 4738 transfer_state = 4739 transfer_state = 4740 transfer_state = 4741 transfer_state = 4742 transfer_state = 4743 transfer_state = 4744 transfer_state = 4745 transfer_state = 4746 transfer_state = 4747 transfer_state = 4748 transfer_state = 4749 transfer_state = 4750 transfer_state = 4751 transfer_state = 4752 transfer_state = 4753 transfer_state = 4754 transfer_state = 4755 transfer_state = 4756 transfer_state = 4757 transfer_state = 4758 transfer_state = 4759 transfer_state = 4760 transfer_state = 4761 transfer_state = 4762 transfer_state = 4763 transfer_state = 4764 transfer_state = 4765 transfer_state = 4766 transfer_state = 4767 transfer_state = 4768 transfer_state = 4769 transfer_state = 4770 transfer_state = 4771 transfer_state = 4772 transfer_state = 4773 transfer_state = 4774 transfer_state = 4775 transfer_state = 4776 transfer_state = 4777 transfer_state = 4778 transfer_state = 4779 transfer_state = 4780 transfer_state = 4781 transfer_state = 4782 transfer_state = 4783 transfer_state = 4784
+            transfer_state = 377 transfer_state = 4716 transfer_state = 4717 transfer_state = 4718 transfer_state = 4719 transfer_state = 4720 transfer_state = 4721 transfer_state = 4722 transfer_state = 4723 transfer_state = 4724 transfer_state = 4725 transfer_state = 4726 transfer_state = 4727 transfer_state = 4728
+            transfer_state = 380 transfer_state = 4798 transfer_state = 4799 transfer_state = 4800 transfer_state = 4801 transfer_state = 4802 transfer_state = 4803 transfer_state = 4804 transfer_state = 4805 transfer_state = 4806 transfer_state = 4807 transfer_state = 4808 transfer_state = 4809
+            transfer_state = 379 transfer_state = 4785 transfer_state = 4786 transfer_state = 4787 transfer_state = 4788 transfer_state = 4789 transfer_state = 4790 transfer_state = 4791 transfer_state = 4792 transfer_state = 4793 transfer_state = 4794 transfer_state = 4795 transfer_state = 4796 transfer_state = 4797
+            transfer_state = 385 transfer_state = 4864 transfer_state = 4865 transfer_state = 4866 transfer_state = 4867 transfer_state = 4868 transfer_state = 4869 transfer_state = 4870 transfer_state = 4871 transfer_state = 4872 transfer_state = 4873 transfer_state = 4874 transfer_state = 4875 transfer_state = 4876 transfer_state = 4877 transfer_state = 4878 transfer_state = 4879 transfer_state = 4880 transfer_state = 4881 transfer_state = 4882 transfer_state = 4883 transfer_state = 4884 transfer_state = 4885
+            transfer_state = 386 transfer_state = 4886 transfer_state = 4887 transfer_state = 4888 transfer_state = 4889 transfer_state = 4890 transfer_state = 4891 transfer_state = 4892 transfer_state = 4893 transfer_state = 4894 transfer_state = 4895 transfer_state = 4896 transfer_state = 4897 transfer_state = 4898 transfer_state = 4899 transfer_state = 4900 transfer_state = 4901 transfer_state = 4902 transfer_state = 4903 transfer_state = 4904 transfer_state = 4905 transfer_state = 4906
+            transfer_state = 463 transfer_state = 5889 transfer_state = 5890 transfer_state = 5891 transfer_state = 5892 transfer_state = 5893 transfer_state = 5894 transfer_state = 5895 transfer_state = 5896 transfer_state = 5897 transfer_state = 5898 transfer_state = 5899 transfer_state = 5900 transfer_state = 5901 transfer_state = 5902
+            add_state_core = 378 add_state_core = 4729 add_state_core = 4730 add_state_core = 4731 add_state_core = 4732 add_state_core = 4733 add_state_core = 4734 add_state_core = 4735 add_state_core = 4736 add_state_core = 4737 add_state_core = 4738 add_state_core = 4739 add_state_core = 4740 add_state_core = 4741 add_state_core = 4742 add_state_core = 4743 add_state_core = 4744 add_state_core = 4745 add_state_core = 4746 add_state_core = 4747 add_state_core = 4748 add_state_core = 4749 add_state_core = 4750 add_state_core = 4751 add_state_core = 4752 add_state_core = 4753 add_state_core = 4754 add_state_core = 4755 add_state_core = 4756 add_state_core = 4757 add_state_core = 4758 add_state_core = 4759 add_state_core = 4760 add_state_core = 4761 add_state_core = 4762 add_state_core = 4763 add_state_core = 4764 add_state_core = 4765 add_state_core = 4766 add_state_core = 4767 add_state_core = 4768 add_state_core = 4769 add_state_core = 4770 add_state_core = 4771 add_state_core = 4772 add_state_core = 4773 add_state_core = 4774 add_state_core = 4775 add_state_core = 4776 add_state_core = 4777 add_state_core = 4778 add_state_core = 4779 add_state_core = 4780 add_state_core = 4781 add_state_core = 4782 add_state_core = 4783 add_state_core = 4784
+            add_state_core = 377 add_state_core = 4716 add_state_core = 4717 add_state_core = 4718 add_state_core = 4719 add_state_core = 4720 add_state_core = 4721 add_state_core = 4722 add_state_core = 4723 add_state_core = 4724 add_state_core = 4725 add_state_core = 4726 add_state_core = 4727 add_state_core = 4728
+            add_state_core = 380 add_state_core = 4798 add_state_core = 4799 add_state_core = 4800 add_state_core = 4801 add_state_core = 4802 add_state_core = 4803 add_state_core = 4804 add_state_core = 4805 add_state_core = 4806 add_state_core = 4807 add_state_core = 4808 add_state_core = 4809
+            add_state_core = 379 add_state_core = 4785 add_state_core = 4786 add_state_core = 4787 add_state_core = 4788 add_state_core = 4789 add_state_core = 4790 add_state_core = 4791 add_state_core = 4792 add_state_core = 4793 add_state_core = 4794 add_state_core = 4795 add_state_core = 4796 add_state_core = 4797
+            add_state_core = 385 add_state_core = 4864 add_state_core = 4865 add_state_core = 4866 add_state_core = 4867 add_state_core = 4868 add_state_core = 4869 add_state_core = 4870 add_state_core = 4871 add_state_core = 4872 add_state_core = 4873 add_state_core = 4874 add_state_core = 4875 add_state_core = 4876 add_state_core = 4877 add_state_core = 4878 add_state_core = 4879 add_state_core = 4880 add_state_core = 4881 add_state_core = 4882 add_state_core = 4883 add_state_core = 4884 add_state_core = 4885
+            add_state_core = 386 add_state_core = 4886 add_state_core = 4887 add_state_core = 4888 add_state_core = 4889 add_state_core = 4890 add_state_core = 4891 add_state_core = 4892 add_state_core = 4893 add_state_core = 4894 add_state_core = 4895 add_state_core = 4896 add_state_core = 4897 add_state_core = 4898 add_state_core = 4899 add_state_core = 4900 add_state_core = 4901 add_state_core = 4902 add_state_core = 4903 add_state_core = 4904 add_state_core = 4905 add_state_core = 4906
+            add_state_core = 463 add_state_core = 5889 add_state_core = 5890 add_state_core = 5891 add_state_core = 5892 add_state_core = 5893 add_state_core = 5894 add_state_core = 5895 add_state_core = 5896 add_state_core = 5897 add_state_core = 5898 add_state_core = 5899 add_state_core = 5900 add_state_core = 5901 add_state_core = 5902
+            set_cosmetic_tag = QUE_PACIFIC
+        }
+        puppet = USA
+        puppet = CSA
+        puppet = USB
+
+        if = {
+            limit = {
+                has_country_flag = QUE_cascadia_exists
+            }   
+            country_event = quebec_fascism.4
+        }
+	}
+    option = { # BIG puppet
+		name = quebec_fascism.3.b
+		USA = {
+            transfer_state = 378 transfer_state = 4729 transfer_state = 4730 transfer_state = 4731 transfer_state = 4732 transfer_state = 4733 transfer_state = 4734 transfer_state = 4735 transfer_state = 4736 transfer_state = 4737 transfer_state = 4738 transfer_state = 4739 transfer_state = 4740 transfer_state = 4741 transfer_state = 4742 transfer_state = 4743 transfer_state = 4744 transfer_state = 4745 transfer_state = 4746 transfer_state = 4747 transfer_state = 4748 transfer_state = 4749 transfer_state = 4750 transfer_state = 4751 transfer_state = 4752 transfer_state = 4753 transfer_state = 4754 transfer_state = 4755 transfer_state = 4756 transfer_state = 4757 transfer_state = 4758 transfer_state = 4759 transfer_state = 4760 transfer_state = 4761 transfer_state = 4762 transfer_state = 4763 transfer_state = 4764 transfer_state = 4765 transfer_state = 4766 transfer_state = 4767 transfer_state = 4768 transfer_state = 4769 transfer_state = 4770 transfer_state = 4771 transfer_state = 4772 transfer_state = 4773 transfer_state = 4774 transfer_state = 4775 transfer_state = 4776 transfer_state = 4777 transfer_state = 4778 transfer_state = 4779 transfer_state = 4780 transfer_state = 4781 transfer_state = 4782 transfer_state = 4783 transfer_state = 4784
+            transfer_state = 377 transfer_state = 4716 transfer_state = 4717 transfer_state = 4718 transfer_state = 4719 transfer_state = 4720 transfer_state = 4721 transfer_state = 4722 transfer_state = 4723 transfer_state = 4724 transfer_state = 4725 transfer_state = 4726 transfer_state = 4727 transfer_state = 4728
+            transfer_state = 380 transfer_state = 4798 transfer_state = 4799 transfer_state = 4800 transfer_state = 4801 transfer_state = 4802 transfer_state = 4803 transfer_state = 4804 transfer_state = 4805 transfer_state = 4806 transfer_state = 4807 transfer_state = 4808 transfer_state = 4809
+            transfer_state = 379 transfer_state = 4785 transfer_state = 4786 transfer_state = 4787 transfer_state = 4788 transfer_state = 4789 transfer_state = 4790 transfer_state = 4791 transfer_state = 4792 transfer_state = 4793 transfer_state = 4794 transfer_state = 4795 transfer_state = 4796 transfer_state = 4797
+            transfer_state = 385 transfer_state = 4864 transfer_state = 4865 transfer_state = 4866 transfer_state = 4867 transfer_state = 4868 transfer_state = 4869 transfer_state = 4870 transfer_state = 4871 transfer_state = 4872 transfer_state = 4873 transfer_state = 4874 transfer_state = 4875 transfer_state = 4876 transfer_state = 4877 transfer_state = 4878 transfer_state = 4879 transfer_state = 4880 transfer_state = 4881 transfer_state = 4882 transfer_state = 4883 transfer_state = 4884 transfer_state = 4885
+            transfer_state = 387 transfer_state = 4907 transfer_state = 4908 transfer_state = 4909 transfer_state = 4910 transfer_state = 4911 transfer_state = 4912 transfer_state = 4913 transfer_state = 4914 transfer_state = 4915 transfer_state = 4916 transfer_state = 4917 transfer_state = 4918
+            transfer_state = 386 transfer_state = 4886 transfer_state = 4887 transfer_state = 4888 transfer_state = 4889 transfer_state = 4890 transfer_state = 4891 transfer_state = 4892 transfer_state = 4893 transfer_state = 4894 transfer_state = 4895 transfer_state = 4896 transfer_state = 4897 transfer_state = 4898 transfer_state = 4899 transfer_state = 4900 transfer_state = 4901 transfer_state = 4902 transfer_state = 4903 transfer_state = 4904 transfer_state = 4905 transfer_state = 4906
+            transfer_state = 376 transfer_state = 4702 transfer_state = 4703 transfer_state = 4704 transfer_state = 4705 transfer_state = 4706 transfer_state = 4707 transfer_state = 4708 transfer_state = 4709 transfer_state = 4710 transfer_state = 4711 transfer_state = 4712 transfer_state = 4713 transfer_state = 4714 transfer_state = 4715
+            transfer_state = 374 transfer_state = 4639 transfer_state = 4640 transfer_state = 4641 transfer_state = 4642 transfer_state = 4643 transfer_state = 4644 transfer_state = 4645 transfer_state = 4646 transfer_state = 4647 transfer_state = 4648 transfer_state = 4649 transfer_state = 4650 transfer_state = 4651 transfer_state = 4652 transfer_state = 4653
+            transfer_state = 375 transfer_state = 4654 transfer_state = 4655 transfer_state = 4656 transfer_state = 4657 transfer_state = 4658 transfer_state = 4659 transfer_state = 4660 transfer_state = 4661 transfer_state = 4662 transfer_state = 4663 transfer_state = 4664 transfer_state = 4665 transfer_state = 4666 transfer_state = 4667 transfer_state = 4668 transfer_state = 4669 transfer_state = 4670 transfer_state = 4671 transfer_state = 4672 transfer_state = 4673 transfer_state = 4674 transfer_state = 4675 transfer_state = 4676 transfer_state = 4677 transfer_state = 4678 transfer_state = 4679 transfer_state = 4680 transfer_state = 4681 transfer_state = 4682 transfer_state = 4683 transfer_state = 4684 transfer_state = 4685 transfer_state = 4686 transfer_state = 4687 transfer_state = 4688 transfer_state = 4689 transfer_state = 4690 transfer_state = 4691 transfer_state = 4692 transfer_state = 4693 transfer_state = 4694 transfer_state = 4695 transfer_state = 4696 transfer_state = 4697 transfer_state = 4698 transfer_state = 4699 transfer_state = 4700 transfer_state = 4701
+            transfer_state = 371 transfer_state = 4596 transfer_state = 4597 transfer_state = 4598 transfer_state = 4599 transfer_state = 4600 transfer_state = 4601 transfer_state = 4602 transfer_state = 4603 transfer_state = 4604 transfer_state = 4605 transfer_state = 4606 transfer_state = 4607 transfer_state = 4608 
+            transfer_state = 383 transfer_state = 4838 transfer_state = 4839 transfer_state = 4840 transfer_state = 4841 transfer_state = 4842 transfer_state = 4843 transfer_state = 4844 transfer_state = 4845 transfer_state = 4846 transfer_state = 4847 transfer_state = 4848 transfer_state = 4849 transfer_state = 4850 transfer_state = 4851
+            transfer_state = 382 transfer_state = 4822 transfer_state = 4823 transfer_state = 4824 transfer_state = 4825 transfer_state = 4826 transfer_state = 4827 transfer_state = 4828 transfer_state = 4829 transfer_state = 4830 transfer_state = 4831 transfer_state = 4832 transfer_state = 4833 transfer_state = 4834 transfer_state = 4835 transfer_state = 4836 transfer_state = 4837
+            transfer_state = 384 transfer_state = 4852 transfer_state = 4853 transfer_state = 4854 transfer_state = 4855 transfer_state = 4856 transfer_state = 4857 transfer_state = 4858 transfer_state = 4859 transfer_state = 4860 transfer_state = 4861 transfer_state = 4862 transfer_state = 4863
+            transfer_state = 381 transfer_state = 4810 transfer_state = 4811 transfer_state = 4812 transfer_state = 4813 transfer_state = 4814 transfer_state = 4815 transfer_state = 4816 transfer_state = 4817 transfer_state = 4818 transfer_state = 4819 transfer_state = 4820 transfer_state = 4821
+            transfer_state = 390 transfer_state = 4952 transfer_state = 4953 transfer_state = 4954 transfer_state = 4955 transfer_state = 4956 transfer_state = 4957 transfer_state = 4958 transfer_state = 4959 transfer_state = 4960 transfer_state = 4961 transfer_state = 4962
+            transfer_state = 389 transfer_state = 4941 transfer_state = 4942 transfer_state = 4943 transfer_state = 4944 transfer_state = 4945 transfer_state = 4946 transfer_state = 4947 transfer_state = 4948 transfer_state = 4949 transfer_state = 4950 transfer_state = 4951
+            transfer_state = 388 transfer_state = 4919 transfer_state = 4920 transfer_state = 4921 transfer_state = 4922 transfer_state = 4923 transfer_state = 4924 transfer_state = 4925 transfer_state = 4926 transfer_state = 4927 transfer_state = 4928 transfer_state = 4929 transfer_state = 4930 transfer_state = 4931 transfer_state = 4932 transfer_state = 4933 transfer_state = 4934 transfer_state = 4935 transfer_state = 4936 transfer_state = 4937 transfer_state = 4938 transfer_state = 4939 transfer_state = 4940
+            transfer_state = 463 transfer_state = 5889 transfer_state = 5890 transfer_state = 5891 transfer_state = 5892 transfer_state = 5893 transfer_state = 5894 transfer_state = 5895 transfer_state = 5896 transfer_state = 5897 transfer_state = 5898 transfer_state = 5899 transfer_state = 5900 transfer_state = 5901 transfer_state = 5902
+            set_cosmetic_tag = QUE_USA
+        }
+        puppet = USA
+
+        if = {
+            limit = {
+                has_country_flag = QUE_cascadia_exists
+            }   
+            country_event = quebec_fascism.4
+        }
+	}
+
+    option = { # annex all
+		name = quebec_fascism.3.c
+		add_stability = -0.1
+        add_war_support = -0.1
+        add_political_power = -150
+
+        if = {
+            limit = {
+                has_country_flag = QUE_cascadia_exists
+            }   
+            country_event = quebec_fascism.4
+        }
+    }
+}
+
+country_event = { #cascadia
+	id = quebec_fascism.4
+	title = quebec_fascism.4.t
+	desc = quebec_fascism.4.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+	
+	option = { #yay
+		name = quebec_fascism.4.a
+		BCO = {
+            transfer_state = 386 transfer_state = 4886 transfer_state = 4887 transfer_state = 4888 transfer_state = 4889 transfer_state = 4890 transfer_state = 4891 transfer_state = 4892 transfer_state = 4893 transfer_state = 4894 transfer_state = 4895 transfer_state = 4896 transfer_state = 4897 transfer_state = 4898 transfer_state = 4899 transfer_state = 4900 transfer_state = 4901 transfer_state = 4902 transfer_state = 4903 transfer_state = 4904 transfer_state = 4905 transfer_state = 4906
+            transfer_state = 385 transfer_state = 4864 transfer_state = 4865 transfer_state = 4866 transfer_state = 4867 transfer_state = 4868 transfer_state = 4869 transfer_state = 4870 transfer_state = 4871 transfer_state = 4872 transfer_state = 4873 transfer_state = 4874 transfer_state = 4875 transfer_state = 4876 transfer_state = 4877 transfer_state = 4878 transfer_state = 4879 transfer_state = 4880 transfer_state = 4881 transfer_state = 4882 transfer_state = 4883 transfer_state = 4884 transfer_state = 4885
+            add_state_core = 386 add_state_core = 4886 add_state_core = 4887 add_state_core = 4888 add_state_core = 4889 add_state_core = 4890 add_state_core = 4891 add_state_core = 4892 add_state_core = 4893 add_state_core = 4894 add_state_core = 4895 add_state_core = 4896 add_state_core = 4897 add_state_core = 4898 add_state_core = 4899 add_state_core = 4900 add_state_core = 4901 add_state_core = 4902 add_state_core = 4903 add_state_core = 4904 add_state_core = 4905 add_state_core = 4906
+            add_state_core = 385 add_state_core = 4864 add_state_core = 4865 add_state_core = 4866 add_state_core = 4867 add_state_core = 4868 add_state_core = 4869 add_state_core = 4870 add_state_core = 4871 add_state_core = 4872 add_state_core = 4873 add_state_core = 4874 add_state_core = 4875 add_state_core = 4876 add_state_core = 4877 add_state_core = 4878 add_state_core = 4879 add_state_core = 4880 add_state_core = 4881 add_state_core = 4882 add_state_core = 4883 add_state_core = 4884 add_state_core = 4885
+        }
+        ACN = {
+            transfer_state = 463 transfer_state = 5889 transfer_state = 5890 transfer_state = 5891 transfer_state = 5892 transfer_state = 5893 transfer_state = 5894 transfer_state = 5895 transfer_state = 5896 transfer_state = 5897 transfer_state = 5898 transfer_state = 5899 transfer_state = 5900 transfer_state = 5901 transfer_state = 5902
+            add_state_core = 463 add_state_core = 5889 add_state_core = 5890 add_state_core = 5891 add_state_core = 5892 add_state_core = 5893 add_state_core = 5894 add_state_core = 5895 add_state_core = 5896 add_state_core = 5897 add_state_core = 5898 add_state_core = 5899 add_state_core = 5900 add_state_core = 5901 add_state_core = 5902
+        }
+	}
+    option = { #nay
+		name = quebec_fascism.4.b
+	}
+}
+
+

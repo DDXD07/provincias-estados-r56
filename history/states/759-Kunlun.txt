@@ -1,0 +1,33 @@
+state = {
+	id = 759
+	name = "STATE_759"
+	manpower = 34999
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = wasteland
+	history = {
+		owner = KHM
+		add_core_of = CHI
+		add_core_of = PRC
+		add_core_of = SIK
+		add_core_of = KHM
+		victory_points = { 2074 1 }
+		buildings = {
+			infrastructure = 1
+		}
+		1938.10.25 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				remove_core_of = KHM
+			}
+			owner = SIK
+			add_to_array = {
+				state_victory_points = 2074
+			}
+			controller = SIK
+		}
+	}
+	provinces = { 2074 }
+}

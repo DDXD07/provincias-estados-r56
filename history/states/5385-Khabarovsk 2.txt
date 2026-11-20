@@ -1,0 +1,25 @@
+state = {
+	id = 5385
+	name = "STATE_5385"
+	manpower = 97644
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = SOV
+		victory_points = { 9604 1 }
+		buildings = {
+			infrastructure = 2
+			9604 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = SOV
+		add_core_of = FER
+		add_core_of = GUK
+		add_core_of = VLA
+		add_to_array = {
+			state_victory_points = 9604
+		}
+	}
+	provinces = { 9604 }
+}

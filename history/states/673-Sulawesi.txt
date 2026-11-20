@@ -1,0 +1,29 @@
+state = {
+	id = 673
+	name = "STATE_673"
+	manpower = 1080873
+	buildings_max_level_factor = 1
+	local_supplies = 1
+	state_category = rural
+	resources = {
+		rubber = 2
+	}
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = GOW
+		add_to_array = {
+			state_victory_points = 10263
+		}
+		victory_points = { 10263 3 }
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 2
+			air_base = 2
+			10263 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces = { 10263 }
+}

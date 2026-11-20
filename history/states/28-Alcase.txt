@@ -1,0 +1,38 @@
+state = {
+	id = 28
+	name = "STATE_28"
+	manpower = 838073
+	local_supplies = 14.0
+	state_category = developed_rural
+	resources = {
+		steel = 5
+		coal = 1
+	}
+	history = {
+		owner = FRA
+		add_dynamic_modifier = {
+			modifier = FRA_maginot_line_dynamic_modifier
+		}
+		victory_points = { 9559 10 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			9559 = {
+				bunker = 7
+			}
+			anti_air_building = 5
+			air_base = 5
+		}
+		add_core_of = FRA
+		add_core_of = ALS
+		add_to_array = {
+			state_victory_points = 9559
+		}
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+			}
+		}
+	}
+	provinces = { 9559 }
+}

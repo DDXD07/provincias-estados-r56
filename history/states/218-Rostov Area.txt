@@ -1,0 +1,26 @@
+state = {
+	id = 218
+	name = "STATE_218"
+	manpower = 1104648
+	local_supplies = 0.0
+	state_category = developed_rural
+	history = {
+		owner = SOV
+		victory_points = { 9417 20 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 3
+			9417 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = SOV
+		add_core_of = DON
+		add_to_array = {
+			state_victory_points = 9417
+		}
+	}
+	provinces = { 9417 }
+}

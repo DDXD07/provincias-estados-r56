@@ -1,0 +1,23 @@
+state = {
+	id = 2135
+	name = "STATE_2135"
+	manpower = 116411
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = SWE
+		victory_points = { 11215 1 }
+		buildings = {
+			infrastructure = 3
+			11215 = {
+				naval_base = 5
+				coastal_bunker = 3
+			}
+		}
+		add_core_of = SWE
+		add_to_array = {
+			state_victory_points = 11215
+		}
+	}
+	provinces = { 11215 }
+}

@@ -1,0 +1,16 @@
+state = {
+	id = 9452
+	name = "STATE_9452"
+	manpower = 46859
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = YUG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = YUG
+		add_core_of = BOS
+	}
+	provinces = { 11574 }
+}

@@ -1,0 +1,21 @@
+state = {
+	id = 10254
+	name = "STATE_10254"
+	manpower = 22108
+	local_supplies = 1
+	state_category = pastoral
+	history = {
+		owner = INS
+		add_core_of = WPG
+		set_resistance = 15
+		set_compliance = 20
+		victory_points = { 1602 1 }
+		buildings = {
+			infrastructure = 1
+		}
+		add_to_array = {
+			state_victory_points = 1602
+		}
+	}
+	provinces = { 1602 }
+}

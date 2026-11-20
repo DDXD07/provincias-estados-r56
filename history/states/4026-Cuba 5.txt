@@ -1,0 +1,20 @@
+state = {
+	id = 4026
+	name = "STATE_4026"
+	manpower = 109674
+	buildings_max_level_factor = 1
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		steel = 8
+		chromium = 7
+	}
+	history = {
+		owner = CUB
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CUB
+	}
+	provinces = { 12347 }
+}

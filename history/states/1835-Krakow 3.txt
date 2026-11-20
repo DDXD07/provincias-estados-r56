@@ -1,0 +1,21 @@
+state = {
+	id = 1835
+	name = "STATE_1835"
+	manpower = 242256
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		oil = 1
+	}
+	history = {
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+		add_core_of = UKR
+		add_core_of = RUT
+	}
+	provinces = { 11550 }
+}

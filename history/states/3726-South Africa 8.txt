@@ -1,0 +1,19 @@
+state = {
+	id = 3726
+	name = "STATE_3726"
+	manpower = 106682
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		chromium = 4
+		coal = 1
+	}
+	history = {
+		owner = SAF
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SAF
+	}
+	provinces = { 10566 }
+}

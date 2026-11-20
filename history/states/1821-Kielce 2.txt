@@ -1,0 +1,20 @@
+state = {
+	id = 1821
+	name = "STATE_1821"
+	manpower = 403899
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = POL
+		victory_points = { 442 3 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+		add_to_array = {
+			state_victory_points = 442
+		}
+	}
+	provinces = { 442 }
+}

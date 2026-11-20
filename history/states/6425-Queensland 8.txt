@@ -1,0 +1,19 @@
+state = {
+	id = 6425
+	name = "STATE_6425"
+	manpower = 12567
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		tungsten = 1
+	}
+	history = {
+		owner = AST
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = AST
+	}
+	provinces = { 12411 }
+}

@@ -1,0 +1,26 @@
+state = {
+	id = 330
+	name = "STATE_330"
+	manpower = 254064
+	local_supplies = 0.000
+	state_category = large_town
+	resources = {
+		chromium = 1
+	}
+	history = {
+		owner = MON
+		victory_points = { 4801 10 }
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 3
+			air_base = 1
+		}
+		add_core_of = MON
+		add_claim_by = CHI
+		add_to_array = {
+			state_victory_points = 4801
+		}
+	}
+	provinces = { 4801 }
+}

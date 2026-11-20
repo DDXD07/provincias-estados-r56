@@ -1,0 +1,16 @@
+state = {
+	id = 2393
+	name = "STATE_2393"
+	manpower = 134128
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = ITA
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = ITA
+		add_core_of = TOS
+	}
+	provinces = { 11889 }
+}

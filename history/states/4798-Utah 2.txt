@@ -1,0 +1,23 @@
+state = {
+	id = 4798
+	name = "STATE_4798"
+	manpower = 60941
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		tungsten = 6
+		coal = 1
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 12699
+		}
+		victory_points = { 12699 1 }
+	}
+	provinces = { 12699 }
+}

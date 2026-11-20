@@ -1,0 +1,605 @@
+﻿###########################
+# NZL TFV events Events
+###########################
+
+add_namespace = tfv_new_zealand
+
+#NZL joins Comintern
+country_event = {
+	id = tfv_new_zealand.1
+	title = tfv_new_zealand.1.t	
+	desc = tfv_new_zealand.1.desc	#
+	picture = GFX_report_event_stalin_meeting
+	
+	is_triggered_only = yes
+	
+	option = { #SOV agrees
+		name = tfv_new_zealand.1.a
+		ai_chance = {
+			base = 90
+			modifier = { 
+				NZL = { NOT = { has_government = communism } } 
+				factor = 0
+				}
+		}
+		add_to_faction = NZL
+		NZL = { country_event = { id = tfv_new_zealand.2 hours = 6 } }
+	}
+
+
+	option = { #SOV refuses
+		name = tfv_new_zealand.1.b
+		ai_chance = {
+			base = 0
+			modifier = { 
+				NZL = { NOT = { has_government = communism } } 
+				add = 100
+				}
+		}
+		NZL = { country_event = { id = tfv_new_zealand.3 hours = 6 } }	
+	}
+}
+
+#SOV agrees
+country_event = {
+	id = tfv_new_zealand.2
+	title = tfv_new_zealand.2.t		# 
+	desc = tfv_new_zealand.2.desc	#
+	picture = GFX_report_event_stalin_meeting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tfv_new_zealand.2.a
+	}
+}
+#SOV refuses :(
+country_event = {
+	id = tfv_new_zealand.3
+	title = tfv_new_zealand.3.t		# 
+	desc = tfv_new_zealand.3.desc	#
+	picture = GFX_report_event_stalin_meeting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tfv_new_zealand.3.a
+	}
+}
+
+#NZL joins JAP - Event for JAP from NZL focus
+country_event = {
+	id = tfv_new_zealand.4
+	title = tfv_new_zealand.4.t	
+	desc = tfv_new_zealand.4.desc	#
+	picture = GFX_report_event_ast_transfer_singapore
+	
+	is_triggered_only = yes
+	
+	option = { #JAP agrees
+		name = tfv_new_zealand.4.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			add_to_faction = NZL
+			else = {
+				create_faction_from_template = {
+					template = faction_template_geacps_faction
+					name = daitoa_kyoeiken
+				}
+				add_to_faction = NZL
+			}
+		}
+		NZL = { country_event = { id = tfv_new_zealand.5 hours = 6 } }
+	}
+
+
+	option = { #JAP refuses
+		name = tfv_new_zealand.4.b
+		ai_chance = {
+			base = 0
+		}
+		NZL = { country_event = { id = tfv_new_zealand.6 hours = 6 } }	
+	}
+}
+
+#JAP agrees
+country_event = {
+	id = tfv_new_zealand.5
+	title = tfv_new_zealand.5.t		# 
+	desc = tfv_new_zealand.5.desc	#
+	picture = GFX_report_event_ast_transfer_singapore
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tfv_new_zealand.5.a
+	}
+}
+#JAP refuses :(
+country_event = {
+	id = tfv_new_zealand.6
+	title = tfv_new_zealand.6.t		# 
+	desc = tfv_new_zealand.6.desc	#
+	picture = GFX_report_event_ast_transfer_singapore				
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tfv_new_zealand.6.a
+	}
+}
+
+country_event = {
+	id = tfv_new_zealand.7
+	title = tfv_new_zealand.7.t
+	desc = tfv_new_zealand.7.desc
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = NZL
+		has_government = democratic
+		date > 1940.3.27
+		has_country_leader = { ruling_only = yes character = NZL_michael_joseph_savage }
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	#ok I guess
+	option = {
+		name = tfv_new_zealand.7.a
+		promote_character = NZL_peter_fraser
+
+		
+	}
+}
+
+country_event = { #Polynesia annexes NZL for Polynesian Empire game rule
+	id = tfv_new_zealand.8
+	title = tfv_new_zealand.8.t
+	desc = tfv_new_zealand.8.desc
+	picture = GFX_report_event_generic_funeral
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	#ok I guess
+	option = {
+		NZL = {
+			transfer_units_fraction = {
+				target = PREV
+				size = 1
+			}
+		}
+		annex_country = {
+			target = NZL
+		}
+	}
+}
+
+country_event = { #New Zealand demands islands
+	id = tfv_new_zealand.9
+	title = tfv_new_zealand.9.t
+	desc = tfv_new_zealand.9.desc
+	picture = GFX_report_event_ast_transfer_singapore
+
+	is_triggered_only = yes
+	
+	#take these dang islands
+	option = {
+		name = tfv_new_zealand.9.a
+		ai_chance = {
+			base = 10
+		}
+		effect_tooltip = {
+			if = {
+				limit = {
+					controls_state = 284
+				}
+				FROM = { transfer_state = 284 transfer_state = 3811 transfer_state = 3812 transfer_state = 3813 transfer_state = 3814 transfer_state = 3815 transfer_state = 3816 transfer_state = 3817 }
+			}
+			if = {
+				limit = {
+					controls_state = 629
+				}
+				FROM = { transfer_state = 629 transfer_state = 7643 transfer_state = 7644 transfer_state = 7645 transfer_state = 7646 }
+			}
+			if = {
+				limit = {
+					controls_state = 630
+				}
+				FROM = { transfer_state = 630 }
+			}
+			if = {
+				limit = {
+					controls_state = 631
+				}
+				FROM = { transfer_state = 631 }
+			}
+			if = {
+				limit = {
+					controls_state = 632
+				}
+				FROM = { transfer_state = 632 }
+			}
+			if = {
+				limit = {
+					controls_state = 633
+				}
+				FROM = { transfer_state = 633 transfer_state = 7647 transfer_state = 7648 transfer_state = 7649 transfer_state = 7650 transfer_state = 7651 transfer_state = 7652 transfer_state = 7653 transfer_state = 7654 }
+			}
+			if = {
+				limit = {
+					controls_state = 634
+				}
+				FROM = { transfer_state = 634 transfer_state = 7655 transfer_state = 7656 transfer_state = 7657 transfer_state = 7658 transfer_state = 7659 transfer_state = 7660 transfer_state = 7661 transfer_state = 7662 transfer_state = 7663 transfer_state = 7664 }
+			}
+			if = {
+				limit = {
+					controls_state = 635
+				}
+				FROM = { transfer_state = 635 transfer_state = 7665 transfer_state = 7666 transfer_state = 7667 transfer_state = 7668 transfer_state = 7669 }
+			}
+			if = {
+				limit = {
+					controls_state = 636
+				}
+				FROM = { transfer_state = 636 transfer_state = 7670 transfer_state = 7671 }
+			}
+			if = {
+				limit = {
+					controls_state = 638
+				}
+				FROM = { transfer_state = 638 }
+			}
+			if = {
+				limit = {
+					controls_state = 639
+				}
+				FROM = { transfer_state = 639 transfer_state = 7678 transfer_state = 7679 transfer_state = 7680 transfer_state = 7681 }
+			}
+			if = {
+				limit = {
+					controls_state = 641
+				}
+				FROM = { transfer_state = 641 transfer_state = 7691 }
+			}
+			if = {
+				limit = {
+					controls_state = 642
+				}
+				FROM = { transfer_state = 642 }
+			}
+			if = {
+				limit = {
+					controls_state = 643
+				}
+				FROM = { transfer_state = 643 transfer_state = 7692 transfer_state = 7693 transfer_state = 7694 }
+			}
+			if = {
+				limit = {
+					controls_state = 645
+				}
+				FROM = { transfer_state = 645 }
+			}
+			if = {
+				limit = {
+					controls_state = 646
+				}
+				FROM = { transfer_state = 646 transfer_state = 7700 transfer_state = 7701 }
+			}
+			if = {
+				limit = {
+					controls_state = 647
+				}
+				FROM = { transfer_state = 647 transfer_state = 7702 }
+			}
+			if = {
+				limit = {
+					controls_state = 648
+				}
+				FROM = { transfer_state = 648 }
+			}
+			if = {
+				limit = {
+					controls_state = 684
+				}
+				FROM = { transfer_state = 684 transfer_state = 8094 transfer_state = 8095 transfer_state = 8096 transfer_state = 8097 transfer_state = 8098 transfer_state = 8099 transfer_state = 8100 transfer_state = 8101 transfer_state = 8102 transfer_state = 8103 }
+			}
+			if = {
+				limit = {
+					controls_state = 723
+				}
+				FROM = { transfer_state = 723 transfer_state = 8207 transfer_state = 8208 transfer_state = 8209 transfer_state = 8210 transfer_state = 8211 }
+			}
+			if = {
+				limit = {
+					controls_state = 725
+				}
+				FROM = { transfer_state = 725 }
+			}
+			if = {
+				limit = {
+					controls_state = 726
+				}
+				FROM = { transfer_state = 726 transfer_state = 8227 }
+			}
+			if = {
+				limit = {
+					controls_state = 727
+				}
+				FROM = { transfer_state = 727 transfer_state = 8228 transfer_state = 8229 }
+			}
+			if = {
+				limit = {
+					controls_state = 734
+				}
+				FROM = { transfer_state = 734 transfer_state = 8255 }
+			}
+			if = {
+				limit = {
+					controls_state = 1070
+				}
+				FROM = { transfer_state = 1070 transfer_state = 9966 transfer_state = 9967 transfer_state = 9968 transfer_state = 9969 transfer_state = 9970 transfer_state = 9971 transfer_state = 9972 transfer_state = 9973 }
+			}
+			if = {
+				limit = {
+					controls_state = 1071
+				}
+				FROM = { transfer_state = 1071 transfer_state = 9974 transfer_state = 9975 transfer_state = 9976 }
+			}
+			if = {
+				limit = {
+					controls_state = 1072
+				}
+				FROM = { transfer_state = 1072 transfer_state = 9977 transfer_state = 9978 transfer_state = 9979 transfer_state = 9980 transfer_state = 9981 transfer_state = 9982 transfer_state = 9983 transfer_state = 9984 transfer_state = 9985 transfer_state = 9986 transfer_state = 9987 transfer_state = 9988 transfer_state = 9989 }
+			}
+			FROM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+		}
+		hidden_effect = {
+			FROM = { country_event = { id = tfv_new_zealand.91 } }
+		}
+	}
+	
+	#these are my islands, how dare you
+	option = {
+		name = tfv_new_zealand.9.b
+		ai_chance = {
+			base = 10
+			modifier = { #The USA shouldn't eagerly give away Hawaii if it is a state
+				NOT = {
+					629 = {
+						is_core_of = ROOT
+					}
+				}
+				factor = 0
+			}
+		}
+		FROM = {
+			country_event = {
+				id = tfv_new_zealand.92
+				days = 2
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = small_decrease
+			}
+		}
+	}
+}
+
+country_event = { #New Zealand demands islands
+	id = tfv_new_zealand.91
+	title = tfv_new_zealand.91.t
+	desc = tfv_new_zealand.91.desc
+	picture = GFX_report_event_ast_transfer_singapore
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tfv_new_zealand.91.a
+		ai_chance = {
+			base = 10
+		}
+		hidden_effect = {
+			clr_country_flag = is_demanding_flag
+		}
+		FROM = {
+			if = {
+				limit = {
+					controls_state = 284
+				}
+				ROOT = { transfer_state = 284 transfer_state = 3811 transfer_state = 3812 transfer_state = 3813 transfer_state = 3814 transfer_state = 3815 transfer_state = 3816 transfer_state = 3817 }
+			}
+			if = {
+				limit = {
+					controls_state = 629
+				}
+				ROOT = { transfer_state = 629 transfer_state = 7643 transfer_state = 7644 transfer_state = 7645 transfer_state = 7646 }
+			}
+			if = {
+				limit = {
+					controls_state = 630
+				}
+				ROOT = { transfer_state = 630 }
+			}
+			if = {
+				limit = {
+					controls_state = 631
+				}
+				ROOT = { transfer_state = 631 }
+			}
+			if = {
+				limit = {
+					controls_state = 632
+				}
+				ROOT = { transfer_state = 632 }
+			}
+			if = {
+				limit = {
+					controls_state = 633
+				}
+				ROOT = { transfer_state = 633 transfer_state = 7647 transfer_state = 7648 transfer_state = 7649 transfer_state = 7650 transfer_state = 7651 transfer_state = 7652 transfer_state = 7653 transfer_state = 7654 }
+			}
+			if = {
+				limit = {
+					controls_state = 634
+				}
+				ROOT = { transfer_state = 634 transfer_state = 7655 transfer_state = 7656 transfer_state = 7657 transfer_state = 7658 transfer_state = 7659 transfer_state = 7660 transfer_state = 7661 transfer_state = 7662 transfer_state = 7663 transfer_state = 7664 }
+			}
+			if = {
+				limit = {
+					controls_state = 635
+				}
+				ROOT = { transfer_state = 635 transfer_state = 7665 transfer_state = 7666 transfer_state = 7667 transfer_state = 7668 transfer_state = 7669 }
+			}
+			if = {
+				limit = {
+					controls_state = 636
+				}
+				ROOT = { transfer_state = 636 transfer_state = 7670 transfer_state = 7671 }
+			}
+			if = {
+				limit = {
+					controls_state = 638
+				}
+				ROOT = { transfer_state = 638 }
+			}
+			if = {
+				limit = {
+					controls_state = 639
+				}
+				ROOT = { transfer_state = 639 transfer_state = 7678 transfer_state = 7679 transfer_state = 7680 transfer_state = 7681 }
+			}
+			if = {
+				limit = {
+					controls_state = 641
+				}
+				ROOT = { transfer_state = 641 transfer_state = 7691 }
+			}
+			if = {
+				limit = {
+					controls_state = 642
+				}
+				ROOT = { transfer_state = 642 }
+			}
+			if = {
+				limit = {
+					controls_state = 643
+				}
+				ROOT = { transfer_state = 643 transfer_state = 7692 transfer_state = 7693 transfer_state = 7694 }
+			}
+			if = {
+				limit = {
+					controls_state = 645
+				}
+				ROOT = { transfer_state = 645 }
+			}
+			if = {
+				limit = {
+					controls_state = 646
+				}
+				ROOT = { transfer_state = 646 transfer_state = 7700 transfer_state = 7701 }
+			}
+			if = {
+				limit = {
+					controls_state = 647
+				}
+				ROOT = { transfer_state = 647 transfer_state = 7702 }
+			}
+			if = {
+				limit = {
+					controls_state = 648
+				}
+				ROOT = { transfer_state = 648 }
+			}
+			if = {
+				limit = {
+					controls_state = 684
+				}
+				ROOT = { transfer_state = 684 transfer_state = 8094 transfer_state = 8095 transfer_state = 8096 transfer_state = 8097 transfer_state = 8098 transfer_state = 8099 transfer_state = 8100 transfer_state = 8101 transfer_state = 8102 transfer_state = 8103 }
+			}
+			if = {
+				limit = {
+					controls_state = 723
+				}
+				ROOT = { transfer_state = 723 transfer_state = 8207 transfer_state = 8208 transfer_state = 8209 transfer_state = 8210 transfer_state = 8211 }
+			}
+			if = {
+				limit = {
+					controls_state = 725
+				}
+				ROOT = { transfer_state = 725 }
+			}
+			if = {
+				limit = {
+					controls_state = 726
+				}
+				ROOT = { transfer_state = 726 transfer_state = 8227 }
+			}
+			if = {
+				limit = {
+					controls_state = 727
+				}
+				ROOT = { transfer_state = 727 transfer_state = 8228 transfer_state = 8229 }
+			}
+			if = {
+				limit = {
+					controls_state = 734
+				}
+				ROOT = { transfer_state = 734 transfer_state = 8255 }
+			}
+			if = {
+				limit = {
+					controls_state = 1070
+				}
+				FROM = { transfer_state = 1070 transfer_state = 9966 transfer_state = 9967 transfer_state = 9968 transfer_state = 9969 transfer_state = 9970 transfer_state = 9971 transfer_state = 9972 transfer_state = 9973 }
+			}
+			if = {
+				limit = {
+					controls_state = 1071
+				}
+				FROM = { transfer_state = 1071 transfer_state = 9974 transfer_state = 9975 transfer_state = 9976 }
+			}
+			if = {
+				limit = {
+					controls_state = 1072
+				}
+				FROM = { transfer_state = 1072 transfer_state = 9977 transfer_state = 9978 transfer_state = 9979 transfer_state = 9980 transfer_state = 9981 transfer_state = 9982 transfer_state = 9983 transfer_state = 9984 transfer_state = 9985 transfer_state = 9986 transfer_state = 9987 transfer_state = 9988 transfer_state = 9989 }
+			}
+		}
+	}
+}
+
+country_event = { #New Zealand demands islands
+	id = tfv_new_zealand.92
+	title = tfv_new_zealand.92.t
+	desc = tfv_new_zealand.92.desc
+	picture = GFX_report_event_ast_transfer_singapore
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tfv_new_zealand.92.a
+		ai_chance = {
+			base = 10
+		}
+		hidden_effect = {
+			clr_country_flag = is_demanding_flag
+		}
+	}
+}

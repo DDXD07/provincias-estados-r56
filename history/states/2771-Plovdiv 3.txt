@@ -1,0 +1,19 @@
+state = {
+	id = 2771
+	name = "STATE_2771"
+	manpower = 139611
+	local_supplies = 5.0
+	state_category = pastoral
+	history = {
+		owner = BUL
+		victory_points = { 9862 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = BUL
+		add_to_array = {
+			state_victory_points = 9862
+		}
+	}
+	provinces = { 9862 }
+}

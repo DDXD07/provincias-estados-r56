@@ -1,0 +1,19 @@
+state = {
+	id = 3012
+	name = "STATE_3012"
+	manpower = 89046
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		coal = 9
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+	}
+	provinces = { 6776 }
+}

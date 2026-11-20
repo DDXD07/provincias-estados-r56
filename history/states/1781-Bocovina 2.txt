@@ -1,0 +1,20 @@
+state = {
+	id = 1781
+	name = "STATE_1781"
+	manpower = 118650
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = ROM
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ROM
+		add_core_of = RUT
+		add_claim_by = UKR
+	}
+	provinces = { 9548 }
+}

@@ -1,0 +1,24 @@
+state = {
+	id = 1403
+	name = "STATE_1403"
+	manpower = 405719
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		coal = 2
+	}
+	history = {
+		owner = HOL
+		add_core_of = HOL
+		add_to_array = {
+			state_victory_points = 6496
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		victory_points = { 6496 3 }
+	}
+	provinces = { 6496 }
+}

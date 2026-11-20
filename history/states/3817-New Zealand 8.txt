@@ -1,0 +1,15 @@
+state = {
+	id = 3817
+	name = "STATE_3817"
+	manpower = 19962
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = NZL
+		add_core_of = NZL
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 4804 }
+}

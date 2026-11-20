@@ -1,0 +1,17 @@
+state = {
+	id = 7242
+	name = "STATE_7242"
+	manpower = 86184
+	local_supplies = 1.0
+	state_category = p2s_village
+	history = {
+		owner = GXC
+		add_core_of = GXC
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 4177 }
+}

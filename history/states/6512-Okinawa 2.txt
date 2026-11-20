@@ -1,0 +1,21 @@
+state = {
+	id = 6512
+	name = "STATE_6512"
+	manpower = 41287
+	local_supplies = 0.0
+	state_category = small_island
+	resources = {
+		coal = 2
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 2
+		}
+		strategic_province_location = {
+			defensible_coastline = 10124
+		}
+	}
+	provinces = { 10124 }
+}

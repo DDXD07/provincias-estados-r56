@@ -1,0 +1,19 @@
+state = {
+	id = 1997
+	name = "STATE_1997"
+	manpower = 55107
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = ITA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ITA
+		add_core_of = SAD
+	}
+	provinces = { 11824 }
+}

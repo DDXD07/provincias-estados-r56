@@ -1,0 +1,19 @@
+state = {
+	id = 6498
+	name = "STATE_6498"
+	manpower = 243830
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = JAP
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 9955 }
+}

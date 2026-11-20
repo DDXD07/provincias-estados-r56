@@ -1,0 +1,19 @@
+state = {
+	id = 9879
+	name = "STATE_9879"
+	manpower = 74511
+	local_supplies = 0.000
+	state_category = pastoral
+	resources = {
+		steel = 5
+		aluminium = 1
+	}
+	history = {
+		owner = ENG
+		add_core_of = ENG
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 9285 }
+}

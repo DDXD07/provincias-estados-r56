@@ -1,0 +1,24 @@
+state = {
+	id = 7878
+	name = "STATE_7878"
+	manpower = 88532
+	buildings_max_level_factor = 1
+	local_supplies = 3.0
+	state_category = p2s_village
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = EIS
+		buildings = {
+			infrastructure = 1
+			12234 = {
+				naval_base = 1
+			}
+		}
+		add_to_array = {
+			state_victory_points = 12234
+		}
+		victory_points = { 12234 1 }
+	}
+	provinces = { 12234 }
+}

@@ -1,0 +1,31 @@
+state = {
+	id = 429
+	name = "STATE_429"
+	manpower = 14626170
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		tungsten = 1
+	}
+	history = {
+		owner = RAJ
+		add_core_of = RAJ
+		add_to_array = {
+			state_victory_points = 1349
+		}
+		add_to_array = {
+			state_victory_points = 9975
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 2
+			1349 = {
+				naval_base = 6
+			}
+		}
+		victory_points = { 1349 25 }
+		victory_points = { 9975 10 }
+	}
+	provinces = { 1349 }
+}

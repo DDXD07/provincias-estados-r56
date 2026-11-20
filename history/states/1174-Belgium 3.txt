@@ -1,0 +1,23 @@
+state = {
+	id = 1174
+	name = "STATE_1174"
+	manpower = 116357
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = BEL
+		add_core_of = BEL
+		add_core_of = FLA
+		add_to_array = {
+			state_victory_points = 3576
+		}
+		victory_points = { 3576 1 }
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 3576 }
+}

@@ -1,0 +1,27 @@
+state = {
+	id = 1731
+	name = "STATE_1731"
+	manpower = 153750
+	local_supplies = 2.0
+	state_category = pastoral
+	resources = {
+		coal = 4
+	}
+	history = {
+		victory_points = { 6485 1 }
+		owner = CZE
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = CZE
+		add_claim_by = SIL
+		1938.9.30 = {
+			owner = GER
+			add_to_array = {
+				state_victory_points = 6485
+			}
+			controller = GER
+		}
+	}
+	provinces = { 6485 }
+}

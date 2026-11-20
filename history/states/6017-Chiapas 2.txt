@@ -1,0 +1,20 @@
+state = {
+	id = 6017
+	name = "STATE_6017"
+	manpower = 234480
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = MEX
+		add_to_array = {
+			state_victory_points = 12867
+		}
+		victory_points = { 12867 1 }
+	}
+	provinces = { 12867 }
+}

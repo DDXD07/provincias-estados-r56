@@ -1,0 +1,18 @@
+state = {
+	id = 2550
+	name = "STATE_2550"
+	manpower = 86990
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		chromium = 1
+	}
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CYP
+	}
+	provinces = { 7193 }
+}

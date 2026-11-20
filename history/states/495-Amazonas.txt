@@ -1,0 +1,23 @@
+state = {
+	id = 495
+	name = "STATE_495"
+	manpower = 45188
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		aluminium = 1
+		rubber = 1
+	}
+	history = {
+		owner = BRA
+		victory_points = { 10934 3 }
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = BRA
+		add_to_array = {
+			state_victory_points = 10934
+		}
+	}
+	provinces = { 10934 }
+}

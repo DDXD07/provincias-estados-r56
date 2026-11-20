@@ -1,0 +1,24 @@
+state = {
+	id = 8449
+	name = "STATE_8449"
+	manpower = 536433
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = COG
+		add_core_of = BRD
+		IF = {
+			limit = {
+				has_dlc = "Gotterdammerung"
+			}
+			add_dynamic_modifier = {
+				modifier = COG_burundian_separatism_modifier
+			}
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 13475 }
+}

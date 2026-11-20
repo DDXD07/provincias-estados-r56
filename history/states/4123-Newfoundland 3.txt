@@ -1,0 +1,17 @@
+state = {
+	id = 4123
+	name = "STATE_4123"
+	manpower = 36438
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CAN
+		add_core_of = NFL
+		add_claim_by = QUE
+	}
+	provinces = { 7788 }
+}

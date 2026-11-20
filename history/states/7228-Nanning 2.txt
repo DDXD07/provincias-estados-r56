@@ -1,0 +1,25 @@
+state = {
+	id = 7228
+	name = "STATE_7228"
+	manpower = 258552
+	local_supplies = 1.0
+	state_category = pastoral
+	resources = {
+		tungsten = 1
+		steel = 1
+	}
+	history = {
+		owner = GXC
+		add_core_of = GXC
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 10459
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 10459 1 }
+	}
+	provinces = { 10459 }
+}

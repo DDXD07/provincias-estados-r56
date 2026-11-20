@@ -1,0 +1,26 @@
+state = {
+	id = 8094
+	name = "STATE_8094"
+	manpower = 14807
+	local_supplies = 0.0
+	state_category = small_island
+	history = {
+		owner = JAP
+		add_core_of = FSM
+		add_to_array = {
+			state_victory_points = 2489
+		}
+		buildings = {
+			infrastructure = 2
+			2489 = {
+				naval_base = 6
+				coastal_bunker = 5
+			}
+		}
+		victory_points = { 2489 2 }
+		strategic_province_location = {
+			natural_harbor = 2489
+		}
+	}
+	provinces = { 2489 }
+}

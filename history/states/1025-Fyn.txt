@@ -1,0 +1,25 @@
+state = {
+	id = 1025
+	name = "STATE_1025"
+	manpower = 390555
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = developed_rural
+	history = {
+		owner = DEN
+		add_core_of = DEN
+		add_to_array = {
+			state_victory_points = 3325
+		}
+		victory_points = { 3325 5 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			dockyard = 1
+			3325 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces = { 3325 }
+}

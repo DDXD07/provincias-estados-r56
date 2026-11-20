@@ -1,0 +1,16 @@
+state = {
+	id = 9595
+	name = "STATE_9595"
+	manpower = 85630
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = GER
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = GER
+		add_core_of = SHL
+	}
+	provinces = { 317 }
+}

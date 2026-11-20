@@ -1,0 +1,16 @@
+state = {
+	id = 10064
+	name = "STATE_10064"
+	manpower = 1304597
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = RAJ
+		add_core_of = RAJ
+		add_core_of = KHL
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 2076 }
+}

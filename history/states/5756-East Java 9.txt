@@ -1,0 +1,16 @@
+state = {
+	id = 5756
+	name = "STATE_5756"
+	manpower = 373031
+	local_supplies = 5.000
+	state_category = p2s_village
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_claim_by = JVA
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 13501 }
+}

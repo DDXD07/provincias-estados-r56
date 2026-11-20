@@ -1,0 +1,19 @@
+state = {
+	id = 9898
+	name = "STATE_9898"
+	manpower = 19471
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		oil = 4
+	}
+	history = {
+		owner = IRQ
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = IRQ
+		add_core_of = KUR
+	}
+	provinces = { 10793 }
+}

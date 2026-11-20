@@ -1,0 +1,16 @@
+state = {
+	id = 2797
+	name = "STATE_2797"
+	manpower = 5624
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		add_claim_by = SMI
+	}
+	provinces = { 6140 }
+}

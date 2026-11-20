@@ -1,0 +1,32 @@
+state = {
+	id = 761
+	name = "STATE_761"
+	manpower = 805160
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		steel = 1
+		chromium = 1
+	}
+	history = {
+		owner = MAN
+		add_core_of = MAN
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 13278
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 4
+			arms_factory = 1
+			industrial_complex = 1
+			13278 = {
+				bunker = 2
+			}
+		}
+		victory_points = { 13278 1 }
+	}
+	provinces = { 13278 }
+}

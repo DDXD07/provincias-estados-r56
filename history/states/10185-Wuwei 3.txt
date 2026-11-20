@@ -1,0 +1,30 @@
+state = {
+	id = 10185
+	name = "STATE_10185"
+	manpower = 144329
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = XSM
+		add_core_of = XSM
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 1
+		}
+		1936.1.1 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				GSM = {
+					transfer_state = PREV
+				}
+				add_core_of = GSM
+				remove_core_of = XSM
+			}
+		}
+	}
+	provinces = { 12327 }
+}

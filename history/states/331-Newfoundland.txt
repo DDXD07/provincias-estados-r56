@@ -1,0 +1,25 @@
+state = {
+	id = 331
+	name = "STATE_331"
+	manpower = 109310
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			12505 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = CAN
+		add_core_of = NFL
+		add_claim_by = QUE
+		add_to_array = {
+			state_victory_points = 12505
+		}
+		victory_points = { 12505 1 }
+	}
+	provinces = { 12505 }
+}

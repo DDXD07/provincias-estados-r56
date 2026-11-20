@@ -1,0 +1,15 @@
+state = {
+	id = 1992
+	name = "STATE_1992"
+	manpower = 42426
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = IRE
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = IRE
+	}
+	provinces = { 369 }
+}

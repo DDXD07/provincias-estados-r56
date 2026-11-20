@@ -1,0 +1,21 @@
+state = {
+	id = 407
+	name = "STATE_407"
+	manpower = 44230
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = KAZ
+		add_to_array = {
+			state_victory_points = 11537
+		}
+		victory_points = { 11537 3 }
+	}
+	provinces = { 11537 }
+}

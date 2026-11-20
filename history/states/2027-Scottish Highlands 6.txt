@@ -1,0 +1,21 @@
+state = {
+	id = 2027
+	name = "STATE_2027"
+	manpower = 5302
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		tungsten = 1
+		aluminium = 1
+	}
+	history = {
+		add_core_of = SCO
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ENG
+	}
+	provinces = { 9090 }
+}

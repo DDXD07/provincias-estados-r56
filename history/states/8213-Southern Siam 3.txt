@@ -1,0 +1,19 @@
+state = {
+	id = 8213
+	name = "STATE_8213"
+	manpower = 295835
+	local_supplies = 1
+	state_category = pastoral
+	resources = {
+		rubber = 2
+	}
+	history = {
+		owner = SIA
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 7236 1 }
+		add_core_of = SIA
+	}
+	provinces = { 7236 }
+}

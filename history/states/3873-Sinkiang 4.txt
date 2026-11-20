@@ -1,0 +1,20 @@
+state = {
+	id = 3873
+	name = "STATE_3873"
+	manpower = 61
+	buildings_max_level_factor = 1.000
+	impassable = yes
+	local_supplies = 0.0
+	state_category = wasteland
+	history = {
+		owner = KHM
+		add_core_of = CHI
+		add_core_of = PRC
+		add_core_of = SIK
+		add_core_of = KHM
+		buildings = {
+			infrastructure = 0
+		}
+	}
+	provinces = { 12864 }
+}

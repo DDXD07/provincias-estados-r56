@@ -1,0 +1,20 @@
+state = {
+	id = 5724
+	name = "STATE_5724"
+	manpower = 322487
+	local_supplies = 5.0
+	state_category = pastoral
+	resources = {
+		chromium = 1
+		steel = 1
+	}
+	history = {
+		owner = RAJ
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = PAK
+		add_claim_by = AFG
+	}
+	provinces = { 4558 }
+}

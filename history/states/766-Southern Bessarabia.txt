@@ -1,0 +1,25 @@
+state = {
+	id = 766
+	name = "STATE_766"
+	manpower = 283299
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		victory_points = { 6727 1 }
+		add_core_of = ROM
+		add_core_of = MOL
+		add_claim_by = UKR
+		owner = ROM
+		add_to_array = {
+			state_victory_points = 6727
+		}
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			6727 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces = { 6727 }
+}

@@ -1,0 +1,29 @@
+state = {
+	id = 1627
+	name = "STATE_1627"
+	manpower = 601042
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		steel = 1
+		coal = 1
+	}
+	history = {
+		owner = GER
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = GER
+		add_core_of = THU
+		add_to_array = {
+			state_victory_points = 538
+		}
+		victory_points = { 538 2 }
+		1939.1.1 = {
+			buildings = {
+				synthetic_refinery = 1
+			}
+		}
+	}
+	provinces = { 538 }
+}

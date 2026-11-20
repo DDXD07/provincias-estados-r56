@@ -1,0 +1,25 @@
+state = {
+	id = 4462
+	name = "STATE_4462"
+	manpower = 342340
+	buildings_max_level_factor = 1.000
+	local_supplies = 11.0
+	state_category = pastoral
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_to_array = {
+			state_victory_points = 873
+		}
+		victory_points = { 873 5 }
+	}
+	provinces = { 873 }
+}

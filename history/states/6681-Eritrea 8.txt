@@ -1,0 +1,16 @@
+state = {
+	id = 6681
+	name = "STATE_6681"
+	manpower = 31611
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = ITA
+		add_core_of = ERI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 8043 }
+}

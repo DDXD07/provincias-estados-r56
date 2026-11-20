@@ -1,0 +1,22 @@
+state = {
+	id = 9458
+	name = "STATE_9458"
+	manpower = 117653
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = MPL
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = { 13443 2 }
+		add_core_of = PAL
+		add_claim_by = ISR
+		add_to_array = {
+			state_victory_points = 13443
+		}
+		set_compliance = 50
+	}
+	provinces = { 13443 }
+}

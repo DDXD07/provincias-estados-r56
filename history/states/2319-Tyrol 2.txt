@@ -1,0 +1,16 @@
+state = {
+	id = 2319
+	name = "STATE_2319"
+	manpower = 89438
+	buildings_max_level_factor = 1.000
+	local_supplies = 12.000
+	state_category = pastoral
+	history = {
+		owner = AUS
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = AUS
+	}
+	provinces = { 671 }
+}

@@ -1,0 +1,21 @@
+state = {
+	id = 4008
+	name = "STATE_4008"
+	manpower = 30400
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		aluminium = 19
+	}
+	history = {
+		add_core_of = SUR
+		owner = HOL
+		buildings = {
+			infrastructure = 2
+			12828 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces = { 12828 }
+}

@@ -1,0 +1,26 @@
+state = {
+	id = 7196
+	name = "STATE_7196"
+	manpower = 949091
+	local_supplies = 1.0
+	state_category = pastoral
+	history = {
+		owner = GXC
+		add_core_of = GXC
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 994 1 }
+		buildings = {
+			infrastructure = 1
+		}
+		1938.10.25 = {
+			remove_core_of = GDC
+			owner = CHI
+			add_to_array = {
+				state_victory_points = 994
+			}
+			controller = JAP
+		}
+	}
+	provinces = { 994 }
+}

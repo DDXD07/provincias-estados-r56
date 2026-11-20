@@ -1,0 +1,28 @@
+state = {
+	id = 2083
+	name = "STATE_2083"
+	manpower = 1492720
+	local_supplies = 0.0
+	state_category = developed_rural
+	resources = {
+		steel = 7
+		coal = 5
+	}
+	history = {
+		owner = ENG
+		victory_points = { 11297 10 }
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+			11297 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = ENG
+		add_to_array = {
+			state_victory_points = 11297
+		}
+	}
+	provinces = { 11297 }
+}

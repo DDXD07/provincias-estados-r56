@@ -1,0 +1,16 @@
+state = {
+	id = 9932
+	name = "STATE_9932"
+	manpower = 18572
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = PRU
+		add_core_of = PRU
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 13485 }
+}

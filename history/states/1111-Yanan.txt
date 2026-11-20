@@ -1,0 +1,24 @@
+state = {
+	id = 1111
+	name = "STATE_1111"
+	manpower = 2724631
+	buildings_max_level_factor = 1
+	local_supplies = 0
+	state_category = town
+	history = {
+		owner = XIC
+		add_core_of = PRC
+		add_core_of = CHI
+		add_core_of = XIC
+		add_to_array = {
+			state_victory_points = 8049
+		}
+		victory_points = { 8049 3 }
+		buildings = {
+			infrastructure = 1
+			arms_factory = 2
+			industrial_complex = 2
+		}
+	}
+	provinces = { 8049 }
+}

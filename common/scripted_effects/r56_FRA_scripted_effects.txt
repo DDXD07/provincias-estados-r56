@@ -1,0 +1,626 @@
+FRA_disunite_germany_base_effect = {
+    if = {
+        limit = {
+            51 = {
+                is_controlled_by = ROOT
+            }
+        }
+        transfer_state = 51 transfer_state = 1545 transfer_state = 1546 transfer_state = 1547
+    }
+    if = {
+        limit = {
+            42 = {
+                is_controlled_by = ROOT
+            }
+        }
+        transfer_state = 42 transfer_state = 1471 transfer_state = 1472 transfer_state = 1473 transfer_state = 1474 transfer_state = 1475 transfer_state = 1476 transfer_state = 1477
+    }
+    if = {
+        limit = {
+            965 = {
+                is_controlled_by = ROOT
+            }
+        }
+        transfer_state = 965
+    }    
+    if = {
+        limit = {
+            4 = { is_owned_or_subject_trigger = yes }
+            152 = { is_owned_or_subject_trigger = yes }
+            153 = { is_owned_or_subject_trigger = yes }
+            848 = { is_owned_or_subject_trigger = yes }
+            1054 = { is_owned_or_subject_trigger = yes }
+            1086 = { is_owned_or_subject_trigger = yes }
+        }
+        AUS = {
+            transfer_state = 4 transfer_state = 1156 transfer_state = 1157 transfer_state = 1158 transfer_state = 1159 transfer_state = 1160 transfer_state = 1161 transfer_state = 1162
+            transfer_state = 152 transfer_state = 2312 transfer_state = 2313 transfer_state = 2314 transfer_state = 2315 transfer_state = 2316 transfer_state = 2317 transfer_state = 2318
+            transfer_state = 153 transfer_state = 2319 transfer_state = 2320 transfer_state = 2321 transfer_state = 2322 transfer_state = 2323
+            transfer_state = 848 transfer_state = 8860
+            transfer_state = 1054 transfer_state = 9907 transfer_state = 9908 transfer_state = 9909 transfer_state = 9910 transfer_state = 9911 transfer_state = 9912 transfer_state = 9913 transfer_state = 9914 transfer_state = 9915 transfer_state = 9916 transfer_state = 9917
+            transfer_state = 1086 transfer_state = 10000 transfer_state = 10001
+        }
+        if = {
+            limit = {
+                39 = { 
+                    is_owned_or_subject_trigger = yes
+                }
+                ITA = {
+                    OR = {
+                        exists = no
+                        NOT = { is_subject_of = FRA }
+                    }
+                }
+            }
+            AUS = {
+                transfer_state = 39 transfer_state = 1444 transfer_state = 1445 transfer_state = 1446 transfer_state = 1447
+            }
+        }
+        puppet = AUS
+    }
+    if = { #set up Wurtemberg puppet
+        limit = {
+            50 = {
+                is_owned_or_subject_trigger = yes
+            }
+            923 = {
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        WUR = {
+            transfer_state = 50 transfer_state = 1534 transfer_state = 1535 transfer_state = 1536 transfer_state = 1537 transfer_state = 1538 transfer_state = 1539 transfer_state = 1540 transfer_state = 1541 transfer_state = 1542 transfer_state = 1543 transfer_state = 1544
+            add_state_core = 50 add_state_core = 1534 add_state_core = 1535 add_state_core = 1536 add_state_core = 1537 add_state_core = 1538 add_state_core = 1539 add_state_core = 1540 add_state_core = 1541 add_state_core = 1542 add_state_core = 1543 add_state_core = 1544
+            transfer_state = 923 transfer_state = 9257 transfer_state = 9258 transfer_state = 9259 transfer_state = 9260 transfer_state = 9261
+            add_state_core = 923 add_state_core = 9257 add_state_core = 9258 add_state_core = 9259 add_state_core = 9260 add_state_core = 9261
+        }
+        puppet = WUR
+    }
+    if = { #set up Saxony puppet
+        limit = {
+            65 = {
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        SAX = {
+            transfer_state = 65 transfer_state = 1674 transfer_state = 1675 transfer_state = 1676 transfer_state = 1677 transfer_state = 1678 transfer_state = 1679 transfer_state = 1680 transfer_state = 1681 transfer_state = 1682 transfer_state = 1683
+            add_state_core = 65 add_state_core = 1674 add_state_core = 1675 add_state_core = 1676 add_state_core = 1677 add_state_core = 1678 add_state_core = 1679 add_state_core = 1680 add_state_core = 1681 add_state_core = 1682 add_state_core = 1683
+        }
+        if = {
+            limit = {
+                60 = {
+                    is_owned_or_subject_trigger = yes
+                }
+            }
+            SAX = {
+                transfer_state = 60 transfer_state = 1627 transfer_state = 1628 transfer_state = 1629 transfer_state = 1630 transfer_state = 1631 transfer_state = 1632 transfer_state = 1633 transfer_state = 1634
+                add_state_core = 60 add_state_core = 1627 add_state_core = 1628 add_state_core = 1629 add_state_core = 1630 add_state_core = 1631 add_state_core = 1632 add_state_core = 1633 add_state_core = 1634
+            }
+        }
+        puppet = SAX
+    }
+    if = { #set up Mecklenburg puppet
+        limit = {
+            61 = {
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        MEK = {
+            transfer_state = 61 transfer_state = 1635 transfer_state = 1636 transfer_state = 1637 transfer_state = 1638 transfer_state = 1639
+            add_state_core = 61 add_state_core = 1635 add_state_core = 1636 add_state_core = 1637 add_state_core = 1638 add_state_core = 1639
+        }
+        puppet = MEK
+    }
+    if = { #set up Schleswig-Holstein puppet
+        limit = {
+            998 = {
+                is_owned_or_subject_trigger = yes
+            }
+            58 = {
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        SHL = {
+            transfer_state = 58 transfer_state = 1605 transfer_state = 1606 transfer_state = 1607 transfer_state = 1608 transfer_state = 1609
+            add_state_core = 58 add_state_core = 1605 add_state_core = 1606 add_state_core = 1607 add_state_core = 1608 add_state_core = 1609
+            transfer_state = 998 transfer_state = 9594 transfer_state = 9595
+            add_state_core = 998 add_state_core = 9594 add_state_core = 9595
+        }
+        puppet = SHL
+    }
+    if = { #set up Hessen puppet
+        limit = {
+            55 = {
+                is_owned_or_subject_trigger = yes
+            }
+            990 = {
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        HES = {
+            transfer_state = 55 transfer_state = 1579 transfer_state = 1580 transfer_state = 1581 transfer_state = 1582 transfer_state = 1583 transfer_state = 1584 transfer_state = 1585 transfer_state = 1586
+            add_state_core = 55 add_state_core = 1579 add_state_core = 1580 add_state_core = 1581 add_state_core = 1582 add_state_core = 1583 add_state_core = 1584 add_state_core = 1585 add_state_core = 1586
+            transfer_state = 990 transfer_state = 9576 transfer_state = 9577
+            add_state_core = 990 add_state_core = 9576 add_state_core = 9577
+        }
+        puppet = HES
+    }
+    if = { #set up Bavaria puppet
+        limit = {
+            52 = {
+                is_owned_or_subject_trigger = yes
+            }
+            53 = {
+                is_owned_or_subject_trigger = yes
+            }
+            54 = {
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        BAY = {
+            transfer_state = 52 transfer_state = 1548 transfer_state = 1549 transfer_state = 1550 transfer_state = 1551 transfer_state = 1552 transfer_state = 1553 transfer_state = 1554 transfer_state = 1555 transfer_state = 1556 transfer_state = 1557 transfer_state = 1558
+            transfer_state = 53 transfer_state = 1559 transfer_state = 1560 transfer_state = 1561 transfer_state = 1562 transfer_state = 1563 transfer_state = 1564 transfer_state = 1565 transfer_state = 1566 transfer_state = 1567
+            transfer_state = 54 transfer_state = 1568 transfer_state = 1569 transfer_state = 1570 transfer_state = 1571 transfer_state = 1572 transfer_state = 1573 transfer_state = 1574 transfer_state = 1575 transfer_state = 1576 transfer_state = 1577 transfer_state = 1578
+            add_state_core = 52 add_state_core = 1548 add_state_core = 1549 add_state_core = 1550 add_state_core = 1551 add_state_core = 1552 add_state_core = 1553 add_state_core = 1554 add_state_core = 1555 add_state_core = 1556 add_state_core = 1557 add_state_core = 1558
+            add_state_core = 53 add_state_core = 1559 add_state_core = 1560 add_state_core = 1561 add_state_core = 1562 add_state_core = 1563 add_state_core = 1564 add_state_core = 1565 add_state_core = 1566 add_state_core = 1567
+            add_state_core = 54 add_state_core = 1568 add_state_core = 1569 add_state_core = 1570 add_state_core = 1571 add_state_core = 1572 add_state_core = 1573 add_state_core = 1574 add_state_core = 1575 add_state_core = 1576 add_state_core = 1577 add_state_core = 1578
+        }
+        puppet = BAY
+    }
+    if = { #set up Hanover puppet
+        limit = {
+            59 = {
+                is_owned_or_subject_trigger = yes
+            }
+            56 = {
+                is_owned_or_subject_trigger = yes
+            }
+            57 = {
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        HAN = {
+            transfer_state = 59 transfer_state = 1610 transfer_state = 1611 transfer_state = 1612 transfer_state = 1613 transfer_state = 1614 transfer_state = 1615 transfer_state = 1616 transfer_state = 1617 transfer_state = 1618 transfer_state = 1619 transfer_state = 1620 transfer_state = 1621 transfer_state = 1622 transfer_state = 1623 transfer_state = 1624 transfer_state = 1625 transfer_state = 1626
+            transfer_state = 56 transfer_state = 1587 transfer_state = 1588 transfer_state = 1589 transfer_state = 1590 transfer_state = 1591 transfer_state = 1592 transfer_state = 1593 transfer_state = 1594 transfer_state = 1595
+            transfer_state = 57 transfer_state = 1596 transfer_state = 1597 transfer_state = 1598 transfer_state = 1599 transfer_state = 1600 transfer_state = 1601 transfer_state = 1602 transfer_state = 1603 transfer_state = 1604
+            add_state_core = 59 add_state_core = 1610 add_state_core = 1611 add_state_core = 1612 add_state_core = 1613 add_state_core = 1614 add_state_core = 1615 add_state_core = 1616 add_state_core = 1617 add_state_core = 1618 add_state_core = 1619 add_state_core = 1620 add_state_core = 1621 add_state_core = 1622 add_state_core = 1623 add_state_core = 1624 add_state_core = 1625 add_state_core = 1626
+            add_state_core = 56 add_state_core = 1587 add_state_core = 1588 add_state_core = 1589 add_state_core = 1590 add_state_core = 1591 add_state_core = 1592 add_state_core = 1593 add_state_core = 1594 add_state_core = 1595
+            add_state_core = 57 add_state_core = 1596 add_state_core = 1597 add_state_core = 1598 add_state_core = 1599 add_state_core = 1600 add_state_core = 1601 add_state_core = 1602 add_state_core = 1603 add_state_core = 1604
+        }
+        HAN = {
+			#avoid weird micro prussia
+			add_state_core = 989 add_state_core = 9572 add_state_core = 9573 add_state_core = 9574 add_state_core = 9575
+			transfer_state = 989 transfer_state = 9572 transfer_state = 9573 transfer_state = 9574 transfer_state = 9575           
+        }        
+        puppet = HAN
+        HAN = {
+            set_cosmetic_tag = HAN_WST
+        }
+    }
+    if = {
+        limit = {
+            CZE = { exists = yes }
+            NOT = { has_war_with = CZE }
+        }
+        every_state = {
+            limit = { 
+                is_core_of = CZE 
+                is_owned_or_subject_trigger = yes
+            }
+            CZE = { transfer_state = PREV }
+        }
+    }
+    else = {
+        every_state = {
+            limit = { 
+                is_core_of = CZE 
+                is_owned_or_subject_trigger = yes
+            }
+            CZE = { transfer_state = PREV }
+        }
+        puppet = CZE
+    }
+    every_state = {
+        limit = { 
+            is_core_of = GER 
+            is_owned_or_subject_trigger = yes
+            CONTROLLER = {
+                NOT = {
+                    tag = BAY
+                    tag = MEK
+                    tag = SAX
+                    tag = HAN
+                    tag = SHL
+                    tag = WUR
+                    tag = CZE
+                    tag = AUS
+                    tag = HES
+                }
+            }
+            NOT = {
+                state = 42
+                state = 1053
+                state = 51
+                state = 28
+                state = 8
+            }
+        }
+        PRE = {
+            transfer_state = PREV
+            add_state_core = PREV
+        }
+    }
+    if = {#Gdynia
+        limit = {
+            807 = { is_owned_or_subject_trigger = yes }
+        }
+        PRE = {
+            transfer_state = 807 transfer_state = 8632 transfer_state = 8633 transfer_state = 8634 transfer_state = 8635 transfer_state = 8636 transfer_state = 8637 transfer_state = 8638
+            add_state_core = 807 add_state_core = 8632 add_state_core = 8633 add_state_core = 8634 add_state_core = 8635 add_state_core = 8636 add_state_core = 8637 add_state_core = 8638
+        }
+    }
+    if = {#Poznan
+        limit = {
+            86 = { is_owned_or_subject_trigger = yes }
+        }
+        PRE = {
+            transfer_state = 86 transfer_state = 1807 transfer_state = 1808 transfer_state = 1809 transfer_state = 1810 transfer_state = 1811 transfer_state = 1812 transfer_state = 1813 transfer_state = 1814
+            add_state_core = 86 add_state_core = 1807 add_state_core = 1808 add_state_core = 1809 add_state_core = 1810 add_state_core = 1811 add_state_core = 1812 add_state_core = 1813 add_state_core = 1814
+        }
+    }
+    if = {#Katowice
+        limit = {
+            762 = { is_owned_or_subject_trigger = yes }
+        }
+        PRE = {
+            transfer_state = 762 transfer_state = 8434
+            add_state_core = 762 add_state_core = 8434
+        }
+    }
+    if = {#Danzig
+        limit = {
+            85 = { is_owned_or_subject_trigger = yes }
+        }
+        PRE = {
+            transfer_state = 85
+            add_state_core = 85
+        }
+    }
+    if = {#Memel
+        limit = {
+            188 = { is_owned_or_subject_trigger = yes }
+        }
+        PRE = {
+            transfer_state = 188 transfer_state = 2575
+            add_state_core = 188 add_state_core = 2575
+        }
+    }
+    if = {
+        limit = {
+            country_exists = PRE
+        }
+        puppet = PRE
+    }
+}
+FRA_disunite_germany_confederation_borders = {
+    FRA_disunite_germany_base_effect = yes
+    if = { #Tyrol to Bravaria
+        limit = {
+            153 = {
+                is_owned_or_subject_trigger = yes
+            }
+            BAY = {
+                exists = yes
+            }
+            NOT = {
+                AUS = {
+                    exists = yes
+                }                
+            }
+        }
+        BAY = {
+            transfer_state = 153 transfer_state = 2319 transfer_state = 2320 transfer_state = 2321 transfer_state = 2322 transfer_state = 2323
+            add_state_core = 153 add_state_core = 2319 add_state_core = 2320 add_state_core = 2321 add_state_core = 2322 add_state_core = 2323
+        }
+    }
+    if = { #Tyrol to Bravaria
+        limit = {
+            39 = {
+                is_owned_or_subject_trigger = yes
+            }
+            BAY = {
+                exists = yes
+                owns_state = 153
+            }
+            
+            AUS = {
+                exists = no
+            }                
+                        
+            ITA = {
+                exists = no
+            }
+        }
+        BAY = {
+            transfer_state = 39 transfer_state = 1444 transfer_state = 1445 transfer_state = 1446 transfer_state = 1447
+            add_state_core = 39 add_state_core = 1444 add_state_core = 1445 add_state_core = 1446 add_state_core = 1447
+        }
+    }
+    if = { #Take Weser-Ems
+        limit = {
+            56 = {
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        transfer_state = 56 transfer_state = 1587 transfer_state = 1588 transfer_state = 1589 transfer_state = 1590 transfer_state = 1591 transfer_state = 1592 transfer_state = 1593 transfer_state = 1594 transfer_state = 1595
+    }
+}
+
+FRA_SCO_disunite_germany_confederation_borders = {
+    FRA_disunite_germany_base_effect = yes
+    if = { #Tyrol to Bravaria
+        limit = {
+            153 = {
+                is_owned_or_subject_trigger = yes
+            }
+            BAY = {
+                exists = yes
+            }
+            NOT = {
+                AUS = {
+                    exists = yes
+                }                
+            }
+        }
+        BAY = {
+            transfer_state = 153 transfer_state = 2319 transfer_state = 2320 transfer_state = 2321 transfer_state = 2322 transfer_state = 2323
+            add_state_core = 153 add_state_core = 2319 add_state_core = 2320 add_state_core = 2321 add_state_core = 2322 add_state_core = 2323
+        }
+    }
+    if = { #Tyrol to Bravaria
+        limit = {
+            39 = {
+                is_owned_or_subject_trigger = yes
+            }
+            BAY = {
+                exists = yes
+                owns_state = 153
+            }
+            
+            AUS = {
+                exists = no
+            }                
+                        
+            ITA = {
+                exists = no
+            }
+        }
+        BAY = {
+            transfer_state = 39 transfer_state = 1444 transfer_state = 1445 transfer_state = 1446 transfer_state = 1447
+            add_state_core = 39 add_state_core = 1444 add_state_core = 1445 add_state_core = 1446 add_state_core = 1447
+        }
+    }
+    SCO = {
+        puppet = {
+            target = BAY
+            end_wars = no
+        }
+    }
+    if = { #Take Weser-Ems
+        limit = {
+            56 = {
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        transfer_state = 56 transfer_state = 1587 transfer_state = 1588 transfer_state = 1589 transfer_state = 1590 transfer_state = 1591 transfer_state = 1592 transfer_state = 1593 transfer_state = 1594 transfer_state = 1595
+    }
+}
+
+FRA_disunite_italy_base_effect = {
+    if = {
+        limit = {
+            158 = {
+                is_controlled_by = ROOT
+            }
+        }
+        transfer_state = 158 transfer_state = 2348 transfer_state = 2349 transfer_state = 2350 transfer_state = 2351 transfer_state = 2352 transfer_state = 2353 transfer_state = 2354 transfer_state = 2355 transfer_state = 2356 transfer_state = 2357 transfer_state = 2358 transfer_state = 2359 transfer_state = 2360 transfer_state = 2361 transfer_state = 2362 transfer_state = 2363
+    }
+    if = {
+        limit = {
+            162 = {
+                is_controlled_by = ROOT
+            }
+        }
+        transfer_state = 162 transfer_state = 2384 transfer_state = 2385 transfer_state = 2386 transfer_state = 2387 transfer_state = 2388 transfer_state = 2389 transfer_state = 2390 transfer_state = 2391 transfer_state = 2392 transfer_state = 2393
+    }
+    if = {
+        limit = {
+            2 = {
+                is_controlled_by = ROOT
+            }
+        }
+        transfer_state = 2 transfer_state = 1146 transfer_state = 1147 transfer_state = 1148 transfer_state = 1149 transfer_state = 1150 transfer_state = 1151
+    }
+    if = {
+        limit = {
+            736 = {
+                is_controlled_by = ROOT
+            }
+        }
+        transfer_state = 736 transfer_state = 8266
+    }
+    if = {
+        limit = {
+            163 = {
+                is_controlled_by = ROOT
+            }
+        }
+        transfer_state = 163
+    }
+    if = { #set up Naples puppet
+        limit = {
+            117 = {
+                is_owned_or_subject_trigger = yes
+            }
+            156 = {
+                is_owned_or_subject_trigger = yes
+            }
+            157 = {
+                is_owned_or_subject_trigger = yes
+            }
+            849 = {
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        NAP = {
+            transfer_state = 117 transfer_state = 2010 transfer_state = 2011 transfer_state = 2012 transfer_state = 2013 transfer_state = 2014 transfer_state = 2015 transfer_state = 2016 transfer_state = 2017
+            transfer_state = 156 transfer_state = 2341 transfer_state = 2342 transfer_state = 2343 transfer_state = 2344
+            transfer_state = 157 transfer_state = 2345 transfer_state = 2346 transfer_state = 2347
+            transfer_state = 849 transfer_state = 8861 transfer_state = 8862 transfer_state = 8863 transfer_state = 8864 transfer_state = 8865 transfer_state = 8866 transfer_state = 8867 #Puglia, new
+        }
+        puppet = NAP
+        NAP = {
+            set_cosmetic_tag = NAP_FRA
+        }
+    }
+    if = { #set up Sicily puppet
+        limit = {
+            115 = {
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        SCI = {
+            transfer_state = 115 transfer_state = 2001 transfer_state = 2002 transfer_state = 2003 transfer_state = 2004 transfer_state = 2005 transfer_state = 2006 transfer_state = 2007 transfer_state = 2008 transfer_state = 2009
+        }
+        puppet = SCI
+    }
+    if = { #set up Sardinian puppet
+        limit = {
+            114 = {
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        SAD = {
+            transfer_state = 114 transfer_state = 1994 transfer_state = 1995 transfer_state = 1996 transfer_state = 1997 transfer_state = 1998 transfer_state = 1999 transfer_state = 2000
+        }
+        puppet = SAD
+    }
+    if = { # Add Venice cus lols
+        limit = {
+            160 = {
+                is_owned_or_subject_trigger = yes
+            }
+            912 = {
+                is_owned_or_subject_trigger = yes
+            }
+            736 = {
+               is_owned_or_subject_trigger = yes
+            }
+            39 = {
+                is_owned_or_subject_trigger = yes
+            }
+            852 = { #Istria
+                is_owned_or_subject_trigger = yes
+            }
+            850 = { #Trentino, made core at start
+                is_owned_or_subject_trigger = yes
+            }
+        }
+        VNZ = {
+            transfer_state = 160 transfer_state = 2373 transfer_state = 2374 transfer_state = 2375
+            transfer_state = 912 transfer_state = 9186 transfer_state = 9187 transfer_state = 9188 transfer_state = 9189
+            transfer_state = 736 transfer_state = 8266
+            transfer_state = 850 transfer_state = 8868
+            if = {  #optional but sensible state, Zara
+                limit = {
+                    PREV = {
+                        163 = {
+                            is_owned_or_subject_trigger = yes 
+                        }
+                    }
+                }
+                transfer_state = 163
+            }
+            transfer_state = 39 transfer_state = 1444 transfer_state = 1445 transfer_state = 1446 transfer_state = 1447 
+            transfer_state = 852 transfer_state = 8872
+        }
+        736 = { add_core_of = VNZ } 8266 = { add_core_of = VNZ }
+		163 = { add_core_of = VNZ }
+		911 = { add_core_of = VNZ } 9185 = { add_core_of = VNZ }
+        39 = {add_claim_by = VNZ} 1444 = {add_claim_by = VNZ} 1445 = {add_claim_by = VNZ} 1446 = {add_claim_by = VNZ} 1447 = {add_claim_by = VNZ}
+        puppet = VNZ
+    }
+    every_state = {
+        limit = { 
+            is_core_of = ITA
+            is_owned_or_subject_trigger = yes
+            CONTROLLER = {
+                NOT = {
+                    tag = NAP
+                    tag = SCI
+                    tag = SAD
+                    tag = VNZ
+                }
+            }
+            NOT = {
+                state = 158
+                state = 162
+                state = 2
+                state = 736
+                state = 163
+            }
+        }
+        ITA = {
+            transfer_state = PREV
+            add_state_core = PREV
+        }
+    }
+    puppet = ITA
+    ITA = {
+        set_cosmetic_tag = ITA_FRA
+    }
+}
+
+FRA_air_force_improvement = {
+	if = {
+		limit = {
+			has_idea = FRA_modernizing_airforce4
+		}
+		remove_ideas = FRA_modernizing_airforce4
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_modernizing_airforce3
+		}
+		swap_ideas = {
+			remove_idea = FRA_modernizing_airforce3
+			add_idea = FRA_modernizing_airforce4
+		}
+	}	
+	else_if = {
+		limit = {
+			has_idea = FRA_modernizing_airforce2
+		}
+		swap_ideas = {
+			remove_idea = FRA_modernizing_airforce2
+			add_idea = FRA_modernizing_airforce3
+		}
+	}	
+	else_if = {
+		limit = {
+			has_idea = FRA_modernizing_airforce1
+		}
+		swap_ideas = {
+			remove_idea = FRA_modernizing_airforce1
+			add_idea = FRA_modernizing_airforce2
+		}
+	}	
+	else_if = {
+		limit = {
+			has_idea = FRA_outdated_airforce
+		}
+		swap_ideas = {
+			remove_idea = FRA_outdated_airforce
+			add_idea = FRA_modernizing_airforce1
+		}
+	}
+}

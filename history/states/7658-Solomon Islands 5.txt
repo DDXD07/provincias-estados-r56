@@ -1,0 +1,19 @@
+state = {
+	id = 7658
+	name = "STATE_7658"
+	manpower = 3495
+	buildings_max_level_factor = 1
+	local_supplies = 0.0
+	state_category = small_island
+	history = {
+		owner = ENG
+		add_core_of = SOL
+		buildings = {
+			infrastructure = 1
+		}
+		strategic_state_location = {
+			favorable_approach = 10291
+		}
+	}
+	provinces = { 10291 }
+}

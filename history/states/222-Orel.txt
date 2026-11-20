@@ -1,0 +1,25 @@
+state = {
+	id = 222
+	name = "STATE_222"
+	manpower = 1899693
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		steel = 3
+		chromium = 1
+	}
+	history = {
+		owner = SOV
+		victory_points = { 9355 10 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 4
+		}
+		add_core_of = SOV
+		add_to_array = {
+			state_victory_points = 9355
+		}
+	}
+	provinces = { 9355 }
+}

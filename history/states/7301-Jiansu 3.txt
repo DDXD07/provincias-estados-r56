@@ -1,0 +1,24 @@
+state = {
+	id = 7301
+	name = "STATE_7301"
+	manpower = 2731072
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 4001
+		}
+		victory_points = { 4001 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		1938.10.25 = {
+			controller = JAP
+		}
+	}
+	provinces = { 4001 }
+}

@@ -1,0 +1,27 @@
+state = {
+	id = 615
+	name = "STATE_615"
+	manpower = 2706896
+	local_supplies = 0.0
+	state_category = developed_rural
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = SHX
+		add_core_of = SHX
+		add_core_of = CHI
+		add_core_of = PRC
+		set_state_flag = CHI_taiyuan_arsenal_organization_flag
+		add_to_array = {
+			state_victory_points = 4174
+		}
+		victory_points = { 4174 3 }
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+	provinces = { 4174 }
+}

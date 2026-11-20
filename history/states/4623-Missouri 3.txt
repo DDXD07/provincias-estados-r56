@@ -1,0 +1,24 @@
+state = {
+	id = 4623
+	name = "STATE_4623"
+	manpower = 175614
+	local_supplies = 7.0
+	state_category = pastoral
+	resources = {
+		aluminium = 1
+		coal = 1
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = USA
+		add_claim_by = CSA
+		add_to_array = {
+			state_victory_points = 12361
+		}
+		victory_points = { 12361 1 }
+	}
+	provinces = { 12361 }
+}

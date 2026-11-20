@@ -1,0 +1,15 @@
+state = {
+	id = 4009
+	name = "STATE_4009"
+	manpower = 6000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = FRA
+		add_core_of = CAY
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 4934 }
+}

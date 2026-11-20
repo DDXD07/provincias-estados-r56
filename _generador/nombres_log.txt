@@ -1,0 +1,18 @@
+Estados finales: 10278 | provincias con VP: 1872
+GeoNames: 226412 lugares poblados [6s]
+  franja x 0-1400: 75 semillas, 70 coinciden
+  franja x 700-2100: 174 semillas, 153 coinciden
+  franja x 1400-2800: 161 semillas, 95 coinciden
+  franja x 2100-3500: 305 semillas, 280 coinciden
+  franja x 2800-4200: 384 semillas, 374 coinciden
+  franja x 3500-4900: 342 semillas, 335 coinciden
+  franja x 4200-5600: 237 semillas, 226 coinciden
+  franja x 4900-5632: 35 semillas, 30 coinciden
+Proyeccion: 2075 ciudades del juego como puntos de control; error de validacion cruzada mediano 35 km (2.2 px), p90 93 km (5.1 px); ciudades del juego que caen en su propia provincia (validacion cruzada): 59% [12s]
+Incertidumbre calibrada (max. verosimilitud): escala 1.0, prob. media 0.54 vs acierto real 0.59
+Ciudades ubicadas en provincias: 225105 [27s]
+Provincias nombradas por ciudad interior: 7400 (ciudades recuperadas del borde: 89) [28s]
+Provincias sin ciudad interior: {'ciudad_lejana': 176, 'ciudad_cercana': 297, 'municipio_condado': 90, 'sin_datos': 136}
+Confianza (prob. de que la ciudad este dentro de la provincia): mediana 0.72, >=0.8: 41%, <0.5: 28%
+Fuentes: {'geonames': 7400, 'lejana': 176, 'cercana': 297, 'juego': 2179, 'condado': 90, 'sin_datos': 136}
+Nombres repetidos dentro de un mismo estado original: 0

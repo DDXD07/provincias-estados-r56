@@ -1,0 +1,20 @@
+state = {
+	id = 1929
+	name = "STATE_1929"
+	manpower = 171496
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = YUG
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = { 9596 1 }
+		add_core_of = YUG
+		add_core_of = SLV
+		add_to_array = {
+			state_victory_points = 9596
+		}
+	}
+	provinces = { 9596 }
+}

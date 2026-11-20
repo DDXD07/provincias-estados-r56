@@ -1,0 +1,19 @@
+state = {
+	id = 6540
+	name = "STATE_6540"
+	manpower = 312043
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		add_to_array = {
+			state_victory_points = 11985
+		}
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = { 11985 2 }
+	}
+	provinces = { 11985 }
+}

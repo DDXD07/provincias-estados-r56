@@ -1,0 +1,19 @@
+state = {
+	id = 9673
+	name = "STATE_9673"
+	manpower = 7204
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	resources = {
+		tungsten = 10
+	}
+	history = {
+		owner = RAJ
+		add_core_of = BRM
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 12125 }
+}

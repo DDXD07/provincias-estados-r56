@@ -1,0 +1,22 @@
+state = {
+	id = 228
+	name = "STATE_228"
+	manpower = 446583
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = SOV
+		victory_points = { 9461 1 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+		add_core_of = DON
+		add_to_array = {
+			state_victory_points = 9461
+		}
+	}
+	provinces = { 9461 }
+}

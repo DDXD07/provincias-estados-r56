@@ -1,0 +1,19 @@
+state = {
+	id = 10223
+	name = "STATE_10223"
+	manpower = 330586
+	local_supplies = 1
+	state_category = rural
+	history = {
+		owner = SIA
+		add_core_of = SIA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 1427 3 }
+		add_to_array = {
+			state_victory_points = 1427
+		}
+	}
+	provinces = { 1427 }
+}

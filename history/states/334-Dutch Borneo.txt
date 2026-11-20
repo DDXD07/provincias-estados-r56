@@ -1,0 +1,28 @@
+state = {
+	id = 334
+	name = "STATE_334"
+	manpower = 163225
+	buildings_max_level_factor = 1.000
+	local_supplies = 1.000
+	state_category = rural
+	resources = {
+		rubber = 5
+	}
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = KUT
+		add_to_array = {
+			state_victory_points = 10237
+		}
+		victory_points = { 10237 3 }
+		buildings = {
+			infrastructure = 1
+			fuel_silo = 1
+			10237 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces = { 10237 }
+}

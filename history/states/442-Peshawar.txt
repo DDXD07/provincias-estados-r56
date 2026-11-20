@@ -1,0 +1,26 @@
+state = {
+	id = 442
+	name = "STATE_442"
+	manpower = 3547347
+	local_supplies = 5.0
+	state_category = rural
+	resources = {
+		chromium = 1
+		steel = 1
+	}
+	history = {
+		victory_points = { 12717 5 }
+		owner = RAJ
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 3
+		}
+		add_core_of = PAK
+		add_claim_by = AFG
+		add_to_array = {
+			state_victory_points = 12717
+		}
+	}
+	provinces = { 12717 }
+}

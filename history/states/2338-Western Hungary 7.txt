@@ -1,0 +1,18 @@
+state = {
+	id = 2338
+	name = "STATE_2338"
+	manpower = 47261
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		aluminium = 4
+	}
+	history = {
+		owner = HUN
+		add_core_of = HUN
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 11663 }
+}

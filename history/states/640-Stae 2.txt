@@ -1,0 +1,23 @@
+state = {
+	id = 640
+	name = "STATE_640"
+	manpower = 462498
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		tungsten = 2
+	}
+	history = {
+		owner = RAJ
+		add_core_of = BRM
+		add_to_array = {
+			state_victory_points = 1492
+		}
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+		}
+		victory_points = { 1566 2 }
+	}
+	provinces = { 1566 }
+}

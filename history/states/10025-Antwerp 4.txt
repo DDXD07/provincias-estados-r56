@@ -1,0 +1,16 @@
+state = {
+	id = 10025
+	name = "STATE_10025"
+	manpower = 27273
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = BEL
+		add_core_of = BEL
+		add_core_of = FLA
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 9574 }
+}

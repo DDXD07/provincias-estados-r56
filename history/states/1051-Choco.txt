@@ -1,0 +1,20 @@
+state = {
+	id = 1051
+	name = "STATE_1051"
+	manpower = 688901
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = COL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = COL
+		add_to_array = {
+			state_victory_points = 2023
+		}
+		victory_points = { 2023 1 }
+	}
+	provinces = { 2023 }
+}

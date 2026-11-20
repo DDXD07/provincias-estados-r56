@@ -1,0 +1,17 @@
+state = {
+	id = 10259
+	name = "STATE_10259"
+	manpower = 7370
+	local_supplies = 1
+	state_category = p2s_village
+	history = {
+		owner = INS
+		add_core_of = WPG
+		set_resistance = 15
+		set_compliance = 20
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 1617 }
+}

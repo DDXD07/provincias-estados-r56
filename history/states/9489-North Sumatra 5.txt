@@ -1,0 +1,23 @@
+state = {
+	id = 9489
+	name = "STATE_9489"
+	manpower = 86874
+	buildings_max_level_factor = 1.000
+	local_supplies = 3.000
+	state_category = p2s_village
+	resources = {
+		rubber = 7
+		oil = 2
+	}
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = SSI
+		set_resistance = 0
+		set_compliance = 60
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 1277 }
+}

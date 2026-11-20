@@ -1,0 +1,18 @@
+state = {
+	id = 8324
+	name = "STATE_8324"
+	manpower = 692308
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = XIC
+		add_core_of = PRC
+		add_core_of = CHI
+		add_core_of = XIC
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 12713 }
+}

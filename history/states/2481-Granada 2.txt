@@ -1,0 +1,24 @@
+state = {
+	id = 2481
+	name = "STATE_2481"
+	manpower = 401241
+	buildings_max_level_factor = 1.000
+	local_supplies = 6.0
+	state_category = rural
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = SPR
+		victory_points = { 1176 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = SPR
+		add_to_array = {
+			state_victory_points = 1176
+		}
+	}
+	provinces = { 1176 }
+}

@@ -1,0 +1,21 @@
+state = {
+	id = 2465
+	name = "STATE_2465"
+	manpower = 553984
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = SPR
+		add_core_of = GLC
+		victory_points = { 6734 3 }
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+		}
+		add_core_of = SPR
+		add_to_array = {
+			state_victory_points = 6734
+		}
+	}
+	provinces = { 6734 }
+}

@@ -1,0 +1,21 @@
+state = {
+	id = 6133
+	name = "STATE_6133"
+	manpower = 110855
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		oil = 1
+	}
+	history = {
+		owner = COL
+		buildings = {
+			infrastructure = 2
+			8056 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = COL
+	}
+	provinces = { 8056 }
+}

@@ -1,0 +1,22 @@
+state = {
+	id = 95
+	name = "STATE_95"
+	manpower = 429853
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		victory_points = { 9304 1 }
+		owner = POL
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+		}
+		add_core_of = POL
+		add_core_of = BLR
+		add_to_array = {
+			state_victory_points = 9304
+		}
+	}
+	provinces = { 9304 }
+}

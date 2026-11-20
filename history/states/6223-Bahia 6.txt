@@ -1,0 +1,19 @@
+state = {
+	id = 6223
+	name = "STATE_6223"
+	manpower = 62019
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 1
+		chromium = 1
+	}
+	history = {
+		owner = BRA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = BRA
+	}
+	provinces = { 5218 }
+}

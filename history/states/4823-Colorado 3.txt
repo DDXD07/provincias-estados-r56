@@ -1,0 +1,22 @@
+state = {
+	id = 4823
+	name = "STATE_4823"
+	manpower = 83982
+	local_supplies = 8.0
+	state_category = pastoral
+	resources = {
+		oil = 1
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 10588
+		}
+		victory_points = { 10588 1 }
+	}
+	provinces = { 10588 }
+}

@@ -1,0 +1,23 @@
+state = {
+	id = 9614
+	name = "STATE_9614"
+	manpower = 119472
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = BRA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = BRA
+		if = {
+			limit = {
+				NOT = {
+					has_dlc = "Trial of Allegiance"
+				}
+			}
+			set_demilitarized_zone = yes
+		}
+	}
+	provinces = { 7561 }
+}

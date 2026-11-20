@@ -1,0 +1,16 @@
+state = {
+	id = 6338
+	name = "STATE_6338"
+	manpower = 12220
+	impassable = yes
+	local_supplies = 0.0
+	state_category = wasteland
+	history = {
+		owner = FRA
+		add_core_of = ALG
+		buildings = {
+			infrastructure = 0
+		}
+	}
+	provinces = { 8088 }
+}

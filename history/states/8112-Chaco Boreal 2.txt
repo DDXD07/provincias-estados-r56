@@ -1,0 +1,20 @@
+state = {
+	id = 8112
+	name = "STATE_8112"
+	manpower = 6558
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		tungsten = 1
+		steel = 1
+	}
+	history = {
+		owner = PAR
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = PAR
+		add_core_of = BOL
+	}
+	provinces = { 8203 }
+}

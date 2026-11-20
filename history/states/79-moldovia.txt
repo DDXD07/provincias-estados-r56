@@ -1,0 +1,22 @@
+state = {
+	id = 79
+	name = "STATE_79"
+	manpower = 789297
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = ROM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 2
+		}
+		victory_points = { 9716 4 }
+		add_core_of = ROM
+		add_claim_by = MOL
+		add_to_array = {
+			state_victory_points = 9716
+		}
+	}
+	provinces = { 9716 }
+}

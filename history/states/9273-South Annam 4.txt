@@ -1,0 +1,24 @@
+state = {
+	id = 9273
+	name = "STATE_9273"
+	manpower = 156317
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		rubber = 1
+	}
+	history = {
+		owner = FRI
+		add_core_of = FRI
+		add_core_of = VIN
+		add_to_array = {
+			state_victory_points = 4405
+		}
+		victory_points = { 4405 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 4405 }
+}

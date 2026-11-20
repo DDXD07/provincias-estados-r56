@@ -1,0 +1,23 @@
+state = {
+	id = 1914
+	name = "STATE_1914"
+	manpower = 154524
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		aluminium = 1
+	}
+	history = {
+		owner = DEN
+		victory_points = { 3206 1 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = DEN
+		add_to_array = {
+			state_victory_points = 3206
+		}
+	}
+	provinces = { 3206 }
+}

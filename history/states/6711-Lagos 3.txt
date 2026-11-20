@@ -1,0 +1,14 @@
+state = {
+	id = 6711
+	name = "STATE_6711"
+	manpower = 3000
+	local_supplies = 0.0
+	state_category = tiny_island
+	history = {
+		owner = JAP
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 1515 }
+}

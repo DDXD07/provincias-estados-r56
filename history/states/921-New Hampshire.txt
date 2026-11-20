@@ -1,0 +1,21 @@
+state = {
+	id = 921
+	name = "STATE_921"
+	manpower = 240499
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 3712
+		}
+		victory_points = { 3712 1 }
+	}
+	provinces = { 3712 }
+}

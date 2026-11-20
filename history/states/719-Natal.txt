@@ -1,0 +1,28 @@
+state = {
+	id = 719
+	name = "STATE_719"
+	manpower = 3081677
+	local_supplies = 0.0
+	state_category = developed_rural
+	resources = {
+		chromium = 15
+		coal = 1
+	}
+	history = {
+		owner = SAF
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 1
+			1468 = {
+				naval_base = 2
+			}
+		}
+		victory_points = { 1468 3 }
+		add_core_of = SAF
+		add_to_array = {
+			state_victory_points = 1468
+		}
+	}
+	provinces = { 1468 }
+}

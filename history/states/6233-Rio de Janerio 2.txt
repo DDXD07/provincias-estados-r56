@@ -1,0 +1,20 @@
+state = {
+	id = 6233
+	name = "STATE_6233"
+	manpower = 1635942
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = BRA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = BRA
+		add_to_array = {
+			state_victory_points = 12996
+		}
+		victory_points = { 12996 10 }
+	}
+	provinces = { 12996 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 3961
+	name = "STATE_3961"
+	manpower = 53215
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		rubber = 1
+	}
+	history = {
+		owner = LIB
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = LIB
+	}
+	provinces = { 13450 }
+}

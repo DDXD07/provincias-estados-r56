@@ -1,0 +1,19 @@
+state = {
+	id = 4643
+	name = "STATE_4643"
+	manpower = 92156
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		oil = 4
+		aluminium = 1
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+	}
+	provinces = { 2043 }
+}

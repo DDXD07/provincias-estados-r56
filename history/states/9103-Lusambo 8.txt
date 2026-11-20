@@ -1,0 +1,30 @@
+state = {
+	id = 9103
+	name = "STATE_9103"
+	manpower = 88524
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = COG
+		IF = {
+			limit = {
+				AND = {
+					has_dlc = "Gotterdammerung"
+					has_game_rule = {
+						rule = BEL_focus_tree_selection
+						option = STANDARD_TREE
+					}
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = COG_state_loyal_to_free_congo_modifier
+			}
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = COG
+	}
+	provinces = { 2024 }
+}

@@ -1,0 +1,20 @@
+state = {
+	id = 9195
+	name = "STATE_9195"
+	manpower = 89015
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		tungsten = 7
+		rubber = 21
+	}
+	history = {
+		owner = MAL
+		add_core_of = MAL
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 12271 }
+}

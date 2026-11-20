@@ -1,0 +1,30 @@
+state = {
+	id = 726
+	name = "STATE_726"
+	manpower = 34998
+	local_supplies = 0.0
+	state_category = small_island
+	resources = {
+		rubber = 1
+	}
+	history = {
+		owner = NZL
+		add_core_of = SAM
+		add_to_array = {
+			state_victory_points = 7290
+		}
+		set_demilitarized_zone = yes
+		buildings = {
+			infrastructure = 2
+			7290 = {
+				naval_base = 2
+				coastal_bunker = 2
+			}
+		}
+		strategic_province_location = {
+			defensible_coastline = 7290
+		}
+		victory_points = { 7290 3 }
+	}
+	provinces = { 7290 }
+}

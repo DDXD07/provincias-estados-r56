@@ -1,0 +1,23 @@
+state = {
+	id = 1568
+	name = "STATE_1568"
+	manpower = 221308
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = GER
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = { 11417 1 }
+		add_core_of = GER
+		add_core_of = BAY
+		add_to_array = {
+			state_victory_points = 11417
+		}
+	}
+	provinces = { 11417 }
+}

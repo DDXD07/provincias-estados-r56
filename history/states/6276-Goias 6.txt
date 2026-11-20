@@ -1,0 +1,16 @@
+state = {
+	id = 6276
+	name = "STATE_6276"
+	manpower = 40377
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = BRA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = BRA
+	}
+	provinces = { 12959 }
+}

@@ -1,0 +1,23 @@
+state = {
+	id = 4209
+	name = "STATE_4209"
+	manpower = 163008
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = TUR
+		victory_points = { 11746 5 }
+		buildings = {
+			infrastructure = 2
+			11746 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = TUR
+		add_claim_by = KUR
+		add_to_array = {
+			state_victory_points = 11746
+		}
+	}
+	provinces = { 11746 }
+}

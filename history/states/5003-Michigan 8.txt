@@ -1,0 +1,20 @@
+state = {
+	id = 5003
+	name = "STATE_5003"
+	manpower = 65438
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 3
+		oil = 1
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = USA
+	}
+	provinces = { 4854 }
+}

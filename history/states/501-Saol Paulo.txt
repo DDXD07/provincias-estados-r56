@@ -1,0 +1,22 @@
+state = {
+	id = 501
+	name = "STATE_501"
+	manpower = 2375867
+	local_supplies = 0.0
+	state_category = large_town
+	history = {
+		owner = BRA
+		buildings = {
+			arms_factory = 1
+			industrial_complex = 3
+			infrastructure = 3
+			air_base = 4
+		}
+		add_core_of = BRA
+		add_to_array = {
+			state_victory_points = 10513
+		}
+		victory_points = { 10513 20 }
+	}
+	provinces = { 10513 }
+}

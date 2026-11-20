@@ -1,0 +1,19 @@
+state = {
+	id = 5804
+	name = "STATE_5804"
+	manpower = 184757
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 7170 2 }
+		add_core_of = JOR
+		add_to_array = {
+			state_victory_points = 7170
+		}
+	}
+	provinces = { 7170 }
+}

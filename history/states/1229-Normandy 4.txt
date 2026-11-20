@@ -1,0 +1,26 @@
+state = {
+	id = 1229
+	name = "STATE_1229"
+	manpower = 286397
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = FRA
+		victory_points = { 6449 3 }
+		buildings = {
+			infrastructure = 4
+			6449 = {
+				naval_base = 3
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = FRA
+		add_to_array = {
+			state_victory_points = 6449
+		}
+	}
+	provinces = { 6449 }
+}

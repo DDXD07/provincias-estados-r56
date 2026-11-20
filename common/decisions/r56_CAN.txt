@@ -1,0 +1,386 @@
+operations = {
+
+	CAN_defence_scheme_no1 = {
+		icon = generic_operation
+		allowed = { tag = CAN }
+		
+		available = {
+			has_war_with = FROM
+			OR = {
+				has_completed_focus = r56_CAN_defence_scheme_no1
+				has_completed_focus = r56_CAN_defence_scheme_no1_gg
+			}
+		}
+		
+		visible = {
+			OR = {
+				has_completed_focus = r56_CAN_defence_scheme_no1
+				has_completed_focus = r56_CAN_defence_scheme_no1_gg
+			}
+		}
+
+		target_trigger = {
+			FROM = { tag = USA }
+		}
+
+		targets = { USA }
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		days_remove = 180
+		
+		targeted_modifier = {
+			tag = USA
+			attack_bonus_against = 0.15
+		}
+	}
+
+	CAN_democracy_decision = {
+		icon = generic_operation
+		allowed = { tag = CAN }
+
+		available = {
+			has_completed_focus = r56_CAN_install_democracy_in_the_americas
+			FROM = {
+				NOT = { has_government = ROOT }
+			}
+			is_puppet = no
+		}
+		
+		visible = {
+			has_completed_focus = r56_CAN_install_democracy_in_the_americas
+			FROM = {
+				NOT = { has_government = ROOT }
+			}
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = MEX
+					tag = GUA
+					tag = ELS
+					tag = HON
+					tag = CUB
+					tag = HAI
+					tag = DOM
+					tag = NIC
+					tag = COS
+					tag = PAN
+					tag = COL
+					tag = VEN
+					tag = BRA
+					tag = ECU
+					tag = PRU
+					tag = BOL
+					tag = PAR
+					tag = CHL
+					tag = ARG
+					tag = URG
+				}
+			}
+		}
+		
+		targets = { MEX GUA ELS HON CUB HAI DOM NIC COS PAN COL VEN BRA ECU PRU BOL PAR CHL ARG URG }
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		cost = 150
+		
+		fire_only_once = yes
+		
+		days_remove = 60
+		
+		remove_effect = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FROM
+				expire = 0
+			}
+		}
+	}
+}
+
+political_actions = {
+
+	CAN_seize_newfoundland_and_labrador = {
+		icon = generic_operation
+		allowed = {
+			tag = CAN
+		}
+		
+		available = {
+			has_country_flag = ENG_abdication_crisis_dominion_will_leave
+			NOT = {
+				has_country_flag = ENG_abdication_crisis_dominion_will_stay
+			}
+		}
+		
+		visible = {
+			ENG = {
+				has_completed_focus = ENG_a_change_in_course
+			}
+			NOT = {
+				has_country_flag = ENG_abdication_crisis_dominion_will_stay
+			}
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		cost = 20
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			transfer_state = 331 transfer_state = 4122 transfer_state = 4123 transfer_state = 4124 transfer_state = 4125
+			transfer_state = 332 transfer_state = 4126 transfer_state = 4127 transfer_state = 4128 transfer_state = 4129
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+			}
+		}
+	}
+
+	CAN_integrate_alaska = {
+		icon = generic_nationalism
+		
+		allowed = {
+			original_tag = CAN
+		}
+
+		visible = {
+			has_completed_focus = r56_CAN_claims_on_america
+			NOT = {
+				463 = { is_core_of = ROOT }
+			}
+		}
+		
+		available = {
+			controls_state = 463
+			has_completed_focus = r56_CAN_claims_on_america
+			NOT = {
+				has_country_flag = r56_CAN_already_integrating
+			}
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = { state = 463 } 
+		}
+
+		cost = 50
+
+		days_remove = 180
+
+		cancel_if_not_visible = yes
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		complete_effect = {
+			set_country_flag = { flag = r56_CAN_already_integrating value = 1 days = 180 }
+		}
+		
+		remove_effect = {
+			add_state_core = 463 add_state_core = 5889 add_state_core = 5890 add_state_core = 5891 add_state_core = 5892 add_state_core = 5893 add_state_core = 5894 add_state_core = 5895 add_state_core = 5896 add_state_core = 5897 add_state_core = 5898 add_state_core = 5899 add_state_core = 5900 add_state_core = 5901 add_state_core = 5902
+			hidden_effect = {
+				remove_state_claim = 463 remove_state_claim = 5889 remove_state_claim = 5890 remove_state_claim = 5891 remove_state_claim = 5892 remove_state_claim = 5893 remove_state_claim = 5894 remove_state_claim = 5895 remove_state_claim = 5896 remove_state_claim = 5897 remove_state_claim = 5898 remove_state_claim = 5899 remove_state_claim = 5900 remove_state_claim = 5901 remove_state_claim = 5902
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	CAN_integrate_washington = {
+		icon = generic_nationalism
+		
+		allowed = {
+			original_tag = CAN
+		}
+
+		visible = {
+			has_completed_focus = r56_CAN_claims_on_america
+			NOT = {
+				385 = { is_core_of = ROOT }
+			}
+		}
+		
+		available = {
+			controls_state = 386
+			has_completed_focus = r56_CAN_claims_on_america
+			NOT = {
+				has_country_flag = r56_CAN_already_integrating
+			}
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = { state = 386 } 
+		}
+
+		cost = 50
+
+		days_remove = 180
+
+		cancel_if_not_visible = yes
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		complete_effect = {
+			set_country_flag = { flag = r56_CAN_already_integrating value = 1 days = 180 }
+		}
+		
+		remove_effect = {
+			add_state_core = 386 add_state_core = 4886 add_state_core = 4887 add_state_core = 4888 add_state_core = 4889 add_state_core = 4890 add_state_core = 4891 add_state_core = 4892 add_state_core = 4893 add_state_core = 4894 add_state_core = 4895 add_state_core = 4896 add_state_core = 4897 add_state_core = 4898 add_state_core = 4899 add_state_core = 4900 add_state_core = 4901 add_state_core = 4902 add_state_core = 4903 add_state_core = 4904 add_state_core = 4905 add_state_core = 4906
+			hidden_effect = {
+				remove_state_claim = 386 remove_state_claim = 4886 remove_state_claim = 4887 remove_state_claim = 4888 remove_state_claim = 4889 remove_state_claim = 4890 remove_state_claim = 4891 remove_state_claim = 4892 remove_state_claim = 4893 remove_state_claim = 4894 remove_state_claim = 4895 remove_state_claim = 4896 remove_state_claim = 4897 remove_state_claim = 4898 remove_state_claim = 4899 remove_state_claim = 4900 remove_state_claim = 4901 remove_state_claim = 4902 remove_state_claim = 4903 remove_state_claim = 4904 remove_state_claim = 4905 remove_state_claim = 4906
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	CAN_integrate_oregon = {
+		icon = generic_nationalism
+		
+		allowed = {
+			original_tag = CAN
+		}
+
+		visible = {
+			has_completed_focus = r56_CAN_claims_on_america
+			NOT = {
+				385 = { is_core_of = ROOT }
+			}
+		}
+		
+		available = {
+			controls_state = 385
+			has_completed_focus = r56_CAN_claims_on_america
+			NOT = {
+				has_country_flag = r56_CAN_already_integrating
+			}
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = { state = 385 } 
+		}
+
+		cost = 50
+
+		days_remove = 180
+
+		cancel_if_not_visible = yes
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		complete_effect = {
+			set_country_flag = { flag = r56_CAN_already_integrating value = 1 days = 180 }
+		}
+		
+		remove_effect = {
+			add_state_core = 385 add_state_core = 4864 add_state_core = 4865 add_state_core = 4866 add_state_core = 4867 add_state_core = 4868 add_state_core = 4869 add_state_core = 4870 add_state_core = 4871 add_state_core = 4872 add_state_core = 4873 add_state_core = 4874 add_state_core = 4875 add_state_core = 4876 add_state_core = 4877 add_state_core = 4878 add_state_core = 4879 add_state_core = 4880 add_state_core = 4881 add_state_core = 4882 add_state_core = 4883 add_state_core = 4884 add_state_core = 4885
+			hidden_effect = {
+				remove_state_claim = 385 remove_state_claim = 4864 remove_state_claim = 4865 remove_state_claim = 4866 remove_state_claim = 4867 remove_state_claim = 4868 remove_state_claim = 4869 remove_state_claim = 4870 remove_state_claim = 4871 remove_state_claim = 4872 remove_state_claim = 4873 remove_state_claim = 4874 remove_state_claim = 4875 remove_state_claim = 4876 remove_state_claim = 4877 remove_state_claim = 4878 remove_state_claim = 4879 remove_state_claim = 4880 remove_state_claim = 4881 remove_state_claim = 4882 remove_state_claim = 4883 remove_state_claim = 4884 remove_state_claim = 4885
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	CAN_integrate_new_england = {
+		icon = generic_nationalism
+		
+		allowed = {
+			original_tag = CAN
+		}
+
+		visible = {
+			has_completed_focus = r56_CAN_claims_on_america
+			NOT = {
+				357 = { is_core_of = ROOT }
+				921 = { is_core_of = ROOT }
+				990 = { is_core_of = ROOT }
+				991 = { is_core_of = ROOT }
+				993 = { is_core_of = ROOT }
+				992 = { is_core_of = ROOT }
+			}
+		}
+		
+		available = {
+			controls_state = 357
+			has_completed_focus = r56_CAN_claims_on_america
+			NOT = {
+				has_country_flag = r56_CAN_already_integrating
+			}
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = { 
+				state = 357
+				state = 921
+				state = 990
+				state = 990
+				state = 991
+				state = 992
+				state = 993
+			} 
+		}
+
+		cost = 50
+
+		days_remove = 180
+
+		cancel_if_not_visible = yes
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		complete_effect = {
+			set_country_flag = { flag = r56_CAN_already_integrating value = 1 days = 180 }
+		}
+		
+		remove_effect = {
+			add_state_core = 357 add_state_core = 4370 add_state_core = 4371 add_state_core = 4372 add_state_core = 4373 add_state_core = 4374 add_state_core = 4375 add_state_core = 4376 add_state_core = 4377 add_state_core = 4378 add_state_core = 4379 add_state_core = 4380
+			add_state_core = 990 add_state_core = 9576 add_state_core = 9577
+			add_state_core = 921 add_state_core = 9251 add_state_core = 9252 add_state_core = 9253
+			add_state_core = 991 add_state_core = 9578 add_state_core = 9579 add_state_core = 9580 add_state_core = 9581 add_state_core = 9582 add_state_core = 9583
+			add_state_core = 992
+			add_state_core = 993 add_state_core = 9584 add_state_core = 9585 add_state_core = 9586 add_state_core = 9587
+			hidden_effect = {
+				remove_state_claim = 357 remove_state_claim = 4370 remove_state_claim = 4371 remove_state_claim = 4372 remove_state_claim = 4373 remove_state_claim = 4374 remove_state_claim = 4375 remove_state_claim = 4376 remove_state_claim = 4377 remove_state_claim = 4378 remove_state_claim = 4379 remove_state_claim = 4380
+				remove_state_claim = 921 remove_state_claim = 9251 remove_state_claim = 9252 remove_state_claim = 9253
+				remove_state_claim = 990 remove_state_claim = 9576 remove_state_claim = 9577
+				remove_state_claim = 991 remove_state_claim = 9578 remove_state_claim = 9579 remove_state_claim = 9580 remove_state_claim = 9581 remove_state_claim = 9582 remove_state_claim = 9583
+				remove_state_claim = 992
+				remove_state_claim = 993 remove_state_claim = 9584 remove_state_claim = 9585 remove_state_claim = 9586 remove_state_claim = 9587
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

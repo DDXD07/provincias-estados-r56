@@ -1,0 +1,24 @@
+state = {
+	id = 7295
+	name = "STATE_7295"
+	manpower = 673214
+	local_supplies = 4.0
+	state_category = p2s_village
+	resources = {
+		aluminium = 1
+	}
+	history = {
+		owner = SND
+		add_core_of = SND
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+		1938.10.25 = {
+			owner = CHI
+			controller = JAP
+		}
+	}
+	provinces = { 4186 }
+}

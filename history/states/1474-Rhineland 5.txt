@@ -1,0 +1,23 @@
+state = {
+	id = 1474
+	name = "STATE_1474"
+	manpower = 33580
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 3
+		aluminium = 1
+		coal = 2
+	}
+	history = {
+		owner = GER
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = GER
+		add_core_of = RHI
+		set_demilitarized_zone = yes
+	}
+	provinces = { 3558 }
+}

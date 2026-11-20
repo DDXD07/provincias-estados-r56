@@ -1,0 +1,20 @@
+state = {
+	id = 471
+	name = "STATE_471"
+	manpower = 15711
+	buildings_max_level_factor = 1.000
+	local_supplies = 3.000
+	state_category = wasteland
+	history = {
+		owner = CAN
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 12571 1 }
+		add_core_of = CAN
+		add_to_array = {
+			state_victory_points = 12571
+		}
+	}
+	provinces = { 12571 }
+}

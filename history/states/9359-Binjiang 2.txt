@@ -1,0 +1,23 @@
+state = {
+	id = 9359
+	name = "STATE_9359"
+	manpower = 301727
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = MAN
+		add_core_of = MAN
+		add_core_of = CHI
+		add_core_of = PRC
+		add_claim_by = GUK
+		add_to_array = {
+			state_victory_points = 11906
+		}
+		victory_points = { 11906 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 11906 }
+}

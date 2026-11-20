@@ -1,0 +1,19 @@
+state = {
+	id = 4330
+	name = "STATE_4330"
+	manpower = 60483
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = TUR
+		victory_points = { 7530 1 }
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = KUR
+		add_to_array = {
+			state_victory_points = 7530
+		}
+	}
+	provinces = { 7530 }
+}

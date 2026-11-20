@@ -1,0 +1,174 @@
+political_actions = {
+#	CAT_deploy_the_aragonese_fleet = {
+#
+#		icon = generic_army_support
+#
+#		allowed = {
+#			original_tag = CAT
+#		}
+#
+#		available = {
+#	
+#		}
+#		
+#		fire_only_once = yes	
+#		visible = {
+#			has_global_flag = XVth_century_aragon_flag
+#		}
+#
+#		complete_effect = {				
+#			load_oob = "CAT_ARAGON_1936_naval_legacy"							
+#		}			
+#		ai_will_do = {
+#			factor = 50
+#		}
+#	}
+	AST_assimilate_new_zealand = {
+
+		icon = generic_nationalism
+
+		cost = 75
+		fire_only_once = yes
+
+		days_remove = 60
+
+		allowed = {
+			original_tag = AST
+		}
+
+		available = {
+			surrender_progress < 0.3
+			has_civil_war = no
+			284 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+				compliance > 70
+				resistance < 25
+			}
+			1136 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+				compliance > 70
+				resistance < 25
+			}
+			1140 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+				compliance > 70
+				resistance < 25
+			}
+			723 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+				compliance > 70
+				resistance < 25
+			}
+			1139 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+				compliance > 70
+				resistance < 25
+			}
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = AST_R56_intergrate_new_zealand
+				has_completed_focus = AST_R56_liberate_new_zealand
+				has_completed_focus = AST_R56_seize_the_seventh_state
+			}
+			
+		}
+
+		remove_effect = {
+			284 = {
+				add_core_of = ROOT
+			} 3811 = {
+				add_core_of = ROOT
+			} 3812 = {
+				add_core_of = ROOT
+			} 3813 = {
+				add_core_of = ROOT
+			} 3814 = {
+				add_core_of = ROOT
+			} 3815 = {
+				add_core_of = ROOT
+			} 3816 = {
+				add_core_of = ROOT
+			} 3817 = {
+				add_core_of = ROOT
+			}
+			1136 = {
+				add_core_of = ROOT
+			} 10239 = {
+				add_core_of = ROOT
+			} 10240 = {
+				add_core_of = ROOT
+			} 10241 = {
+				add_core_of = ROOT
+			} 10242 = {
+				add_core_of = ROOT
+			} 10243 = {
+				add_core_of = ROOT
+			} 10244 = {
+				add_core_of = ROOT
+			} 10245 = {
+				add_core_of = ROOT
+			} 10246 = {
+				add_core_of = ROOT
+			} 10247 = {
+				add_core_of = ROOT
+			} 10248 = {
+				add_core_of = ROOT
+			} 10249 = {
+				add_core_of = ROOT
+			} 10250 = {
+				add_core_of = ROOT
+			} 10251 = {
+				add_core_of = ROOT
+			} 10252 = {
+				add_core_of = ROOT
+			} 10253 = {
+				add_core_of = ROOT
+			}
+			1140 = {
+				add_core_of = ROOT
+			} 10269 = {
+				add_core_of = ROOT
+			} 10270 = {
+				add_core_of = ROOT
+			} 10271 = {
+				add_core_of = ROOT
+			} 10272 = {
+				add_core_of = ROOT
+			}
+			723 = {
+				add_core_of = ROOT
+			} 8207 = {
+				add_core_of = ROOT
+			} 8208 = {
+				add_core_of = ROOT
+			} 8209 = {
+				add_core_of = ROOT
+			} 8210 = {
+				add_core_of = ROOT
+			} 8211 = {
+				add_core_of = ROOT
+			}
+			1139 = {
+				add_core_of = ROOT
+			} 10265 = {
+				add_core_of = ROOT
+			} 10266 = {
+				add_core_of = ROOT
+			} 10267 = {
+				add_core_of = ROOT
+			} 10268 = {
+				add_core_of = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}		
+	}
+}

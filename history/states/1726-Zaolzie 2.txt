@@ -1,0 +1,19 @@
+state = {
+	id = 1726
+	name = "STATE_1726"
+	manpower = 38000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		coal = 3
+	}
+	history = {
+		owner = CZE
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = CZE
+		add_claim_by = SIL
+	}
+	provinces = { 9551 }
+}

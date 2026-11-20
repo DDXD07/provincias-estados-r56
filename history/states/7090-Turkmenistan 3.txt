@@ -1,0 +1,21 @@
+state = {
+	id = 7090
+	name = "STATE_7090"
+	manpower = 64794
+	buildings_max_level_factor = 1.000
+	local_supplies = 4.000
+	state_category = p2s_village
+	history = {
+		add_core_of = TMS
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 7560 1 }
+		add_core_of = SOV
+		add_to_array = {
+			state_victory_points = 7560
+		}
+	}
+	provinces = { 7560 }
+}

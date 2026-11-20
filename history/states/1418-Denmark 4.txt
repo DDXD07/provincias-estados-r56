@@ -1,0 +1,16 @@
+state = {
+	id = 1418
+	name = "STATE_1418"
+	manpower = 30434
+	buildings_max_level_factor = 1.000
+	local_supplies = 15.000
+	state_category = p2s_village
+	history = {
+		owner = DEN
+		add_core_of = DEN
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 3305 }
+}

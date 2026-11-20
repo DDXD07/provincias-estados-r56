@@ -1,0 +1,22 @@
+state = {
+	id = 3988
+	name = "STATE_3988"
+	manpower = 340265
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = ECU
+		buildings = {
+			infrastructure = 2
+			8252 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = ECU
+		add_to_array = {
+			state_victory_points = 8252
+		}
+		victory_points = { 8252 1 }
+	}
+	provinces = { 8252 }
+}

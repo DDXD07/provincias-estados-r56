@@ -1,0 +1,19 @@
+state = {
+	id = 5809
+	name = "STATE_5809"
+	manpower = 506941
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = EGY
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 11974 1 }
+		add_core_of = EGY
+		add_to_array = {
+			state_victory_points = 11974
+		}
+	}
+	provinces = { 11974 }
+}

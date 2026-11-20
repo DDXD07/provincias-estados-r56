@@ -1,0 +1,21 @@
+state = {
+	id = 915
+	name = "STATE_915"
+	manpower = 267042
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		tungsten = 5
+		rubber = 14
+	}
+	history = {
+		owner = MAL
+		add_core_of = MAL
+		victory_points = { 7399 1 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 7399 }
+}

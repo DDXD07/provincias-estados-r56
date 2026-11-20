@@ -1,0 +1,20 @@
+state = {
+	id = 2364
+	name = "STATE_2364"
+	manpower = 851824
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = ITA
+		victory_points = { 773 3 }
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+		}
+		add_core_of = ITA
+		add_to_array = {
+			state_victory_points = 773
+		}
+	}
+	provinces = { 773 }
+}

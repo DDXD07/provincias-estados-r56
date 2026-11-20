@@ -1,0 +1,20 @@
+state = {
+	id = 7093
+	name = "STATE_7093"
+	manpower = 21599
+	buildings_max_level_factor = 1.000
+	local_supplies = 4.000
+	state_category = p2s_village
+	resources = {
+		oil = 1
+	}
+	history = {
+		add_core_of = TMS
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+	}
+	provinces = { 7635 }
+}

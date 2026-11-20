@@ -1,0 +1,19 @@
+state = {
+	id = 4031
+	name = "STATE_4031"
+	manpower = 51282
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		rubber = 1
+	}
+	history = {
+		owner = NIC
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = NIC
+	}
+	provinces = { 13429 }
+}

@@ -1,0 +1,16 @@
+state = {
+	id = 9590
+	name = "STATE_9590"
+	manpower = 144510
+	buildings_max_level_factor = 1.000
+	local_supplies = 1.000
+	state_category = pastoral
+	history = {
+		owner = CUB
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CUB
+	}
+	provinces = { 10498 }
+}

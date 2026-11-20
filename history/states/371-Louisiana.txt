@@ -1,0 +1,29 @@
+state = {
+	id = 371
+	name = "STATE_371"
+	manpower = 1305527
+	local_supplies = 0.0
+	state_category = town
+	resources = {
+		oil = 2
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			fuel_silo = 1
+			air_base = 5
+			7552 = {
+				naval_base = 7
+			}
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_to_array = {
+			state_victory_points = 7552
+		}
+		victory_points = { 7552 20 }
+	}
+	provinces = { 7552 }
+}

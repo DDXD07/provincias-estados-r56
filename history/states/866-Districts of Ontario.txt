@@ -1,0 +1,16 @@
+state = {
+	id = 866
+	name = "STATE_866"
+	manpower = 10591
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	history = {
+		buildings = {
+			infrastructure = 1
+		}
+		owner = CAN
+		add_core_of = CAN
+	}
+	provinces = { 761 }
+}

@@ -1,0 +1,14 @@
+state = {
+	id = 8254
+	name = "STATE_8254"
+	manpower = 7375
+	local_supplies = 0.0
+	state_category = small_island
+	history = {
+		owner = RAJ
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 10321 }
+}

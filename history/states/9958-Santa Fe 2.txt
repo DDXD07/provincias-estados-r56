@@ -1,0 +1,22 @@
+state = {
+	id = 9958
+	name = "STATE_9958"
+	manpower = 238740
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		oil = 1
+	}
+	history = {
+		owner = ARG
+		add_core_of = ARG
+		add_to_array = {
+			state_victory_points = 5163
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 5163 1 }
+	}
+	provinces = { 5163 }
+}

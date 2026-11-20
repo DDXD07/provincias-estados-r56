@@ -1,0 +1,22 @@
+state = {
+	id = 5020
+	name = "STATE_5020"
+	manpower = 275531
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 3
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 4166
+		}
+		victory_points = { 4166 1 }
+	}
+	provinces = { 4166 }
+}

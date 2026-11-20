@@ -1,0 +1,18 @@
+state = {
+	id = 4204
+	name = "STATE_4204"
+	manpower = 44778
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		chromium = 2
+	}
+	history = {
+		owner = TUR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = TUR
+	}
+	provinces = { 11907 }
+}

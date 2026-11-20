@@ -1,0 +1,26 @@
+state = {
+	id = 816
+	name = "STATE_816"
+	manpower = 613664
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = developed_rural
+	resources = {
+		coal = 8
+	}
+	history = {
+		owner = USA
+		buildings = {
+			industrial_complex = 2
+			infrastructure = 3
+			air_base = 3
+		}
+		add_core_of = USA
+		add_claim_by = CSA
+		add_to_array = {
+			state_victory_points = 7588
+		}
+		victory_points = { 7588 3 }
+	}
+	provinces = { 7588 }
+}

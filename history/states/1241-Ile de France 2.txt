@@ -1,0 +1,27 @@
+state = {
+	id = 1241
+	name = "STATE_1241"
+	manpower = 650618
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = FRA
+		victory_points = { 9523 5 }
+		buildings = {
+			infrastructure = 4
+			9523 = {
+				landmark_eiffel_tower = {
+					level = 1
+					allowed = {
+						has_dlc = "Gotterdammerung"
+					}
+				}
+			}
+		}
+		add_core_of = FRA
+		add_to_array = {
+			state_victory_points = 9523
+		}
+	}
+	provinces = { 9523 }
+}

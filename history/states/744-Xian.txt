@@ -1,0 +1,22 @@
+state = {
+	id = 744
+	name = "STATE_744"
+	manpower = 2076921
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = XIC
+		add_core_of = PRC
+		add_core_of = CHI
+		add_core_of = XIC
+		add_to_array = {
+			state_victory_points = 7301
+		}
+		victory_points = { 7301 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 7301 }
+}

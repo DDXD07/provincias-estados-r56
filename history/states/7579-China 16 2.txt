@@ -1,0 +1,22 @@
+state = {
+	id = 7579
+	name = "STATE_7579"
+	manpower = 119226
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		aluminium = 1
+		chromium = 1
+	}
+	history = {
+		owner = SIK
+		add_core_of = CHI
+		add_core_of = PRC
+		add_core_of = SIK
+		add_core_of = KHM
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 5087 }
+}

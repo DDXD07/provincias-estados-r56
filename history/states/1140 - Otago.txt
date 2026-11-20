@@ -1,0 +1,19 @@
+state = {
+	id = 1140
+	name = "STATE_1140"
+	manpower = 51899
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = NZL
+		add_core_of = NZL
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 2211 2 }
+		add_to_array = {
+			state_victory_points = 2211
+		}
+	}
+	provinces = { 2211 }
+}

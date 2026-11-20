@@ -1,0 +1,19 @@
+state = {
+	id = 6297
+	name = "STATE_6297"
+	manpower = 67783
+	local_supplies = 6.0
+	state_category = p2s_village
+	resources = {
+		tungsten = 4
+		steel = 1
+	}
+	history = {
+		owner = ARG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ARG
+	}
+	provinces = { 8255 }
+}

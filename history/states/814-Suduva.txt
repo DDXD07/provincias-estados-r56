@@ -1,0 +1,23 @@
+state = {
+	id = 814
+	name = "STATE_814"
+	manpower = 109869
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = developed_rural
+	history = {
+		owner = LIT
+		victory_points = { 11312 1 }
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 4
+		}
+		add_core_of = LIT
+		add_to_array = {
+			state_victory_points = 11312
+		}
+	}
+	provinces = { 11312 }
+}

@@ -1,0 +1,18 @@
+state = {
+	id = 4170
+	name = "STATE_4170"
+	manpower = 28039
+	local_supplies = 8.0
+	state_category = pastoral
+	resources = {
+		chromium = 5
+	}
+	history = {
+		owner = TUR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = TUR
+	}
+	provinces = { 10038 }
+}

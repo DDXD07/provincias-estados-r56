@@ -1,0 +1,21 @@
+state = {
+	id = 8782
+	name = "STATE_8782"
+	manpower = 50950
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		chromium = 5
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = KBK
+		add_core_of = TER
+	}
+	provinces = { 685 }
+}

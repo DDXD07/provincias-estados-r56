@@ -1,0 +1,25 @@
+state = {
+	id = 1401
+	name = "STATE_1401"
+	manpower = 532555
+	local_supplies = 14.0
+	state_category = rural
+	resources = {
+		steel = 6
+		coal = 1
+	}
+	history = {
+		owner = BEL
+		add_core_of = BEL
+		add_core_of = WLL
+		add_to_array = {
+			state_victory_points = 9536
+		}
+		victory_points = { 9536 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+	}
+	provinces = { 9536 }
+}

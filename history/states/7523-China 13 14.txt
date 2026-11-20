@@ -1,0 +1,25 @@
+state = {
+	id = 7523
+	name = "STATE_7523"
+	manpower = 921745
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = HBC
+		add_core_of = HBC
+		add_core_of = CHI
+		add_core_of = PRC
+		1936.1.1 = {
+			transfer_state_to = HBC
+			add_core_of = HBC
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		1938.10.25 = {
+			owner = CHI
+			controller = JAP
+		}
+	}
+	provinces = { 11944 }
+}

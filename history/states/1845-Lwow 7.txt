@@ -1,0 +1,18 @@
+state = {
+	id = 1845
+	name = "STATE_1845"
+	manpower = 67989
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+	}
+	provinces = { 11532 }
+}

@@ -1,0 +1,21 @@
+state = {
+	id = 1743
+	name = "STATE_1743"
+	manpower = 172149
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = ROM
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 9672 1 }
+		add_core_of = ROM
+		add_core_of = SZK
+		add_core_of = TRA
+		add_to_array = {
+			state_victory_points = 9672
+		}
+	}
+	provinces = { 9672 }
+}

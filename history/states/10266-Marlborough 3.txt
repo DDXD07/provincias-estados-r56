@@ -1,0 +1,18 @@
+state = {
+	id = 10266
+	name = "STATE_10266"
+	manpower = 18172
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		tungsten = 1
+	}
+	history = {
+		owner = NZL
+		add_core_of = NZL
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 4819 }
+}

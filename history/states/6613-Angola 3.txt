@@ -1,0 +1,16 @@
+state = {
+	id = 6613
+	name = "STATE_6613"
+	manpower = 177778
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	history = {
+		owner = POR
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = ANG
+	}
+	provinces = { 13473 }
+}

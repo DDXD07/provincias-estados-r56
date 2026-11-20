@@ -1,0 +1,13 @@
+state = {
+	id = 9629
+	name = "STATE_9629"
+	manpower = 91626
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = AFG
+		add_core_of = AFG
+		add_core_of = HAZ
+	}
+	provinces = { 10789 }
+}

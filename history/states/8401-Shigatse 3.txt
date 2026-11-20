@@ -1,0 +1,21 @@
+state = {
+	id = 8401
+	name = "STATE_8401"
+	manpower = 67355
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = TIB
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 7926 1 }
+		add_core_of = TIB
+		add_claim_by = CHI
+		add_to_array = {
+			state_victory_points = 7926
+		}
+	}
+	provinces = { 7926 }
+}

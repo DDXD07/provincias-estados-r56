@@ -1,0 +1,22 @@
+state = {
+	id = 8200
+	name = "STATE_8200"
+	manpower = 105139
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = POR
+		add_core_of = TML
+		add_to_array = {
+			state_victory_points = 12206
+		}
+		buildings = {
+			infrastructure = 2
+			12206 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 12206 1 }
+	}
+	provinces = { 12206 }
+}

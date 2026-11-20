@@ -1,0 +1,26 @@
+state = {
+	id = 687
+	name = "STATE_687"
+	manpower = 118844
+	local_supplies = 5.0
+	state_category = pastoral
+	resources = {
+		aluminium = 12
+	}
+	history = {
+		add_core_of = GYA
+		add_claim_by = VEN
+		owner = ENG
+		add_to_array = {
+			state_victory_points = 4982
+		}
+		victory_points = { 4982 2 }
+		buildings = {
+			infrastructure = 1
+			4982 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces = { 4982 }
+}

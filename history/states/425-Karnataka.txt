@@ -1,0 +1,24 @@
+state = {
+	id = 425
+	name = "STATE_425"
+	manpower = 2751836
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		chromium = 1
+		steel = 1
+	}
+	history = {
+		owner = RAJ
+		add_core_of = MYS
+		add_to_array = {
+			state_victory_points = 4315
+		}
+		victory_points = { 4315 10 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+	provinces = { 4315 }
+}

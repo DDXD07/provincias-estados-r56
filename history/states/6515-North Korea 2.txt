@@ -1,0 +1,22 @@
+state = {
+	id = 6515
+	name = "STATE_6515"
+	manpower = 725807
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = JAP
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 11775 1 }
+		add_core_of = KOR
+		add_to_array = {
+			state_victory_points = 11775
+		}
+	}
+	provinces = { 11775 }
+}

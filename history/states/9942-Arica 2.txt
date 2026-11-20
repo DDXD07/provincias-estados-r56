@@ -1,0 +1,24 @@
+state = {
+	id = 9942
+	name = "STATE_9942"
+	manpower = 74581
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		tungsten = 3
+	}
+	history = {
+		owner = CHL
+		add_core_of = CHL
+		add_core_of = BOL
+		add_claim_by = PRU
+		add_to_array = {
+			state_victory_points = 8217
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 8217 1 }
+	}
+	provinces = { 8217 }
+}

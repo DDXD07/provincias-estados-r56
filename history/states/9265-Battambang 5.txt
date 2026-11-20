@@ -1,0 +1,17 @@
+state = {
+	id = 9265
+	name = "STATE_9265"
+	manpower = 150000
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		add_core_of = CAM
+		add_core_of = FRI
+		owner = FRI
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 12447 }
+}

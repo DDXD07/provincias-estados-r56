@@ -1,0 +1,19 @@
+state = {
+	id = 6266
+	name = "STATE_6266"
+	manpower = 149781
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = BRA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = BRA
+		add_to_array = {
+			state_victory_points = 2111
+		}
+		victory_points = { 2111 1 }
+	}
+	provinces = { 2111 }
+}

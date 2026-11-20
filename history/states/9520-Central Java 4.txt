@@ -1,0 +1,16 @@
+state = {
+	id = 9520
+	name = "STATE_9520"
+	manpower = 315862
+	buildings_max_level_factor = 1.000
+	local_supplies = 3.000
+	state_category = p2s_village
+	history = {
+		owner = INS
+		add_core_of = INS
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 12277 }
+}

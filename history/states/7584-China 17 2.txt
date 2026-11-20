@@ -1,0 +1,27 @@
+state = {
+	id = 7584
+	name = "STATE_7584"
+	manpower = 3605871
+	buildings_max_level_factor = 1.000
+	local_supplies = 2.0
+	state_category = pastoral
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 4130
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 4130 1 }
+		1938.10.25 = {
+			buildings = {
+				infrastructure = 2
+				arms_factory = 1
+			}
+		}
+	}
+	provinces = { 4130 }
+}

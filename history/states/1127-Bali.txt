@@ -1,0 +1,21 @@
+state = {
+	id = 1127
+	name = "STATE_1127"
+	manpower = 735238
+	local_supplies = 1.0
+	state_category = small_island
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = BLI
+		add_core_of = EIS
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 13502 2 }
+		add_to_array = {
+			state_victory_points = 13502
+		}
+	}
+	provinces = { 13502 }
+}

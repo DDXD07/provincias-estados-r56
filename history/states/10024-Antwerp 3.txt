@@ -1,0 +1,19 @@
+state = {
+	id = 10024
+	name = "STATE_10024"
+	manpower = 27274
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = BEL
+		add_core_of = BEL
+		add_core_of = FLA
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 11419 }
+}

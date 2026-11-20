@@ -1,0 +1,22 @@
+state = {
+	id = 1734
+	name = "STATE_1734"
+	manpower = 484447
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = CZE
+		victory_points = { 6562 5 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = CZE
+		add_to_array = {
+			state_victory_points = 6562
+		}
+	}
+	provinces = { 6562 }
+}

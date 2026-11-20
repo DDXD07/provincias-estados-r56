@@ -1,0 +1,33 @@
+state = {
+	id = 3954
+	name = "STATE_3954"
+	manpower = 102501
+	buildings_max_level_factor = 1.000
+	local_supplies = 2.000
+	state_category = p2s_village
+	history = {
+		owner = COG
+		add_core_of = COG
+		IF = {
+			limit = {
+				AND = {
+					has_dlc = "Gotterdammerung"
+					has_game_rule = {
+						rule = BEL_focus_tree_selection
+						option = STANDARD_TREE
+					}
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = COG_state_loyal_to_belgium_modifier
+			}
+		}
+		buildings = {
+			infrastructure = 2
+			10968 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces = { 10968 }
+}

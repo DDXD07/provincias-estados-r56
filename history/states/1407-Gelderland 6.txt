@@ -1,0 +1,19 @@
+state = {
+	id = 1407
+	name = "STATE_1407"
+	manpower = 57961
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 2
+	}
+	history = {
+		owner = HOL
+		add_core_of = HOL
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 9431 }
+}

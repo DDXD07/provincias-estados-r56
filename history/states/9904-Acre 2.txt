@@ -1,0 +1,19 @@
+state = {
+	id = 9904
+	name = "STATE_9904"
+	manpower = 11608
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		rubber = 13
+	}
+	history = {
+		owner = BRA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = BRA
+		add_core_of = BOL
+	}
+	provinces = { 13341 }
+}

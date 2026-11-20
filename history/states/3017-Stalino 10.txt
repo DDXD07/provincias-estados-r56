@@ -1,0 +1,19 @@
+state = {
+	id = 3017
+	name = "STATE_3017"
+	manpower = 89046
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 6
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+	}
+	provinces = { 3491 }
+}

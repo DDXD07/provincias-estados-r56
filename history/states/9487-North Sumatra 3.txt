@@ -1,0 +1,27 @@
+state = {
+	id = 9487
+	name = "STATE_9487"
+	manpower = 260621
+	buildings_max_level_factor = 1.000
+	local_supplies = 3.000
+	state_category = p2s_village
+	resources = {
+		rubber = 6
+		oil = 1
+	}
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = SSI
+		set_resistance = 0
+		set_compliance = 60
+		add_to_array = {
+			state_victory_points = 7463
+		}
+		victory_points = { 7463 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 7463 }
+}

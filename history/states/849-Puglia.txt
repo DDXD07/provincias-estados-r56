@@ -1,0 +1,33 @@
+state = {
+	id = 849
+	name = "STATE_849"
+	manpower = 1462532
+	local_supplies = 0.000
+	state_category = city
+	history = {
+		owner = ITA
+		victory_points = { 11837 15 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			dockyard = 4
+			air_base = 5
+			11837 = {
+				naval_base = 10
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_core_of = ITA
+		add_core_of = TTS
+		add_core_of = NAP
+		add_to_array = {
+			state_victory_points = 11837
+		}
+	}
+	provinces = { 11837 }
+}

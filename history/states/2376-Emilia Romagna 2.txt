@@ -1,0 +1,21 @@
+state = {
+	id = 2376
+	name = "STATE_2376"
+	manpower = 974642
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = ITA
+		victory_points = { 6793 3 }
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+		}
+		add_core_of = ITA
+		add_core_of = PAP
+		add_to_array = {
+			state_victory_points = 6793
+		}
+	}
+	provinces = { 6793 }
+}

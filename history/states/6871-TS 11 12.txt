@@ -1,0 +1,19 @@
+state = {
+	id = 6871
+	name = "STATE_6871"
+	manpower = 75693
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = KHA
+	}
+	provinces = { 1369 }
+}

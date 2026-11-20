@@ -1,0 +1,19 @@
+state = {
+	id = 5843
+	name = "STATE_5843"
+	manpower = 102999
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 4
+		coal = 1
+	}
+	history = {
+		owner = FRA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ALG
+	}
+	provinces = { 9964 }
+}

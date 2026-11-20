@@ -1,0 +1,24 @@
+state = {
+	id = 948
+	name = "STATE_948"
+	manpower = 99623
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		oil = 4
+	}
+	history = {
+		owner = VEN
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = { 4892 1 }
+		add_core_of = VEN
+		add_to_array = {
+			state_victory_points = 4892
+		}
+	}
+	provinces = { 4892 }
+}

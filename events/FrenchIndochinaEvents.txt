@@ -1,0 +1,347 @@
+﻿###########################
+# Indochinese Events
+###########################
+
+add_namespace = frenchindochina
+add_namespace = indochina
+
+country_event = {
+	id = indochina.1
+	title = indochina.1.t
+	desc = indochina.1.d
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = indochina.1.a
+		ai_chance = {	base = 10 }
+		add_stability = 0.1
+		add_political_power = -50
+		add_autonomy_ratio = {
+			value = 0.3
+		}
+		JAP = {
+			country_event = { days = 5 id = japan.7 }
+		}
+	}
+	option = {
+		name = indochina.1.b
+		ai_chance = {	base = 90 }
+		JAP = {
+			country_event = { days = 5 id = japan.6 }
+		}
+	}
+}
+
+# Jules Brévié named gouverneur
+country_event = {
+	id = frenchindochina.1
+	title = frenchindochina.1.t
+	desc = frenchindochina.1.d
+	picture = GFX_report_event_jules_brevie
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = frenchindochina.1.a
+		set_country_flag = FRI_jules_brevie_gouverneur_flag
+		retire_ideology_leader = neutrality
+		promote_character = FRI_jules_brévie
+		#custom_effect_tooltip = french_indochina_jules_brevie_governor_event_tt
+	}			
+}
+
+country_event = {
+	id = frenchindochina.2
+	title = frenchindochina.2.t
+	desc = frenchindochina.2.d
+	picture = GFX_report_event_bank_of_indochina
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = frenchindochina.2.a
+		set_country_flag = r56_FRI_strikes_happened 
+		add_timed_idea = {
+			idea = FRI_strikes
+			days = 430
+		}
+	}			
+}
+
+
+country_event = {
+	id = frenchindochina.4
+	title = frenchindochina.4.t
+	desc = frenchindochina.4.d
+	picture = GFX_report_event_soldiers_in_france
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = frenchindochina.4.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 50
+				is_historical_focus_on = yes
+			}
+		}
+		set_country_flag = block_leave_faction_news_event
+		every_enemy_country = {
+			white_peace = FRI
+		}
+		if = {
+			limit = {
+				VIC = {
+					exists = yes
+				}
+			}
+			VIC = {
+				set_autonomy = {
+					target = FRI
+					autonomy_state = autonomy_colony
+				}
+			}
+		}
+		else = {
+			every_other_country = {
+				limit = {
+					has_country_flag = is_vichy_france
+				}
+				set_autonomy = {
+					target = FRI
+					autonomy_state = autonomy_colony
+				}
+			}
+		}
+		promote_character = FRI_jean_decoux
+		set_country_flag = FRI_support_vichy
+		set_party_name = { ideology = fascism long_name = FRI_fascist_gouvernorat_general_party_long name = FRI_fascist_gouvernorat_general_party_long }
+		hidden_effect = {
+			set_cosmetic_tag = FRIVichy
+		}
+	}
+	option = {
+		name = frenchindochina.4.b
+		ai_chance = {
+			base = 10
+		}
+		promote_character = FRI_georges_thierry_dargenlieu
+	}			
+}
+
+country_event = {
+	id = frenchindochina.5
+	title = frenchindochina.5.t
+	desc = frenchindochina.5.d
+	picture = GFX_report_event_generic_army
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = frenchindochina.5.a
+		send_equipment = {
+		    equipment = infantry_equipment
+		    amount = 1500
+		    target = FRI
+		}
+		add_manpower = -15000
+		FRI = {
+			country_event = frenchindochina.6
+		}
+	}
+
+	option = {
+		name = frenchindochina.5.b
+		FRI = {
+			country_event = frenchindochina.7
+		}
+	}			
+}
+
+country_event = {
+	id = frenchindochina.6
+	title = frenchindochina.6.t
+	desc = frenchindochina.6.d
+	picture = GFX_report_event_bank_of_indochina
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = frenchindochina.6.a
+		load_oob = FRI_bonus_troops_armee_de_terre
+	}			
+}
+
+country_event = {
+	id = frenchindochina.7
+	title = frenchindochina.7.t
+	desc = frenchindochina.7.d
+	picture = GFX_report_event_bank_of_indochina
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = frenchindochina.7.a
+	}			
+}
+#IndoChina War
+country_event = {
+	id = frenchindochina.8
+	title = frenchindochina.8.t
+	desc = frenchindochina.8.d
+	picture = GFX_report_event_bank_of_indochina
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = r56.news_event.15
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = frenchindochina.8.a
+		
+		hidden_effect = {
+			FRI = {
+				remove_ideas = FRI_strikes
+				remove_ideas = FRI_growing_vietnamese_nationalism
+			}
+			VIN = {
+				transfer_state = 671 transfer_state = 7949 transfer_state = 7950 transfer_state = 7951 transfer_state = 7952 transfer_state = 7953 transfer_state = 7954 transfer_state = 7955 transfer_state = 7956 transfer_state = 7957 transfer_state = 7958 transfer_state = 7959 transfer_state = 7960 transfer_state = 7961 transfer_state = 7962 transfer_state = 7963 transfer_state = 7964 transfer_state = 7965
+				add_state_claim = 670 add_state_claim = 7921 add_state_claim = 7922 add_state_claim = 7923 add_state_claim = 7924 add_state_claim = 7925 add_state_claim = 7926 add_state_claim = 7927 add_state_claim = 7928 add_state_claim = 7929 add_state_claim = 7930 add_state_claim = 7931 add_state_claim = 7932 add_state_claim = 7933 add_state_claim = 7934 add_state_claim = 7935 add_state_claim = 7936 add_state_claim = 7937 add_state_claim = 7938 add_state_claim = 7939 add_state_claim = 7940 add_state_claim = 7941 add_state_claim = 7942 add_state_claim = 7943 add_state_claim = 7944 add_state_claim = 7945 add_state_claim = 7946 add_state_claim = 7947 add_state_claim = 7948
+				add_state_claim = 728
+				add_state_claim = 741 add_state_claim = 8287 add_state_claim = 8288 add_state_claim = 8289 add_state_claim = 8290 add_state_claim = 8291 add_state_claim = 8292 add_state_claim = 8293 add_state_claim = 8294 add_state_claim = 8295 add_state_claim = 8296 add_state_claim = 8297 add_state_claim = 8298 add_state_claim = 8299 add_state_claim = 8300 add_state_claim = 8301 add_state_claim = 8302 add_state_claim = 8303 add_state_claim = 8304 add_state_claim = 8305 add_state_claim = 8306
+				add_state_claim = 924
+				add_state_claim = 925 add_state_claim = 9262 add_state_claim = 9263 add_state_claim = 9264 add_state_claim = 9265 add_state_claim = 9266 add_state_claim = 9267 add_state_claim = 9268
+				add_state_claim = 926 add_state_claim = 9269 add_state_claim = 9270
+				country_event = {
+					id = vietnam.14
+					days = 1
+				}
+				inherit_technology = FRI
+				set_popularities = {
+					democratic = 25
+					neutrality = 25
+					fascism = 15
+					communism = 35
+				}
+				set_politics = {
+					ruling_party = communism
+				}
+				load_oob = "VIN_rebellion_focus"
+				set_country_flag = VIN_war_of_independence_flag
+				add_ideas = VIN_the_independence_war
+				change_tag_from = ROOT
+			}
+			FRI = {
+				declare_war_on = {
+				target = VIN
+				type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					FRI = {
+						is_subject_of = FRA
+					}
+				} #France AI will not defend the front but will try to defend the ports
+				FRA = {
+					add_ai_strategy = {
+						type = antagonize
+						id = "VIN"
+						value = 100
+					}
+				}
+				FRA = {
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = "FRI"
+						value = 1000
+					}
+				}
+				FRA = {
+					add_ai_strategy = {
+						type = declare_war
+						id = "VIN"
+						value = 100
+					}
+				}
+				FRA = {
+					add_ai_strategy = {
+						type = befriend
+						id = "FRI"
+						value = 100
+					}
+					add_ai_strategy = {
+						type = support
+						id = "FRI"
+						value = 10
+					}
+					add_ai_strategy = {
+						type = dont_defend_ally_borders
+						id = "FRI"
+						value = 25
+					}
+					add_ai_strategy = {
+						type = invade
+						id = "VIN"
+						value = -500
+					}
+					add_ai_strategy = { #Prevents silly naval invasions
+						type = naval_avoid_region
+						id = "75"
+						value = 25
+					}
+					add_ai_strategy = { #French send some troops to defend Indochina cities but not alot
+						type = put_unit_buffers
+						ratio = 0.06
+						order_id = 2 	
+						subtract_invasions_from_need = yes
+						subtract_fronts_from_need = yes
+						states = { 286 3859 3860 3861 3862 3863 3864 3865 3866 3867 3868 3869 3870 741 8287 8288 8289 8290 8291 8292 8293 8294 8295 8296 8297 8298 8299 8300 8301 8302 8303 8304 8305 8306 }
+					}
+				}
+			}
+		}
+	}			
+}
+
+# Hidden event to 'age' Uncle Ho after 1946
+country_event = {
+	id = frenchindochina.9
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	immediate = {
+		hidden_effect = {
+			FRI_ho_chi_minh = {
+				set_portraits = {
+					civilian = { large = GFX_Portrait_Indochina_Ho_Chi_Minh_Old }
+					army = { large = GFX_Portrait_Indochina_Ho_Chi_Minh_Old }
+				}
+			}
+		}
+	}
+}

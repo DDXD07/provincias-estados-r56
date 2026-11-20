@@ -1,0 +1,17 @@
+state = {
+	id = 8409
+	name = "STATE_8409"
+	manpower = 6095
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = TIB
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = TIB
+		add_claim_by = CHI
+	}
+	provinces = { 12801 }
+}

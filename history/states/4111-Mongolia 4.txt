@@ -1,0 +1,20 @@
+state = {
+	id = 4111
+	name = "STATE_4111"
+	manpower = 12100
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		steel = 1
+		chromium = 1
+	}
+	history = {
+		owner = MON
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = MON
+		add_claim_by = CHI
+	}
+	provinces = { 1725 }
+}

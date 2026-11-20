@@ -1,0 +1,23 @@
+state = {
+	id = 4157
+	name = "STATE_4157"
+	manpower = 688014
+	local_supplies = 5.0
+	state_category = p2s_village
+	resources = {
+		rubber = 5
+		oil = 1
+	}
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_to_array = {
+			state_victory_points = 10279
+		}
+		victory_points = { 10279 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 10279 }
+}

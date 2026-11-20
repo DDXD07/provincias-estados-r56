@@ -1,0 +1,24 @@
+state = {
+	id = 520
+	name = "STATE_520"
+	manpower = 4079
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = wasteland
+	history = {
+		owner = AST
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+			7669 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 7669 5 }
+		add_core_of = AST
+		add_to_array = {
+			state_victory_points = 7669
+		}
+	}
+	provinces = { 7669 }
+}

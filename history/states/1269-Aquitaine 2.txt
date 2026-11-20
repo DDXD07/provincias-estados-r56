@@ -1,0 +1,21 @@
+state = {
+	id = 1269
+	name = "STATE_1269"
+	manpower = 25343
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 6
+		aluminium = 3
+	}
+	history = {
+		owner = FRA
+		buildings = {
+			infrastructure = 3
+		}
+		add_claim_by = OCC
+		add_core_of = FRA
+	}
+	provinces = { 6777 }
+}

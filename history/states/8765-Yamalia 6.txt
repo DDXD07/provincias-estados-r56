@@ -1,0 +1,16 @@
+state = {
+	id = 8765
+	name = "STATE_8765"
+	manpower = 1372
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		add_core_of = YAM
+	}
+	provinces = { 4761 }
+}

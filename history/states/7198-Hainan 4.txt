@@ -1,0 +1,22 @@
+state = {
+	id = 7198
+	name = "STATE_7198"
+	manpower = 316364
+	local_supplies = 1.0
+	state_category = pastoral
+	history = {
+		owner = GXC
+		add_core_of = GXC
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 1
+		}
+		1938.10.25 = {
+			remove_core_of = GDC
+			owner = CHI
+			controller = JAP
+		}
+	}
+	provinces = { 11963 }
+}

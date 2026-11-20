@@ -1,0 +1,20 @@
+state = {
+	id = 9234
+	name = "STATE_9234"
+	manpower = 573224
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = JAP
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = { 11992 1 }
+		add_core_of = KOR
+		add_to_array = {
+			state_victory_points = 11992
+		}
+	}
+	provinces = { 11992 }
+}

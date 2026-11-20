@@ -1,0 +1,27 @@
+state = {
+	id = 319
+	name = "STATE_319"
+	manpower = 881218
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = town
+	history = {
+		owner = DOM
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 1
+			air_base = 1
+			7660 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = DOM
+		add_to_array = {
+			state_victory_points = 7660
+		}
+		victory_points = { 7660 5 }
+	}
+	provinces = { 7660 }
+}

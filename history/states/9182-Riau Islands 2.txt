@@ -1,0 +1,24 @@
+state = {
+	id = 9182
+	name = "STATE_9182"
+	manpower = 44375
+	buildings_max_level_factor = 1
+	local_supplies = 1
+	state_category = small_island
+	resources = {
+		rubber = 1
+		aluminium = 12
+	}
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = SSI
+		buildings = {
+			infrastructure = 2
+			13532 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces = { 13532 }
+}

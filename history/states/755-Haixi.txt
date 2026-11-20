@@ -1,0 +1,23 @@
+state = {
+	id = 755
+	name = "STATE_755"
+	manpower = 249999
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = XSM
+		add_core_of = XSM
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 10750
+		}
+		victory_points = { 10750 1 }
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+	}
+	provinces = { 10750 13146 }
+}

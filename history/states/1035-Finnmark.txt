@@ -1,0 +1,24 @@
+state = {
+	id = 1035
+	name = "STATE_1035"
+	manpower = 19376
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	history = {
+		victory_points = { 9116 1 }
+		owner = NOR
+		add_core_of = NOR
+		add_core_of = SMI
+		add_to_array = {
+			state_victory_points = 9116
+		}
+		buildings = {
+			infrastructure = 1
+			9116 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces = { 9116 }
+}

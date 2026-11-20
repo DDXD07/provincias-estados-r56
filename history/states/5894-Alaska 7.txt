@@ -1,0 +1,15 @@
+state = {
+	id = 5894
+	name = "STATE_5894"
+	manpower = 2371
+	buildings_max_level_factor = 1
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 12661 }
+}

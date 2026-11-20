@@ -1,0 +1,15 @@
+state = {
+	id = 5759
+	name = "STATE_5759"
+	manpower = 110265
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = EGY
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = EGY
+	}
+	provinces = { 7164 }
+}

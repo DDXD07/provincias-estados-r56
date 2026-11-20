@@ -1,0 +1,22 @@
+state = {
+	id = 1026
+	name = "STATE_1026"
+	manpower = 157881
+	buildings_max_level_factor = 1.000
+	local_supplies = 11.000
+	state_category = rural
+	history = {
+		owner = SWE
+		add_core_of = SWE
+		add_to_array = {
+			state_victory_points = 9393
+		}
+		victory_points = { 9393 2 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 2
+		}
+	}
+	provinces = { 9393 }
+}

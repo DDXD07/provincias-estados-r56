@@ -1,0 +1,19 @@
+state = {
+	id = 9696
+	name = "STATE_9696"
+	manpower = 31577
+	buildings_max_level_factor = 1.000
+	local_supplies = 11.000
+	state_category = pastoral
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = SWE
+		add_core_of = SWE
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 6311 13095 }
+}

@@ -1,0 +1,21 @@
+state = {
+	id = 9157
+	name = "STATE_9157"
+	manpower = 1178199
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	history = {
+		owner = ENG
+		add_core_of = NGA
+		add_core_of = SOK
+		add_to_array = {
+			state_victory_points = 1891
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 1891 1 }
+	}
+	provinces = { 1891 }
+}

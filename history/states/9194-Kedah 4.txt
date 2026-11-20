@@ -1,0 +1,19 @@
+state = {
+	id = 9194
+	name = "STATE_9194"
+	manpower = 73946
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		rubber = 11
+	}
+	history = {
+		owner = MAL
+		add_core_of = MAL
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 7342 }
+}

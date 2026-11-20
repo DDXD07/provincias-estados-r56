@@ -1,0 +1,20 @@
+state = {
+	id = 7267
+	name = "STATE_7267"
+	manpower = 2054583
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 7174
+		}
+		victory_points = { 7174 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 7174 }
+}

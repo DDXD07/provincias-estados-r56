@@ -1,0 +1,21 @@
+state = {
+	id = 3788
+	name = "STATE_3788"
+	manpower = 116597
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 2
+	}
+	history = {
+		owner = CHL
+		buildings = {
+			infrastructure = 3
+			8222 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = CHL
+	}
+	provinces = { 8222 }
+}

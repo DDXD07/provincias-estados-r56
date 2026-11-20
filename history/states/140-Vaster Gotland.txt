@@ -1,0 +1,27 @@
+state = {
+	id = 140
+	name = "STATE_140"
+	manpower = 644450
+	local_supplies = 0.000
+	state_category = town
+	history = {
+		owner = SWE
+		victory_points = { 383 10 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 1
+			383 = {
+				naval_base = 5
+				coastal_bunker = 5
+			}
+		}
+		add_core_of = SWE
+		add_to_array = {
+			state_victory_points = 383
+		}
+	}
+	provinces = { 383 }
+}

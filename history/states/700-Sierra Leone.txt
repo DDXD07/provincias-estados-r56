@@ -1,0 +1,25 @@
+state = {
+	id = 700
+	name = "STATE_700"
+	manpower = 884249
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = ENG
+		victory_points = { 2038 1 }
+		buildings = {
+			infrastructure = 2
+			2038 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = SIE
+		add_to_array = {
+			state_victory_points = 2038
+		}
+	}
+	provinces = { 2038 }
+}

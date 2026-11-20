@@ -1,0 +1,19 @@
+state = {
+	id = 4810
+	name = "STATE_4810"
+	manpower = 39804
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 10711 1 }
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 10711
+		}
+	}
+	provinces = { 10711 }
+}

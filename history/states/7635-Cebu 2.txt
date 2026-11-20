@@ -1,0 +1,22 @@
+state = {
+	id = 7635
+	name = "STATE_7635"
+	manpower = 1121570
+	local_supplies = 6.0
+	state_category = pastoral
+	history = {
+		owner = PHI
+		buildings = {
+			infrastructure = 3
+			12118 = {
+				naval_base = 3
+			}
+		}
+		victory_points = { 12118 3 }
+		add_core_of = PHI
+		add_to_array = {
+			state_victory_points = 12118
+		}
+	}
+	provinces = { 12118 }
+}

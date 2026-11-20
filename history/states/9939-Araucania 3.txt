@@ -1,0 +1,18 @@
+state = {
+	id = 9939
+	name = "STATE_9939"
+	manpower = 80215
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 7
+	}
+	history = {
+		owner = CHL
+		add_core_of = CHL
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 12920 }
+}

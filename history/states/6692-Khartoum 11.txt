@@ -1,0 +1,16 @@
+state = {
+	id = 6692
+	name = "STATE_6692"
+	manpower = 79741
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = EGY
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SUD
+	}
+	provinces = { 10745 }
+}

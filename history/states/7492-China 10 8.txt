@@ -1,0 +1,25 @@
+state = {
+	id = 7492
+	name = "STATE_7492"
+	manpower = 91875
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = MEN
+		add_core_of = MEN
+		add_core_of = CHI
+		add_core_of = PRC
+		1936.1.1 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				add_core_of = HBC
+			}
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 1489 }
+}

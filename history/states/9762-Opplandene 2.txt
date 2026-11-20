@@ -1,0 +1,19 @@
+state = {
+	id = 9762
+	name = "STATE_9762"
+	manpower = 24406
+	local_supplies = 0.000
+	state_category = pastoral
+	history = {
+		victory_points = { 3136 1 }
+		owner = NOR
+		add_core_of = NOR
+		add_to_array = {
+			state_victory_points = 3136
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 3136 }
+}

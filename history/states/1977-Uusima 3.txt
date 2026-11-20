@@ -1,0 +1,19 @@
+state = {
+	id = 1977
+	name = "STATE_1977"
+	manpower = 39929
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = FIN
+		add_core_of = FIN
+		add_to_array = {
+			state_victory_points = 11211
+		}
+		victory_points = { 11211 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 11211 }
+}

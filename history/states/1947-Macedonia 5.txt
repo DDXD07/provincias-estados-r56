@@ -1,0 +1,23 @@
+state = {
+	id = 1947
+	name = "STATE_1947"
+	manpower = 46640
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		chromium = 16
+		aluminium = 4
+	}
+	history = {
+		owner = YUG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = YUG
+		add_core_of = MAC
+		add_core_of = BUL
+		add_claim_by = SER
+	}
+	provinces = { 907 }
+}

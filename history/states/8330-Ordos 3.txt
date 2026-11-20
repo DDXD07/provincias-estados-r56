@@ -1,0 +1,22 @@
+state = {
+	id = 8330
+	name = "STATE_8330"
+	manpower = 45455
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 1
+		coal = 2
+	}
+	history = {
+		owner = SHX
+		add_core_of = SHX
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 4986 }
+}

@@ -1,0 +1,28 @@
+state = {
+	id = 7512
+	name = "STATE_7512"
+	manpower = 921746
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = HBC
+		add_core_of = HBC
+		add_core_of = CHI
+		add_core_of = PRC
+		1936.1.1 = {
+			transfer_state_to = HBC
+			add_core_of = HBC
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		1938.10.25 = {
+			owner = CHI
+			controller = JAP
+		}
+	}
+	provinces = { 4114 }
+}

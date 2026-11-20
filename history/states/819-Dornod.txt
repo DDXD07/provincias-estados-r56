@@ -1,0 +1,21 @@
+state = {
+	id = 819
+	name = "STATE_819"
+	manpower = 17648
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	history = {
+		owner = MON
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 12557 1 }
+		add_core_of = MON
+		add_claim_by = CHI
+		add_to_array = {
+			state_victory_points = 12557
+		}
+	}
+	provinces = { 12557 }
+}

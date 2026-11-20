@@ -1,0 +1,6 @@
+state_categories = {
+	p2s_village = {
+		local_building_slots = 0
+		color = { 120 110 90 }
+	}
+}

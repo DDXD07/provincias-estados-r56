@@ -1,0 +1,21 @@
+state = {
+	id = 373
+	name = "STATE_373"
+	manpower = 1229296
+	local_supplies = 7.0
+	state_category = town
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+		}
+		add_core_of = USA
+		add_claim_by = CSA
+		add_to_array = {
+			state_victory_points = 4569
+		}
+		victory_points = { 4569 10 }
+	}
+	provinces = { 4569 }
+}

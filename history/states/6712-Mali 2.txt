@@ -1,0 +1,16 @@
+state = {
+	id = 6712
+	name = "STATE_6712"
+	manpower = 277066
+	buildings_max_level_factor = 1.000
+	local_supplies = 2.000
+	state_category = pastoral
+	history = {
+		owner = FRA
+		add_core_of = MLI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 5045 }
+}

@@ -1,0 +1,18 @@
+state = {
+	id = 3845
+	name = "STATE_3845"
+	manpower = 17088
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = AST
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = AST
+	}
+	provinces = { 4500 }
+}

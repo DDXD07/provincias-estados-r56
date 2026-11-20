@@ -1,0 +1,24 @@
+state = {
+	id = 1095
+	name = "STATE_1095"
+	manpower = 169064
+	local_supplies = 14.0
+	state_category = pastoral
+	resources = {
+		steel = 2
+		coal = 1
+	}
+	history = {
+		owner = BEL
+		add_core_of = BEL
+		add_core_of = WLL
+		add_to_array = {
+			state_victory_points = 9418
+		}
+		victory_points = { 9418 1 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 9418 }
+}

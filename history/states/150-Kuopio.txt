@@ -1,0 +1,20 @@
+state = {
+	id = 150
+	name = "STATE_150"
+	manpower = 63288
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = FIN
+		add_core_of = FIN
+		add_to_array = {
+			state_victory_points = 11141
+		}
+		victory_points = { 11141 2 }
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+	}
+	provinces = { 11141 13111 13112 }
+}

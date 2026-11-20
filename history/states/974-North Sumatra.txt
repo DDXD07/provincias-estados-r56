@@ -1,0 +1,31 @@
+state = {
+	id = 974
+	name = "STATE_974"
+	manpower = 955605
+	buildings_max_level_factor = 1.000
+	local_supplies = 3.000
+	state_category = rural
+	resources = {
+		rubber = 8
+		oil = 2
+	}
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = SSI
+		set_resistance = 0
+		set_compliance = 60
+		add_to_array = {
+			state_victory_points = 4652
+		}
+		victory_points = { 4652 5 }
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 2
+			4652 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces = { 4652 }
+}

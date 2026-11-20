@@ -1,0 +1,24 @@
+state = {
+	id = 190
+	name = "STATE_190"
+	manpower = 157748
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		victory_points = { 9262 3 }
+		owner = LAT
+		buildings = {
+			infrastructure = 3
+			9262 = {
+				naval_base = 1
+			}
+			dockyard = 1
+		}
+		add_core_of = LAT
+		add_to_array = {
+			state_victory_points = 9262
+		}
+	}
+	provinces = { 9262 }
+}

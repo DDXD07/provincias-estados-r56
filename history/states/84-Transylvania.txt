@@ -1,0 +1,23 @@
+state = {
+	id = 84
+	name = "STATE_84"
+	manpower = 597686
+	local_supplies = 0.0
+	state_category = developed_rural
+	history = {
+		owner = ROM
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = { 690 3 }
+		add_core_of = ROM
+		add_claim_by = SZK
+		add_core_of = TRA
+		add_to_array = {
+			state_victory_points = 690
+		}
+	}
+	provinces = { 690 }
+}

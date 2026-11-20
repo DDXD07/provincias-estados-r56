@@ -1,0 +1,16 @@
+state = {
+	id = 4055
+	name = "STATE_4055"
+	manpower = 237752
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = NEP
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = NEP
+	}
+	provinces = { 13470 }
+}

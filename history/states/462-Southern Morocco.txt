@@ -1,0 +1,20 @@
+state = {
+	id = 462
+	name = "STATE_462"
+	manpower = 789267
+	local_supplies = 0.0
+	state_category = wasteland
+	history = {
+		owner = FRA
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+		}
+		victory_points = { 4108 5 }
+		add_core_of = MOR
+		add_to_array = {
+			state_victory_points = 4108
+		}
+	}
+	provinces = { 4108 }
+}

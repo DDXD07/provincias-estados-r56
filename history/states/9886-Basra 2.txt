@@ -1,0 +1,19 @@
+state = {
+	id = 9886
+	name = "STATE_9886"
+	manpower = 37708
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = IRQ
+		victory_points = { 12726 3 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = IRQ
+		add_to_array = {
+			state_victory_points = 12726
+		}
+	}
+	provinces = { 12726 }
+}

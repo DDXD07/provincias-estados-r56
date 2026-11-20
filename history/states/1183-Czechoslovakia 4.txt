@@ -1,0 +1,24 @@
+state = {
+	id = 1183
+	name = "STATE_1183"
+	manpower = 308316
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		steel = 1
+		coal = 1
+	}
+	history = {
+		owner = CZE
+		victory_points = { 9541 3 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = CZE
+		add_to_array = {
+			state_victory_points = 9541
+		}
+	}
+	provinces = { 9541 }
+}

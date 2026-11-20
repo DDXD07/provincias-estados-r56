@@ -1,0 +1,21 @@
+state = {
+	id = 964
+	name = "STATE_964"
+	manpower = 98577
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	history = {
+		owner = DEN
+		victory_points = { 11251 1 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = DEN
+		add_core_of = SHL
+		add_to_array = {
+			state_victory_points = 11251
+		}
+	}
+	provinces = { 11251 }
+}

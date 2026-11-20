@@ -1,0 +1,19 @@
+state = {
+	id = 2766
+	name = "STATE_2766"
+	manpower = 123491
+	local_supplies = 4.0
+	state_category = p2s_village
+	history = {
+		owner = BUL
+		victory_points = { 9769 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = BUL
+		add_to_array = {
+			state_victory_points = 9769
+		}
+	}
+	provinces = { 9769 }
+}

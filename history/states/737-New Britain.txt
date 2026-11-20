@@ -1,0 +1,27 @@
+state = {
+	id = 737
+	name = "STATE_737"
+	manpower = 69802
+	buildings_max_level_factor = 1
+	local_supplies = 0.0
+	state_category = large_island
+	history = {
+		add_core_of = PNG
+		owner = AST
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			7251 = {
+				naval_base = 5
+			}
+		}
+		victory_points = { 7251 5 }
+		strategic_province_location = {
+			defensive_chokepoint = 7251
+		}
+		strategic_province_location = {
+			natural_harbor = 7251
+		}
+	}
+	provinces = { 7251 }
+}

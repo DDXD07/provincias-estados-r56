@@ -1,0 +1,22 @@
+state = {
+	id = 62
+	name = "STATE_62"
+	manpower = 335406
+	buildings_max_level_factor = 1.000
+	local_supplies = 3.000
+	state_category = rural
+	history = {
+		victory_points = { 9388 1 }
+		owner = GER
+		buildings = {
+			infrastructure = 3
+			fuel_silo = 1
+			air_base = 2
+		}
+		add_core_of = GER
+		add_to_array = {
+			state_victory_points = 9388
+		}
+	}
+	provinces = { 9388 }
+}

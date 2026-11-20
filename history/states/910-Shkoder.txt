@@ -1,0 +1,21 @@
+state = {
+	id = 910
+	name = "STATE_910"
+	manpower = 255338
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		victory_points = { 9780 3 }
+		owner = ALB
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = ALB
+		add_claim_by = ITA
+		add_to_array = {
+			state_victory_points = 9780
+		}
+	}
+	provinces = { 9780 }
+}

@@ -1,0 +1,22 @@
+state = {
+	id = 4164
+	name = "STATE_4164"
+	manpower = 270092
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 2
+	}
+	history = {
+		owner = ENG
+		victory_points = { 6351 1 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = ENG
+		add_to_array = {
+			state_victory_points = 6351
+		}
+	}
+	provinces = { 6351 }
+}

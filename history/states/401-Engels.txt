@@ -1,0 +1,24 @@
+state = {
+	id = 401
+	name = "STATE_401"
+	manpower = 45348
+	local_supplies = 7.0
+	state_category = pastoral
+	resources = {
+		steel = 2
+		tungsten = 1
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_claim_by = TAT
+		add_to_array = {
+			state_victory_points = 6502
+		}
+		victory_points = { 6502 1 }
+	}
+	provinces = { 6502 }
+}

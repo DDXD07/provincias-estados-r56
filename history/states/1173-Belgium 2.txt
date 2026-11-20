@@ -1,0 +1,24 @@
+state = {
+	id = 1173
+	name = "STATE_1173"
+	manpower = 426641
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = BEL
+		add_core_of = BEL
+		add_core_of = FLA
+		add_to_array = {
+			state_victory_points = 6560
+		}
+		victory_points = { 6560 5 }
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+		}
+	}
+	provinces = { 6560 }
+}

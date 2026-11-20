@@ -1,0 +1,14 @@
+state = {
+	id = 10053
+	name = "STATE_10053"
+	manpower = 3832
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = RAJ
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 1579 }
+}

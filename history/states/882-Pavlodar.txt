@@ -1,0 +1,24 @@
+state = {
+	id = 882
+	name = "STATE_882"
+	manpower = 77490
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		chromium = 1
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = KAZ
+		add_to_array = {
+			state_victory_points = 7708
+		}
+		victory_points = { 7708 1 }
+	}
+	provinces = { 7708 }
+}

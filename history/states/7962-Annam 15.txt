@@ -1,0 +1,19 @@
+state = {
+	id = 7962
+	name = "STATE_7962"
+	manpower = 147573
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		tungsten = 2
+	}
+	history = {
+		add_core_of = VIN
+		add_core_of = FRI
+		owner = FRI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 4119 }
+}

@@ -1,0 +1,16 @@
+state = {
+	id = 8277
+	name = "STATE_8277"
+	manpower = 6346
+	buildings_max_level_factor = 1
+	local_supplies = 0.0
+	state_category = large_island
+	history = {
+		add_core_of = PNG
+		owner = AST
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 12222 }
+}

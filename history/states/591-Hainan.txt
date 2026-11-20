@@ -1,0 +1,30 @@
+state = {
+	id = 591
+	name = "STATE_591"
+	manpower = 1581817
+	local_supplies = 1.0
+	state_category = pastoral
+	history = {
+		owner = GXC
+		add_core_of = GXC
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 1070 2 }
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			1070 = {
+				naval_base = 2
+			}
+		}
+		1938.10.25 = {
+			remove_core_of = GDC
+			owner = CHI
+			add_to_array = {
+				state_victory_points = 1070
+			}
+			controller = JAP
+		}
+	}
+	provinces = { 1070 }
+}

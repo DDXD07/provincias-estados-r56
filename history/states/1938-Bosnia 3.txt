@@ -1,0 +1,19 @@
+state = {
+	id = 1938
+	name = "STATE_1938"
+	manpower = 63398
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		aluminium = 2
+	}
+	history = {
+		owner = YUG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = YUG
+		add_core_of = BOS
+	}
+	provinces = { 982 }
+}

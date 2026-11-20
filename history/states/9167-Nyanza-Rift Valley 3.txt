@@ -1,0 +1,16 @@
+state = {
+	id = 9167
+	name = "STATE_9167"
+	manpower = 135680
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = KEN
+	}
+	provinces = { 10860 }
+}

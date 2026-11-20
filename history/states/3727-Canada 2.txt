@@ -1,0 +1,24 @@
+state = {
+	id = 3727
+	name = "STATE_3727"
+	manpower = 932820
+	local_supplies = 0.0
+	state_category = town
+	history = {
+		victory_points = { 3775 20 }
+		owner = CAN
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+			3775 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = CAN
+		add_to_array = {
+			state_victory_points = 3775
+		}
+	}
+	provinces = { 3775 }
+}

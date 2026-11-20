@@ -1,0 +1,20 @@
+state = {
+	id = 2426
+	name = "STATE_2426"
+	manpower = 159095
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = SPR
+		victory_points = { 832 1 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SPR
+		add_to_array = {
+			state_victory_points = 832
+		}
+	}
+	provinces = { 832 }
+}

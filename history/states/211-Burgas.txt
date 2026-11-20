@@ -1,0 +1,23 @@
+state = {
+	id = 211
+	name = "STATE_211"
+	manpower = 452796
+	local_supplies = 4.0
+	state_category = rural
+	history = {
+		owner = BUL
+		victory_points = { 9783 5 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			9783 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = BUL
+		add_to_array = {
+			state_victory_points = 9783
+		}
+	}
+	provinces = { 9783 }
+}

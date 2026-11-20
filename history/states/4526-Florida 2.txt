@@ -1,0 +1,24 @@
+state = {
+	id = 4526
+	name = "STATE_4526"
+	manpower = 146820
+	local_supplies = 10.0
+	state_category = rural
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			10352 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_to_array = {
+			state_victory_points = 10352
+		}
+		victory_points = { 10352 1 }
+	}
+	provinces = { 10352 }
+}

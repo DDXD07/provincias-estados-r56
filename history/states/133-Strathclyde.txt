@@ -1,0 +1,28 @@
+state = {
+	id = 133
+	name = "STATE_133"
+	manpower = 1666410
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		steel = 3
+		coal = 4
+	}
+	history = {
+		add_core_of = SCO
+		owner = ENG
+		victory_points = { 3273 15 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+			anti_air_building = 2
+			air_base = 3
+		}
+		add_core_of = ENG
+		add_to_array = {
+			state_victory_points = 3273
+		}
+	}
+	provinces = { 3273 }
+}

@@ -1,0 +1,24 @@
+state = {
+	id = 422
+	name = "STATE_422"
+	manpower = 2160712
+	local_supplies = 0.0
+	state_category = developed_rural
+	resources = {
+		rubber = 8
+	}
+	history = {
+		add_core_of = SRL
+		owner = ENG
+		add_to_array = {
+			state_victory_points = 7344
+		}
+		victory_points = { 7344 5 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			air_base = 3
+		}
+	}
+	provinces = { 7344 }
+}

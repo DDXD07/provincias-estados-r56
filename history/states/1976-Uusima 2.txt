@@ -1,0 +1,19 @@
+state = {
+	id = 1976
+	name = "STATE_1976"
+	manpower = 39929
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = FIN
+		add_core_of = FIN
+		add_to_array = {
+			state_victory_points = 6009
+		}
+		victory_points = { 6009 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 6009 }
+}

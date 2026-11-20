@@ -1,0 +1,15 @@
+state = {
+	id = 2056
+	name = "STATE_2056"
+	manpower = 14247
+	local_supplies = 0.0
+	state_category = small_island
+	history = {
+		owner = SWE
+		add_core_of = SWE
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 6258 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 683
+	name = "STATE_683"
+	manpower = 23068
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = wasteland
+	resources = {
+		aluminium = 4
+	}
+	history = {
+		owner = CAN
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = CAN
+	}
+	provinces = { 2947 8962 13188 13190 13191 }
+}

@@ -1,0 +1,26 @@
+state = {
+	id = 104
+	name = "STATE_104"
+	manpower = 697363
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		aluminium = 2
+		coal = 1
+	}
+	history = {
+		owner = YUG
+		victory_points = { 11899 5 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+		}
+		add_core_of = YUG
+		add_core_of = BOS
+		add_to_array = {
+			state_victory_points = 11899
+		}
+	}
+	provinces = { 11899 }
+}

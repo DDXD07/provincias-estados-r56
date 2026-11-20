@@ -1,0 +1,21 @@
+state = {
+	id = 1409
+	name = "STATE_1409"
+	manpower = 590999
+	buildings_max_level_factor = 1.000
+	local_supplies = 14.0
+	state_category = rural
+	history = {
+		owner = HOL
+		add_core_of = HOL
+		add_to_array = {
+			state_victory_points = 9335
+		}
+		victory_points = { 9335 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+	provinces = { 9335 }
+}

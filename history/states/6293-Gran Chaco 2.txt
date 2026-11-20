@@ -1,0 +1,19 @@
+state = {
+	id = 6293
+	name = "STATE_6293"
+	manpower = 67783
+	local_supplies = 6.0
+	state_category = pastoral
+	resources = {
+		tungsten = 5
+		steel = 1
+	}
+	history = {
+		owner = ARG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ARG
+	}
+	provinces = { 8169 }
+}

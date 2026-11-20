@@ -1,0 +1,21 @@
+state = {
+	id = 6772
+	name = "STATE_6772"
+	manpower = 116748
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 10559 1 }
+		add_core_of = SOV
+		add_core_of = FER
+		add_claim_by = BYA
+		add_to_array = {
+			state_victory_points = 10559
+		}
+	}
+	provinces = { 10559 }
+}

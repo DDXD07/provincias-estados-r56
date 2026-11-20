@@ -1,0 +1,19 @@
+state = {
+	id = 9656
+	name = "STATE_9656"
+	manpower = 37552
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = RAJ
+		add_core_of = BRM
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 8063 }
+}

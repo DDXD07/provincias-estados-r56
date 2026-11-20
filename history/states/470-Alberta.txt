@@ -1,0 +1,21 @@
+state = {
+	id = 470
+	name = "STATE_470"
+	manpower = 193420
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = rural
+	history = {
+		owner = CAN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = { 3010 3 }
+		add_core_of = CAN
+		add_to_array = {
+			state_victory_points = 3010
+		}
+	}
+	provinces = { 3010 }
+}

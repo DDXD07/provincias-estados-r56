@@ -1,0 +1,28 @@
+state = {
+	id = 279
+	name = "STATE_279"
+	manpower = 2448530
+	local_supplies = 0.0
+	state_category = large_city
+	resources = {
+		steel = 2
+	}
+	history = {
+		owner = CHL
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 7
+			air_base = 3
+			650 = {
+				bunker = 1
+			}
+		}
+		add_core_of = CHL
+		add_to_array = {
+			state_victory_points = 650
+		}
+		victory_points = { 650 10 }
+	}
+	provinces = { 650 }
+}

@@ -1,0 +1,15 @@
+state = {
+	id = 3797
+	name = "STATE_3797"
+	manpower = 97682
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 4
+		}
+	}
+	provinces = { 993 }
+}

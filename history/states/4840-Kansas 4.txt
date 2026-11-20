@@ -1,0 +1,19 @@
+state = {
+	id = 4840
+	name = "STATE_4840"
+	manpower = 69667
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		oil = 3
+		coal = 1
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+	}
+	provinces = { 1753 }
+}

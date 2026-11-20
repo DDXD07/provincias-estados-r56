@@ -1,0 +1,21 @@
+state = {
+	id = 9053
+	name = "STATE_9053"
+	manpower = 8019
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = wasteland
+	resources = {
+		steel = 1
+		coal = 1
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		add_core_of = KAZ
+	}
+	provinces = { 12487 }
+}

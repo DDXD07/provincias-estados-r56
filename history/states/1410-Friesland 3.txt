@@ -1,0 +1,23 @@
+state = {
+	id = 1410
+	name = "STATE_1410"
+	manpower = 253286
+	buildings_max_level_factor = 1.000
+	local_supplies = 14.0
+	state_category = p2s_village
+	history = {
+		owner = HOL
+		add_core_of = HOL
+		add_to_array = {
+			state_victory_points = 6336
+		}
+		victory_points = { 6336 1 }
+		buildings = {
+			infrastructure = 2
+			6336 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces = { 6336 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 6501
+	name = "STATE_6501"
+	manpower = 243829
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = JAP
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 1091 }
+}

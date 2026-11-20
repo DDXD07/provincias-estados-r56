@@ -1,0 +1,18 @@
+state = {
+	id = 2021
+	name = "STATE_2021"
+	manpower = 66586
+	buildings_max_level_factor = 1
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ENG
+		add_core_of = IRE
+		add_core_of = NIR
+	}
+	provinces = { 276 }
+}

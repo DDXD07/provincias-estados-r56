@@ -1,0 +1,19 @@
+state = {
+	id = 1809
+	name = "STATE_1809"
+	manpower = 72639
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+		add_claim_by = KSH
+		1938.3.12 = {
+			add_claim_by = GER
+		}
+	}
+	provinces = { 388 }
+}

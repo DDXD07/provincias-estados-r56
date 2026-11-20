@@ -1,0 +1,16 @@
+state = {
+	id = 7244
+	name = "STATE_7244"
+	manpower = 367363
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 10084 }
+}

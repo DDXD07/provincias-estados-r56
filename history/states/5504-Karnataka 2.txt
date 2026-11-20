@@ -1,0 +1,23 @@
+state = {
+	id = 5504
+	name = "STATE_5504"
+	manpower = 2751836
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		chromium = 1
+		steel = 1
+	}
+	history = {
+		owner = RAJ
+		add_core_of = MYS
+		add_to_array = {
+			state_victory_points = 8011
+		}
+		victory_points = { 8011 10 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 8011 }
+}

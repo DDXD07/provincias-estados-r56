@@ -1,0 +1,16 @@
+state = {
+	id = 4586
+	name = "STATE_4586"
+	manpower = 100492
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+		add_core_of = CSA
+	}
+	provinces = { 4510 }
+}

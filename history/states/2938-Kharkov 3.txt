@@ -1,0 +1,19 @@
+state = {
+	id = 2938
+	name = "STATE_2938"
+	manpower = 48552
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 2
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+	}
+	provinces = { 3508 }
+}

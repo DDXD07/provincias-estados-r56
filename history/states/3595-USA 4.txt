@@ -1,0 +1,25 @@
+state = {
+	id = 3595
+	name = "STATE_3595"
+	manpower = 237382
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 1
+		aluminium = 1
+		coal = 1
+	}
+	history = {
+		victory_points = { 689 1 }
+		owner = USA
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 689
+		}
+	}
+	provinces = { 689 }
+}

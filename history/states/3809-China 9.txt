@@ -1,0 +1,28 @@
+state = {
+	id = 3809
+	name = "STATE_3809"
+	manpower = 150300
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = XIC
+		add_core_of = XIC
+		add_core_of = XSM
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+		1936.1.1 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				add_core_of = GSM
+				remove_core_of = XSM
+			}
+		}
+	}
+	provinces = { 7397 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 8107
+	name = "STATE_8107"
+	manpower = 23770
+	local_supplies = 5.0
+	state_category = p2s_village
+	resources = {
+		aluminium = 11
+	}
+	history = {
+		add_core_of = GYA
+		add_claim_by = VEN
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 13460 }
+}

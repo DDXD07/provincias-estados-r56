@@ -1,0 +1,139 @@
+﻿###########################
+# Canadian TFV events Events
+###########################
+
+add_namespace = tfv_canada
+add_namespace = canada_vanilla
+
+# Completed CAN_skewer_the_eagle.
+# Canadian national focus.
+country_event = {
+	id = tfv_canada.40
+	title = tfv_canada.40.t # Canada proposes alliance with Mexico to surround the US.
+	desc = tfv_canada.40.d	#
+	picture = GFX_report_event_canadian_artillery
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tfv_canada.40.a
+		
+		ai_chance = {
+			base = 100
+		}
+		
+		effect_tooltip = {
+			CAN = {
+				create_faction_from_template = {
+					template = faction_template_generic_dominance
+					name = northern_sovereignty_coalition
+					icon = GFX_faction_logo_generic_15
+				}
+				random_country = {
+					limit = {
+						original_tag = MEX
+						has_government = fascism
+					}
+					CAN = { add_to_faction = PREV }
+				}
+			}
+			add_state_claim = 375 add_state_claim = 4654 add_state_claim = 4655 add_state_claim = 4656 add_state_claim = 4657 add_state_claim = 4658 add_state_claim = 4659 add_state_claim = 4660 add_state_claim = 4661 add_state_claim = 4662 add_state_claim = 4663 add_state_claim = 4664 add_state_claim = 4665 add_state_claim = 4666 add_state_claim = 4667 add_state_claim = 4668 add_state_claim = 4669 add_state_claim = 4670 add_state_claim = 4671 add_state_claim = 4672 add_state_claim = 4673 add_state_claim = 4674 add_state_claim = 4675 add_state_claim = 4676 add_state_claim = 4677 add_state_claim = 4678 add_state_claim = 4679 add_state_claim = 4680 add_state_claim = 4681 add_state_claim = 4682 add_state_claim = 4683 add_state_claim = 4684 add_state_claim = 4685 add_state_claim = 4686 add_state_claim = 4687 add_state_claim = 4688 add_state_claim = 4689 add_state_claim = 4690 add_state_claim = 4691 add_state_claim = 4692 add_state_claim = 4693 add_state_claim = 4694 add_state_claim = 4695 add_state_claim = 4696 add_state_claim = 4697 add_state_claim = 4698 add_state_claim = 4699 add_state_claim = 4700 add_state_claim = 4701 # Texas
+			add_state_claim = 378 add_state_claim = 4729 add_state_claim = 4730 add_state_claim = 4731 add_state_claim = 4732 add_state_claim = 4733 add_state_claim = 4734 add_state_claim = 4735 add_state_claim = 4736 add_state_claim = 4737 add_state_claim = 4738 add_state_claim = 4739 add_state_claim = 4740 add_state_claim = 4741 add_state_claim = 4742 add_state_claim = 4743 add_state_claim = 4744 add_state_claim = 4745 add_state_claim = 4746 add_state_claim = 4747 add_state_claim = 4748 add_state_claim = 4749 add_state_claim = 4750 add_state_claim = 4751 add_state_claim = 4752 add_state_claim = 4753 add_state_claim = 4754 add_state_claim = 4755 add_state_claim = 4756 add_state_claim = 4757 add_state_claim = 4758 add_state_claim = 4759 add_state_claim = 4760 add_state_claim = 4761 add_state_claim = 4762 add_state_claim = 4763 add_state_claim = 4764 add_state_claim = 4765 add_state_claim = 4766 add_state_claim = 4767 add_state_claim = 4768 add_state_claim = 4769 add_state_claim = 4770 add_state_claim = 4771 add_state_claim = 4772 add_state_claim = 4773 add_state_claim = 4774 add_state_claim = 4775 add_state_claim = 4776 add_state_claim = 4777 add_state_claim = 4778 add_state_claim = 4779 add_state_claim = 4780 add_state_claim = 4781 add_state_claim = 4782 add_state_claim = 4783 add_state_claim = 4784 # California
+			add_state_claim = 379 add_state_claim = 4785 add_state_claim = 4786 add_state_claim = 4787 add_state_claim = 4788 add_state_claim = 4789 add_state_claim = 4790 add_state_claim = 4791 add_state_claim = 4792 add_state_claim = 4793 add_state_claim = 4794 add_state_claim = 4795 add_state_claim = 4796 add_state_claim = 4797 # Nevada
+			add_state_claim = 377 add_state_claim = 4716 add_state_claim = 4717 add_state_claim = 4718 add_state_claim = 4719 add_state_claim = 4720 add_state_claim = 4721 add_state_claim = 4722 add_state_claim = 4723 add_state_claim = 4724 add_state_claim = 4725 add_state_claim = 4726 add_state_claim = 4727 add_state_claim = 4728 # Arizona
+			add_state_claim = 380 add_state_claim = 4798 add_state_claim = 4799 add_state_claim = 4800 add_state_claim = 4801 add_state_claim = 4802 add_state_claim = 4803 add_state_claim = 4804 add_state_claim = 4805 add_state_claim = 4806 add_state_claim = 4807 add_state_claim = 4808 add_state_claim = 4809 # Utah
+			add_state_claim = 382 add_state_claim = 4822 add_state_claim = 4823 add_state_claim = 4824 add_state_claim = 4825 add_state_claim = 4826 add_state_claim = 4827 add_state_claim = 4828 add_state_claim = 4829 add_state_claim = 4830 add_state_claim = 4831 add_state_claim = 4832 add_state_claim = 4833 add_state_claim = 4834 add_state_claim = 4835 add_state_claim = 4836 add_state_claim = 4837 # Colorado
+			add_state_claim = 376 add_state_claim = 4702 add_state_claim = 4703 add_state_claim = 4704 add_state_claim = 4705 add_state_claim = 4706 add_state_claim = 4707 add_state_claim = 4708 add_state_claim = 4709 add_state_claim = 4710 add_state_claim = 4711 add_state_claim = 4712 add_state_claim = 4713 add_state_claim = 4714 add_state_claim = 4715 # New Mexico
+		}
+		
+		hidden_effect = {
+			CAN = {
+				country_event = { id = tfv_canada.41 }
+			}
+		}
+	}
+	
+	option = {
+		name = tfv_canada.40.b
+	
+		ai_chance = {
+			base = 0
+		}
+	
+		hidden_effect = {
+			CAN = {
+				country_event = { id = tfv_canada.42 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tfv_canada.41
+	title = tfv_canada.41.t
+	desc = tfv_canada.41.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tfv_canada.41.a
+		create_faction_from_template = {
+			template = faction_template_generic_dominance
+			name = northern_sovereignty_coalition
+			icon = GFX_faction_logo_generic_15
+		}
+		random_country = {
+			limit = {
+				original_tag = MEX
+				has_government = fascism
+			}
+			CAN = { add_to_faction = PREV }
+		}
+		
+		MEX = {
+			add_state_claim = 375 add_state_claim = 4654 add_state_claim = 4655 add_state_claim = 4656 add_state_claim = 4657 add_state_claim = 4658 add_state_claim = 4659 add_state_claim = 4660 add_state_claim = 4661 add_state_claim = 4662 add_state_claim = 4663 add_state_claim = 4664 add_state_claim = 4665 add_state_claim = 4666 add_state_claim = 4667 add_state_claim = 4668 add_state_claim = 4669 add_state_claim = 4670 add_state_claim = 4671 add_state_claim = 4672 add_state_claim = 4673 add_state_claim = 4674 add_state_claim = 4675 add_state_claim = 4676 add_state_claim = 4677 add_state_claim = 4678 add_state_claim = 4679 add_state_claim = 4680 add_state_claim = 4681 add_state_claim = 4682 add_state_claim = 4683 add_state_claim = 4684 add_state_claim = 4685 add_state_claim = 4686 add_state_claim = 4687 add_state_claim = 4688 add_state_claim = 4689 add_state_claim = 4690 add_state_claim = 4691 add_state_claim = 4692 add_state_claim = 4693 add_state_claim = 4694 add_state_claim = 4695 add_state_claim = 4696 add_state_claim = 4697 add_state_claim = 4698 add_state_claim = 4699 add_state_claim = 4700 add_state_claim = 4701 # Texas
+			add_state_claim = 378 add_state_claim = 4729 add_state_claim = 4730 add_state_claim = 4731 add_state_claim = 4732 add_state_claim = 4733 add_state_claim = 4734 add_state_claim = 4735 add_state_claim = 4736 add_state_claim = 4737 add_state_claim = 4738 add_state_claim = 4739 add_state_claim = 4740 add_state_claim = 4741 add_state_claim = 4742 add_state_claim = 4743 add_state_claim = 4744 add_state_claim = 4745 add_state_claim = 4746 add_state_claim = 4747 add_state_claim = 4748 add_state_claim = 4749 add_state_claim = 4750 add_state_claim = 4751 add_state_claim = 4752 add_state_claim = 4753 add_state_claim = 4754 add_state_claim = 4755 add_state_claim = 4756 add_state_claim = 4757 add_state_claim = 4758 add_state_claim = 4759 add_state_claim = 4760 add_state_claim = 4761 add_state_claim = 4762 add_state_claim = 4763 add_state_claim = 4764 add_state_claim = 4765 add_state_claim = 4766 add_state_claim = 4767 add_state_claim = 4768 add_state_claim = 4769 add_state_claim = 4770 add_state_claim = 4771 add_state_claim = 4772 add_state_claim = 4773 add_state_claim = 4774 add_state_claim = 4775 add_state_claim = 4776 add_state_claim = 4777 add_state_claim = 4778 add_state_claim = 4779 add_state_claim = 4780 add_state_claim = 4781 add_state_claim = 4782 add_state_claim = 4783 add_state_claim = 4784 # California
+			add_state_claim = 379 add_state_claim = 4785 add_state_claim = 4786 add_state_claim = 4787 add_state_claim = 4788 add_state_claim = 4789 add_state_claim = 4790 add_state_claim = 4791 add_state_claim = 4792 add_state_claim = 4793 add_state_claim = 4794 add_state_claim = 4795 add_state_claim = 4796 add_state_claim = 4797 # Nevada
+			add_state_claim = 377 add_state_claim = 4716 add_state_claim = 4717 add_state_claim = 4718 add_state_claim = 4719 add_state_claim = 4720 add_state_claim = 4721 add_state_claim = 4722 add_state_claim = 4723 add_state_claim = 4724 add_state_claim = 4725 add_state_claim = 4726 add_state_claim = 4727 add_state_claim = 4728 # Arizona
+			add_state_claim = 380 add_state_claim = 4798 add_state_claim = 4799 add_state_claim = 4800 add_state_claim = 4801 add_state_claim = 4802 add_state_claim = 4803 add_state_claim = 4804 add_state_claim = 4805 add_state_claim = 4806 add_state_claim = 4807 add_state_claim = 4808 add_state_claim = 4809 # Utah
+			add_state_claim = 382 add_state_claim = 4822 add_state_claim = 4823 add_state_claim = 4824 add_state_claim = 4825 add_state_claim = 4826 add_state_claim = 4827 add_state_claim = 4828 add_state_claim = 4829 add_state_claim = 4830 add_state_claim = 4831 add_state_claim = 4832 add_state_claim = 4833 add_state_claim = 4834 add_state_claim = 4835 add_state_claim = 4836 add_state_claim = 4837 # Colorado
+			add_state_claim = 376 add_state_claim = 4702 add_state_claim = 4703 add_state_claim = 4704 add_state_claim = 4705 add_state_claim = 4706 add_state_claim = 4707 add_state_claim = 4708 add_state_claim = 4709 add_state_claim = 4710 add_state_claim = 4711 add_state_claim = 4712 add_state_claim = 4713 add_state_claim = 4714 add_state_claim = 4715 # New Mexico
+		}
+		hidden_effect = {
+			news_event = { id = news.249 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = tfv_canada.42
+	title = tfv_canada.42.t
+	desc = tfv_canada.42.desc
+	picture = GFX_report_event_american_hunger_march
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tfv_canada.42.a
+		
+	}
+}
+
+# Ronnie the Bren Gun Girl
+# Triggered by Women in the Workforce decision
+
+country_event = {
+	id = canada_vanilla.1
+	title = canada_vanilla.1.title
+	desc = canada_vanilla.1.desc
+	
+	picture = GFX_report_event_canada_ronnie
+
+	is_triggered_only = yes
+
+	option = {
+		name = canada_vanilla.1.opt
+	}
+}
+

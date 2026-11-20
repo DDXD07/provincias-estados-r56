@@ -1,0 +1,23 @@
+state = {
+	id = 4999
+	name = "STATE_4999"
+	manpower = 196310
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 2
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 11685
+		}
+		victory_points = { 11685 1 }
+	}
+	provinces = { 11685 }
+}

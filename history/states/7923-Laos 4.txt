@@ -1,0 +1,19 @@
+state = {
+	id = 7923
+	name = "STATE_7923"
+	manpower = 27796
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		rubber = 1
+	}
+	history = {
+		owner = FRI
+		add_core_of = LAO
+		add_core_of = FRI
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 4568 }
+}

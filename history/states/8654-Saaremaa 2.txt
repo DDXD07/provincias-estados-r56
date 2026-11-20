@@ -1,0 +1,16 @@
+state = {
+	id = 8654
+	name = "STATE_8654"
+	manpower = 8093
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = small_island
+	history = {
+		owner = EST
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = EST
+	}
+	provinces = { 6201 }
+}

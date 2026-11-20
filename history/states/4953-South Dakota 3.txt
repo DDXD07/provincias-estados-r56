@@ -1,0 +1,19 @@
+state = {
+	id = 4953
+	name = "STATE_4953"
+	manpower = 103926
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 12620
+		}
+		victory_points = { 12620 1 }
+	}
+	provinces = { 12620 }
+}

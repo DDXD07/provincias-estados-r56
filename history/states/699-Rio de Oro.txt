@@ -1,0 +1,20 @@
+state = {
+	id = 699
+	name = "STATE_699"
+	manpower = 14478
+	local_supplies = 0.0
+	state_category = wasteland
+	history = {
+		owner = SPR
+		add_core_of = WES
+		add_claim_by = MOR
+		add_to_array = {
+			state_victory_points = 10875
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 10875 1 }
+	}
+	provinces = { 10875 }
+}

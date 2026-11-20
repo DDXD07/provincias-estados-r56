@@ -1,0 +1,27 @@
+state = {
+	id = 34
+	name = "STATE_34"
+	manpower = 1597663
+	local_supplies = 14.0
+	state_category = town
+	resources = {
+		steel = 5
+		coal = 1
+	}
+	history = {
+		owner = BEL
+		add_core_of = BEL
+		add_core_of = WLL
+		add_to_array = {
+			state_victory_points = 11519
+		}
+		victory_points = { 11519 10 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 1
+		}
+	}
+	provinces = { 11519 }
+}

@@ -1,0 +1,18 @@
+state = {
+	id = 4063
+	name = "STATE_4063"
+	manpower = 249876
+	buildings_max_level_factor = 1.000
+	local_supplies = 3.0
+	state_category = p2s_village
+	history = {
+		owner = YUN
+		add_core_of = YUN
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 10346 }
+}

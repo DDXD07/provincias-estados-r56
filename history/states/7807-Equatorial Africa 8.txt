@@ -1,0 +1,15 @@
+state = {
+	id = 7807
+	name = "STATE_7807"
+	manpower = 113692
+	local_supplies = 2.0
+	state_category = p2s_village
+	history = {
+		owner = FRA
+		add_core_of = CAR
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 1974 }
+}

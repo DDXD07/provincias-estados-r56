@@ -1,0 +1,24 @@
+state = {
+	id = 4997
+	name = "STATE_4997"
+	manpower = 458056
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 3
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 6782
+		}
+		victory_points = { 6782 3 }
+	}
+	provinces = { 6782 }
+}

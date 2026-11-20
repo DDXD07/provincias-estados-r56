@@ -1,0 +1,26 @@
+state = {
+	id = 1097
+	name = "STATE_1097"
+	manpower = 202500
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		chromium = 11
+		tungsten = 3
+	}
+	history = {
+		owner = ENG
+		add_core_of = ZAM
+		add_core_of = BAR
+		add_core_of = KAT
+		add_to_array = {
+			state_victory_points = 697
+		}
+		victory_points = { 697 1 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 697 }
+}

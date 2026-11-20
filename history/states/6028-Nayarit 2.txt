@@ -1,0 +1,21 @@
+state = {
+	id = 6028
+	name = "STATE_6028"
+	manpower = 244353
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = MEX
+		add_to_array = {
+			state_victory_points = 12746
+		}
+		victory_points = { 12746 5 }
+	}
+	provinces = { 12746 }
+}

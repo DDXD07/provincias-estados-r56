@@ -1,0 +1,26 @@
+state = {
+	id = 52
+	name = "STATE_52"
+	manpower = 1894060
+	local_supplies = 8.0
+	state_category = town
+	resources = {
+		aluminium = 1
+	}
+	history = {
+		owner = GER
+		victory_points = { 692 20 }
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 1
+			air_base = 6
+		}
+		add_core_of = GER
+		add_core_of = BAY
+		add_to_array = {
+			state_victory_points = 692
+		}
+	}
+	provinces = { 692 }
+}

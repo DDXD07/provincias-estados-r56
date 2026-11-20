@@ -1,0 +1,20 @@
+state = {
+	id = 509
+	name = "STATE_509"
+	manpower = 67784
+	local_supplies = 6.0
+	state_category = rural
+	resources = {
+		tungsten = 6
+		steel = 1
+	}
+	history = {
+		owner = ARG
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = ARG
+	}
+	provinces = { 2208 }
+}

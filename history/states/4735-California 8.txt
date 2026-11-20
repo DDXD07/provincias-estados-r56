@@ -1,0 +1,25 @@
+state = {
+	id = 4735
+	name = "STATE_4735"
+	manpower = 112198
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		oil = 3
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			610 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 610
+		}
+		victory_points = { 610 2 }
+	}
+	provinces = { 610 }
+}

@@ -1,0 +1,24 @@
+state = {
+	id = 10205
+	name = "STATE_10205"
+	manpower = 46464
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		tungsten = 13
+		rubber = 25
+		aluminium = 1
+		steel = 1
+	}
+	history = {
+		owner = MAL
+		add_core_of = MAL
+		buildings = {
+			1364 = {
+				dam = 1
+			}
+			infrastructure = 1
+		}
+	}
+	provinces = { 1364 }
+}

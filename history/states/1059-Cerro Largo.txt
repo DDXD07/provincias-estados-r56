@@ -1,0 +1,23 @@
+state = {
+	id = 1059
+	name = "STATE_1059"
+	manpower = 179581
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = URG
+		add_core_of = URG
+		add_to_array = {
+			state_victory_points = 1641
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = { 1641 1 }
+	}
+	provinces = { 1641 }
+}

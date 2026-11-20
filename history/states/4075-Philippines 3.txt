@@ -1,0 +1,19 @@
+state = {
+	id = 4075
+	name = "STATE_4075"
+	manpower = 155253
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = PHI
+		add_core_of = PHI
+		add_to_array = {
+			state_victory_points = 1221
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = { 1221 1 }
+	}
+	provinces = { 1221 }
+}

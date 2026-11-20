@@ -1,0 +1,17 @@
+state = {
+	id = 9532
+	name = "STATE_9532"
+	manpower = 14752
+	buildings_max_level_factor = 1.000
+	impassable = yes
+	force_link_ownership_to = 978
+	local_supplies = 0.000
+	impassable_ignored_links = { 333 }
+	impassable_ignored_links = { 1131 }
+	state_category = wasteland
+	history = {
+		owner = INS
+		add_core_of = POK
+	}
+	provinces = { 7299 }
+}

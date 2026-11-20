@@ -1,0 +1,19 @@
+state = {
+	id = 444
+	name = "STATE_444"
+	manpower = 85694
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		victory_points = { 8066 1 }
+		owner = RAJ
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = PAK
+		add_to_array = {
+			state_victory_points = 8066
+		}
+	}
+	provinces = { 8066 }
+}

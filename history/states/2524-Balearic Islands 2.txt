@@ -1,0 +1,18 @@
+state = {
+	id = 2524
+	name = "STATE_2524"
+	manpower = 73101
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = SPR
+		buildings = {
+			infrastructure = 3
+			7114 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = SPR
+	}
+	provinces = { 7114 }
+}

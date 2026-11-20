@@ -1,0 +1,17 @@
+state = {
+	id = 9991
+	name = "STATE_9991"
+	manpower = 181096
+	local_supplies = 1.0
+	state_category = pastoral
+	history = {
+		owner = XSM
+		add_core_of = XSM
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 4888 }
+}

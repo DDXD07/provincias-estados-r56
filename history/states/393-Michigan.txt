@@ -1,0 +1,32 @@
+state = {
+	id = 393
+	name = "STATE_393"
+	manpower = 2682896
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = large_city
+	resources = {
+		steel = 2
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 5
+			dockyard = 1
+			air_base = 4
+			steel_mill = 2
+			6710 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 6710
+		}
+		victory_points = { 6710 20 }
+		add_extra_state_shared_building_slots = 1
+	}
+	provinces = { 6710 }
+}

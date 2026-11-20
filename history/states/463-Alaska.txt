@@ -1,0 +1,23 @@
+state = {
+	id = 463
+	name = "STATE_463"
+	manpower = 16589
+	buildings_max_level_factor = 1
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = USA
+		add_to_array = {
+			state_victory_points = 13091
+		}
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			13091 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 13091 3 }
+	}
+	provinces = { 13091 }
+}

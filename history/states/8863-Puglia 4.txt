@@ -1,0 +1,21 @@
+state = {
+	id = 8863
+	name = "STATE_8863"
+	manpower = 330250
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = ITA
+		victory_points = { 11998 3 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ITA
+		add_core_of = TTS
+		add_core_of = NAP
+		add_to_array = {
+			state_victory_points = 11998
+		}
+	}
+	provinces = { 11998 }
+}

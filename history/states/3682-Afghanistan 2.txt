@@ -1,0 +1,23 @@
+state = {
+	id = 3682
+	name = "STATE_3682"
+	manpower = 273767
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 1
+		coal = 1
+	}
+	history = {
+		owner = AFG
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 12831 1 }
+		add_core_of = AFG
+		add_to_array = {
+			state_victory_points = 12831
+		}
+	}
+	provinces = { 12831 }
+}

@@ -1,0 +1,38 @@
+state = {
+	id = 592
+	name = "STATE_592"
+	manpower = 11349667
+	local_supplies = 1.0
+	state_category = large_town
+	resources = {
+		tungsten = 1
+		steel = 1
+	}
+	history = {
+		owner = GXC
+		add_core_of = GXC
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 2
+			air_base = 3
+			1047 = {
+				naval_base = 5
+				coastal_bunker = 1
+				bunker = 1
+			}
+		}
+		victory_points = { 1047 10 }
+		1938.10.25 = {
+			remove_core_of = GDC
+			owner = CHI
+			add_to_array = {
+				state_victory_points = 1047
+			}
+			controller = JAP
+		}
+	}
+	provinces = { 1047 }
+}

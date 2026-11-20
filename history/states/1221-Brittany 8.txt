@@ -1,0 +1,16 @@
+state = {
+	id = 1221
+	name = "STATE_1221"
+	manpower = 37730
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = FRA
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = FRA
+		add_core_of = BRI
+	}
+	provinces = { 11508 }
+}

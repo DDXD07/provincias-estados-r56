@@ -1,0 +1,20 @@
+state = {
+	id = 8678
+	name = "STATE_8678"
+	manpower = 87667
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 7
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = USA
+		add_claim_by = CSA
+	}
+	provinces = { 7466 }
+}

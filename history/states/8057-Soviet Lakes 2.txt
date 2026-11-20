@@ -1,0 +1,19 @@
+state = {
+	id = 8057
+	name = "STATE_8057"
+	manpower = 125937
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = SAF
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = { 10442 1 }
+		add_core_of = SAF
+		add_to_array = {
+			state_victory_points = 10442
+		}
+	}
+	provinces = { 10442 }
+}

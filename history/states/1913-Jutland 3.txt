@@ -1,0 +1,24 @@
+state = {
+	id = 1913
+	name = "STATE_1913"
+	manpower = 257539
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	resources = {
+		aluminium = 1
+	}
+	history = {
+		owner = DEN
+		victory_points = { 399 2 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = DEN
+		add_to_array = {
+			state_victory_points = 399
+		}
+	}
+	provinces = { 399 }
+}

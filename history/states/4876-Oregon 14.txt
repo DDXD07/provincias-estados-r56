@@ -1,0 +1,15 @@
+state = {
+	id = 4876
+	name = "STATE_4876"
+	manpower = 30767
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = USA
+	}
+	provinces = { 10151 }
+}

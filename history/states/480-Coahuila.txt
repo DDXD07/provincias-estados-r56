@@ -1,0 +1,26 @@
+state = {
+	id = 480
+	name = "STATE_480"
+	manpower = 265766
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			7973 = {
+				bunker = 1
+			}
+		}
+		victory_points = { 7973 3 }
+		add_core_of = MEX
+		add_to_array = {
+			state_victory_points = 7973
+		}
+	}
+	provinces = { 7973 }
+}

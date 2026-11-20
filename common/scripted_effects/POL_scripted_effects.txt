@@ -1,0 +1,882 @@
+#Remember to change the tooltips if the effects are changed
+#State scope. Prev is target country.
+POL_increase_danzig_control = {
+	if = {
+		limit = {
+			has_dynamic_modifier = { modifier = international_city }
+		}
+		remove_dynamic_modifier = {
+			modifier = international_city
+		}
+		add_dynamic_modifier = {
+			modifier = international_city_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = { modifier = international_city_2 }
+		}
+		remove_dynamic_modifier = {
+			modifier = international_city_2
+		}
+		add_dynamic_modifier = {
+			modifier = international_city_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = { modifier = international_city_3 }
+		}
+		remove_dynamic_modifier = {
+			modifier = international_city_3
+		}
+		add_dynamic_modifier = {
+			modifier = international_city_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = { modifier = international_city_4 }
+		}
+		add_compliance = 20
+	}
+}
+
+POL_remove_danzig_effect = {
+	remove_core_of = DNZ
+	set_demilitarized_zone = no
+	controller = { save_event_target_as = danzig_occupier }
+	if = {
+		limit = {
+			has_resistance = yes
+		}
+		force_enable_resistance = { 
+			clear = yes
+			occupier = danzig_occupier
+			occupied = DNZ
+		}
+		if = {
+			limit = {
+				NOT = { controller = { PREV = { is_core_of = PREV } } }
+			}
+			start_resistance = POL #swap resistance in Danzig to Poland if the occupier does not have a core there.
+		}
+	}
+	if = {
+		limit = {
+			has_dynamic_modifier = { modifier =  international_city }
+		}
+		remove_dynamic_modifier = {
+			modifier = international_city
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = { modifier =  international_city_2 }
+		}
+		remove_dynamic_modifier = {
+			modifier = international_city_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = { modifier =  international_city_3 }
+		}
+		remove_dynamic_modifier = {
+			modifier = international_city_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = { modifier =  international_city_4 }
+		}
+		remove_dynamic_modifier = {
+			modifier = international_city_4
+		}
+	}
+}
+
+POL_april_constitution_up = {
+	if = {
+		limit = {
+			has_idea = POL_april_constitution_1
+		}
+		swap_ideas = {
+			remove_idea = POL_april_constitution_1
+			add_idea = POL_april_constitution_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_april_constitution_2
+		}
+		swap_ideas = {
+			remove_idea = POL_april_constitution_2
+			add_idea = POL_april_constitution_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_april_constitution_3
+		}
+		swap_ideas = {
+			remove_idea = POL_april_constitution_3
+			add_idea = POL_april_constitution_4
+		}
+	}
+}
+
+POL_april_constitution_remove = {
+	if = {
+		limit = {
+			has_idea = POL_april_constitution_1
+		}
+		remove_ideas = POL_april_constitution_1
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_april_constitution_2
+		}
+		remove_ideas = POL_april_constitution_2
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_april_constitution_3
+		}
+		remove_ideas = POL_april_constitution_3
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_april_constitution_4
+		}
+		remove_ideas = POL_april_constitution_4
+	}
+}
+
+POL_sanation_left_opposition_up = {
+	if = {
+		limit = {
+			has_idea = POL_sanation_left_opposition_1
+		}
+		swap_ideas = {
+			remove_idea = POL_sanation_left_opposition_1
+			add_idea = POL_sanation_left_opposition_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_left_opposition_2
+		}
+		swap_ideas = {
+			remove_idea = POL_sanation_left_opposition_2
+			add_idea = POL_sanation_left_opposition_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_left_opposition_3
+		}
+		swap_ideas = {
+			remove_idea = POL_sanation_left_opposition_3
+			add_idea = POL_sanation_left_opposition_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_left_opposition_4
+		}
+		remove_ideas = POL_sanation_left_opposition_4
+		if = { #historically, Slawek committed suicide. On historical AI, the Left should be sidelined by the AI without any risk of civil war.
+			limit = {
+				is_historical_focus_on = yes
+				is_ai = yes
+			}
+			country_event = {
+				id = poland.19
+			}
+		}
+		else = {
+			random_list = {
+				50 = {
+					hidden_effect = {
+						add_country_leader_role = {							
+							character = POL_walery_slawek
+							country_leader = {
+								ideology=socialism
+								traits = { left_sanationist_minister }
+								expire="1965.1.1"
+							}
+							promote_leader = yes
+						}
+					}
+					start_civil_war = {
+						ideology = democratic
+						size = 0.45
+						keep_unit_leaders_trigger = {
+							NOT = { has_trait = POL_sanation_left_leader }
+						}
+					}
+					random_other_country = {
+						limit = {
+							original_tag = ROOT
+							has_government = democratic
+						}
+						set_cosmetic_tag = POL_SANATION
+						set_party_name = { 
+							ideology = democratic 
+							long_name = POL_POS_party_long
+							name = POL_POS_party 
+						}
+					}
+				}
+				50 = {
+					country_event = {
+						id = poland.19
+					}
+				}
+			}
+		}
+	}
+}
+
+POL_sanation_left_opposition_down = {
+	if = {
+		limit = {
+			has_idea = POL_sanation_left_opposition_4
+		}
+		swap_ideas = {
+			remove_idea = POL_sanation_left_opposition_4
+			add_idea = POL_sanation_left_opposition_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_left_opposition_3
+		}
+		swap_ideas = {
+			remove_idea = POL_sanation_left_opposition_3
+			add_idea = POL_sanation_left_opposition_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_left_opposition_2
+		}
+		swap_ideas = {
+			remove_idea = POL_sanation_left_opposition_2
+			add_idea = POL_sanation_left_opposition_1
+		}
+	}
+	# else_if = {
+	# 	limit = {
+	# 		has_idea = POL_sanation_left_opposition_1
+	# 	}
+	# 	add_days_mission_timeout = {	#system unused, throws error
+	# 		mission = POL_sanation_left_irritation
+	# 		days = 30
+	# 	}
+	# }
+}
+
+POL_sanation_left_opposition_remove = {
+	if = {
+		limit = {
+			has_idea = POL_sanation_left_opposition_4
+		}
+		remove_ideas = POL_sanation_left_opposition_4
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_left_opposition_3
+		}
+		remove_ideas = POL_sanation_left_opposition_3
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_left_opposition_2
+		}
+		remove_ideas = POL_sanation_left_opposition_2
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_left_opposition_1
+		}
+		remove_ideas = POL_sanation_left_opposition_1
+	}
+}
+
+POL_sanation_right_opposition_up = {
+	if = {
+		limit = {
+			has_idea = POL_sanation_right_opposition_1
+		}
+		swap_ideas = {
+			remove_idea = POL_sanation_right_opposition_1
+			add_idea = POL_sanation_right_opposition_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_right_opposition_2
+		}
+		swap_ideas = {
+			remove_idea = POL_sanation_right_opposition_2
+			add_idea = POL_sanation_right_opposition_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_right_opposition_3
+		}
+		swap_ideas = {
+			remove_idea = POL_sanation_right_opposition_3
+			add_idea = POL_sanation_right_opposition_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_right_opposition_4
+		}
+		if = { #The sanation right will not start a civil war if it's AI and historical so we don't risk any unwanted Civil Wars there. Instead they'll simply keep the national spirit at it's highest level. The player and the Non-Historical AI will still get the CW 
+			limit = {
+				OR = {
+					AND = {
+						is_ai = yes 
+						is_historical_focus_on = no
+					}
+					AND = {
+						is_ai = no 
+					}
+				}
+			}
+			remove_ideas = POL_sanation_right_opposition_4 
+			hidden_effect = {
+				add_country_leader_role = {
+					character = POL_edward_rydzsmigly
+					country_leader = {
+						ideology=falangism
+						traits = { sanation_militarist_falangist }
+						expire="1965.1.1"
+					}
+					promote_leader = yes
+				}
+			}
+			start_civil_war = {
+				ideology = fascism
+				size = 0.5
+				army_ratio = 0.25
+				keep_unit_leaders_trigger = {
+					NOT = { has_trait = POL_sanation_right_leader }
+				}
+			}
+			random_other_country = {
+				limit = {
+					original_tag = ROOT
+					has_government = fascism
+				}
+				set_party_name = { 
+					ideology = fascism 
+					long_name = POL_OZON_party_long
+					name = POL_OZON_party
+				}
+				set_cosmetic_tag = POL_SANATION
+			}
+			hidden_effect = {
+				promote_character = POL_boleslaw_piasecki #Make Piasecki ruler of the fascist party in regular Poland
+			}
+		}
+	}
+}
+
+POL_sanation_right_opposition_down = {
+	if = {
+		limit = {
+			has_idea = POL_sanation_right_opposition_4
+		}
+		swap_ideas = {
+			remove_idea = POL_sanation_right_opposition_4
+			add_idea = POL_sanation_right_opposition_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_right_opposition_3
+		}
+		swap_ideas = {
+			remove_idea = POL_sanation_right_opposition_3
+			add_idea = POL_sanation_right_opposition_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_right_opposition_2
+		}
+		swap_ideas = {
+			remove_idea = POL_sanation_right_opposition_2
+			add_idea = POL_sanation_right_opposition_1
+		}
+	}
+	# else_if = {	#system unused, throws error
+	# 	limit = {
+	# 		has_idea = POL_sanation_right_opposition_1
+	# 	}
+	# 	add_days_mission_timeout = {
+	# 		mission = POL_sanation_right_irritation
+	# 		days = 30
+	# 	}
+	# }
+}
+
+POL_sanation_right_opposition_remove = {
+	if = {
+		limit = {
+			has_idea = POL_sanation_right_opposition_4
+		}
+		remove_ideas = POL_sanation_right_opposition_4
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_right_opposition_3
+		}
+		remove_ideas = POL_sanation_right_opposition_3
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_right_opposition_2
+		}
+		remove_ideas = POL_sanation_right_opposition_2
+	}
+	else_if = {
+		limit = {
+			has_idea = POL_sanation_right_opposition_1
+		}
+		remove_ideas = POL_sanation_right_opposition_1
+	}
+}
+
+POL_monarchist_civil_war_effect = {
+	set_variable = {
+		var = civil_war_size_var
+		value = 0
+	}
+	set_variable = {
+		var = civil_war_size_var
+		value = monarchist_support
+	}
+	divide_variable = {
+		var = civil_war_size_var
+		value = 100
+	}
+	if = {
+		limit = {
+			tag = LIT
+		}
+		if = {
+			limit = {
+				POL = {
+					owns_state = 784
+				}
+			}
+			transfer_state = 784 transfer_state = 8514 transfer_state = 8515 transfer_state = 8516
+			start_civil_war = {
+				ideology = neutrality
+				size = civil_war_size_var
+				keep_political_leader = yes
+				states = { 784 8514 8515 8516 }
+				keep_unit_leaders_trigger = {
+					NOT = { has_unit_leader_flag = POL_monarchy_sympathies_flag }
+				}
+			}
+		}
+		else = {
+			start_civil_war = {
+				ideology = neutrality
+				size = civil_war_size_var
+				keep_political_leader = yes
+				keep_unit_leaders_trigger = {
+					NOT = { has_unit_leader_flag = POL_monarchy_sympathies_flag }
+				}
+			}
+		}
+
+		random_other_country = {
+			limit = {
+				has_civil_war = yes
+				original_tag = LIT
+			}
+			set_cosmetic_tag = LIT_KINGDOM
+			set_country_flag = POL_lithuanian_personal_union_flag
+		}
+		if = {
+			limit = {
+				any_other_country = {
+					original_tag = POL
+					POL_is_valid_to_boost_monarchy = yes 
+				}
+			}
+			every_other_country = {
+				limit = {
+					original_tag = POL
+				}
+				set_country_flag = attempted_royal_takeover_in_LIT
+			}
+		}
+	}
+	if = {
+		limit = {
+			tag = ROM
+		}
+		ROM = {
+			set_country_flag = POL_non_michael_romania
+		}
+		start_civil_war = {
+			ideology = neutrality
+			size = civil_war_size_var
+			keep_political_leader = yes
+			keep_unit_leaders_trigger = {
+				NOT = { has_unit_leader_flag = POL_monarchy_sympathies_flag }
+			}
+		}
+		random_other_country = {
+			limit = {
+				has_civil_war = yes
+				original_tag = ROM
+			}
+			set_cosmetic_tag = ROM_polish_loyalists
+			set_country_flag = POL_romanian_personal_union_flag
+			ROM_ioan_mihail_racovita = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology=military_junta
+						traits = { army_connections }
+						expire="1965.1.1"
+					}
+					promote_leader = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_other_country = {
+						original_tag = POL
+						POL_is_valid_to_boost_monarchy = yes 
+				}
+			}
+			every_other_country = {
+				limit = {
+					original_tag = POL
+				}
+				set_country_flag = attempted_royal_takeover_in_ROM
+			}
+		}
+	}
+	if = {
+		limit = {
+			tag = CZE
+		}
+		start_civil_war = {
+			ideology = neutrality
+			size = civil_war_size_var
+			keep_unit_leaders_trigger = {
+				NOT = { has_unit_leader_flag = POL_monarchy_sympathies_flag }
+			}
+		}
+		random_other_country = {
+			limit = {
+				has_civil_war = yes
+				original_tag = CZE
+			}
+			set_country_flag = POL_czech_personal_union_flag
+		}
+		if = {
+			limit = {
+				any_other_country = {
+						original_tag = POL
+						POL_is_valid_to_boost_monarchy = yes 
+				}
+			}
+			every_other_country = {
+				limit = {
+					original_tag = POL
+				}
+				set_country_flag = attempted_royal_takeover_in_CZE
+			}
+		}
+	}
+	if = {
+		limit = {
+			tag = POL
+		}
+		start_civil_war = {
+			ideology = neutrality
+			size = civil_war_size_var
+			keep_political_leader = yes
+			keep_unit_leaders_trigger = {
+				NOT = { has_unit_leader_flag = POL_monarchy_sympathies_flag }
+			}
+		}
+		random_other_country = {
+			limit = {
+				has_civil_war = yes
+				original_tag = POL
+			}
+			set_cosmetic_tag = POL_KINGDOM
+			set_country_flag = LIT_poland_personal_union_flag
+		}
+		if = {
+			limit = {
+				any_other_country = {
+						original_tag = LIT
+						POL_is_valid_to_boost_monarchy = yes 
+				}
+			}
+			every_other_country = {
+				limit = {
+					original_tag = LIT
+				}
+				set_country_flag = attempted_royal_takeover_in_POL
+			}
+		}
+	}
+
+}
+
+POL_peasant_division_effect = {
+	custom_effect_tooltip = POL_peasant_division_tt
+	hidden_effect = {
+		division_template = { 
+			name = "Peasant Division"
+			division_names_group = POL_INF_01
+			is_locked = no
+			regiments = { 
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 3 y = 0 }
+
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 1 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = { 
+				division = "name = \"1. Peasant Division\" division_template = \"Peasant Division\" start_experience_factor = 0.5" 
+				owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"2. Peasant Division\" division_template = \"Peasant Division\" start_experience_factor = 0.5" 
+				owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"3. Peasant Division\" division_template = \"Peasant Division\" start_experience_factor = 0.5" 
+				owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"4. Peasant Division\" division_template = \"Peasant Division\" start_experience_factor = 0.5" 
+				owner = ROOT
+			}
+		}
+	}
+}
+
+POL_become_german_puppet_effect = {
+	GER = {
+		if = {
+			limit = {
+				POL = {
+					controls_state = 85
+					owns_state = 85
+				}
+			}
+			transfer_state = 85
+		}
+		if = {
+			limit = {
+				POL = {
+					controls_state = 807
+					owns_state = 807
+				}
+			}
+			transfer_state = 807 transfer_state = 8632 transfer_state = 8633 transfer_state = 8634 transfer_state = 8635 transfer_state = 8636 transfer_state = 8637 transfer_state = 8638
+		}
+		if = {
+			limit = {
+				POL = {
+					controls_state = 86
+					owns_state = 86
+				}
+			}
+			transfer_state = 86 transfer_state = 1807 transfer_state = 1808 transfer_state = 1809 transfer_state = 1810 transfer_state = 1811 transfer_state = 1812 transfer_state = 1813 transfer_state = 1814
+		}
+		if = {
+			limit = {
+				POL = {
+					controls_state = 762
+					owns_state = 762
+				}
+			}
+			transfer_state = 762 transfer_state = 8434
+		}
+		85 = { add_core_of = GER } #Danzig
+		86 = { add_core_of = GER } 1807 = { add_core_of = GER } 1808 = { add_core_of = GER } 1809 = { add_core_of = GER } 1810 = { add_core_of = GER } 1811 = { add_core_of = GER } 1812 = { add_core_of = GER } 1813 = { add_core_of = GER } 1814 = { add_core_of = GER } #Poznan
+		807 = { add_core_of = GER } 8632 = { add_core_of = GER } 8633 = { add_core_of = GER } 8634 = { add_core_of = GER } 8635 = { add_core_of = GER } 8636 = { add_core_of = GER } 8637 = { add_core_of = GER } 8638 = { add_core_of = GER } #Gdynia
+		762 = { add_core_of = GER } 8434 = { add_core_of = GER } #Upper Silesia
+		set_autonomy = {
+			target = POL
+			autonomy_state = autonomy_reichsprotectorate
+		}
+		add_to_faction = POL
+	}
+	hidden_effect = {
+		GER = { #Reverse the AI strategy set at game start
+			add_ai_strategy = {
+			   type = alliance
+			   id = POL
+			   value = 2000
+			}
+		}
+		POL = {
+			add_ai_strategy = {
+			   type = alliance
+			   id = GER
+			   value = 2000
+			}
+		}
+	}
+}
+
+POL_divide_lithuania_effect = {
+	188 = { add_core_of = GER } 2575 = { add_core_of = GER }
+	LIT = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = GER
+					is_claimed_by = GER
+					state = 188
+				}
+			}
+			GER = {
+				transfer_state = PREV
+			}
+		}
+	}
+	POL = {
+		annex_country = {
+			target = LIT
+			transfer_troops = no
+		}
+	}
+}
+
+POL_lithuania_wargoal_claims_effect = {
+	188 = { add_core_of = GER } 2575 = { add_core_of = GER }
+	189 = { add_claim_by = POL } 2576 = { add_claim_by = POL } 2577 = { add_claim_by = POL } 2578 = { add_claim_by = POL } 2579 = { add_claim_by = POL } 2580 = { add_claim_by = POL }
+	815 = { add_claim_by = POL } 8666 = { add_claim_by = POL } 8667 = { add_claim_by = POL } 8668 = { add_claim_by = POL } 8669 = { add_claim_by = POL } 8670 = { add_claim_by = POL } 8671 = { add_claim_by = POL } 8672 = { add_claim_by = POL }
+	11 = { add_claim_by = POL } 1202 = { add_claim_by = POL } 1203 = { add_claim_by = POL } 1204 = { add_claim_by = POL } 1205 = { add_claim_by = POL }
+	814 = { add_claim_by = POL } 8663 = { add_claim_by = POL } 8664 = { add_claim_by = POL } 8665 = { add_claim_by = POL }
+	GER = {
+		create_wargoal = {
+			type = take_core_state
+			generator = { 188 }
+			target = LIT
+		}
+	}
+}
+
+POL_set_attempted_royal_takeover_flag = {
+	hidden_effect = {
+		if = {
+			limit = { original_tag = POL }
+			FROM = {
+				set_country_flag = attempted_royal_takeover_in_POL
+			}
+		}
+		else_if = {
+			limit = { original_tag = LIT }
+			FROM = {
+				set_country_flag = attempted_royal_takeover_in_LIT
+			}
+		}
+		else_if = {
+			limit = { original_tag = ROM }
+			FROM = {
+				set_country_flag = attempted_royal_takeover_in_ROM
+			}
+		}
+		else_if = {
+			limit = { original_tag = CZE }
+			FROM = {
+				set_country_flag = attempted_royal_takeover_in_CZE
+			}
+		}
+	}
+}
+
+POL_basic_form_commonwealth = {
+	# Lithuania
+	custom_effect_tooltip = form_country_lithuania_coring_states_tt
+	hidden_effect = {
+		add_state_core = 11 add_state_core = 1202 add_state_core = 1203 add_state_core = 1204 add_state_core = 1205
+		add_state_core = 189 add_state_core = 2576 add_state_core = 2577 add_state_core = 2578 add_state_core = 2579 add_state_core = 2580
+		add_state_core = 188 add_state_core = 2575
+		add_state_core = 784 add_state_core = 8514 add_state_core = 8515 add_state_core = 8516
+		add_state_core = 814 add_state_core = 8663 add_state_core = 8664 add_state_core = 8665
+		add_state_core = 815 add_state_core = 8666 add_state_core = 8667 add_state_core = 8668 add_state_core = 8669 add_state_core = 8670 add_state_core = 8671 add_state_core = 8672
+	}
+	# Poland
+	custom_effect_tooltip = form_country_poland_coring_states_tt
+	hidden_effect = {
+		add_state_core = 5 add_state_core = 1163 add_state_core = 1164 add_state_core = 1165 add_state_core = 1166 add_state_core = 1167 add_state_core = 1168 add_state_core = 1169 add_state_core = 1170 add_state_core = 1171 add_state_core = 1172
+		add_state_core = 10 add_state_core = 1194 add_state_core = 1195 add_state_core = 1196 add_state_core = 1197 add_state_core = 1198 add_state_core = 1199 add_state_core = 1200 add_state_core = 1201
+		add_state_core = 66 add_state_core = 1684 add_state_core = 1685 add_state_core = 1686 add_state_core = 1687 add_state_core = 1688 add_state_core = 1689 add_state_core = 1690 add_state_core = 1691 add_state_core = 1692 add_state_core = 1693 add_state_core = 1694
+		add_state_core = 67 add_state_core = 1695 add_state_core = 1696 add_state_core = 1697 add_state_core = 1698
+		add_state_core = 85
+		add_state_core = 86 add_state_core = 1807 add_state_core = 1808 add_state_core = 1809 add_state_core = 1810 add_state_core = 1811 add_state_core = 1812 add_state_core = 1813 add_state_core = 1814
+		add_state_core = 87 add_state_core = 1815 add_state_core = 1816 add_state_core = 1817 add_state_core = 1818 add_state_core = 1819 add_state_core = 1820
+		add_state_core = 88 add_state_core = 1821 add_state_core = 1822 add_state_core = 1823 add_state_core = 1824 add_state_core = 1825 add_state_core = 1826 add_state_core = 1827 add_state_core = 1828 add_state_core = 1829 add_state_core = 1830 add_state_core = 1831 add_state_core = 1832 add_state_core = 1833
+		add_state_core = 89 add_state_core = 1834 add_state_core = 1835 add_state_core = 1836 add_state_core = 1837 add_state_core = 1838 add_state_core = 1839
+		add_state_core = 90 add_state_core = 1840 add_state_core = 1841 add_state_core = 1842 add_state_core = 1843 add_state_core = 1844 add_state_core = 1845
+		add_state_core = 91 add_state_core = 1846 add_state_core = 1847 add_state_core = 1848 add_state_core = 1849 add_state_core = 1850 add_state_core = 1851 add_state_core = 1852 add_state_core = 1853 add_state_core = 1854
+		add_state_core = 92 add_state_core = 1855 add_state_core = 1856 add_state_core = 1857 add_state_core = 1858 add_state_core = 1859 add_state_core = 1860 add_state_core = 1861 add_state_core = 1862
+		add_state_core = 93 add_state_core = 1863 add_state_core = 1864 add_state_core = 1865 add_state_core = 1866 add_state_core = 1867 add_state_core = 1868 add_state_core = 1869 add_state_core = 1870 add_state_core = 1871
+		add_state_core = 94 add_state_core = 1872 add_state_core = 1873 add_state_core = 1874 add_state_core = 1875 add_state_core = 1876 add_state_core = 1877 add_state_core = 1878 add_state_core = 1879 add_state_core = 1880 add_state_core = 1881 add_state_core = 1882 add_state_core = 1883 add_state_core = 1884 add_state_core = 1885 add_state_core = 1886
+		add_state_core = 95 add_state_core = 1887 add_state_core = 1888 add_state_core = 1889 add_state_core = 1890 add_state_core = 1891 add_state_core = 1892 add_state_core = 1893
+		add_state_core = 96 add_state_core = 1894 add_state_core = 1895 add_state_core = 1896 add_state_core = 1897
+		add_state_core = 97 add_state_core = 1898 add_state_core = 1899 add_state_core = 1900 add_state_core = 1901 add_state_core = 1902 add_state_core = 1903
+		add_state_core = 98 add_state_core = 1904 add_state_core = 1905 add_state_core = 1906 add_state_core = 1907 add_state_core = 1908 add_state_core = 1909 add_state_core = 1910 add_state_core = 1911
+		add_state_core = 193 add_state_core = 2596 add_state_core = 2597 add_state_core = 2598 add_state_core = 2599 add_state_core = 2600 add_state_core = 2601 add_state_core = 2602 add_state_core = 2603 add_state_core = 2604 add_state_core = 2605 add_state_core = 2606 add_state_core = 2607 add_state_core = 2608
+		add_state_core = 194 add_state_core = 2609 add_state_core = 2610 add_state_core = 2611 add_state_core = 2612 add_state_core = 2613 add_state_core = 2614 add_state_core = 2615 add_state_core = 2616 add_state_core = 2617
+		add_state_core = 198 add_state_core = 2637 add_state_core = 2638 add_state_core = 2639
+		add_state_core = 199 add_state_core = 2640 add_state_core = 2641 add_state_core = 2642 add_state_core = 2643 add_state_core = 2644
+		add_state_core = 201 add_state_core = 2653 add_state_core = 2654 add_state_core = 2655 add_state_core = 2656 add_state_core = 2657 add_state_core = 2658 add_state_core = 2659 add_state_core = 2660 add_state_core = 2661 add_state_core = 2662 add_state_core = 2663 add_state_core = 2664
+		add_state_core = 202 add_state_core = 2665 add_state_core = 2666 add_state_core = 2667 add_state_core = 2668 add_state_core = 2669 add_state_core = 2670 add_state_core = 2671 add_state_core = 2672 add_state_core = 2673 add_state_core = 2674
+		add_state_core = 203 add_state_core = 2675 add_state_core = 2676 add_state_core = 2677 add_state_core = 2678 add_state_core = 2679 add_state_core = 2680 add_state_core = 2681 add_state_core = 2682 add_state_core = 2683 add_state_core = 2684 add_state_core = 2685 add_state_core = 2686 add_state_core = 2687 add_state_core = 2688
+		add_state_core = 204 add_state_core = 2689 add_state_core = 2690 add_state_core = 2691 add_state_core = 2692 add_state_core = 2693 add_state_core = 2694 add_state_core = 2695
+		add_state_core = 206 add_state_core = 2711 add_state_core = 2712 add_state_core = 2713 add_state_core = 2714 add_state_core = 2715 add_state_core = 2716 add_state_core = 2717 add_state_core = 2718 add_state_core = 2719
+		add_state_core = 207 add_state_core = 2720 add_state_core = 2721 add_state_core = 2722 add_state_core = 2723 add_state_core = 2724 add_state_core = 2725 add_state_core = 2726 add_state_core = 2727 add_state_core = 2728 add_state_core = 2729
+		add_state_core = 241 add_state_core = 3222 add_state_core = 3223 add_state_core = 3224 add_state_core = 3225 add_state_core = 3226 add_state_core = 3227 add_state_core = 3228 add_state_core = 3229 add_state_core = 3230 add_state_core = 3231 add_state_core = 3232 add_state_core = 3233
+		add_state_core = 242 add_state_core = 3234 add_state_core = 3235 add_state_core = 3236 add_state_core = 3237 add_state_core = 3238 add_state_core = 3239 add_state_core = 3240 add_state_core = 3241 add_state_core = 3242 add_state_core = 3243 add_state_core = 3244 add_state_core = 3245 add_state_core = 3246 add_state_core = 3247 add_state_core = 3248
+		add_state_core = 243 add_state_core = 3249 add_state_core = 3250 add_state_core = 3251 add_state_core = 3252 add_state_core = 3253 add_state_core = 3254 add_state_core = 3255 add_state_core = 3256
+		add_state_core = 259 add_state_core = 3564 add_state_core = 3565 add_state_core = 3566 add_state_core = 3567 add_state_core = 3568 add_state_core = 3569 add_state_core = 3570 add_state_core = 3571 add_state_core = 3572
+		add_state_core = 762 add_state_core = 8434
+		add_state_core = 784 add_state_core = 8514 add_state_core = 8515 add_state_core = 8516
+		add_state_core = 807 add_state_core = 8632 add_state_core = 8633 add_state_core = 8634 add_state_core = 8635 add_state_core = 8636 add_state_core = 8637 add_state_core = 8638
+		add_state_core = 934 add_state_core = 9328
+		add_state_core = 935 add_state_core = 9329 add_state_core = 9330
+		add_state_core = 936 add_state_core = 9331
+	}
+	custom_effect_tooltip = form_country_latvia_coring_states_tt
+	hidden_effect = {
+		add_state_core = 12 add_state_core = 1206 add_state_core = 1207 add_state_core = 1208 add_state_core = 1209 
+		add_state_core = 190 add_state_core = 2581 add_state_core = 2582 add_state_core = 2583 add_state_core = 2584 add_state_core = 2585
+		add_state_core = 808 add_state_core = 8639 add_state_core = 8640
+		add_state_core = 809 add_state_core = 8641 add_state_core = 8642 add_state_core = 8643 add_state_core = 8644 add_state_core = 8645
+		add_state_core = 810 add_state_core = 8646 add_state_core = 8647 add_state_core = 8648 add_state_core = 8649 add_state_core = 8650 add_state_core = 8651 add_state_core = 8652 add_state_core = 8653
+	}
+
+	hidden_effect = {
+		news_event = { id = wtt_news.57 hours = 6 }
+		set_global_flag = form_commonwealth_flag
+	}
+}

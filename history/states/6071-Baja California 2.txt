@@ -1,0 +1,23 @@
+state = {
+	id = 6071
+	name = "STATE_6071"
+	manpower = 22578
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+			12736 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = MEX
+		add_to_array = {
+			state_victory_points = 12736
+		}
+		victory_points = { 12736 1 }
+	}
+	provinces = { 12736 }
+}

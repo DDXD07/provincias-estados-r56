@@ -1,0 +1,26 @@
+state = {
+	id = 7895
+	name = "STATE_7895"
+	manpower = 152393
+	buildings_max_level_factor = 1
+	local_supplies = 1
+	state_category = small_island
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = TNE
+		add_core_of = MLK
+		set_resistance = 0
+		set_compliance = 55
+		add_to_array = {
+			state_victory_points = 1574
+		}
+		victory_points = { 1574 2 }
+		buildings = {
+			1574 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces = { 1574 }
+}

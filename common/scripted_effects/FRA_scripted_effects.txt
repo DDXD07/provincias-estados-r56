@@ -1,0 +1,753 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+transfer_advisors_to_vichy = {
+
+	FRA = {
+		FRA_jean_romatet = {
+			set_nationality = event_target:vichy_france	
+		}
+
+
+		FRA_pierre_pucheu = {
+			set_nationality = event_target:vichy_france	
+		}
+
+
+		FRA_gaston_henry_haye = {
+			set_nationality = event_target:vichy_france	
+		}
+
+
+		FRA_philippe_henriot = {
+			set_nationality = event_target:vichy_france	
+		}
+
+
+		
+		FRA_marcel_bucard = {
+			set_nationality = event_target:vichy_france	
+		}
+
+
+		FRA_marcel_deat = {
+			set_nationality = event_target:vichy_france	
+		}
+
+
+		FRA_charles_maurras = {
+			set_nationality = event_target:vichy_france	
+		}
+
+		FRA_emile_laure = {
+			set_nationality = event_target:vichy_france	
+		}
+
+		FRA_joseph_doumenc = {
+			set_nationality = event_target:vichy_france	
+		}
+		
+
+	}
+
+}
+
+
+
+remove_worker_shortage_effect = {	
+	if = {
+		limit = { has_idea = FRA_worker_shortage }
+		remove_ideas = FRA_worker_shortage
+	}
+	else_if = {
+		limit = { has_idea = FRA_full_employment }
+		remove_ideas = FRA_full_employment
+	}
+}
+
+remove_occupation_cost_effect = {
+	if = {
+		limit = { has_idea = FRA_occupation_costs_1 }
+		remove_ideas = FRA_occupation_costs_1
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_2
+		}
+		remove_ideas = FRA_occupation_costs_2
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_3
+		}
+		remove_ideas = FRA_occupation_costs_3
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_4
+		}
+		remove_ideas = FRA_occupation_costs_4
+	}
+}
+
+reduce_occupation_cost_effect = {
+	if = {
+		limit = { has_idea = FRA_occupation_costs_1 }
+		remove_ideas = FRA_occupation_costs_1
+		hidden_effect = {
+			#Remove reduced monthly CGFF increase for Germany
+			GER = {
+				if = {
+					limit = {
+						has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+					}
+					clr_country_flag = GER_french_war_reparations_flag
+					add_to_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_vichy_france }
+					country_event = { id = wuw_GER_diplomacy.100 hours = 1 }
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_2
+		}
+		swap_ideas = {
+			remove_idea = FRA_occupation_costs_2
+			add_idea = FRA_occupation_costs_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_3
+		}
+		swap_ideas = {
+			remove_idea = FRA_occupation_costs_3
+			add_idea = FRA_occupation_costs_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_4
+		}
+		swap_ideas = {
+			remove_idea = FRA_occupation_costs_4
+			add_idea = FRA_occupation_costs_3
+		}
+	}
+}
+
+increase_occupation_cost_effect = {
+	if = {
+		limit = {
+			has_idea = FRA_occupation_costs_3
+		}
+		swap_ideas = {
+			remove_idea = FRA_occupation_costs_3
+			add_idea = FRA_occupation_costs_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_2
+		}
+		swap_ideas = {
+			remove_idea = FRA_occupation_costs_2
+			add_idea = FRA_occupation_costs_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_1
+		}
+		swap_ideas = {
+			remove_idea = FRA_occupation_costs_1
+			add_idea = FRA_occupation_costs_2
+		}
+	}
+	else_if = {
+		limit = { 
+			NOT = { 
+				has_idea = FRA_occupation_costs_1
+				has_idea = FRA_occupation_costs_2
+				has_idea = FRA_occupation_costs_3
+				has_idea = FRA_occupation_costs_4 
+			}
+		}
+		add_ideas = FRA_occupation_costs_1
+		hidden_effect = {
+			#Reduce monthly CGFF increase for Germany
+			GER = {
+				GER_set_consumer_goods_war_reparations = yes
+			}
+		}
+	}
+}
+
+FRA_congress_of_paris_italian_claims_setup_effect = {
+	add_state_claim = 452 add_state_claim = 5786 add_state_claim = 5787 add_state_claim = 5788 add_state_claim = 5789 add_state_claim = 5790 add_state_claim = 5791 add_state_claim = 5792 add_state_claim = 5793
+	add_state_claim = 447 add_state_claim = 5757 add_state_claim = 5758 add_state_claim = 5759 add_state_claim = 5760 add_state_claim = 5761 add_state_claim = 5762
+	add_state_claim = 446 add_state_claim = 5749 add_state_claim = 5750 add_state_claim = 5751 add_state_claim = 5752 add_state_claim = 5753 add_state_claim = 5754 add_state_claim = 5755 add_state_claim = 5756
+	add_state_claim = 457 add_state_claim = 5822 add_state_claim = 5823 add_state_claim = 5824 add_state_claim = 5825 add_state_claim = 5826 add_state_claim = 5827 add_state_claim = 5828 add_state_claim = 5829
+	add_state_claim = 456 add_state_claim = 5808 add_state_claim = 5809 add_state_claim = 5810 add_state_claim = 5811 add_state_claim = 5812 add_state_claim = 5813 add_state_claim = 5814 add_state_claim = 5815 add_state_claim = 5816 add_state_claim = 5817 add_state_claim = 5818 add_state_claim = 5819 add_state_claim = 5820 add_state_claim = 5821
+	add_state_claim = 551 add_state_claim = 6683 add_state_claim = 6684 add_state_claim = 6685 add_state_claim = 6686 add_state_claim = 6687 add_state_claim = 6688 add_state_claim = 6689 add_state_claim = 6690 add_state_claim = 6691 add_state_claim = 6692 add_state_claim = 6693 add_state_claim = 6694
+	add_state_claim = 549 add_state_claim = 6667 add_state_claim = 6668 add_state_claim = 6669 add_state_claim = 6670 add_state_claim = 6671 add_state_claim = 6672 add_state_claim = 6673 add_state_claim = 6674
+	add_state_claim = 269 add_state_claim = 3685 add_state_claim = 3686 add_state_claim = 3687 add_state_claim = 3688 add_state_claim = 3689 add_state_claim = 3690 add_state_claim = 3691
+	add_state_claim = 547 add_state_claim = 6659 add_state_claim = 6660 add_state_claim = 6661
+	add_state_claim = 904 add_state_claim = 9166 add_state_claim = 9167
+	add_state_claim = 905 add_state_claim = 9168 add_state_claim = 9169
+	add_state_claim = 903 add_state_claim = 9163 add_state_claim = 9164 add_state_claim = 9165
+	add_state_claim = 548 add_state_claim = 6662 add_state_claim = 6663 add_state_claim = 6664 add_state_claim = 6665 add_state_claim = 6666
+	add_state_claim = 546 add_state_claim = 6642 add_state_claim = 6643 add_state_claim = 6644 add_state_claim = 6645 add_state_claim = 6646 add_state_claim = 6647 add_state_claim = 6648 add_state_claim = 6649 add_state_claim = 6650 add_state_claim = 6651 add_state_claim = 6652 add_state_claim = 6653 add_state_claim = 6654 add_state_claim = 6655 add_state_claim = 6656 add_state_claim = 6657 add_state_claim = 6658
+	add_state_claim = 887 add_state_claim = 9095 add_state_claim = 9096
+	add_state_claim = 885 add_state_claim = 9087 add_state_claim = 9088 add_state_claim = 9089
+	add_state_claim = 884 add_state_claim = 9084 add_state_claim = 9085 add_state_claim = 9086
+	add_state_claim = 886 add_state_claim = 9090 add_state_claim = 9091 add_state_claim = 9092 add_state_claim = 9093 add_state_claim = 9094
+	add_state_claim = 883 add_state_claim = 9080 add_state_claim = 9081 add_state_claim = 9082 add_state_claim = 9083
+}
+
+FRA_congress_of_paris_portugese_claims_setup_effect = {
+	add_state_claim = 295 add_state_claim = 3947 add_state_claim = 3948 add_state_claim = 3949 add_state_claim = 3950 add_state_claim = 3951 add_state_claim = 3952 add_state_claim = 3953 add_state_claim = 3954
+	add_state_claim = 771 add_state_claim = 8452 add_state_claim = 8453 add_state_claim = 8454 add_state_claim = 8455 add_state_claim = 8456 add_state_claim = 8457 add_state_claim = 8458
+	add_state_claim = 981 add_state_claim = 9552 add_state_claim = 9553
+	add_state_claim = 770 add_state_claim = 8450 add_state_claim = 8451
+	add_state_claim = 545 add_state_claim = 6637 add_state_claim = 6638 add_state_claim = 6639 add_state_claim = 6640 add_state_claim = 6641
+	add_state_claim = 542 add_state_claim = 6620 add_state_claim = 6621 add_state_claim = 6622 add_state_claim = 6623 add_state_claim = 6624
+	add_state_claim = 541 add_state_claim = 6618 add_state_claim = 6619
+	add_state_claim = 893 add_state_claim = 9123 add_state_claim = 9124 add_state_claim = 9125 add_state_claim = 9126
+	add_state_claim = 894 add_state_claim = 9127
+	add_state_claim = 895 add_state_claim = 9128 add_state_claim = 9129 add_state_claim = 9130
+	add_state_claim = 681 add_state_claim = 8057 add_state_claim = 8058 add_state_claim = 8059 add_state_claim = 8060 add_state_claim = 8061 add_state_claim = 8062 add_state_claim = 8063 add_state_claim = 8064 add_state_claim = 8065 add_state_claim = 8066 add_state_claim = 8067 add_state_claim = 8068 add_state_claim = 8069 add_state_claim = 8070
+	add_state_claim = 275 add_state_claim = 3720 add_state_claim = 3721 add_state_claim = 3722 add_state_claim = 3723 add_state_claim = 3724 add_state_claim = 3725 add_state_claim = 3726
+	add_state_claim = 719 add_state_claim = 8198 add_state_claim = 8199
+}
+
+FRA_right_wing_riot_effect = {
+	if = {
+		limit = {
+			has_idea = FRA_political_violence
+		}
+		country_event = lar_france_political_violence.1
+	}
+}
+FRA_communism_riot_effect = {
+	if = {
+		limit = {
+			has_idea = FRA_political_violence
+		}
+		country_event = lar_france_political_violence.2
+	}
+}
+
+FRA_transfer_indochina_effect = {
+	if = {
+		limit = {
+			VIN = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = VIN
+	}
+	else_if = {
+		limit = {
+			671 = { CONTROLLER = { original_tag = FRA } }
+			286 = { CONTROLLER = { original_tag = FRA } }
+			1017 = { CONTROLLER = { original_tag = FRA } }
+			1066 = { CONTROLLER = { original_tag = FRA } }
+		}
+		transfer_state = 671 transfer_state = 7949 transfer_state = 7950 transfer_state = 7951 transfer_state = 7952 transfer_state = 7953 transfer_state = 7954 transfer_state = 7955 transfer_state = 7956 transfer_state = 7957 transfer_state = 7958 transfer_state = 7959 transfer_state = 7960 transfer_state = 7961 transfer_state = 7962 transfer_state = 7963 transfer_state = 7964 transfer_state = 7965
+		transfer_state = 286 transfer_state = 3859 transfer_state = 3860 transfer_state = 3861 transfer_state = 3862 transfer_state = 3863 transfer_state = 3864 transfer_state = 3865 transfer_state = 3866 transfer_state = 3867 transfer_state = 3868 transfer_state = 3869 transfer_state = 3870
+		transfer_state = 1017 transfer_state = 9646 transfer_state = 9647 transfer_state = 9648
+		transfer_state = 1066 transfer_state = 9948 transfer_state = 9949 transfer_state = 9950 transfer_state = 9951
+	}
+	if = {
+		limit = {
+			CAM = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = CAM
+	}
+	else_if = {
+		limit = { 
+			741 = { CONTROLLER = { original_tag = FRA } } 
+			1067 = { CONTROLLER = { original_tag = FRA } } 
+		}
+		transfer_state = 741 transfer_state = 8287 transfer_state = 8288 transfer_state = 8289 transfer_state = 8290 transfer_state = 8291 transfer_state = 8292 transfer_state = 8293 transfer_state = 8294 transfer_state = 8295 transfer_state = 8296 transfer_state = 8297 transfer_state = 8298 transfer_state = 8299 transfer_state = 8300 transfer_state = 8301 transfer_state = 8302 transfer_state = 8303 transfer_state = 8304 transfer_state = 8305 transfer_state = 8306
+		transfer_state = 1067 transfer_state = 9952 transfer_state = 9953 transfer_state = 9954 transfer_state = 9955 transfer_state = 9956 transfer_state = 9957
+	}
+	if = {
+		limit = {
+			LAO = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = LAO
+	}
+	else_if = {
+		limit = { 
+			670 = { CONTROLLER = { original_tag = FRA } } 
+			1069 = { CONTROLLER = { original_tag = FRA } } 
+			1068 = { CONTROLLER = { original_tag = FRA } } 
+		}
+		transfer_state = 670 transfer_state = 7921 transfer_state = 7922 transfer_state = 7923 transfer_state = 7924 transfer_state = 7925 transfer_state = 7926 transfer_state = 7927 transfer_state = 7928 transfer_state = 7929 transfer_state = 7930 transfer_state = 7931 transfer_state = 7932 transfer_state = 7933 transfer_state = 7934 transfer_state = 7935 transfer_state = 7936 transfer_state = 7937 transfer_state = 7938 transfer_state = 7939 transfer_state = 7940 transfer_state = 7941 transfer_state = 7942 transfer_state = 7943 transfer_state = 7944 transfer_state = 7945 transfer_state = 7946 transfer_state = 7947 transfer_state = 7948
+		transfer_state = 1069 transfer_state = 9964 transfer_state = 9965
+		transfer_state = 1068 transfer_state = 9958 transfer_state = 9959 transfer_state = 9960 transfer_state = 9961 transfer_state = 9962 transfer_state = 9963 
+	}
+}
+
+FRA_transfer_syria_effect = {
+	if = {
+		limit = {
+			LEB = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = LEB
+		LEB = { FRA_sync_levant_cosmetic_tag_effect = yes }
+	}
+	else_if = {
+		limit = { 553 = { CONTROLLER = { original_tag = FRA } } }
+		transfer_state = 553 transfer_state = 6704 transfer_state = 6705
+	}
+	if = {
+		limit = {
+			SYR = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = SYR
+		SYR = { FRA_sync_levant_cosmetic_tag_effect = yes }
+	}
+	else_if = {
+		limit = {
+			680 = { CONTROLLER = { original_tag = FRA } }
+			677 = { CONTROLLER = { original_tag = FRA } }
+			554 = { CONTROLLER = { original_tag = FRA } }
+		}
+		transfer_state = 680 transfer_state = 8045 transfer_state = 8046 transfer_state = 8047 transfer_state = 8048 transfer_state = 8049 transfer_state = 8050 transfer_state = 8051 transfer_state = 8052 transfer_state = 8053 transfer_state = 8054 transfer_state = 8055 transfer_state = 8056
+		transfer_state = 677 transfer_state = 8028 transfer_state = 8029 transfer_state = 8030 transfer_state = 8031 transfer_state = 8032 transfer_state = 8033
+		transfer_state = 554 transfer_state = 6706 transfer_state = 6707 transfer_state = 6708 transfer_state = 6709
+	}
+}
+
+# Levant mandate names follow whoever Syria and Lebanon currently answer to
+FRA_sync_levant_cosmetic_tag_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_cosmetic_tag = SYR_mandate
+				has_cosmetic_tag = SYR_vichy
+				has_cosmetic_tag = LEB_mandate
+				has_cosmetic_tag = LEB_vichy
+				AND = {
+					is_subject = yes
+					OVERLORD = {
+						original_tag = FRA
+					}
+					NOT = { has_cosmetic_tag = SYR_EYALET }
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+					is_vichy_france = yes
+				}
+			}
+			if = {
+				limit = {
+					original_tag = SYR
+				}
+				set_cosmetic_tag = SYR_vichy
+			}
+			else = {
+				set_cosmetic_tag = LEB_vichy
+			}
+		}
+		else_if = {
+			limit = {
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+					NOT = { is_vichy_france = yes }
+				}
+			}
+			if = {
+				limit = {
+					original_tag = SYR
+				}
+				set_cosmetic_tag = SYR_mandate
+			}
+			else = {
+				set_cosmetic_tag = LEB_mandate
+			}
+		}
+		else = {
+			drop_cosmetic_tag = yes
+		}
+	}
+}
+
+FRA_transfer_north_africa_effect = {
+	if = {
+		limit = {
+			TUN = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = TUN
+	}
+	else_if = {
+		limit = { 
+			458 = { CONTROLLER = { original_tag = FRA } } 
+			665 = { CONTROLLER = { original_tag = FRA } } 
+		}
+		transfer_state = 458 transfer_state = 5830 transfer_state = 5831 transfer_state = 5832 transfer_state = 5833 transfer_state = 5834 transfer_state = 5835 transfer_state = 5836 transfer_state = 5837 transfer_state = 5838 transfer_state = 5839 transfer_state = 5840
+		transfer_state = 665 transfer_state = 7838 transfer_state = 7839 transfer_state = 7840 transfer_state = 7841 transfer_state = 7842 transfer_state = 7843 transfer_state = 7844 transfer_state = 7845 transfer_state = 7846
+	}
+	if = {
+		limit = {
+			MOR = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = MOR
+	}
+	else_if = {
+		limit = { 
+			461 = { CONTROLLER = { original_tag = FRA } } 
+			462 = { CONTROLLER = { original_tag = FRA } } 
+		}
+		transfer_state = 461 transfer_state = 5860 transfer_state = 5861 transfer_state = 5862 transfer_state = 5863 transfer_state = 5864 transfer_state = 5865 transfer_state = 5866 transfer_state = 5867 transfer_state = 5868 transfer_state = 5869 transfer_state = 5870 transfer_state = 5871 transfer_state = 5872 transfer_state = 5873 transfer_state = 5874 transfer_state = 5875
+		transfer_state = 462 transfer_state = 5876 transfer_state = 5877 transfer_state = 5878 transfer_state = 5879 transfer_state = 5880 transfer_state = 5881 transfer_state = 5882 transfer_state = 5883 transfer_state = 5884 transfer_state = 5885 transfer_state = 5886 transfer_state = 5887 transfer_state = 5888
+	}
+	if = {
+		limit = {
+			ALG = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}	
+		}
+		puppet = ALG
+	}
+	else_if = {
+		limit = {
+			513 = { CONTROLLER = { original_tag = FRA } }
+			459 = { CONTROLLER = { original_tag = FRA } }
+			460 = { CONTROLLER = { original_tag = FRA } }
+		}
+		transfer_state = 513 transfer_state = 6320 transfer_state = 6321 transfer_state = 6322 transfer_state = 6323 transfer_state = 6324 transfer_state = 6325 transfer_state = 6326 transfer_state = 6327 transfer_state = 6328 transfer_state = 6329 transfer_state = 6330 transfer_state = 6331
+		transfer_state = 459 transfer_state = 5841 transfer_state = 5842 transfer_state = 5843 transfer_state = 5844 transfer_state = 5845 transfer_state = 5846 transfer_state = 5847 transfer_state = 5848 transfer_state = 5849
+		transfer_state = 460 transfer_state = 5850 transfer_state = 5851 transfer_state = 5852 transfer_state = 5853 transfer_state = 5854 transfer_state = 5855 transfer_state = 5856 transfer_state = 5857 transfer_state = 5858 transfer_state = 5859
+	}
+}
+
+FRA_transfer_central_africa_effect = {
+	if = {
+		limit = {
+			RCG = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = RCG
+	}
+	else_if = {
+		limit = { 
+			772 = { CONTROLLER = { original_tag = FRA } } 
+		}
+		transfer_state = 772 transfer_state = 8459 transfer_state = 8460 transfer_state = 8461 transfer_state = 8462
+	}
+	if = {
+		limit = {
+			GAB = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = GAB
+	}
+	else_if = {
+		limit = { 
+			539 = { CONTROLLER = { original_tag = FRA } } 
+		}
+		transfer_state = 539 transfer_state = 6609 transfer_state = 6610 transfer_state = 6611
+	}
+	if = {
+		limit = {
+			CAR = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = CAR
+	}
+	else_if = {
+		limit = {
+			660 = { CONTROLLER = { original_tag = FRA } }	
+		}
+		transfer_state = 660 transfer_state = 7801 transfer_state = 7802 transfer_state = 7803 transfer_state = 7804 transfer_state = 7805 transfer_state = 7806 transfer_state = 7807
+	}
+	if = {
+		limit = {
+			CMR = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = CMR
+	}
+	else_if = {
+		limit = {
+			773 = { CONTROLLER = { original_tag = FRA } }	
+		}
+		transfer_state = 773 transfer_state = 8463 transfer_state = 8464 transfer_state = 8465 transfer_state = 8466 transfer_state = 8467 transfer_state = 8468
+	}
+	if = {
+		limit = {
+			CHA = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = CHA
+	}
+	else_if = {
+		limit = {
+			774 = { CONTROLLER = { original_tag = FRA } }	
+		}
+		transfer_state = 774 transfer_state = 8469 transfer_state = 8470 transfer_state = 8471 transfer_state = 8472 transfer_state = 8473 transfer_state = 8474 transfer_state = 8475 transfer_state = 8476 transfer_state = 8477 transfer_state = 8478
+	}
+}
+FRA_transfer_western_africa_effect = {
+	if = {
+		limit = {
+			NGR = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = NGR
+	}
+	else_if = {
+		limit = { 
+			781 = { CONTROLLER = { original_tag = FRA } } 
+		}
+		transfer_state = 781 transfer_state = 8505 transfer_state = 8506 transfer_state = 8507 transfer_state = 8508 transfer_state = 8509 transfer_state = 8510
+	}
+	if = {
+		limit = {
+			DAH = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = DAH
+	}
+	else_if = {
+		limit = { 
+			776 = { CONTROLLER = { original_tag = FRA } } 
+		}
+		transfer_state = 776 transfer_state = 8481 transfer_state = 8482
+	}
+	if = {
+		limit = {
+			TOG = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = TOG
+	}
+	else_if = {
+		limit = {
+			777 = { CONTROLLER = { original_tag = FRA } }	
+		}
+		transfer_state = 777 transfer_state = 8483 transfer_state = 8484
+	}
+	if = {
+		limit = {
+			VOL = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = VOL
+	}
+	else_if = {
+		limit = {
+			778 = { CONTROLLER = { original_tag = FRA } }	
+		}
+		transfer_state = 778 transfer_state = 8485 transfer_state = 8486 transfer_state = 8487 transfer_state = 8488 transfer_state = 8489 transfer_state = 8490
+	}
+	if = {
+		limit = {
+			IVO = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = IVO
+	}
+	else_if = {
+		limit = {
+			779 = { CONTROLLER = { original_tag = FRA } }	
+		}
+		transfer_state = 779 transfer_state = 8491 transfer_state = 8492 transfer_state = 8493 transfer_state = 8494 transfer_state = 8495 transfer_state = 8496
+	}
+	if = {
+		limit = {
+			MLI = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = MLI
+	}
+	else_if = {
+		limit = {
+			556 = { CONTROLLER = { original_tag = FRA } }	
+			898 = { CONTROLLER = { original_tag = FRA } }	
+			899 = { CONTROLLER = { original_tag = FRA } }	
+		}
+		transfer_state = 556 transfer_state = 6712 transfer_state = 6713 transfer_state = 6714
+		transfer_state = 898 transfer_state = 9141 transfer_state = 9142 transfer_state = 9143 transfer_state = 9144
+		transfer_state = 899 transfer_state = 9145 transfer_state = 9146 transfer_state = 9147 transfer_state = 9148 transfer_state = 9149
+	}
+	if = {
+		limit = {
+			GNA = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = GNA
+	}
+	else_if = {
+		limit = {
+			780 = { CONTROLLER = { original_tag = FRA } }	
+		}
+		transfer_state = 780 transfer_state = 8497 transfer_state = 8498 transfer_state = 8499 transfer_state = 8500 transfer_state = 8501 transfer_state = 8502 transfer_state = 8503 transfer_state = 8504
+	}
+	if = {
+		limit = {
+			SEN = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = SEN
+	}
+	else_if = {
+		limit = {
+			272 = { CONTROLLER = { original_tag = FRA } }	
+		}
+		transfer_state = 272 transfer_state = 3695 transfer_state = 3696 transfer_state = 3697 transfer_state = 3698 transfer_state = 3699 transfer_state = 3700
+	}
+	if = {
+		limit = {
+			MRT = {
+				exists = yes
+				is_subject = yes
+				OVERLORD = {
+					original_tag = FRA
+				}
+			}
+		}
+		puppet = MRT
+	}
+	else_if = {
+		limit = {
+			557 = { CONTROLLER = { original_tag = FRA } }	
+		}
+		transfer_state = 557 transfer_state = 6715 transfer_state = 6716 transfer_state = 6717 transfer_state = 6718
+	}
+}

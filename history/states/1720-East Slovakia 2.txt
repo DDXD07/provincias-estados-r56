@@ -1,0 +1,19 @@
+state = {
+	id = 1720
+	name = "STATE_1720"
+	manpower = 138648
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = CZE
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CZE
+		add_core_of = SLO
+	}
+	provinces = { 3550 }
+}

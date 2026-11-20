@@ -1,0 +1,20 @@
+state = {
+	id = 148
+	name = "STATE_148"
+	manpower = 17388
+	local_supplies = 3.0
+	state_category = pastoral
+	history = {
+		owner = FIN
+		victory_points = { 11164 2 }
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = FIN
+		add_core_of = SMI
+		add_to_array = {
+			state_victory_points = 11164
+		}
+	}
+	provinces = { 11164 }
+}

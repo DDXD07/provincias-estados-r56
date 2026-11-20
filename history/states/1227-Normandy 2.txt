@@ -1,0 +1,27 @@
+state = {
+	id = 1227
+	name = "STATE_1227"
+	manpower = 450052
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		steel = 2
+	}
+	history = {
+		owner = FRA
+		victory_points = { 9434 5 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			9434 = {
+				naval_base = 5
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = FRA
+		add_to_array = {
+			state_victory_points = 9434
+		}
+	}
+	provinces = { 9434 }
+}

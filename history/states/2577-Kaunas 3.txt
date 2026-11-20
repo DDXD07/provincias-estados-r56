@@ -1,0 +1,19 @@
+state = {
+	id = 2577
+	name = "STATE_2577"
+	manpower = 49794
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = LIT
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = LIT
+	}
+	provinces = { 3337 }
+}

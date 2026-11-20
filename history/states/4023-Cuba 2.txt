@@ -1,0 +1,27 @@
+state = {
+	id = 4023
+	name = "STATE_4023"
+	manpower = 329021
+	buildings_max_level_factor = 1
+	local_supplies = 0.000
+	state_category = pastoral
+	resources = {
+		steel = 7
+		chromium = 6
+	}
+	history = {
+		owner = CUB
+		buildings = {
+			infrastructure = 2
+			7590 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = CUB
+		add_to_array = {
+			state_victory_points = 7590
+		}
+		victory_points = { 7590 1 }
+	}
+	provinces = { 7590 }
+}

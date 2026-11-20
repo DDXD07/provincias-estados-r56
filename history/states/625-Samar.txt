@@ -1,0 +1,20 @@
+state = {
+	id = 625
+	name = "STATE_625"
+	manpower = 612309
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = PHI
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 2
+		}
+		add_core_of = PHI
+		add_to_array = {
+			state_victory_points = 1224
+		}
+		victory_points = { 1224 1 }
+	}
+	provinces = { 1224 }
+}

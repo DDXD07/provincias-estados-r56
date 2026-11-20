@@ -1,0 +1,16 @@
+state = {
+	id = 7793
+	name = "STATE_7793"
+	manpower = 14324
+	buildings_max_level_factor = 1.000
+	local_supplies = 4.000
+	state_category = p2s_village
+	history = {
+		add_core_of = UAE
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 8108 }
+}

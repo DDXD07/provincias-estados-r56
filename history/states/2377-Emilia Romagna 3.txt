@@ -1,0 +1,20 @@
+state = {
+	id = 2377
+	name = "STATE_2377"
+	manpower = 417704
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = ITA
+		victory_points = { 9752 1 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = ITA
+		add_core_of = PAP
+		add_to_array = {
+			state_victory_points = 9752
+		}
+	}
+	provinces = { 9752 }
+}

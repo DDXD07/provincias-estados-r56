@@ -1,0 +1,14 @@
+state = {
+	id = 5640
+	name = "STATE_5640"
+	manpower = 61839
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = TIB
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 12730 }
+}

@@ -1,0 +1,16 @@
+state = {
+	id = 10066
+	name = "STATE_10066"
+	manpower = 32250
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = OMA
+		add_core_of = IMO
+		set_demilitarized_zone = yes
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 2018 }
+}

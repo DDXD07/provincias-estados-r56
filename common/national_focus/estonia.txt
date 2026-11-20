@@ -1,0 +1,2913 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+#!gfx:interface\r56_goals.gfx
+focus_tree = {
+	id = estonia_tree
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 9
+			tag = EST
+			has_dlc = "No Step Back"
+			has_global_flag = EST_vanilla_focus_tree
+		}
+	}
+
+	default = no
+	
+	continuous_focus_position = { x = 20 y = 1000 }
+
+#	focus = {
+#		id = EST_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+	
+	#shared_focus = BALTIC_rejoin_the_railways
+	shared_focus = EST_the_four_year_plan
+	shared_focus = EST_prepare_for_war
+	shared_focus = EST_air_base_expansion
+	shared_focus = EST_build_paldiski_port
+	shared_focus = BALTIC_restore_workers_republic
+	shared_focus = BAL_UNIFIED_baltic_unification
+	
+	#####################################
+	#### ERA OF SILENCE (HISTORICAL) ####
+	#####################################
+	focus = {
+		id = EST_era_of_silence
+		icon = GFX_focus_EST_era_of_silence
+		mutually_exclusive = { focus = BALTIC_restore_workers_republic focus = EST_rally_the_nation }
+		x = 34
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			activate_mission_tooltip = EST_vaps_uprising
+			activate_mission_tooltip = EST_vaps_crackdown
+		}
+	}
+
+	focus = {
+		id = EST_ismaaliit
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EST_era_of_silence }
+		x = 1
+		y = 1
+		relative_position_id = EST_era_of_silence
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_ideas = EST_ismaaliit_idea
+			if = {
+				limit = { has_idea = democratic_opposition }
+				swap_ideas = {
+					remove_idea = democratic_opposition
+					add_idea = democratic_opposition_idea_1
+				}
+			}
+			else_if = {
+				limit = { has_idea = democratic_opposition_idea_1 }
+				swap_ideas = {
+					remove_idea = democratic_opposition_idea_1
+					add_idea = democratic_opposition_idea_2
+				}
+			}
+		}
+	}
+
+	###CIVILIAN GOVERNMENT###
+	focus = {
+		id = EST_establish_the_rahvuskogu
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = EST_era_of_silence }
+		x = -2
+		y = 1
+		relative_position_id = EST_era_of_silence
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			if = {
+				limit = { has_idea = democratic_opposition }
+				swap_ideas = {
+					remove_idea = democratic_opposition
+					add_idea = democratic_opposition_idea_1
+				}
+			}
+			else_if = {
+				limit = { has_idea = democratic_opposition_idea_1 }
+				swap_ideas = {
+					remove_idea = democratic_opposition_idea_1
+					add_idea = democratic_opposition_idea_2
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = EST_jaan_tonisson
+		}
+	}
+
+	focus = {
+		id = EST_chamber_of_deputies
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = EST_establish_the_rahvuskogu }
+		prerequisite = { focus = EST_ismaaliit }
+		x = 0
+		y = 1
+		relative_position_id = EST_establish_the_rahvuskogu
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_idea = democratic_opposition_idea_1 }
+				swap_ideas = {
+					remove_idea = democratic_opposition_idea_1
+					add_idea = democratic_opposition_idea_2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_exploit_the_banks
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = EST_chamber_of_deputies }
+		x = 1
+		y = 1
+		relative_position_id = EST_chamber_of_deputies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = EST_exploit_the_banks_idea
+		}
+	}
+
+	focus = {
+		id = EST_modernize_capital
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = EST_chamber_of_deputies }
+		x = -1
+		y = 1
+		relative_position_id = EST_chamber_of_deputies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_break_the_silence
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = EST_modernize_capital }
+		prerequisite = { focus = EST_exploit_the_banks }
+		mutually_exclusive = { focus = EST_squash_the_opposition }
+		x = 0
+		y = 1
+		relative_position_id = EST_modernize_capital
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			communism < 0.01
+			fascism < 0.05
+			democratic > 0.25
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			}
+			set_politics = {
+				ruling_party = democratic
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			if = {
+				limit = { has_idea = democratic_opposition }
+				remove_ideas = democratic_opposition
+			}
+			else_if = {
+				limit = { has_idea = democratic_opposition_idea_1 }
+				remove_ideas = { democratic_opposition_idea_1 }
+			}
+			else_if = {
+				limit = { has_idea = democratic_opposition_idea_2 }
+				remove_ideas = { democratic_opposition_idea_2 }
+			}
+		}
+	}
+
+	focus = {
+		id = EST_squash_the_opposition
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = EST_modernize_capital }
+		prerequisite = { focus = EST_exploit_the_banks }
+		mutually_exclusive = { focus = EST_break_the_silence }
+		x = 0
+		y = 1
+		relative_position_id = EST_exploit_the_banks
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			democratic < 0.1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			remove_ideas = democratic_opposition_idea_2
+		}
+	}
+
+	focus = {
+		id = EST_formalize_baltic_entente
+		icon = GFX_focus_generic_baltic_entente
+		prerequisite = { focus = EST_break_the_silence focus = EST_squash_the_opposition }
+		mutually_exclusive = { focus = EST_beyond_the_baltic }
+		x = 0
+		y = 1
+		relative_position_id = EST_squash_the_opposition
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					LIT = { is_ai = no }
+					LAT = { is_ai = no } #The AI shouldn't try to lead a Baltic faction if one of the Baltic nations is a player. Would lead to the player having to rush the focus.
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = EST_ai_behavior
+							option = DEFAULT
+						}
+					}
+					has_country_flag = EST_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = EST_ai_behavior
+						option = HISTORICAL
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_government = neutrality
+			}
+			modifier = {
+				factor = 10
+				is_in_faction = no
+				any_other_country = {
+					is_major = yes
+					OR = {
+						has_war_with = ROOT
+						has_wargoal_against = ROOT
+					}
+				} #AI should seek an alliance if they are in immediate danger
+			}
+		}
+
+		available = {
+			is_in_faction = no
+			OR = {
+				LIT = { exists = yes }
+				LAT = { exists = yes }
+			}
+			OR = {
+				LAT = { is_in_faction = no }
+				LIT = { is_in_faction = no }
+			}
+			LAT = {
+				NOT = { has_completed_focus = LAT_formalize_baltic_entente }
+			}
+			LIT = {
+				NOT = { has_completed_focus = LIT_formalize_baltic_entente }
+			}
+		}
+
+		bypass = {
+			is_in_faction_with = LAT
+			is_in_faction_with = LIT
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_country_flag = baltic_entente_leader_flag
+			if = {
+				limit = { 
+					LAT = { 
+						Exists = yes
+						is_in_faction = no 
+					}
+				}
+				LAT = {
+					country_event = { id = BALTIC_events.2 hours = 3 } #requests mutual guarantees which can eventually become a faction via decision
+				}
+			}
+			if = {
+				limit = { 
+					LIT = { 
+						exists = yes
+						is_in_faction = no 
+					} 
+				}
+				LIT = {
+					country_event = { id = BALTIC_events.2 hours = 3 }
+				}
+			}
+			set_country_flag = baltic_entente_flag
+			unlock_decision_tooltip = formalize_the_entente
+			unlock_decision_tooltip = abandon_the_entente
+		}
+	}
+
+	focus = {
+		id = EST_look_north
+		icon = GFX_focus_generic_scandinavian_alliance
+		prerequisite = { focus = EST_formalize_baltic_entente }
+		x = 0
+		y = 1
+		relative_position_id = EST_formalize_baltic_entente
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = baltic_entente_flag
+			is_faction_leader = yes
+			OR = {
+				NOR = { is_in_faction = no }
+				SWE = { is_in_faction = no }
+				FIN = { is_in_faction = no }
+				DEN = { is_in_faction = no }
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			look_north_focus_effect = yes
+		}
+	}
+
+	focus = {
+		id = EST_beyond_the_baltic
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = EST_break_the_silence focus = EST_squash_the_opposition }
+		mutually_exclusive = { focus = EST_formalize_baltic_entente }
+		x = 2
+		y = 1
+		relative_position_id = EST_squash_the_opposition
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = { #Don't mess with history (unless ppl are ignoring you)
+				factor = 0
+				date < 1942.1.1
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = EST_ai_behavior
+							option = DEFAULT
+						}
+					}
+					has_country_flag = EST_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = EST_ai_behavior
+						option = HISTORICAL
+					}
+				}
+			}
+		}
+
+		available = {
+			any_other_country = {
+				NOT = { has_war_with = ROOT }
+				is_faction_leader = yes
+				is_major = yes
+				has_government = democratic
+			}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = ENG
+					has_war_with = ROOT
+				}
+			}
+			is_in_faction = no
+		}
+
+		bypass = {
+			OR = {
+				is_in_faction_with = ENG
+				AND = {
+					is_in_faction = yes
+					any_other_country = {
+						is_faction_leader = yes
+						is_in_faction_with = ROOT
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = { 
+					ENG = {
+						is_faction_leader = yes
+						has_government = democratic
+						not = { has_war_with = ROOT }
+					}
+				}
+				ENG = { country_event = BALTIC_events.1 }
+			}
+			else = {
+				get_best_alliance_match_democratic_effect = yes
+				var:best_leader = {
+					country_event = BALTIC_events.1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_join_the_allies
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = EST_beyond_the_baltic }
+		x = 0
+		y = 1
+		relative_position_id = EST_beyond_the_baltic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				NOT = { has_war_with = ROOT }
+				is_faction_leader = yes
+				is_major = yes
+				has_government = democratic
+			}
+			
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = ENG
+					has_war_with = ROOT
+				}
+			}
+			is_in_faction = no
+		}
+
+		bypass = {
+			OR = {
+				is_in_faction_with = ENG
+				AND = {
+					is_in_faction = yes
+					any_other_country = {
+						is_faction_leader = yes
+						is_in_faction_with = ROOT
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = { 
+					ENG = {
+						is_faction_leader = yes
+						has_government = democratic
+						not = { has_war_with = ROOT }
+					}
+				}
+				ENG = { country_event = generic.2 }
+			}
+			else = {
+				get_best_alliance_match_democratic_effect = yes
+				var:best_leader = {
+					country_event = generic.2
+				}
+			}
+		}
+	}
+
+	###MILITARY GOVERNMENT###
+
+	focus = {
+		id = EST_national_council
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = EST_ismaaliit }
+		prerequisite = { focus = EST_establish_the_rahvuskogu }
+		x = 0
+		y = 1
+		relative_position_id = EST_ismaaliit
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = EST_national_council_idea
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = EST_support_independent_militaries
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = EST_national_council }
+		x = 0
+		y = 1
+		relative_position_id = EST_national_council
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = EST_new_economic_policy
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = EST_support_independent_militaries }
+		prerequisite = { focus = EST_exploit_the_banks }
+		prerequisite = { focus = EST_modernize_capital }
+		x = 0
+		y = 1
+		relative_position_id = EST_support_independent_militaries
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			upgrade_economy_law = yes
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_corporate_chambers
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = EST_new_economic_policy }
+		x = 2
+		y = 1
+		relative_position_id = EST_new_economic_policy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = { has_idea = civilian_economy }
+			NOT = { has_idea = low_economic_mobilisation }
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = EST_corporate_chambers_idea
+		}
+	}
+
+	focus = {
+		id = EST_fight_the_vaps
+		icon = GFX_focus_EST_fight_the_vaps
+		prerequisite = { focus = EST_era_of_silence }
+		x = 2
+		y = 1
+		relative_position_id = EST_ismaaliit
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_idea = EST_vaps_idea_1
+				has_idea = EST_vaps_idea_2
+				has_idea = EST_vaps_idea_3
+				has_idea = EST_vaps_idea_4
+			}
+		}
+
+		bypass = {
+			NOT = {
+				OR = {
+					has_idea = EST_vaps_idea_1
+					has_idea = EST_vaps_idea_2
+					has_idea = EST_vaps_idea_3
+					has_idea = EST_vaps_idea_4
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 150
+			EST_vaps_up_effect = yes
+			unlock_decision_category_tooltip = EST_fight_vaps_decisions
+			custom_effect_tooltip = add_days_to_vaps_timer_tt
+			add_to_variable = {
+				var = vaps_days_var
+				value = 30
+			}
+		}
+	}
+
+	focus = {
+		id = EST_republican_defence_league
+		icon = GFX_focus_EST_republican_defence_league
+		prerequisite = { focus = EST_fight_the_vaps }
+		x = 0
+		y = 1
+		relative_position_id = EST_fight_the_vaps
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = EST_republican_defence_league_idea
+		}
+	}
+
+	focus = {
+		id = EST_womens_defence_league
+		icon = GFX_focus_generic_women_in_military
+		prerequisite = { focus = EST_republican_defence_league }
+		x = 0
+		y = 1
+		relative_position_id = EST_republican_defence_league
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			swap_ideas = {
+				remove_idea = EST_republican_defence_league_idea
+				add_idea = EST_republican_defence_league_idea_1
+			}
+		}
+	}
+
+	focus = {
+		id = EST_cave_to_enemy_pressure
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = EST_republican_defence_league }
+		mutually_exclusive = { focus = EST_fortify_the_border focus = EST_fortify_tallinn }
+		x = 2
+		y = 1
+		relative_position_id = EST_republican_defence_league
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = EST_ai_behavior
+							option = DEFAULT
+						}
+					}
+					has_country_flag = EST_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = EST_ai_behavior
+						option = HISTORICAL
+					}
+				}
+			}
+		}
+
+		available = {
+			is_in_faction = no #would be annoying to see your ally fold for no reason
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = cave_to_enemies_tt
+			set_country_flag = cave_to_enemy_pressure_flag
+		}
+	}
+
+	########################################
+	#### RALLY THE NATION (ALT-HISTORY) ####
+	########################################
+	focus = {
+		id = EST_rally_the_nation
+		icon = GFX_focus_EST_rally_the_nation
+		mutually_exclusive = { focus = BALTIC_restore_workers_republic focus = EST_era_of_silence }
+		x = 45
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			activate_decision = EST_stomp_the_vaps
+			unlock_decision_category_tooltip = march_through_estonia
+		}
+	}
+
+	focus = {
+		id = EST_march_on_talinn
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = { focus = EST_rally_the_nation }
+		x = 0
+		y = 1
+		relative_position_id = EST_rally_the_nation
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			fascism > 0.4
+		}
+		
+		select_effect = {
+			add_days_mission_timeout = {
+				mission = EST_stomp_the_vaps
+				days = 35
+			}
+		}
+
+		bypass = {
+			has_government = fascism
+			has_civil_war = no
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			remove_decision = EST_stomp_the_vaps
+			random_list = {
+				10 = {
+					modifier = {
+						factor = party_popularity@neutrality
+						always = yes
+					}
+					effect_tooltip = {
+						start_civil_war = {
+							ideology = ROOT
+							size = 0.5
+						}
+					}
+					hidden_effect = {
+						country_event = EST_events.7
+					}
+				}
+				10 = {
+					modifier = {
+						factor = party_popularity@fascism
+						always = yes
+					}
+					effect_tooltip = {
+						set_politics = {
+							ruling_party = fascism
+							elections_allowed = no
+						}
+						remove_ideas = democratic_opposition
+					}
+					hidden_effect = {
+						country_event = EST_events.701
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_glory_of_war
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = EST_march_on_talinn }
+		x = -2
+		y = 1
+		relative_position_id = EST_march_on_talinn
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = EST_veteran_training
+			hidden_effect = {
+			    if = {
+				    limit = {
+					    has_idea = democratic_opposition
+					}
+					remove_ideas = democratic_opposition
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_mobilize_the_vets
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = EST_glory_of_war }
+		x = -1
+		y = 1
+		relative_position_id = EST_glory_of_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			swap_ideas = {
+				add_idea = EST_veteran_training_1
+				remove_idea = EST_veteran_training
+			}
+		}
+	}
+
+	focus = {
+		id = EST_vapsid_youth
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = EST_glory_of_war }
+		x = 1
+		y = 1
+		relative_position_id = EST_glory_of_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = EST_vapsid_youth_idea
+		}
+	}
+
+	focus = {
+		id = EST_veterans_government
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = EST_march_on_talinn }
+		x = 2
+		y = 1
+		relative_position_id = EST_march_on_talinn
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 150
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = EST_johan_pitka
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = EST_hjalmar_mae
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = EST_viktor_puskar
+		}
+	}
+
+	focus = {
+		id = EST_anti_communist_militia
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = EST_veterans_government }
+		mutually_exclusive = { focus = EST_reach_out_to_germany }
+		x = -1
+		y = 1
+		relative_position_id = EST_veterans_government
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			division_template = { 
+				name = "Anti-Soviet Division"
+				division_names_group = EST_INF_01
+				is_locked = no
+				regiments = { 
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 3 y = 0 }
+
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 3 y = 1 }
+
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 2 }
+					infantry = { x = 3 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = { 
+					division = "name = \"1. Anti-Soviet Division\" division_template = \"Anti-Soviet Division\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"2. Anti-Soviet Division\" division_template = \"Anti-Soviet Division\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"3. Anti-Soviet Division\" division_template = \"Anti-Soviet Division\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"4. Anti-Soviet Division\" division_template = \"Anti-Soviet Division\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_reach_out_to_germany
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = EST_veterans_government }
+		mutually_exclusive = { focus = EST_anti_communist_militia }
+		x = 1
+		y = 1
+		relative_position_id = EST_veterans_government
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			NOT = { has_war_with = GER }
+			is_subject = no
+			is_in_faction = no
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = GER
+					has_war_with = HUN	
+				}
+			}
+			GER = {
+				is_faction_leader = yes
+				has_government = fascism
+				is_subject = no
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						is_faction_leader = yes
+					}
+				}
+				GER = { country_event = EST_events.1 }
+			}
+			else = {
+				get_best_alliance_match_fascism_effect = yes
+				var:best_leader = {
+					country_event = EST_events.1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_baltic_shield
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = EST_anti_communist_militia focus = EST_reach_out_to_germany }
+		x = 0
+		y = 1
+		relative_position_id = EST_anti_communist_militia
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = { owner = { has_government = communism } }
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_join_the_axis
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = EST_reach_out_to_germany }
+		x = 0
+		y = 1
+		relative_position_id = EST_reach_out_to_germany
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			NOT = { has_war_with = GER }
+			is_subject = no
+			is_in_faction = no
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = GER
+					has_war_with = HUN	
+				}
+			}
+			GER = {
+				is_faction_leader = yes
+				has_government = fascism
+				is_subject = no
+			}
+			NOT = { has_completed_focus = EST_anti_communist_militia }
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						is_faction_leader = yes
+					}
+				}
+				GER = { country_event = generic.2 }
+			}
+			else = {
+				get_best_alliance_match_fascism_effect = yes
+				var:best_leader = {
+					country_event = generic.2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_the_brotherhood
+		icon = GFX_focus_generic_forest_brothers
+		prerequisite = { focus = EST_anti_communist_militia focus = EST_join_the_axis }
+		prerequisite = { focus = EST_baltic_shield }
+		x = 1
+		y = 1
+		relative_position_id = EST_baltic_shield
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			OR = {
+				LIT = {
+					exists = yes
+					OR = {
+						is_subject = no
+						is_subject_of = ROOT
+					}
+				}
+				LAT = {
+					exists = yes
+					OR = {
+						is_subject = no
+						is_subject_of = ROOT
+					}
+				}
+			}
+			
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					LIT = { has_government = fascism }
+				}
+				effect_tooltip = {
+					annex_country = {
+						target = LIT
+						transfer_troops = yes
+					}
+				}
+				hidden_effect = {
+					LIT = { country_event = EST_events.4 }
+				}
+			}
+			else = {
+				create_wargoal = {
+					type = annex_everything
+					target = LIT
+				}
+				hidden_effect = {
+					LIT = { country_event = EST_events.5 }
+				}
+			}
+			if = {
+				limit = {
+					LAT = { has_government = fascism }
+				}
+				effect_tooltip = {
+					annex_country = {
+						target = LAT
+						transfer_troops = yes
+					}
+				}
+				hidden_effect = {
+					LAT = { country_event = EST_events.4 }
+				}
+			}
+			else = {
+				create_wargoal = {
+					type = annex_everything
+					target = LAT
+				}
+				hidden_effect = {
+					LAT = { country_event = EST_events.5 }
+				}
+			}
+		}
+	}
+
+	###FINLAND###
+	focus = {
+		id = EST_empower_finnish_militants
+		icon = GFX_focus_invite_finland
+		prerequisite = { focus = EST_march_on_talinn }
+		x = 0
+		y = 1
+		relative_position_id = EST_march_on_talinn
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			if = {
+				limit = {
+					FIN = {
+						is_ai = no
+					}
+				}
+				FIN = {
+					is_ai = yes
+				}
+			}
+			has_government = fascism
+		}
+
+		bypass = {
+			FIN = {
+				OR = {
+					exists = no
+					is_subject = yes
+					has_government = fascism
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			FIN = {
+				add_timed_idea = {
+					idea = EST_vaps_organizing_in_FIN
+					days = 360
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_national_pride_in_finland
+		icon = GFX_focus_EST_national_pride_in_finland
+		prerequisite = { focus = EST_empower_finnish_militants }
+		x = 0
+		y = 3
+		relative_position_id = EST_empower_finnish_militants
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+
+		bypass = {
+			FIN = {
+				OR = {
+					exists = no
+					is_subject = yes
+					has_government = fascism
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			unlock_decision_category_tooltip = EST_convert_FIN_cat
+		}
+	}
+
+	focus = {
+		id = EST_finno_estonian_supremacy_league
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = EST_national_pride_in_finland }
+		mutually_exclusive = { focus = EST_unite_our_nations }
+		x = 0
+		y = 1
+		relative_position_id = EST_national_pride_in_finland
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			FIN = {
+				has_government = fascism
+			}
+		}
+
+		bypass = {
+			FIN = {
+				OR = {
+					exists = no
+					is_subject = yes
+					has_country_flag = banned_fascism_flag
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				set_rule = {
+					can_create_factions = yes
+				}
+				if = {
+					limit = {
+						NOT = {
+							FIN = { has_idea = FIN_the_lone_wolf }
+						}
+					}
+					create_faction_from_template = {
+						template = faction_template_european_dominance
+						name = FINNO_ESTONIAN_SUPREMACY_LEAGUE
+						icon = GFX_faction_logo_generic_8
+					}
+				}
+			}
+			effect_tooltip = {
+				FIN = { custom_effect_tooltip = invite_to_faction_tt }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_in_faction = yes
+						is_faction_leader = no
+					}
+					random_country = {
+						limit = {
+							is_in_faction_with = ROOT
+							is_faction_leader = yes
+						}
+						country_event = EST_events.6
+					}
+				}
+				else = {
+					FIN = { country_event = generic.5 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_unite_our_nations
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = EST_national_pride_in_finland }
+		mutually_exclusive = { focus = EST_finno_estonian_supremacy_league }
+		x = 2
+		y = 1
+		relative_position_id = EST_national_pride_in_finland
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			FIN = {
+				has_government = fascism
+			}
+			NOT = {
+				has_completed_focus = BAL_UNIFIED_baltic_unification
+			}
+		}
+
+		bypass = {
+			FIN = {
+				OR = {
+					exists = no
+					is_subject = yes
+					has_country_flag = banned_fascism_flag
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			FIN = { country_event = EST_events.2}	
+			effect_tooltip = {
+				custom_effect_tooltip = if_they_accept_tt
+				annex_country = {
+					target = FIN
+					transfer_troops = yes
+				}
+			}
+			hidden_effect = {
+			
+			}
+		}
+	}
+
+	###ESTI IS SCANDI FOCUSES###
+	focus = {
+		id = EST_sieze_swedish_assets
+		icon = GFX_focus_generic_attack_sweden
+		prerequisite = { focus = EST_finno_estonian_supremacy_league }
+		x = -1
+		y = 1
+		relative_position_id = EST_finno_estonian_supremacy_league
+		will_lead_to_war_with = SWE
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+		}
+
+		bypass = {
+			SWE = {
+				OR = {
+					exists = no
+					is_subject_of = EST
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SWE
+			}
+		}
+	}
+
+	focus = {
+		id = EST_secure_the_straits
+		icon = GFX_focus_generic_attack_denmark
+		prerequisite = { focus = EST_sieze_swedish_assets }
+		x = -1
+		y = 1
+		relative_position_id = EST_sieze_swedish_assets
+		will_lead_to_war_with = DEN
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+		}
+
+		bypass = {
+			DEN = {
+				OR = {
+					exists = no
+					is_subject_of = EST
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = DEN
+			}
+		}
+	}
+
+	focus = {
+		id = EST_occupy_norway
+		icon = GFX_focus_generic_attack_norway
+		prerequisite = { focus = EST_sieze_swedish_assets }
+		x = 1
+		y = 1
+		relative_position_id = EST_sieze_swedish_assets
+		will_lead_to_war_with = NOR
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+		}
+
+		bypass = {
+			NOR = {
+				OR = {
+					exists = no
+					is_subject_of = EST
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = NOR
+			}
+		}
+	}
+
+	focus = {
+		id = EST_form_scandinavia
+		icon = GFX_focus_EST_estonia_is_scandinavia
+		prerequisite = { focus = EST_secure_the_straits }
+		prerequisite = { focus = EST_occupy_norway }
+		x = 1
+		y = 1
+		relative_position_id = EST_secure_the_straits
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = control_all_nordic_states_tt
+				all_state = {
+					OR = {
+						controls_or_subject_of = yes
+						controller = {
+							original_tag = FIN
+							is_in_faction_with = ROOT
+						}
+						NOT = {
+							OR = {
+								is_core_of = NOR
+								is_core_of = DEN
+								is_core_of = SWE
+							}
+						}
+					}
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			set_cosmetic_tag = NDC_UNIFIED
+			unlock_decision_tooltip = form_nordic_league
+			if = {
+				limit = {
+					NOR = { is_subject_of = ROOT }
+				}
+				annex_country = {
+					target = NOR
+					transfer_troops = yes
+				}
+			}
+			if = {
+				limit = {
+					SWE = { is_subject_of = ROOT }
+				}
+				annex_country = {
+					target = SWE
+					transfer_troops = yes
+				}
+			}
+			if = {
+				limit = {
+					DEN = { is_subject_of = ROOT }
+				}
+				annex_country = {
+					target = DEN
+					transfer_troops = yes
+				}
+			}
+			if = {
+				limit = {
+					FIN = {
+						OR = {
+							is_subject_of = ROOT
+							AND = {
+								is_in_faction_with = ROOT
+								is_ai = yes
+							}
+						}
+					}
+				}
+				annex_country = {
+					target = FIN
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+
+	###FINNO UGRIC FOCUSES###
+	focus = {
+		id = EST_proclaim_finno_ugra
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = EST_unite_our_nations }
+		x = 1
+		y = 1
+		relative_position_id = EST_unite_our_nations
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+			any_state = {
+				is_core_of = FIN
+				is_owned_by = ROOT 
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			set_cosmetic_tag = EST_FIN
+			every_state = {
+				limit = {
+					is_core_of = FIN
+				}
+				add_core_of = EST
+			}
+		}
+	}
+
+	focus = {
+		id = EST_unite_the_sami
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		prerequisite = { focus = EST_proclaim_finno_ugra }
+		x = -1
+		y = 1
+		relative_position_id = EST_proclaim_finno_ugra
+		will_lead_to_war_with = NOR
+		will_lead_to_war_with = SWE
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				AND = {
+					SWE = {
+						is_subject_of = ROOT
+					}
+					NOR = {
+						is_subject_of = ROOT
+					}
+				}
+				AND = { #R56 - Many state changes
+					144 = { is_fully_controlled_by = ROOT }
+					147 = { is_fully_controlled_by = ROOT }
+					148 = { is_fully_controlled_by = ROOT }
+					666 = { is_fully_controlled_by = ROOT } #hidden meaning???
+					772 = { is_fully_controlled_by = ROOT }
+					968 = { is_fully_controlled_by = ROOT }
+					1029 = { is_fully_controlled_by = ROOT }
+					1033 = { is_fully_controlled_by = ROOT }
+					1034 = { is_fully_controlled_by = ROOT }
+					1035 = { is_fully_controlled_by = ROOT }
+				}
+				SMI = {
+					is_subject_of = ROOT
+				}
+			}
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				generator = { 143 144 }
+				target = NOR
+			}
+			create_wargoal = {
+				type = take_state_focus
+				generator = { 666 38 }
+				target = SWE
+			}
+		}
+	}
+
+	focus = {
+		id = EST_unite_karelia
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = EST_proclaim_finno_ugra }
+		x = 1
+		y = 1
+		relative_position_id = EST_proclaim_finno_ugra
+		will_lead_to_war_with = SOV
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				generator = { 213 215 216 }
+				target = SOV
+			}
+		}
+	}
+
+	focus = {
+		id = EST_unite_the_finnic_identity
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EST_unite_karelia }
+		prerequisite = { focus = EST_unite_the_sami }
+		x = 0
+		y = 2
+		relative_position_id = EST_proclaim_finno_ugra
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+			143 = {
+				controls_or_subject_of = yes
+				is_core_or_compliance_60 = yes
+			}
+			144 = {
+				controls_or_subject_of = yes
+				is_core_or_compliance_60 = yes
+			}
+			666 = {
+				controls_or_subject_of = yes
+				is_core_or_compliance_60 = yes
+			}
+			38 = {
+				controls_or_subject_of = yes
+				is_core_or_compliance_60 = yes
+			}
+			213 = {
+				controls_or_subject_of = yes
+				is_core_or_compliance_60 = yes
+			}
+			215 = {
+				controls_or_subject_of = yes
+				is_core_or_compliance_60 = yes
+			}
+			216 = {
+				controls_or_subject_of = yes
+				is_core_or_compliance_60 = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			set_cosmetic_tag = EST_UGRA
+			if = {
+				limit = {
+					143 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 143 transfer_state = 2205 transfer_state = 2206 transfer_state = 2207 transfer_state = 2208 transfer_state = 2209 transfer_state = 2210 transfer_state = 2211 transfer_state = 2212 transfer_state = 2213 transfer_state = 2214 transfer_state = 2215 transfer_state = 2216 transfer_state = 2217 transfer_state = 2218 transfer_state = 2219 transfer_state = 2220
+			}
+			if = {
+				limit = {
+					968 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 968 transfer_state = 9467 transfer_state = 9468 transfer_state = 9469 transfer_state = 9470 transfer_state = 9471 transfer_state = 9472 transfer_state = 9473 transfer_state = 9474 transfer_state = 9475 transfer_state = 9476 transfer_state = 9477 transfer_state = 9478 transfer_state = 9479 transfer_state = 9480 transfer_state = 9481 transfer_state = 9482 transfer_state = 9483 transfer_state = 9484
+			}
+			if = {
+				limit = {
+					144 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 144 transfer_state = 2221 transfer_state = 2222 transfer_state = 2223 transfer_state = 2224 transfer_state = 2225 transfer_state = 2226 transfer_state = 2227
+			}
+			if = {
+				limit = {
+					666 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 666 transfer_state = 7847 transfer_state = 7848 transfer_state = 7849 transfer_state = 7850 transfer_state = 7851 transfer_state = 7852 transfer_state = 7853 transfer_state = 7854 transfer_state = 7855 transfer_state = 7856 transfer_state = 7857 transfer_state = 7858 transfer_state = 7859 transfer_state = 7860 transfer_state = 7861 transfer_state = 7862 transfer_state = 7863 transfer_state = 7864 transfer_state = 7865 transfer_state = 7866 transfer_state = 7867 transfer_state = 7868 transfer_state = 7869 transfer_state = 7870 transfer_state = 7871 transfer_state = 7872 transfer_state = 7873 transfer_state = 7874 transfer_state = 7875 transfer_state = 7876
+			}
+			if = {
+				limit = {
+					213 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 213 transfer_state = 2780 transfer_state = 2781 transfer_state = 2782 transfer_state = 2783 transfer_state = 2784 transfer_state = 2785 transfer_state = 2786 transfer_state = 2787 transfer_state = 2788 transfer_state = 2789 transfer_state = 2790 transfer_state = 2791 transfer_state = 2792 transfer_state = 2793 transfer_state = 2794 transfer_state = 2795 transfer_state = 2796 transfer_state = 2797 transfer_state = 2798 transfer_state = 2799 transfer_state = 2800 transfer_state = 2801 transfer_state = 2802 transfer_state = 2803 transfer_state = 2804 transfer_state = 2805 transfer_state = 2806 transfer_state = 2807 transfer_state = 2808 transfer_state = 2809 transfer_state = 2810 transfer_state = 2811
+			}
+			if = {
+				limit = {
+					214 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 214 transfer_state = 2812 transfer_state = 2813 transfer_state = 2814 transfer_state = 2815 transfer_state = 2816 transfer_state = 2817 transfer_state = 2818 transfer_state = 2819 transfer_state = 2820 transfer_state = 2821 transfer_state = 2822 transfer_state = 2823 transfer_state = 2824 transfer_state = 2825
+			}
+			if = {
+				limit = {
+					215 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 215 transfer_state = 2826 transfer_state = 2827 transfer_state = 2828 transfer_state = 2829 transfer_state = 2830 transfer_state = 2831 transfer_state = 2832 transfer_state = 2833 transfer_state = 2834 transfer_state = 2835 transfer_state = 2836 transfer_state = 2837 transfer_state = 2838 transfer_state = 2839 transfer_state = 2840 transfer_state = 2841 transfer_state = 2842 transfer_state = 2843 transfer_state = 2844 transfer_state = 2845 transfer_state = 2846 transfer_state = 2847 transfer_state = 2848 transfer_state = 2849 transfer_state = 2850 transfer_state = 2851 transfer_state = 2852 transfer_state = 2853 transfer_state = 2854 transfer_state = 2855 transfer_state = 2856 transfer_state = 2857 transfer_state = 2858 transfer_state = 2859 transfer_state = 2860
+			}
+			if = {
+				limit = {
+					216 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 216 transfer_state = 2861 transfer_state = 2862 transfer_state = 2863 transfer_state = 2864 transfer_state = 2865 transfer_state = 2866 transfer_state = 2867 transfer_state = 2868 transfer_state = 2869 transfer_state = 2870 transfer_state = 2871 transfer_state = 2872 transfer_state = 2873 transfer_state = 2874 transfer_state = 2875 transfer_state = 2876 transfer_state = 2877 transfer_state = 2878
+			}
+			if = {
+				limit = {
+					262 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 262 transfer_state = 3616 transfer_state = 3617 transfer_state = 3618 transfer_state = 3619 transfer_state = 3620 transfer_state = 3621 transfer_state = 3622 transfer_state = 3623
+			}
+			if = {
+				limit = {
+					580 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 580 transfer_state = 7025 transfer_state = 7026 transfer_state = 7027 transfer_state = 7028 transfer_state = 7029 transfer_state = 7030 transfer_state = 7031 transfer_state = 7032 transfer_state = 7033 transfer_state = 7034 transfer_state = 7035 transfer_state = 7036 transfer_state = 7037 transfer_state = 7038 transfer_state = 7039 transfer_state = 7040 transfer_state = 7041 transfer_state = 7042
+			}
+			if = {
+				limit = {
+					581 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 581 transfer_state = 7043 transfer_state = 7044 transfer_state = 7045 transfer_state = 7046
+			}
+			if = {
+				limit = {
+					579 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 579 transfer_state = 7017 transfer_state = 7018 transfer_state = 7019 transfer_state = 7020 transfer_state = 7021 transfer_state = 7022 transfer_state = 7023 transfer_state = 7024
+			}
+			if = {
+				limit = {
+					653 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 653 transfer_state = 7747 transfer_state = 7748 transfer_state = 7749 transfer_state = 7750 transfer_state = 7751 transfer_state = 7752 transfer_state = 7753 transfer_state = 7754 transfer_state = 7755 transfer_state = 7756 transfer_state = 7757 transfer_state = 7758 transfer_state = 7759 transfer_state = 7760 transfer_state = 7761 transfer_state = 7762 transfer_state = 7763 transfer_state = 7764 transfer_state = 7765
+			}
+			if = {
+				limit = {
+					573 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 573 transfer_state = 6912 transfer_state = 6913 transfer_state = 6914 transfer_state = 6915 transfer_state = 6916 transfer_state = 6917 transfer_state = 6918 transfer_state = 6919 transfer_state = 6920
+			}
+			if = {
+				limit = {
+					397 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 397 transfer_state = 5076 transfer_state = 5077 transfer_state = 5078 transfer_state = 5079 transfer_state = 5080 transfer_state = 5081 transfer_state = 5082 transfer_state = 5083 transfer_state = 5084 transfer_state = 5085 transfer_state = 5086 transfer_state = 5087 transfer_state = 5088 transfer_state = 5089 transfer_state = 5090 transfer_state = 5091 transfer_state = 5092 transfer_state = 5093 transfer_state = 5094 transfer_state = 5095 transfer_state = 5096
+			}
+			if = {
+				limit = {
+					398 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 398 transfer_state = 5097 transfer_state = 5098 transfer_state = 5099 transfer_state = 5100 transfer_state = 5101 transfer_state = 5102 transfer_state = 5103 transfer_state = 5104 transfer_state = 5105 transfer_state = 5106 transfer_state = 5107 transfer_state = 5108 transfer_state = 5109 transfer_state = 5110 transfer_state = 5111 transfer_state = 5112 transfer_state = 5113 transfer_state = 5114 transfer_state = 5115 transfer_state = 5116 transfer_state = 5117 transfer_state = 5118 transfer_state = 5119 transfer_state = 5120 transfer_state = 5121 transfer_state = 5122 transfer_state = 5123 transfer_state = 5124 transfer_state = 5125 transfer_state = 5126 transfer_state = 5127 transfer_state = 5128
+			}
+			if = {
+				limit = {
+					400 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 400 transfer_state = 5144 transfer_state = 5145 transfer_state = 5146 transfer_state = 5147 transfer_state = 5148 transfer_state = 5149 transfer_state = 5150 transfer_state = 5151 transfer_state = 5152 transfer_state = 5153 transfer_state = 5154 transfer_state = 5155 transfer_state = 5156 transfer_state = 5157 transfer_state = 5158 transfer_state = 5159 transfer_state = 5160 transfer_state = 5161 transfer_state = 5162 transfer_state = 5163 transfer_state = 5164 transfer_state = 5165 transfer_state = 5166 transfer_state = 5167 transfer_state = 5168 transfer_state = 5169 transfer_state = 5170 transfer_state = 5171 transfer_state = 5172 transfer_state = 5173 transfer_state = 5174 transfer_state = 5175 transfer_state = 5176 transfer_state = 5177 transfer_state = 5178 transfer_state = 5179 transfer_state = 5180 transfer_state = 5181 transfer_state = 5182 transfer_state = 5183 transfer_state = 5184 transfer_state = 5185 transfer_state = 5186 transfer_state = 5187 transfer_state = 5188 transfer_state = 5189 transfer_state = 5190 transfer_state = 5191 transfer_state = 5192 transfer_state = 5193 transfer_state = 5194 transfer_state = 5195 transfer_state = 5196 transfer_state = 5197 transfer_state = 5198 transfer_state = 5199 transfer_state = 5200 transfer_state = 5201 transfer_state = 5202 transfer_state = 5203 transfer_state = 5204 transfer_state = 5205 transfer_state = 5206 transfer_state = 5207
+			}
+			if = {
+				limit = {
+					351 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 351 transfer_state = 4260 transfer_state = 4261 transfer_state = 4262 transfer_state = 4263 transfer_state = 4264 transfer_state = 4265 transfer_state = 4266 transfer_state = 4267 transfer_state = 4268 transfer_state = 4269 transfer_state = 4270 transfer_state = 4271 transfer_state = 4272 transfer_state = 4273 transfer_state = 4274 transfer_state = 4275 transfer_state = 4276 transfer_state = 4277 transfer_state = 4278 transfer_state = 4279 transfer_state = 4280 transfer_state = 4281 transfer_state = 4282 transfer_state = 4283 transfer_state = 4284 transfer_state = 4285 transfer_state = 4286 transfer_state = 4287 transfer_state = 4288 transfer_state = 4289 transfer_state = 4290 transfer_state = 4291 transfer_state = 4292 transfer_state = 4293 transfer_state = 4294 transfer_state = 4295 transfer_state = 4296 transfer_state = 4297 transfer_state = 4298 transfer_state = 4299 transfer_state = 4300 transfer_state = 4301 transfer_state = 4302 transfer_state = 4303 transfer_state = 4304 transfer_state = 4305 transfer_state = 4306 transfer_state = 4307 transfer_state = 4308 transfer_state = 4309 transfer_state = 4310 transfer_state = 4311 transfer_state = 4312 transfer_state = 4313 transfer_state = 4314 transfer_state = 4315 transfer_state = 4316 transfer_state = 4317 transfer_state = 4318 transfer_state = 4319 transfer_state = 4320 transfer_state = 4321 transfer_state = 4322 transfer_state = 4323 transfer_state = 4324 transfer_state = 4325 transfer_state = 4326 transfer_state = 4327 transfer_state = 4328
+			}
+			if = {
+				limit = {
+					208 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 208 transfer_state = 2730 transfer_state = 2731 transfer_state = 2732 transfer_state = 2733 transfer_state = 2734 transfer_state = 2735 transfer_state = 2736 transfer_state = 2737 transfer_state = 2738 transfer_state = 2739 transfer_state = 2740
+			}
+			if = {
+				limit = {
+					879 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 879 transfer_state = 9017 transfer_state = 9018 transfer_state = 9019 transfer_state = 9020 transfer_state = 9021 transfer_state = 9022 transfer_state = 9023 transfer_state = 9024 transfer_state = 9025 transfer_state = 9026 transfer_state = 9027 transfer_state = 9028 transfer_state = 9029 transfer_state = 9030 transfer_state = 9031 transfer_state = 9032
+			}
+			if = {
+				limit = {
+					880 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 880 transfer_state = 9033 transfer_state = 9034 transfer_state = 9035 transfer_state = 9036 transfer_state = 9037 transfer_state = 9038 transfer_state = 9039 transfer_state = 9040 transfer_state = 9041 transfer_state = 9042 transfer_state = 9043 transfer_state = 9044 transfer_state = 9045 transfer_state = 9046 transfer_state = 9047 transfer_state = 9048 transfer_state = 9049 transfer_state = 9050
+			}
+			if = {
+				limit = {
+					825 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 825 transfer_state = 8770 transfer_state = 8771 transfer_state = 8772 transfer_state = 8773 transfer_state = 8774 transfer_state = 8775 transfer_state = 8776 transfer_state = 8777 transfer_state = 8778
+			}
+			if = {
+				limit = {
+					1029 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 1029 transfer_state = 9720 transfer_state = 9721 transfer_state = 9722 transfer_state = 9723 transfer_state = 9724 transfer_state = 9725 transfer_state = 9726 transfer_state = 9727 transfer_state = 9728 transfer_state = 9729 transfer_state = 9730 transfer_state = 9731 transfer_state = 9732 transfer_state = 9733 transfer_state = 9734 transfer_state = 9735 transfer_state = 9736 transfer_state = 9737 transfer_state = 9738 transfer_state = 9739 transfer_state = 9740 transfer_state = 9741 transfer_state = 9742 transfer_state = 9743 transfer_state = 9744 transfer_state = 9745 transfer_state = 9746 transfer_state = 9747 transfer_state = 9748 transfer_state = 9749 transfer_state = 9750 transfer_state = 9751 transfer_state = 9752
+			}
+			if = {
+				limit = {
+					1033 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 1033 transfer_state = 9792 transfer_state = 9793 transfer_state = 9794 transfer_state = 9795 transfer_state = 9796 transfer_state = 9797 transfer_state = 9798
+			}
+			if = {
+				limit = {
+					1034 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 1034 transfer_state = 9799 transfer_state = 9800 transfer_state = 9801 transfer_state = 9802 transfer_state = 9803 transfer_state = 9804 transfer_state = 9805 transfer_state = 9806
+			}
+			if = {
+				limit = {
+					1035 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 1035 transfer_state = 9807 transfer_state = 9808 transfer_state = 9809 transfer_state = 9810 transfer_state = 9811 transfer_state = 9812 transfer_state = 9813 transfer_state = 9814 transfer_state = 9815 transfer_state = 9816 transfer_state = 9817 transfer_state = 9818 transfer_state = 9819 transfer_state = 9820 transfer_state = 9821 transfer_state = 9822 transfer_state = 9823 transfer_state = 9824 transfer_state = 9825
+			}
+			add_state_core = 143 add_state_core = 2205 add_state_core = 2206 add_state_core = 2207 add_state_core = 2208 add_state_core = 2209 add_state_core = 2210 add_state_core = 2211 add_state_core = 2212 add_state_core = 2213 add_state_core = 2214 add_state_core = 2215 add_state_core = 2216 add_state_core = 2217 add_state_core = 2218 add_state_core = 2219 add_state_core = 2220
+			add_state_core = 968 add_state_core = 9467 add_state_core = 9468 add_state_core = 9469 add_state_core = 9470 add_state_core = 9471 add_state_core = 9472 add_state_core = 9473 add_state_core = 9474 add_state_core = 9475 add_state_core = 9476 add_state_core = 9477 add_state_core = 9478 add_state_core = 9479 add_state_core = 9480 add_state_core = 9481 add_state_core = 9482 add_state_core = 9483 add_state_core = 9484 
+			add_state_core = 144 add_state_core = 2221 add_state_core = 2222 add_state_core = 2223 add_state_core = 2224 add_state_core = 2225 add_state_core = 2226 add_state_core = 2227 
+			add_state_core = 666 add_state_core = 7847 add_state_core = 7848 add_state_core = 7849 add_state_core = 7850 add_state_core = 7851 add_state_core = 7852 add_state_core = 7853 add_state_core = 7854 add_state_core = 7855 add_state_core = 7856 add_state_core = 7857 add_state_core = 7858 add_state_core = 7859 add_state_core = 7860 add_state_core = 7861 add_state_core = 7862 add_state_core = 7863 add_state_core = 7864 add_state_core = 7865 add_state_core = 7866 add_state_core = 7867 add_state_core = 7868 add_state_core = 7869 add_state_core = 7870 add_state_core = 7871 add_state_core = 7872 add_state_core = 7873 add_state_core = 7874 add_state_core = 7875 add_state_core = 7876 
+			add_state_core = 213 add_state_core = 2780 add_state_core = 2781 add_state_core = 2782 add_state_core = 2783 add_state_core = 2784 add_state_core = 2785 add_state_core = 2786 add_state_core = 2787 add_state_core = 2788 add_state_core = 2789 add_state_core = 2790 add_state_core = 2791 add_state_core = 2792 add_state_core = 2793 add_state_core = 2794 add_state_core = 2795 add_state_core = 2796 add_state_core = 2797 add_state_core = 2798 add_state_core = 2799 add_state_core = 2800 add_state_core = 2801 add_state_core = 2802 add_state_core = 2803 add_state_core = 2804 add_state_core = 2805 add_state_core = 2806 add_state_core = 2807 add_state_core = 2808 add_state_core = 2809 add_state_core = 2810 add_state_core = 2811 
+			add_state_core = 215 add_state_core = 2826 add_state_core = 2827 add_state_core = 2828 add_state_core = 2829 add_state_core = 2830 add_state_core = 2831 add_state_core = 2832 add_state_core = 2833 add_state_core = 2834 add_state_core = 2835 add_state_core = 2836 add_state_core = 2837 add_state_core = 2838 add_state_core = 2839 add_state_core = 2840 add_state_core = 2841 add_state_core = 2842 add_state_core = 2843 add_state_core = 2844 add_state_core = 2845 add_state_core = 2846 add_state_core = 2847 add_state_core = 2848 add_state_core = 2849 add_state_core = 2850 add_state_core = 2851 add_state_core = 2852 add_state_core = 2853 add_state_core = 2854 add_state_core = 2855 add_state_core = 2856 add_state_core = 2857 add_state_core = 2858 add_state_core = 2859 add_state_core = 2860 
+			add_state_core = 216 add_state_core = 2861 add_state_core = 2862 add_state_core = 2863 add_state_core = 2864 add_state_core = 2865 add_state_core = 2866 add_state_core = 2867 add_state_core = 2868 add_state_core = 2869 add_state_core = 2870 add_state_core = 2871 add_state_core = 2872 add_state_core = 2873 add_state_core = 2874 add_state_core = 2875 add_state_core = 2876 add_state_core = 2877 add_state_core = 2878 
+			add_state_core = 214 add_state_core = 2812 add_state_core = 2813 add_state_core = 2814 add_state_core = 2815 add_state_core = 2816 add_state_core = 2817 add_state_core = 2818 add_state_core = 2819 add_state_core = 2820 add_state_core = 2821 add_state_core = 2822 add_state_core = 2823 add_state_core = 2824 add_state_core = 2825 
+			add_state_core = 262 add_state_core = 3616 add_state_core = 3617 add_state_core = 3618 add_state_core = 3619 add_state_core = 3620 add_state_core = 3621 add_state_core = 3622 add_state_core = 3623 
+			add_state_core = 580 add_state_core = 7025 add_state_core = 7026 add_state_core = 7027 add_state_core = 7028 add_state_core = 7029 add_state_core = 7030 add_state_core = 7031 add_state_core = 7032 add_state_core = 7033 add_state_core = 7034 add_state_core = 7035 add_state_core = 7036 add_state_core = 7037 add_state_core = 7038 add_state_core = 7039 add_state_core = 7040 add_state_core = 7041 add_state_core = 7042 
+			add_state_core = 581 add_state_core = 7043 add_state_core = 7044 add_state_core = 7045 add_state_core = 7046
+			add_state_core = 579 add_state_core = 7017 add_state_core = 7018 add_state_core = 7019 add_state_core = 7020 add_state_core = 7021 add_state_core = 7022 add_state_core = 7023 add_state_core = 7024 
+			add_state_core = 653 add_state_core = 7747 add_state_core = 7748 add_state_core = 7749 add_state_core = 7750 add_state_core = 7751 add_state_core = 7752 add_state_core = 7753 add_state_core = 7754 add_state_core = 7755 add_state_core = 7756 add_state_core = 7757 add_state_core = 7758 add_state_core = 7759 add_state_core = 7760 add_state_core = 7761 add_state_core = 7762 add_state_core = 7763 add_state_core = 7764 add_state_core = 7765 
+			add_state_core = 573 add_state_core = 6912 add_state_core = 6913 add_state_core = 6914 add_state_core = 6915 add_state_core = 6916 add_state_core = 6917 add_state_core = 6918 add_state_core = 6919 add_state_core = 6920 
+			add_state_core = 397 add_state_core = 5076 add_state_core = 5077 add_state_core = 5078 add_state_core = 5079 add_state_core = 5080 add_state_core = 5081 add_state_core = 5082 add_state_core = 5083 add_state_core = 5084 add_state_core = 5085 add_state_core = 5086 add_state_core = 5087 add_state_core = 5088 add_state_core = 5089 add_state_core = 5090 add_state_core = 5091 add_state_core = 5092 add_state_core = 5093 add_state_core = 5094 add_state_core = 5095 add_state_core = 5096 
+			add_state_core = 398 add_state_core = 5097 add_state_core = 5098 add_state_core = 5099 add_state_core = 5100 add_state_core = 5101 add_state_core = 5102 add_state_core = 5103 add_state_core = 5104 add_state_core = 5105 add_state_core = 5106 add_state_core = 5107 add_state_core = 5108 add_state_core = 5109 add_state_core = 5110 add_state_core = 5111 add_state_core = 5112 add_state_core = 5113 add_state_core = 5114 add_state_core = 5115 add_state_core = 5116 add_state_core = 5117 add_state_core = 5118 add_state_core = 5119 add_state_core = 5120 add_state_core = 5121 add_state_core = 5122 add_state_core = 5123 add_state_core = 5124 add_state_core = 5125 add_state_core = 5126 add_state_core = 5127 add_state_core = 5128 
+			add_state_core = 400 add_state_core = 5144 add_state_core = 5145 add_state_core = 5146 add_state_core = 5147 add_state_core = 5148 add_state_core = 5149 add_state_core = 5150 add_state_core = 5151 add_state_core = 5152 add_state_core = 5153 add_state_core = 5154 add_state_core = 5155 add_state_core = 5156 add_state_core = 5157 add_state_core = 5158 add_state_core = 5159 add_state_core = 5160 add_state_core = 5161 add_state_core = 5162 add_state_core = 5163 add_state_core = 5164 add_state_core = 5165 add_state_core = 5166 add_state_core = 5167 add_state_core = 5168 add_state_core = 5169 add_state_core = 5170 add_state_core = 5171 add_state_core = 5172 add_state_core = 5173 add_state_core = 5174 add_state_core = 5175 add_state_core = 5176 add_state_core = 5177 add_state_core = 5178 add_state_core = 5179 add_state_core = 5180 add_state_core = 5181 add_state_core = 5182 add_state_core = 5183 add_state_core = 5184 add_state_core = 5185 add_state_core = 5186 add_state_core = 5187 add_state_core = 5188 add_state_core = 5189 add_state_core = 5190 add_state_core = 5191 add_state_core = 5192 add_state_core = 5193 add_state_core = 5194 add_state_core = 5195 add_state_core = 5196 add_state_core = 5197 add_state_core = 5198 add_state_core = 5199 add_state_core = 5200 add_state_core = 5201 add_state_core = 5202 add_state_core = 5203 add_state_core = 5204 add_state_core = 5205 add_state_core = 5206 add_state_core = 5207 
+			add_state_core = 351 add_state_core = 4260 add_state_core = 4261 add_state_core = 4262 add_state_core = 4263 add_state_core = 4264 add_state_core = 4265 add_state_core = 4266 add_state_core = 4267 add_state_core = 4268 add_state_core = 4269 add_state_core = 4270 add_state_core = 4271 add_state_core = 4272 add_state_core = 4273 add_state_core = 4274 add_state_core = 4275 add_state_core = 4276 add_state_core = 4277 add_state_core = 4278 add_state_core = 4279 add_state_core = 4280 add_state_core = 4281 add_state_core = 4282 add_state_core = 4283 add_state_core = 4284 add_state_core = 4285 add_state_core = 4286 add_state_core = 4287 add_state_core = 4288 add_state_core = 4289 add_state_core = 4290 add_state_core = 4291 add_state_core = 4292 add_state_core = 4293 add_state_core = 4294 add_state_core = 4295 add_state_core = 4296 add_state_core = 4297 add_state_core = 4298 add_state_core = 4299 add_state_core = 4300 add_state_core = 4301 add_state_core = 4302 add_state_core = 4303 add_state_core = 4304 add_state_core = 4305 add_state_core = 4306 add_state_core = 4307 add_state_core = 4308 add_state_core = 4309 add_state_core = 4310 add_state_core = 4311 add_state_core = 4312 add_state_core = 4313 add_state_core = 4314 add_state_core = 4315 add_state_core = 4316 add_state_core = 4317 add_state_core = 4318 add_state_core = 4319 add_state_core = 4320 add_state_core = 4321 add_state_core = 4322 add_state_core = 4323 add_state_core = 4324 add_state_core = 4325 add_state_core = 4326 add_state_core = 4327 add_state_core = 4328 
+			add_state_core = 208 add_state_core = 2730 add_state_core = 2731 add_state_core = 2732 add_state_core = 2733 add_state_core = 2734 add_state_core = 2735 add_state_core = 2736 add_state_core = 2737 add_state_core = 2738 add_state_core = 2739 add_state_core = 2740 
+			add_state_core = 879 add_state_core = 9017 add_state_core = 9018 add_state_core = 9019 add_state_core = 9020 add_state_core = 9021 add_state_core = 9022 add_state_core = 9023 add_state_core = 9024 add_state_core = 9025 add_state_core = 9026 add_state_core = 9027 add_state_core = 9028 add_state_core = 9029 add_state_core = 9030 add_state_core = 9031 add_state_core = 9032
+			add_state_core = 880 add_state_core = 9033 add_state_core = 9034 add_state_core = 9035 add_state_core = 9036 add_state_core = 9037 add_state_core = 9038 add_state_core = 9039 add_state_core = 9040 add_state_core = 9041 add_state_core = 9042 add_state_core = 9043 add_state_core = 9044 add_state_core = 9045 add_state_core = 9046 add_state_core = 9047 add_state_core = 9048 add_state_core = 9049 add_state_core = 9050
+			add_state_core = 825 add_state_core = 8770 add_state_core = 8771 add_state_core = 8772 add_state_core = 8773 add_state_core = 8774 add_state_core = 8775 add_state_core = 8776 add_state_core = 8777 add_state_core = 8778
+			add_state_core = 1029 add_state_core = 9720 add_state_core = 9721 add_state_core = 9722 add_state_core = 9723 add_state_core = 9724 add_state_core = 9725 add_state_core = 9726 add_state_core = 9727 add_state_core = 9728 add_state_core = 9729 add_state_core = 9730 add_state_core = 9731 add_state_core = 9732 add_state_core = 9733 add_state_core = 9734 add_state_core = 9735 add_state_core = 9736 add_state_core = 9737 add_state_core = 9738 add_state_core = 9739 add_state_core = 9740 add_state_core = 9741 add_state_core = 9742 add_state_core = 9743 add_state_core = 9744 add_state_core = 9745 add_state_core = 9746 add_state_core = 9747 add_state_core = 9748 add_state_core = 9749 add_state_core = 9750 add_state_core = 9751 add_state_core = 9752
+			add_state_core = 1033 add_state_core = 9792 add_state_core = 9793 add_state_core = 9794 add_state_core = 9795 add_state_core = 9796 add_state_core = 9797 add_state_core = 9798
+			add_state_core = 1034 add_state_core = 9799 add_state_core = 9800 add_state_core = 9801 add_state_core = 9802 add_state_core = 9803 add_state_core = 9804 add_state_core = 9805 add_state_core = 9806
+			add_state_core = 1035 add_state_core = 9807 add_state_core = 9808 add_state_core = 9809 add_state_core = 9810 add_state_core = 9811 add_state_core = 9812 add_state_core = 9813 add_state_core = 9814 add_state_core = 9815 add_state_core = 9816 add_state_core = 9817 add_state_core = 9818 add_state_core = 9819 add_state_core = 9820 add_state_core = 9821 add_state_core = 9822 add_state_core = 9823 add_state_core = 9824 add_state_core = 9825
+		}
+	}
+
+	###SHARED FORTIFICATION FOCUSES###
+	focus = {
+		id = EST_threat_on_our_border
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = EST_march_on_talinn focus = EST_fight_the_vaps }
+		x = -5
+		y = 2
+		relative_position_id = EST_march_on_talinn
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				NOT = {
+					is_in_faction_with = SOV
+				}
+				NOT = {
+					is_in_faction_with = GER
+				}
+			}
+		}
+
+		bypass = {
+			is_in_faction_with = SOV
+			is_in_faction_with = GER
+		}
+
+		completion_reward = {
+			country_event = { id = LAT_events.1 } #select who is the greatest threat and gain forts on their border
+		}
+	}
+
+	focus = {
+		id = EST_fortify_tallinn
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = EST_threat_on_our_border }
+		mutually_exclusive = { focus = EST_fortify_the_border focus = EST_cave_to_enemy_pressure }
+		x = 1
+		y = 1
+		relative_position_id = EST_threat_on_our_border
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			owns_state = 13
+		}
+
+		bypass = {
+			NOT = { owns_state = 13 }
+		}
+
+		completion_reward = {
+			13 = {
+				add_building_construction = { type = bunker province = 3174 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 3074 level = 2 instant_build = yes }
+			}
+			812 = {
+				add_building_construction = { type = bunker province = 496 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 11426 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 3152 level = 2 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = EST_hold_saaremaa
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = EST_fortify_tallinn }
+		x = 0
+		y = 1
+		relative_position_id = EST_fortify_tallinn
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			owns_state = 811 
+		}
+
+		bypass = {
+			NOT = { owns_state = 811 }
+		}
+
+		completion_reward = {
+			811 = {
+				add_building_construction = { type = bunker province = 185 level = 4 instant_build = yes }
+				add_building_construction = { type = bunker province = 6201 level = 3 instant_build = yes }
+			}
+			set_victory_points = {
+				province = 185
+				value = 15
+			}
+			set_victory_points = {
+				province = 3152
+				value = 5
+			}
+		}
+	}
+
+	focus = {
+		id = EST_fortify_the_border
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = EST_threat_on_our_border }
+		mutually_exclusive = { focus = EST_fortify_tallinn focus = EST_cave_to_enemy_pressure }
+		x = 3
+		y = 1
+		relative_position_id = EST_threat_on_our_border
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			is_subject = yes
+		}
+
+		completion_reward = {
+			191 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_fight_against_communism
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = EST_fortify_the_border focus = EST_fortify_tallinn }
+		x = 0
+		y = 1
+		relative_position_id = EST_fortify_the_border
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_country_flag = germans_true_enemy_flag }
+				add_ideas = anti_german_army_idea
+			}
+			else = {
+				add_ideas = anti_soviet_army_idea
+			}
+		}
+	}
+
+	focus = {
+		id = EST_long_push_east
+		icon = GFX_goal_tank_hunt
+		prerequisite = { focus = EST_fight_against_communism }
+		x = 0
+		y = 1
+		relative_position_id = EST_fight_against_communism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				AND = {
+					has_country_flag = soviets_true_enemy_flag
+					SOV = { surrender_progress > 0.1 }
+				}
+				AND = {
+					has_country_flag = germans_true_enemy_flag
+					GER = { surrender_progress > 0.1 }
+				}
+				surrender_progress > 0.9
+			}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = EST_motors_idea
+		}
+	}
+
+	###RESISTANCE FOCUSES###
+	focus = {
+		id = EST_prepare_for_the_inevitable
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = EST_corporate_chambers focus = EST_unite_our_nations focus = EST_finno_estonian_supremacy_league }
+		x = 1
+		y = 2
+		relative_position_id = EST_corporate_chambers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				surrender_progress > 0.3
+				has_capitulated = yes
+			}
+		}
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+
+	focus = {
+		id = EST_forest_brothers
+		icon = GFX_focus_generic_forest_brothers
+		prerequisite = { focus = EST_prepare_for_the_inevitable }
+		x = -2
+		y = 1
+		relative_position_id = EST_prepare_for_the_inevitable
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = BALTIC_forest_brothers_idea
+		}
+	}
+
+	focus = {
+		id = EST_prepare_underground_resistance
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = EST_prepare_for_the_inevitable }
+		x = 0
+		y = 1
+		relative_position_id = EST_prepare_for_the_inevitable
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				surrender_progress > 0.3
+				has_capitulated = yes
+			}
+		}
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = { POL_influx_of_exiles }
+			add_offsite_building = { type = arms_factory level = 4 }
+		}
+	}
+
+	focus = {
+		id = EST_prepare_covert_resistance
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = EST_prepare_for_the_inevitable }
+		x = 2
+		y = 1
+		relative_position_id = EST_prepare_for_the_inevitable
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				surrender_progress > 0.3
+				has_capitulated = yes
+			}
+		}
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			if = {
+				limit = {
+					has_DLC = "La Resistance"
+				}
+				gain_random_agency_upgrade = yes
+				add_offsite_building = { type = industrial_complex level = 3 }
+			}
+			else = {
+				add_tech_bonus = {
+					name = EST_prepare_covert_resistance
+					bonus = 1.0
+					uses = 2
+					category = electronics
+				}
+			}
+		}
+	}
+	
+	################
+	###DEMOCRATIC###
+	################
+	focus = {
+		id = EST_baltic_economic_union
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = EST_formalize_baltic_entente }
+		prerequisite = { focus = EST_break_the_silence }
+		x = -2
+		y = 1
+		relative_position_id = EST_formalize_baltic_entente
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_faction_leader = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_ideas = { BALTIC_economic_union_1 }
+			every_other_country = {
+				limit = {
+					is_baltic_country = yes
+					is_in_faction_with = ROOT
+				}
+				hidden_effect = { country_event = BALTIC_entente_events.1 }
+				add_ideas = { BALTIC_economic_union_1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = EST_baltic_defence_army
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = EST_baltic_economic_union }
+		x = 1
+		y = 1
+		relative_position_id = EST_baltic_economic_union
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_faction_leader = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_ideas = { LIT_baltic_defence_army }
+			every_other_country = {
+				limit = {
+					is_baltic_country = yes
+					is_in_faction_with = ROOT
+				}
+				hidden_effect = { country_event = BALTIC_entente_events.2 }
+				add_ideas = { LIT_baltic_defence_army }
+			}
+		}
+	}
+	
+	focus = {
+		id = EST_pan_baltic_bank
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = EST_baltic_economic_union }
+		x = -1
+		y = 1
+		relative_position_id = EST_baltic_economic_union
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_faction_leader = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			swap_ideas = {
+				add_idea = BALTIC_economic_union_2
+				remove_idea = BALTIC_economic_union_1
+			}
+			every_other_country = {
+				limit = {
+					is_baltic_country = yes
+					is_in_faction_with = ROOT
+				}
+				hidden_effect = { country_event = BALTIC_entente_events.3 }
+				swap_ideas = {
+					add_idea = BALTIC_economic_union_2
+					remove_idea = BALTIC_economic_union_1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = EST_propose_baltic_union
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = EST_pan_baltic_bank }
+		prerequisite = { focus = EST_baltic_defence_army }
+		x = -1
+		y = 1
+		relative_position_id = EST_baltic_defence_army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_faction_leader = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			remove_ideas = { 
+				LIT_baltic_defence_army
+				BALTIC_economic_union_2
+			}
+			add_ideas = { BALTIC_union_idea }
+			every_other_country = {
+				limit = {
+					is_baltic_country = yes
+					is_in_faction_with = ROOT
+				}
+				hidden_effect = { country_event = BALTIC_entente_events.4 }
+				remove_ideas = { 
+					LIT_baltic_defence_army
+					BALTIC_economic_union_2
+				}
+				add_ideas = { BALTIC_union_idea }
+			}
+		}
+	}
+	
+	focus = {
+		id = EST_baltic_stronger_together
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = EST_propose_baltic_union }
+		x = 1
+		y = 1
+		relative_position_id = EST_propose_baltic_union
+		mutually_exclusive = { focus = EST_baltic_unification }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_faction_leader = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			swap_ideas = {
+				add_idea = BALTIC_union_idea_1
+				remove_idea = BALTIC_union_idea
+			}
+			division_template = {
+				name = "Baltic Entente Division"
+				priority = 1
+				division_names_group = EST_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+		
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+		
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { PREV = { has_full_control_of_state = PREV } }
+				create_unit = {
+					division = "name = \"1 Baltic Entente Division\" division_template = \"Baltic Entente Division\" start_experience_factor = 0.9" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"2 Baltic Entente Division\" division_template = \"Baltic Entente Division\" start_experience_factor = 0.9" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"3 Baltic Entente Division\" division_template = \"Baltic Entente Division\" start_experience_factor = 0.9" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"4 Baltic Entente Division\" division_template = \"Baltic Entente Division\" start_experience_factor = 0.9" 
+					owner = PREV
+				}
+			}
+			every_other_country = {
+				limit = {
+					is_baltic_country = yes
+					is_in_faction_with = ROOT
+				}
+				swap_ideas = {
+					add_idea = BALTIC_union_idea_1
+					remove_idea = BALTIC_union_idea
+				}
+				custom_effect_tooltip = gain_baltic_entente_divisions_tt
+				hidden_effect = { 
+					country_event = BALTIC_entente_events.5
+					division_template = {
+						name = "Baltic Entente Division"
+						priority = 1
+						division_names_group = LAT_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+				
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+				
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { PREV = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "name = \"1 Baltic Entente Division\" division_template = \"Baltic Entente Division\" start_experience_factor = 0.9" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"2 Baltic Entente Division\" division_template = \"Baltic Entente Division\" start_experience_factor = 0.9" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"3 Baltic Entente Division\" division_template = \"Baltic Entente Division\" start_experience_factor = 0.9" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"4 Baltic Entente Division\" division_template = \"Baltic Entente Division\" start_experience_factor = 0.9" 
+							owner = PREV
+						}
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					is_baltic_country = yes
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+				custom_effect_tooltip = gain_topple_tt
+				hidden_effect = {
+					create_wargoal = {
+						target = PREV
+						type = topple_government
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = EST_baltic_unification
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = EST_propose_baltic_union }
+		x = -1
+		y = 1
+		relative_position_id = EST_propose_baltic_union
+		mutually_exclusive = { focus = EST_baltic_stronger_together }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_faction_leader = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					is_baltic_country = yes
+					is_in_faction_with = ROOT
+				}
+				country_event = {
+					id = BALTIC_entente_events.6
+					days = 3
+				}
+			}
+			effect_tooltip = {
+				if = {
+					limit = {
+						any_other_country = {
+							is_baltic_country = yes
+							is_in_faction_with = ROOT
+						}
+					}
+					custom_effect_tooltip = if_they_accept_tt
+					every_other_country = {
+						limit = {
+							is_baltic_country = yes
+							is_in_faction_with = ROOT
+						}
+					}
+					custom_effect_tooltip = annex_countries_tt
+				}
+			}
+			every_other_country = {
+				limit = {
+					is_baltic_country = yes
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+				custom_effect_tooltip = gain_annex_tt
+				hidden_effect = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	
+	###END OF DEMOCRACY###
+}

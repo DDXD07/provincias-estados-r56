@@ -1,0 +1,26 @@
+state = {
+	id = 3693
+	name = "STATE_3693"
+	manpower = 112501
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		set_variable = {
+			ETH_state_development_production_speed = -0.1
+		}
+		set_variable = {
+			ETH_state_development_local_building_slots_factor = -0.1
+		}
+		add_dynamic_modifier = {
+			modifier = ETH_state_development_dynamic_modifier
+		}
+		owner = ETH
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ETH
+		add_core_of = ORO
+	}
+	provinces = { 13288 }
+}

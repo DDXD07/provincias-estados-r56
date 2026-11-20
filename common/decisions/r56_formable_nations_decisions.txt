@@ -1,0 +1,4529 @@
+unite_the_levant_category = {
+    form_greater_syria = {
+        icon = generic_form_nation
+
+        allowed = {
+            OR = {
+                original_tag = LEB
+                original_tag = SYR
+                original_tag = JOR
+            }
+        }
+        fire_only_once = yes
+        available = {
+            is_subject = no
+            custom_trigger_tooltip = {
+                tooltip = form_country_gs_syria_required_states_tt
+                controls_state = 680
+                controls_state = 677
+                controls_state = 554
+            }
+            controls_state = 553
+            custom_trigger_tooltip = {
+                tooltip = form_country_gs_israel_palestina_required_states_tt
+                controls_state = 454
+                controls_state = 1016
+                controls_state = 1017
+                controls_state = 949
+                controls_state = 966
+            }
+            controls_state = 455
+            controls_state = 1021
+            controls_state = 1022
+            NOT = { has_cosmetic_tag = ARA_UNIFIED }
+            NOT = { has_completed_focus = PAL_islamists }
+        }
+        complete_effect = {
+            set_cosmetic_tag = SYR_UNIFIED
+            custom_effect_tooltip = form_country_gs_required_coring_states_tt
+            hidden_effect = {
+                every_state = {
+                    limit = {
+                        OR = {
+                            is_core_of = JOR
+                            is_core_of = LEB
+                            is_core_of = PAL
+                            is_core_of = SYR
+                        }
+                    }
+                    add_core_of = ROOT #ROOT
+                    #Siria, Libano, Palestina, Jordan
+                }
+                news_event = { id = r56.news_event.34 hours = 6 }
+
+                if = {
+                    limit = {
+                        has_dlc = "La Resistance"
+                    }
+                    every_country = {
+                        every_operative = {
+                            limit = {
+                                OR = {
+                                    has_nationality = JOR
+                                    has_nationality = LEB
+                                    has_nationality = PAL
+                                    has_nationality = SYR
+                                }
+                                NOT = {
+                                    has_nationality = ROOT
+                                }
+                            }
+                            add_nationality = ROOT
+                        }
+                    }
+                }
+            }
+            set_capital = {
+                state = 554
+            }
+            set_province_name = { id = 1086 name = "Al-Quds" }
+            custom_effect_tooltip = form_country_gs_iraq_kuwait_coring_states_tt
+            hidden_effect = {
+                add_state_core = 453 add_state_core = 5794 add_state_core = 5795 add_state_core = 5796 add_state_core = 5797 add_state_core = 5798 add_state_core = 5799 add_state_core = 5800 add_state_core = 5801
+                add_state_claim = 676 add_state_claim = 8025 add_state_claim = 8026 add_state_claim = 8027
+                add_state_claim = 675 add_state_claim = 8022 add_state_claim = 8023 add_state_claim = 8024
+                add_state_claim = 291 add_state_claim = 3929 add_state_claim = 3930
+                add_state_claim = 1049 add_state_claim = 9899 add_state_claim = 9900
+                add_state_claim = 1048 add_state_claim = 9897 add_state_claim = 9898
+                add_state_claim = 1046 add_state_claim = 9890 add_state_claim = 9891 add_state_claim = 9892
+                add_state_claim = 1047 add_state_claim = 9893 add_state_claim = 9894 add_state_claim = 9895 add_state_claim = 9896
+                add_state_claim = 1045 add_state_claim = 9886 add_state_claim = 9887 add_state_claim = 9888 add_state_claim = 9889
+
+            }
+
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+        }
+
+        ai_will_do = {
+            factor = 200
+            modifier = {
+                factor = 0.1
+                is_historical_focus_on = yes
+            }
+        }
+    }
+}
+
+unify_the_peninsula_category = {
+    unite_korea = {
+        icon = GFX_decision_korea_unification
+
+        allowed = {
+            OR = {
+                original_tag = KOR
+                original_tag = NKR
+            }
+        }
+        fire_only_once = yes
+        available = {
+            is_subject = no
+            custom_trigger_tooltip = {
+                tooltip = form_country_joseon_south_korea_required_states_tt
+                controls_state = 525
+                controls_state = 919
+                controls_state = 920
+            }
+            custom_trigger_tooltip = {
+                tooltip = form_country_joseon_north_korea_required_states_tt
+                controls_state = 527
+                controls_state = 917
+                controls_state = 918
+            }
+            NOT = { has_cosmetic_tag = KOR_unified }
+        }
+		visible = {
+            original_tag = JAP
+			NOT = { has_global_flag = unite_joseon_flag }
+		}
+        complete_effect = {
+            set_cosmetic_tag = KOR_unified
+            custom_effect_tooltip = form_country_joseon_korea_coring_states_tt
+            hidden_effect = {
+                every_state = {
+                    limit = {
+                        OR = {
+                            is_core_of = KOR
+                            is_core_of = NKR
+                        }
+                    }
+                    add_core_of = ROOT #ROOT
+                    #North and South Korea
+                }
+				set_global_flag = unite_joseon_flag
+
+                if = {
+                    limit = {
+                        has_dlc = "La Resistance"
+                    }
+                    every_country = {
+                        every_operative = {
+                            limit = {
+                                OR = {
+                                    has_nationality = KOR
+                                    has_nationality = NKR
+                                }
+                                NOT = {
+                                    has_nationality = ROOT
+                                }
+                            }
+                            add_nationality = ROOT
+                        }
+                    }
+                }
+
+            }
+
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+        }
+
+        ai_will_do = {
+            factor = 200
+        }
+    }
+}
+
+##form_peru_bolivia_category = {
+##    form_peru_bolivia = {
+##        fire_only_once = yes
+##        icon = generic_form_nation
+##
+##        allowed = {
+##            OR = {
+##                original_tag = BOL
+##                original_tag = PRU 
+##                    
+##            }
+##        }
+##        available = {
+##               if = {
+##               Limit = {
+##                    original_tag = PRU 
+##                       }
+##                      NOT = { 
+##                 OR = { 
+##                   has_country_flag = formed_peru_bolivia
+##                   has_country_flag = PRU_no_peru_bolivia
+##                   has_country_flag = PRU_no_inca_peru_bolivia
+##                      }
+##                     }
+##                        }
+##           
+##            all_state = {
+##                OR = {
+##                    NOT = { is_core_of = PRU }
+##                    is_core_of = ECU
+##                    is_controlled_by = ROOT
+##                }
+##            }
+##            all_state = {
+##                OR = {
+##                    NOT = { is_core_of = BOL }
+##                    is_core_of = PAR
+##                    is_core_of = CHL
+##                    is_core_of = BRA
+##                    is_controlled_by = ROOT
+##                }
+##            }
+##        }
+##
+##        complete_effect = {
+##
+##            hidden_effect = {
+##                if = {
+##                    limit = {
+##                        has_dlc = "La Resistance"
+##                    }
+##                    every_country = {
+##                        every_operative = {
+##                            limit = {
+##                                OR = {
+##                                    has_nationality = PRU
+##                                    has_nationality = BOL
+##                                }
+##                                NOT = {
+##                                    has_nationality = ROOT
+##                                }
+##                            }
+##                            add_nationality = ROOT
+##                        }
+##                    }
+##                }                
+##            }
+##
+##            set_country_flag = formed_peru_bolivia
+##            set_cosmetic_tag = PRB
+##            688 = { add_core_of = ROOT }
+##            506 = { add_core_of = ROOT }
+##            490 = { add_core_of = ROOT }
+##            1052 = { add_core_of = ROOT }
+##        }
+##        remove_effect = {
+##            hidden_effect = {
+##                every_state = {
+##                    limit = {
+##                        OR = { is_core_of = BOL is_core_of = PRU }
+##                    }
+##                    add_core_of = PREV
+##                }
+##            }
+##        }
+##        remove_effect = {
+##            add_ideas = generic_recent_political_unification
+##            add_ideas = generic_recent_army_unification
+##            add_ideas = generic_recent_economic_unification
+##        }
+##        ai_will_do = {
+##            factor = 1
+##        }
+##    }
+##}
+##
+
+form_russia_category = {
+    form_russia = {
+        icon = generic_form_nation
+        fire_only_once = yes
+        allowed = { original_tag = LIE }
+
+        available = {
+            is_subject = no
+            custom_trigger_tooltip = {
+                tooltip = LIE_requires_all_these_states_to_form_russia
+                controls_state = 195
+                controls_state = 208
+                controls_state = 209
+                controls_state = 210
+                controls_state = 263
+                controls_state = 244
+                controls_state = 246
+                controls_state = 242
+                controls_state = 243
+                controls_state = 224
+                controls_state = 219
+                controls_state = 205
+                controls_state = 247
+                controls_state = 264
+                controls_state = 220
+                controls_state = 222
+                controls_state = 223
+                controls_state = 240
+                controls_state = 258
+                controls_state = 254
+                controls_state = 260
+                controls_state = 257
+                controls_state = 255
+                controls_state = 252
+                controls_state = 253
+                controls_state = 248
+                controls_state = 351
+                controls_state = 879
+                controls_state = 214
+                controls_state = 880
+                controls_state = 239
+            }
+        }
+
+        highlight_states = {
+			highlight_state_targets = {
+                state = 195
+                state = 208
+                state = 209
+                state = 210
+                state = 263
+                state = 244
+                state = 246
+                state = 242
+                state = 243
+                state = 224
+                state = 219
+                state = 205
+                state = 247
+                state = 264
+                state = 216
+                state = 215
+                state = 220
+                state = 222
+                state = 223
+                state = 240
+                state = 258
+                state = 254
+                state = 260
+                state = 257
+                state = 255
+                state = 252
+                state = 253
+                state = 248
+                state = 351
+                state = 879
+                state = 214
+                state = 880
+                state = 239
+            }
+		}
+
+        ai_will_do = { factor = 150 }
+
+        visible = {
+            has_completed_focus = LIE_finish_the_fight
+            if = {
+                limit = { original_tag = LIE }
+                has_country_leader = {
+                    character = LIE_boris_smyslovsky
+                    ruling_only = yes
+                }
+            }
+        }
+
+        complete_effect = {
+            set_capital = { state = 219 }
+            every_state = {
+                limit = {
+                    OR = {
+                        state = 195
+                        state = 208
+                        state = 209
+                        state = 210
+                        state = 263
+                        state = 244
+                        state = 246
+                        state = 242
+                        state = 243
+                        state = 224
+                        state = 219
+                        state = 205
+                        state = 247
+                        state = 264
+                        state = 216
+                        state = 215
+                        state = 220
+                        state = 222
+                        state = 223
+                        state = 240
+                        state = 258
+                        state = 254
+                        state = 260
+                        state = 257
+                        state = 255
+                        state = 252
+                        state = 253
+                        state = 248
+                        state = 351
+                        state = 879
+                        state = 214
+                        state = 880
+                        state = 239
+                    }
+                }
+                add_core_of = ROOT
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            set_cosmetic_tag = SOV
+            custom_effect_tooltip = generic_skip_one_line_tt
+            add_ideas = generic_recent_political_unification
+            custom_effect_tooltip = generic_skip_one_line_tt
+            add_ideas = generic_recent_army_unification
+            custom_effect_tooltip = generic_skip_one_line_tt
+            add_ideas = generic_recent_economic_unification
+            if = {
+                limit = { original_tag = LIE }
+                set_country_flag = achievement_formed_russia
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            unlock_decision_tooltip = reintegrate_the_don_republic
+            unlock_decision_tooltip = bring_back_white_names
+            unlock_decision_tooltip = question_of_the_capital_russia
+        }
+    }
+
+    bring_back_white_names = {
+        icon = GFX_decision_generic_break_treaty
+        allowed = { original_tag = LIE }
+        fire_only_once = yes
+        cost = 50
+
+        days_remove = 85
+
+        available = { NOT = { has_government = communism } }
+
+        modifier = { political_power_factor = -0.25 }
+        ai_will_do = { factor = 150 }
+
+        visible = {
+            has_cosmetic_tag = SOV
+            if = {
+                limit = { original_tag = LIE }
+                #has_country_leader = {
+                #    character = LIE_boris_smyslovsky
+                #    ruling_only = yes
+                #}
+            }
+        }
+
+        remove_effect = {
+            add_political_power = 100
+            add_stability = 0.1
+            add_popularity = {
+                ideology = communism
+                popularity = -0.1
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            country_event = liechtenstein.32
+            custom_effect_tooltip = generic_skip_one_line_tt
+            set_province_name = {
+                id = 11375
+                name = SOV_Nizhny_Novgorod
+            }
+            252 = { set_state_name = SOV_Nizhny_Novgorod }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            set_province_name = {
+                id = 6245
+                name = SOV_Tver
+            }
+            247 = { set_state_name = SOV_Tver }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            custom_effect_tooltip = LIE_if_has_integrated_don
+            effect_tooltip = {
+                217 = { set_state_name = SOV_Volgograd }
+                set_province_name = {
+                    id = 3529
+                    name = SOV_Volgograd
+                }
+            }
+            hidden_effect = {
+                if = {
+                    limit = { has_country_flag = LIE_can_expand_southwards }
+                    217 = { set_state_name = SOV_Volgograd }
+                    set_province_name = {
+                        id = 3529
+                        name = SOV_Volgograd
+                    }
+                }
+            }
+            set_country_flag = LIE_has_renamed_stuff
+        }
+    }
+
+    question_of_the_capital_russia = {
+        icon = GFX_decision_generic_colonial_administration
+        allowed = { original_tag = LIE }
+        fire_only_once = yes
+        cost = 25
+
+        available = {
+            OR = {
+                controls_state = 195
+                controls_state = 219
+                controls_state = 217
+            }
+        }
+
+        highlight_states = {
+			highlight_state_targets = {
+                state = 195
+                state = 219
+                state = 217
+            }
+		}
+
+        ai_will_do = { factor = 150 }
+
+        visible = {
+            has_cosmetic_tag = SOV
+            if = {
+                limit = { original_tag = LIE }
+                #has_country_leader = {
+                #    character = LIE_boris_smyslovsky
+                #    ruling_only = yes
+                #}
+            }
+        }
+
+        complete_effect = { country_event = liechtenstein.33 }
+    }
+
+    reintegrate_the_don_republic = {
+        icon = GFX_decision_generic_nationalism
+        allowed = { original_tag = LIE }
+        fire_only_once = yes
+        cost = 100
+
+        days_remove = 150
+
+        available = {
+            is_subject = no
+            custom_trigger_tooltip = {
+                tooltip = LIE_to_core_donrepublic
+                238 = {
+                    is_controlled_by = ROOT
+                    compliance > 35
+                    resistance < 5
+                }
+                218 = {
+                    is_controlled_by = ROOT
+                    compliance > 35
+                    resistance < 5
+                }
+                245 = {
+                    is_controlled_by = ROOT
+                    compliance > 35
+                    resistance < 5
+                }
+                217 = {
+                    is_controlled_by = ROOT
+                    compliance > 35
+                    resistance < 5
+                }
+                265 = {
+                    is_controlled_by = ROOT
+                    compliance > 35
+                    resistance < 5
+                }
+            }
+        }
+
+        modifier = {
+            political_power_factor = -0.15
+            consumer_goods_factor = 0.1
+        }
+
+        highlight_states = {
+			highlight_state_targets = {
+                state = 238
+                state = 218
+                state = 245
+                state = 217
+                state = 265
+            }
+		}
+
+        ai_will_do = { factor = 150 }
+
+        visible = {
+            has_cosmetic_tag = SOV
+            if = {
+                limit = { original_tag = LIE }
+                #has_country_leader = {
+                #    character = LIE_boris_smyslovsky
+                #    ruling_only = yes
+                #}
+            }
+        }
+
+        remove_effect = {
+            add_political_power = 50
+            add_stability = 0.05
+            custom_effect_tooltip = generic_skip_one_line_tt
+            every_state = {
+                limit = {
+                    OR = {
+                        state = 238
+                        state = 218
+                        state = 245
+                        state = 217
+                        state = 265
+                    }
+                }
+                add_core_of = ROOT
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            unlock_decision_tooltip = reclaim_the_kuban_region
+            unlock_decision_tooltip = concessions_to_kalmyks
+            set_country_flag = LIE_can_expand_southwards
+            custom_effect_tooltip = generic_skip_one_line_tt
+            custom_effect_tooltip = LIE_if_has_integrated_don_two
+            effect_tooltip = {
+                217 = { set_state_name = SOV_Volgograd }
+                set_province_name = {
+                    id = 3529
+                    name = SOV_Volgograd
+                }
+            }
+            hidden_effect = {
+                if = {
+                    limit = { has_country_flag = LIE_has_renamed_stuff }
+                    217 = { set_state_name = SOV_Volgograd }
+                    set_province_name = {
+                        id = 3529
+                        name = SOV_Volgograd
+                    }
+                }
+            }
+        }
+    }
+
+    reclaim_the_kuban_region = {
+        icon = GFX_decision_generic_cavalry
+        allowed = { original_tag = LIE }
+        fire_only_once = yes
+        cost = 50
+
+        days_remove = 100
+
+        available = {
+            is_subject = no
+            custom_trigger_tooltip = {
+                tooltip = LIE_to_core_kuban
+                234 = {
+                    is_controlled_by = ROOT
+                    compliance > 40
+                    resistance < 5
+                }
+                233 = {
+                    is_controlled_by = ROOT
+                    compliance > 40
+                    resistance < 5
+                }
+                235 = {
+                    is_controlled_by = ROOT
+                    compliance > 40
+                    resistance < 5
+                }
+            }
+        }
+
+        modifier = {
+            political_power_factor = -0.1
+            consumer_goods_factor = 0.05
+        }
+
+        highlight_states = {
+			highlight_state_targets = {
+                state = 234
+                state = 233
+                state = 235
+            }
+		}
+
+        ai_will_do = { factor = 150 }
+
+        visible = {
+            has_cosmetic_tag = SOV
+            has_country_flag = LIE_can_expand_southwards
+            if = {
+                limit = { original_tag = LIE }
+                #has_country_leader = {
+                #    character = LIE_boris_smyslovsky
+                #    ruling_only = yes
+                #}
+            }
+        }
+
+        remove_effect = {
+            add_political_power = 35
+            add_popularity = {
+                ideology = ROOT
+                popularity = 0.03
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            every_state = {
+                limit = {
+                    OR = {
+                        state = 234
+                        state = 233
+                        state = 235
+                    }
+                }
+                add_core_of = ROOT
+            }
+        }
+    }
+
+    concessions_to_kalmyks = {
+        icon = GFX_decision_eng_trade_unions_support
+        allowed = { original_tag = LIE }
+        fire_only_once = yes
+        cost = 25
+
+        days_remove = 50
+
+        available = {
+            #is_subject = no
+            237 = { is_controlled_by = ROOT }
+            236 = { is_controlled_by = ROOT }
+        }
+
+        modifier = { political_power_factor = -0.05 }
+
+        highlight_states = {
+			highlight_state_targets = {
+                state = 237
+                state = 236
+            }
+		}
+
+        ai_will_do = { factor = 150 }
+
+        visible = {
+            has_cosmetic_tag = SOV
+            has_country_flag = LIE_can_expand_southwards
+            if = {
+                limit = { original_tag = LIE }
+                #has_country_leader = {
+                #    character = LIE_boris_smyslovsky
+                #    ruling_only = yes
+                #}
+            }
+        }
+
+        remove_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        state = 237
+                        state = 236
+                    }
+                }
+                add_compliance = 5
+                add_resistance = -5
+            }
+            set_country_flag = can_integrate_kalmykia
+            custom_effect_tooltip = generic_skip_one_line_tt
+            unlock_decision_tooltip = integrate_kalmykia_into_russia
+        }
+    }
+
+    integrate_kalmykia_into_russia = {
+        icon = GFX_decision_generic_operation
+        allowed = { original_tag = LIE }
+        fire_only_once = yes
+        cost = 35
+
+        days_remove = 100
+
+        available = {
+            is_subject = no
+            custom_trigger_tooltip = {
+                tooltip = LIE_to_core_kalmykia
+                237 = {
+                    is_controlled_by = ROOT
+                    compliance > 45
+                    resistance < 5
+                }
+                236 = {
+                    is_controlled_by = ROOT
+                    compliance > 45
+                    resistance < 5
+                }
+            }
+        }
+
+        modifier = { 
+            political_power_factor = -0.1
+            consumer_goods_factor = 0.05
+        }
+
+        highlight_states = {
+			highlight_state_targets = {
+                state = 237
+                state = 236
+            }
+		}
+
+        ai_will_do = { factor = 150 }
+
+        visible = {
+            has_cosmetic_tag = SOV
+            has_country_flag = can_integrate_kalmykia
+            if = {
+                limit = { original_tag = LIE }
+                #has_country_leader = {
+                #    character = LIE_boris_smyslovsky
+                #    ruling_only = yes
+                #}
+            }
+        }
+
+        remove_effect = {
+            add_political_power = 20
+            every_state = {
+                limit = {
+                    OR = {
+                        state = 237
+                        state = 236
+                    }
+                }
+                add_core_of = ROOT
+            }
+        }
+    }
+}
+
+form_prussia_category = {
+
+    form_prussia = {
+        icon = generic_form_nation
+        cost = 0
+        fire_only_once = yes
+
+        allowed = { original_tag = DNZ }
+
+        available = {
+            controls_state = 64
+            controls_state = 68
+            controls_state = 63
+            controls_state = 66
+            controls_state = 67
+            controls_state = 807
+            controls_state = 86
+            controls_state = 762
+            controls_state = 85
+            controls_state = 62
+            controls_state = 5
+            controls_state = 763
+        }
+
+        ai_will_do = {
+            factor = 150
+        }
+
+        #visible = {
+        #    OR = { #weird conditions removed
+        #        controls_state = 64
+        #        controls_state = 5
+        #        controls_state = 63
+        #        controls_state = 807
+        #        has_completed_focus = DNZ_prussia_legacy
+        #    }
+        #}
+
+        complete_effect = {
+            add_state_core = 64 add_state_core = 1659 add_state_core = 1660 add_state_core = 1661 add_state_core = 1662 add_state_core = 1663 add_state_core = 1664 add_state_core = 1665 add_state_core = 1666 add_state_core = 1667 add_state_core = 1668 add_state_core = 1669 add_state_core = 1670 add_state_core = 1671 add_state_core = 1672 add_state_core = 1673
+            add_state_core = 68 add_state_core = 1699 add_state_core = 1700 add_state_core = 1701 add_state_core = 1702 add_state_core = 1703 add_state_core = 1704
+            add_state_core = 63 add_state_core = 1646 add_state_core = 1647 add_state_core = 1648 add_state_core = 1649 add_state_core = 1650 add_state_core = 1651 add_state_core = 1652 add_state_core = 1653 add_state_core = 1654 add_state_core = 1655 add_state_core = 1656 add_state_core = 1657 add_state_core = 1658
+            add_state_core = 66 add_state_core = 1684 add_state_core = 1685 add_state_core = 1686 add_state_core = 1687 add_state_core = 1688 add_state_core = 1689 add_state_core = 1690 add_state_core = 1691 add_state_core = 1692 add_state_core = 1693 add_state_core = 1694
+            add_state_core = 67 add_state_core = 1695 add_state_core = 1696 add_state_core = 1697 add_state_core = 1698
+            add_state_core = 807 add_state_core = 8632 add_state_core = 8633 add_state_core = 8634 add_state_core = 8635 add_state_core = 8636 add_state_core = 8637 add_state_core = 8638
+            add_state_core = 86 add_state_core = 1807 add_state_core = 1808 add_state_core = 1809 add_state_core = 1810 add_state_core = 1811 add_state_core = 1812 add_state_core = 1813 add_state_core = 1814
+            add_state_core = 762 add_state_core = 8434
+            add_state_core = 763 add_state_core = 8435 add_state_core = 8436 add_state_core = 8437 add_state_core = 8438 add_state_core = 8439
+            add_state_core = 188 add_state_core = 2575
+            add_state_core = 85
+            add_state_core = 62 add_state_core = 1640 add_state_core = 1641 add_state_core = 1642 add_state_core = 1643 add_state_core = 1644 add_state_core = 1645
+            add_state_core = 5 add_state_core = 1163 add_state_core = 1164 add_state_core = 1165 add_state_core = 1166 add_state_core = 1167 add_state_core = 1168 add_state_core = 1169 add_state_core = 1170 add_state_core = 1171 add_state_core = 1172
+            #set_cosmetic_tag = PRS
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+        }
+    }
+}
+
+recreate_belgium_category = {
+
+    recreate_belgium = {
+        allowed = {
+            OR = {
+                original_tag = WLL
+                original_tag = FLA
+            }
+        }
+        fire_only_once = yes
+        available = {
+            if = {
+                limit = { original_tag = FLA }
+                NOT = { has_government = fascism }
+            }
+            is_subject = no
+            6 = { is_controlled_by = ROOT }
+            34 = { is_controlled_by = ROOT }
+			1094 = { is_controlled_by = ROOT }
+            1095  = { is_controlled_by = ROOT }
+			965 = { is_controlled_by = ROOT }
+        }
+        icon = generic_form_nation
+        complete_effect = {
+#            set_cosmetic_tag = BEL_REUNIFIED
+            set_country_flag = reunified_belgium_flag
+
+            if = {
+                limit  = {
+                    ROOT = { has_government = democratic }
+                }
+                if = {
+                    limit = { BEL = { democratic < 0.5 } }
+                    BEL = {
+                        add_popularity = { ideology = democratic popularity = 0.33 }
+                        set_politics = {
+                            ruling_party = democratic elections_allowed = yes
+                        }
+                    }
+                }
+                else = {
+                    BEL = {
+                        unlock_national_focus = BEL_form_coalition_government
+                    }
+                }
+            }
+
+            if = {
+                limit  = {
+                    ROOT = { has_government = neutrality }
+                }
+                if = {
+                    limit = {
+                        BEL = { neutrality < 0.5 }
+                    }
+                    BEL = {
+                        add_popularity = { ideology = neutrality popularity = 0.33 }
+                        set_politics = {
+                            ruling_party = neutrality elections_allowed = yes
+                        }
+                    }
+                }
+                else = {
+                    BEL = {
+                        unlock_national_focus = BEL_king_reaction
+                    }
+                }
+            }
+
+            if = {
+                limit  = {
+                    ROOT = { has_government = communism }
+                }
+                if = {
+                    limit  = {
+                        BEL = { communism < 0.5 }
+                    }
+                    BEL = {
+                        add_popularity = { ideology = communism popularity = 0.33 }
+                        set_politics = {
+                            ruling_party = communism elections_allowed = no
+                        }
+                    }
+                }
+                if = { #Check. If exclusive, then use else_if.
+                    limit  = {
+                        BEL = { has_idea = BEL_leopold3 }
+                    }
+                    BEL = {
+                        swap_ideas = {
+                            remove_idea = BEL_leopold3
+                            add_idea = BEL_leopold3_exile
+                        }
+                    }
+                }
+                else = {
+                    BEL = {
+                        unlock_national_focus = BEL_go_left
+                    }
+                }
+            }
+
+            else = { #Fascist branch
+#                limit = { ROOT = { has_government = fascism } }
+                if = {
+                    limit  = {
+                        BEL = { fascism < 0.5 }
+                    }
+                    BEL = {
+                        add_popularity = { ideology = fascism popularity = 0.33 }
+                        set_politics = {
+                             ruling_party = fascism elections_allowed = no
+                        }
+                    }
+                }
+                if = { #Check. If exclusive, then use else_if.
+                    limit  = {
+                        BEL = { has_idea = BEL_leopold3 }
+                    }
+                    BEL = {
+                        swap_ideas = {
+                            remove_idea = BEL_leopold3
+                            add_idea = BEL_leopold3_exile
+                        }
+                    }
+                }
+                else = {
+                    BEL = {
+                        unlock_national_focus = BEL_go_right
+                        unlock_national_focus = BEL_choose_Rex
+                    }
+                }
+            }
+
+            BEL = {
+                set_capital = { state = 6 }
+                add_ideas = generic_recent_political_unification
+                add_ideas = generic_recent_army_unification
+                add_ideas = generic_recent_economic_unification
+                set_country_flag = BEL_1936_election
+                annex_country = {
+                    target = ROOT
+                    transfer_troops = yes
+                }
+                change_tag_from = ROOT
+            }
+            FLA = {
+                every_unit_leader = {
+                    set_nationality = BEL
+                }
+                # exclude regional nationalists
+            }
+            WLL = {
+                every_unit_leader = {
+                    set_nationality = BEL
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 200
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+        }
+    }
+}
+
+form_united_netherlands_category2 = {
+    form_united_netherlands2_BEL = {
+        icon = generic_form_nation
+
+        allowed = { original_tag = BEL }
+        visible = {
+            NOT = { has_global_flag = form_united_netherlands_flag }
+        }
+        available = {
+            is_subject = no
+            if = {
+                limit = { has_global_flag = bel_dlc_focus_tree }
+                OR = {
+                    has_government = communism
+                    has_completed_focus = BEL_support_the_vnv
+                }
+            }
+            else = {
+                OR = {
+                    has_country_flag = Chose_Verdinaso
+                    has_completed_focus = BEL_go_left
+                }
+            }
+
+            # Netherlands
+                custom_trigger_tooltip = {
+                    tooltip = form_eu_netherlands_required_states_tt
+                    controls_state = 7
+                    controls_state = 35
+                    controls_state = 36
+                    owns_state = 7
+                    owns_state = 35
+                    owns_state = 36
+                }
+            # Belgium
+                custom_trigger_tooltip = {
+                    tooltip = form_eu_belgium_required_states_tt
+                    controls_state = 6
+                    controls_state = 34
+					controls_state = 1094
+                    controls_state = 1095
+					controls_state = 965
+                    owns_state = 6
+                    owns_state = 34
+					owns_state = 1094
+                    owns_state = 1095
+					owns_state = 965
+                }
+            }
+
+        complete_effect = {
+            custom_effect_tooltip = form_eu_netherlands_coring_states_tt
+            hidden_effect = {
+                set_cosmetic_tag = BEL5
+                every_state = {
+                    limit = { region = 5 NOT = { state = 8 } }
+                    add_core_of = ROOT
+                }
+            }
+            hidden_effect = {
+                news_event = { id = wtt_news.58 hours = 6 }
+                set_global_flag = form_united_netherlands_flag
+            }
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+        }
+        ai_will_do = {
+            factor = 200
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+        }
+    }
+
+    form_united_netherlands2_HOL = {
+        icon = generic_form_nation
+
+        allowed = { original_tag = HOL }
+
+        visible = {
+            NOT = { has_global_flag = form_united_netherlands_flag
+				original_tag = HOL
+			}
+        }
+
+        available = {
+            is_subject = no
+            OR = {
+                has_government = fascism
+                has_government = communism
+            }
+            # Netherlands
+                custom_trigger_tooltip = {
+                    tooltip = form_eu_netherlands_required_states_tt
+                    controls_state = 7
+                    controls_state = 35
+                    controls_state = 36
+                    owns_state = 7
+                    owns_state = 35
+                    owns_state = 36
+                }
+            # Belgium
+                custom_trigger_tooltip = {
+                    tooltip = form_eu_belgium_required_states_tt
+                    controls_state = 6
+                    controls_state = 34
+					controls_state = 1094
+                    controls_state = 1095
+					controls_state = 965
+                    owns_state = 6
+                    owns_state = 34
+					owns_state = 1094
+                    owns_state = 1095
+					owns_state = 965
+                }
+            }
+
+        complete_effect = {
+            custom_effect_tooltip = form_eu_belgium_coring_states_tt
+            hidden_effect = {
+                set_cosmetic_tag = BEL5
+                every_state = {
+                    limit = { region = 5 NOT = { state = 8 } }
+                    add_core_of = ROOT
+                }
+            }
+            hidden_effect = {
+                news_event = { id = wtt_news.58 hours = 6 }
+                set_global_flag = form_united_netherlands_flag
+            }
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+        }
+        ai_will_do = {
+            factor = 200
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+        }
+    }
+}
+
+form_carribean_category = {
+    form_caribbean = {
+        icon = generic_form_nation
+        days_re_enable = 0
+
+        allowed = {
+            OR = {
+                original_tag = DOM
+                original_tag = HAI
+                original_tag = CUB
+				original_tag = JAM
+				original_tag = PUE
+				original_tag = BAH
+                original_tag = TRI
+                original_tag = GDL
+                original_tag = CRC
+                original_tag = STK
+				original_tag = DMN
+				original_tag = BRB
+				original_tag = STL
+				original_tag = SVG
+				original_tag = GRA
+                original_tag = MAR
+                original_tag = MAA
+            }
+        }
+        fire_only_once = yes
+        available = {
+            994 = { is_controlled_by = ROOT }
+            315 = { is_controlled_by = ROOT }
+            318 = { is_controlled_by = ROOT }
+            319 = { is_controlled_by = ROOT }
+        }
+        complete_effect = {
+            set_cosmetic_tag = CAB
+            hidden_effect = {
+                every_state = { #This has a day of lag, for reasons
+                    limit = {
+                        OR = { is_core_of = CUB is_core_of = DOM is_core_of = HAI }
+                    }
+                    add_core_of = ROOT
+                }
+                news_event = { id = r56.news_event.35 hours = 6 }
+
+
+                if = {
+                    limit = {
+                        has_dlc = "La Resistance"
+                    }
+                    every_country = {
+                        every_operative = {
+                            limit = {
+                                OR = {
+                                    has_nationality = DOM
+                                    has_nationality = HAI
+                                    has_nationality = CUB
+                                    has_nationality = JAM
+                                    has_nationality = PUE
+                                    has_nationality = BAH
+                                    has_nationality = TRI
+                                    has_nationality = GDL
+                                    has_nationality = CRC                                    
+                                }
+                                NOT = {
+                                    has_nationality = ROOT
+                                }
+                            }
+                            add_nationality = ROOT
+                        }
+                    }
+                }
+
+            }
+            every_state = { #This has a day of lag, for reasons
+                limit = {
+                    OR = { is_core_of = TRI is_core_of = PUE is_core_of = BAS is_core_of = GDL is_core_of = BAH is_core_of = CRC is_core_of = JAM is_core_of = STK is_core_of = DMN is_core_of = BRB is_core_of = STL is_core_of = SVG is_core_of = GRA is_core_of = MAR is_core_of = MAA }
+                }
+                add_core_of = ROOT
+            }
+            972 = {
+                add_core_of = ROOT
+            }
+            1050 = {
+                add_core_of = ROOT
+            }
+        }
+        ai_will_do = {
+            factor = 50
+        }
+    }
+}
+
+ENG_restore_the_UK = {
+    unite_britain = {
+        days_re_enable = 0
+        fire_only_once = yes
+
+        visible = { original_tag = ENG }
+        available = { #Scotland & Wales
+            is_subject = no
+            NOT = {
+                any_state = {
+                    OR = {
+                        is_core_of = SCO
+                        is_core_of = WLS
+                        state = 119
+                    }
+                    NOT = {
+                        OR = {
+                            is_controlled_by = ROOT
+                            OWNER = {
+                                is_subject_of = ROOT
+                            }
+                        }
+                    }
+                }
+            }
+            #119 = { is_controlled_by = ROOT }
+        }
+        icon = eng_install_government
+
+        complete_effect = {
+            drop_cosmetic_tag = yes
+            every_state = {
+                limit = {
+                    OR = {
+                        is_core_of = SCO
+                        is_core_of = WLS
+                        state = 119
+                    }
+                }
+                add_core_of = ROOT
+            }
+            set_capital = { state = 126 }
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+            hidden_effect = {
+                news_event = { id = r56.news_event.38 hours = 6 }
+            }
+        }
+        ai_will_do = {
+            factor = 50
+        }
+    }
+}
+
+celtic_unification_category = {
+    form_celtic_union = {
+        icon = generic_form_nation
+        fire_only_once = yes
+        allowed = {
+            OR = {
+                original_tag = SCO
+                original_tag = IRE
+                original_tag = NIR
+                original_tag = BRI
+                original_tag = WLS
+            }
+        }
+        available = {
+            is_subject = no
+            #IRE
+            controls_state = 113
+            controls_state = 119
+            controls_state = 134
+            controls_state = 135
+            #WLS
+            controls_state = 122
+            #SCO
+            controls_state = 133
+            controls_state = 121
+            controls_state = 136
+            controls_state = 120
+            controls_state = 123
+            #BRI
+            controls_state = 14
+
+			# isle of man
+			controls_state = 1042
+
+        }
+        complete_effect = {
+
+            set_cosmetic_tag = CEL_UNIFIED
+            hidden_effect = {
+                113 = { add_core_of = ROOT } 1987 = { add_core_of = ROOT } 1988 = { add_core_of = ROOT } 1989 = { add_core_of = ROOT } 1990 = { add_core_of = ROOT } 1991 = { add_core_of = ROOT } 1992 = { add_core_of = ROOT } 1993 = { add_core_of = ROOT }
+                119 = { add_core_of = ROOT } 2018 = { add_core_of = ROOT } 2019 = { add_core_of = ROOT } 2020 = { add_core_of = ROOT } 2021 = { add_core_of = ROOT } 2022 = { add_core_of = ROOT }
+                #114 = { add_core_of = ROOT }
+                134 = { add_core_of = ROOT } 2103 = { add_core_of = ROOT } 2104 = { add_core_of = ROOT } 2105 = { add_core_of = ROOT } 2106 = { add_core_of = ROOT } 2107 = { add_core_of = ROOT } 2108 = { add_core_of = ROOT } 2109 = { add_core_of = ROOT } 2110 = { add_core_of = ROOT }
+                135 = { add_core_of = ROOT } 2111 = { add_core_of = ROOT } 2112 = { add_core_of = ROOT } 2113 = { add_core_of = ROOT } 2114 = { add_core_of = ROOT } 2115 = { add_core_of = ROOT } 2116 = { add_core_of = ROOT } 2117 = { add_core_of = ROOT } 2118 = { add_core_of = ROOT } 2119 = { add_core_of = ROOT }
+                122 = { add_core_of = ROOT } 2044 = { add_core_of = ROOT } 2045 = { add_core_of = ROOT } 2046 = { add_core_of = ROOT } 2047 = { add_core_of = ROOT } 2048 = { add_core_of = ROOT } 2049 = { add_core_of = ROOT } 2050 = { add_core_of = ROOT }
+                133 = { add_core_of = ROOT } 2096 = { add_core_of = ROOT } 2097 = { add_core_of = ROOT } 2098 = { add_core_of = ROOT } 2099 = { add_core_of = ROOT } 2100 = { add_core_of = ROOT } 2101 = { add_core_of = ROOT } 2102 = { add_core_of = ROOT }
+                121 = { add_core_of = ROOT } 2039 = { add_core_of = ROOT } 2040 = { add_core_of = ROOT } 2041 = { add_core_of = ROOT } 2042 = { add_core_of = ROOT } 2043 = { add_core_of = ROOT }
+                136 = { add_core_of = ROOT } 2120 = { add_core_of = ROOT } 2121 = { add_core_of = ROOT } 2122 = { add_core_of = ROOT } 2123 = { add_core_of = ROOT } 2124 = { add_core_of = ROOT } 2125 = { add_core_of = ROOT }
+                120 = { add_core_of = ROOT } 2023 = { add_core_of = ROOT } 2024 = { add_core_of = ROOT } 2025 = { add_core_of = ROOT } 2026 = { add_core_of = ROOT } 2027 = { add_core_of = ROOT } 2028 = { add_core_of = ROOT } 2029 = { add_core_of = ROOT } 2030 = { add_core_of = ROOT } 2031 = { add_core_of = ROOT } 2032 = { add_core_of = ROOT } 2033 = { add_core_of = ROOT } 2034 = { add_core_of = ROOT } 2035 = { add_core_of = ROOT } 2036 = { add_core_of = ROOT } 2037 = { add_core_of = ROOT } 2038 = { add_core_of = ROOT }
+                123 = { add_core_of = ROOT } 2051 = { add_core_of = ROOT } 2052 = { add_core_of = ROOT } 2053 = { add_core_of = ROOT } 2054 = { add_core_of = ROOT } 2055 = { add_core_of = ROOT }
+                970 = { add_core_of = ROOT }
+                971 = { add_core_of = ROOT }
+                14 = { add_core_of = ROOT } 1215 = { add_core_of = ROOT } 1216 = { add_core_of = ROOT } 1217 = { add_core_of = ROOT } 1218 = { add_core_of = ROOT } 1219 = { add_core_of = ROOT } 1220 = { add_core_of = ROOT } 1221 = { add_core_of = ROOT } 1222 = { add_core_of = ROOT } 1223 = { add_core_of = ROOT } 1224 = { add_core_of = ROOT } 1225 = { add_core_of = ROOT } 1226 = { add_core_of = ROOT }
+				1042 = { add_core_of = ROOT }
+                news_event = { id = r56.news_event.33 hours = 6 }
+
+                if = {
+                    limit = {
+                        has_dlc = "La Resistance"
+                    }
+                    every_country = {
+                        every_operative = {
+                            limit = {
+                                OR = {
+                                    has_nationality = SCO
+                                    has_nationality = IRE
+                                    has_nationality = NIR
+                                    has_nationality = BRI
+                                    has_nationality = WLS
+                                }
+                                NOT = {
+                                    has_nationality = ROOT
+                                }
+                            }
+                            add_nationality = ROOT
+                        }
+                    }
+                }
+            }
+            123 = { 
+                add_core_of = ROOT 
+                set_state_name = "Cornwall"
+            }
+
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+            hidden_effect = {
+                set_party_name = {
+                    ideology = neutrality
+                    long_name = CEL_UNIFIED_neutrality_party_long
+                    name = CEL_UNIFIED_neutrality_party
+                }
+                set_party_name = {
+                    ideology = democratic
+                    long_name = CEL_UNIFIED_democratic_party_long
+                    name = CEL_UNIFIED_democratic_party
+                }
+                set_party_name = {
+                    ideology = communism
+                    long_name = CEL_UNIFIED_communism_party_long
+                    name = CEL_UNIFIED_communism_party
+                }
+                set_party_name = {
+                    ideology = fascism
+                    long_name = CEL_UNIFIED_fascism_party_long
+                    name = CEL_UNIFIED_fascism_party
+                }                               
+
+            }
+
+        }
+
+        ai_will_do = {
+            factor = 200
+        #   modifier = {
+        #       factor = 0
+        #       is_historical_focus_on = yes
+        #   }
+        }
+    }
+
+    CEL_UNIFIED_integrate_galicia = {
+        icon = generic_form_nation
+
+        allowed = {
+            OR = {
+                original_tag = SCO
+                original_tag = IRE
+                original_tag = NIR
+                original_tag = BRI
+                original_tag = WLS
+            }
+        }
+
+        cost = 50
+
+        available = {
+            is_subject = no
+            # Galicia
+            controls_state = 171
+            171 = { compliance > 40 }
+        }
+
+        visible = {
+            has_cosmetic_tag = CEL_UNIFIED
+        }
+
+        days_remove = 90
+
+        remove_effect = {
+            171 = { add_core_of = ROOT } 2465 = { add_core_of = ROOT } 2466 = { add_core_of = ROOT } 2467 = { add_core_of = ROOT } 2468 = { add_core_of = ROOT } 2469 = { add_core_of = ROOT } 2470 = { add_core_of = ROOT } 2471 = { add_core_of = ROOT } 2472 = { add_core_of = ROOT } 2473 = { add_core_of = ROOT } 2474 = { add_core_of = ROOT } 2475 = { add_core_of = ROOT } 2476 = { add_core_of = ROOT }
+        }
+
+        ai_will_do = {
+            factor = 200
+        #    modifier = {
+        #        factor = 0
+        #        is_historical_focus_on = yes
+        #    }
+        }
+    }
+
+    CEL_UNIFIED_wall_of_steel = {
+        icon = generic_political_discourse
+        fire_only_once = yes
+
+        allowed = {
+            OR = {
+                original_tag = SCO
+                original_tag = IRE
+                original_tag = NIR
+                original_tag = WLS
+            }
+        }
+
+        cost = 25
+
+        visible = {
+            has_cosmetic_tag = CEL_UNIFIED
+            NOT = { original_tag = BRI }
+        }
+
+        complete_effect = {
+        #    BRI = { retire_character = BRI_francois_taldir_jaffrennou }
+        #    ROOT = { recruit_character = BRI_francois_taldir_jaffrennou }
+            #set_nationality is what the wiki recommends but it doesn't work.
+           # BRI_francois_taldir_jaffrennou = {
+           #     set_nationality = ROOT
+           # }
+            every_possible_country = {
+                limit = { has_character = BRI_francois_taldir_jaffrennou }
+                random_character = {
+                    limit = {
+                        is_character = BRI_francois_taldir_jaffrennou
+                    }
+                    set_nationality = ROOT
+                }
+            }
+            set_country_flag = CEL_francois_recruited
+        }
+
+        ai_will_do = {
+            factor = 200
+        }
+    }
+}
+
+#form_turkestan_category = {
+#    form_turkestan = {
+#        icon = generic_form_nation
+#        fire_only_once = yes
+#
+#        allowed = {
+#            OR = {
+#                original_tag = KAZ
+#                original_tag = UZB
+#                original_tag = TMS
+#                original_tag = TAJ
+#                original_tag = KYR
+#                original_tag = TAN
+#                #AND = { #Can't add Sinkiang until a solution is found regarding the political struggle in China
+#                #    original_tag = SIK
+#                #    NOT = {
+#                #        tag = event_target:WTT_current_china_leader
+#                #    }
+#                #}
+#            }
+#        }
+#
+#        available = {
+#            is_subject = no
+#            # Kazakhstan
+#            custom_trigger_tooltip = {
+#                tooltip = form_country_kazakhstan_required_states_tt
+#                all_state = {
+#                    OR = {
+#                        NOT = { is_core_of = KAZ }
+#                        is_controlled_by = ROOT
+#                    }
+#                }
+#            }
+#            # Uzbekistan
+#            custom_trigger_tooltip = {
+#                tooltip = form_country_uzbekistan_required_states_tt
+#                controls_state = 405
+#                controls_state = 585
+#            }
+#            # Turkmenistan
+#            custom_trigger_tooltip = {
+#                tooltip = form_country_turkmenistan_required_states_tt
+#                controls_state = 584
+#            }
+#            # Tajikistan
+#            custom_trigger_tooltip = {
+#                tooltip = form_country_tajikistan_required_states_tt
+#                controls_state = 742
+#            }
+#            # Kyrgyzstan
+#            custom_trigger_tooltip = {
+#                tooltip = form_country_kyrgyzstan_required_states_tt
+#                controls_state = 732
+#            }
+#        }
+#
+#        complete_effect = {
+#            set_cosmetic_tag = TRK_UNITED
+#            hidden_effect = {
+#                every_state = {
+#                    limit = {
+#                        OR = {
+#                            region = 136 #The Great Steppe, contains most of the provinces.
+#                            region = 145 #Sinkiang
+#                            is_core_of = TAN #Tannu Tuva
+#                            is_core_of = KAZ #Kazakhstan
+#                        }
+#                    }
+#                    add_core_of = ROOT
+#                }
+#            }
+#            # Kazakhstan
+#            custom_effect_tooltip = form_country_kazakhstan_coring_states_tt
+#            # Uzbekistan
+#            custom_effect_tooltip = form_country_uzbekistan_coring_states_tt
+#            # Turkmenistan
+#            custom_effect_tooltip = form_country_turkmenistan_coring_states_tt
+#            # Tajikistan
+#            custom_effect_tooltip = form_country_tajikistan_coring_states_tt
+#            # Kyrgyzstan
+#            custom_effect_tooltip = form_country_kyrgyzstan_coring_states_tt
+#            #Uyguristan - Sinkiang
+#            custom_effect_tooltip = form_country_sinkiang_coring_states_tt
+#            654 = { add_core_of = ROOT }
+##            329 = { add_core_of = ROOT }
+#
+#            ROOT = {
+#                add_state_claim = 40
+#                add_state_claim = 570
+#
+#                add_state_claim = 569
+#                add_state_claim = 572
+#                add_state_claim = 582
+#                add_state_claim = 651
+#
+#                add_state_claim = 652
+#                add_state_claim = 251
+#                add_state_claim = 249
+#
+#                add_state_claim = 401
+#                add_state_claim = 236
+#            }
+#            add_ideas = generic_recent_political_unification
+#            add_ideas = generic_recent_army_unification
+#            add_ideas = generic_recent_economic_unification
+#            hidden_effect = {
+#                #news_event = { id = wtt_news.1003 hours = 6 }
+#                #country_event = { id = armenia.28 days = 2 }
+#                set_global_flag = turkestan_formed
+#            }
+#        }
+#
+#        ai_will_do = {
+#            factor = 200
+#            modifier = {
+#                factor = 0
+#                is_historical_focus_on = yes
+#            }
+#        }
+#    }
+#}
+
+form_malayan_confederation_category = {
+	# Form Sumatra
+	form_sumatra = {
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = ATJ
+				original_tag = SSI
+			}
+		}
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 1128
+				state = 1135
+				state = 974
+				state = 672
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 1128
+			controls_state = 1135
+			controls_state = 974
+			controls_state = 672
+		}
+
+		visible = { NOT = { has_global_flag = form_sumatra_flag } }
+		ai_will_do = { base = 200 }
+
+		complete_effect = {
+			set_cosmetic_tag = SMT
+			hidden_effect = { set_global_flag = form_sumatra_flag set_country_flag = hello_i_am_sumatra_now }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+					OR = {
+						state = 1128
+						state = 1135
+						state = 974
+						state = 672
+						state = 909
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	# Form North Borneo
+	form_north_kalimantan = {
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = SAR
+				original_tag = SAB
+				original_tag = BRN
+			}
+		}
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 333
+				state = 1131
+				state = 1014
+				state = 916
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 333
+			controls_state = 1131
+			controls_state = 1014
+			controls_state = 916
+		}
+
+		visible = { NOT = { has_global_flag = form_north_kalimantan_flag } }
+		ai_will_do = { base = 200 }
+
+		complete_effect = {
+			set_cosmetic_tag = NBR
+			hidden_effect = { set_global_flag = form_north_kalimantan_flag set_country_flag = hello_i_am_now_north_borneo }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+					OR = {
+						state = 333
+						state = 1131
+						state = 1014
+						state = 916
+					}
+				}
+				add_core_of = ROOT
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			unlock_decision_tooltip = form_borneo
+		}
+	}
+
+	# Form Borneo
+	form_borneo = {
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = KUT
+				original_tag = POK
+				original_tag = SAR
+				original_tag = SAB
+				original_tag = BRN
+			}
+		}
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 333
+				state = 1131
+				state = 1014
+				state = 916
+				state = 334
+				state = 978
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 333
+			controls_state = 1131
+			controls_state = 1014
+			controls_state = 916
+			controls_state = 334
+			controls_state = 978
+		}
+
+		visible = {
+			OR = {
+				original_tag = KUT
+				original_tag = POK
+				AND = {
+					OR = {
+						original_tag = SAR
+						original_tag = SAB
+						original_tag = BRN
+					}
+					has_country_flag = hello_i_am_now_north_borneo
+				}
+			}
+			NOT = { has_global_flag = form_kalimantan_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = KLM
+			hidden_effect = { set_global_flag = form_kalimantan_flag set_country_flag = hello_i_am_borneo_will_you_be_my_friend }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+					OR = {
+						state = 333
+						state = 1131
+						state = 1014
+						state = 916
+						state = 334
+						state = 978
+						state = 977
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+
+		ai_will_do = { base = 200 }
+	}
+
+	# Form East Indonesia
+	form_east_indonesia = {
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = TML
+				original_tag = WPG
+				original_tag = MLK
+				original_tag = TNE
+				original_tag = GOW
+				original_tag = MNH
+				original_tag = EIS
+				original_tag = BLI
+			}
+		}
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 1127
+				state = 667
+				state = 1142
+				state = 673
+				state = 975
+				state = 668
+				state = 738
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 1127
+			controls_state = 667
+			controls_state = 1142
+			controls_state = 673
+			controls_state = 975
+			controls_state = 668
+			controls_state = 738
+		}
+
+		visible = {
+			OR = {
+				original_tag = TML
+				original_tag = MLK
+				original_tag = TNE
+				original_tag = GOW
+				original_tag = MNH
+				original_tag = EIS
+				original_tag = BLI
+				AND = {
+					original_tag = WPG
+					has_country_flag = hello_i_am_papua_but_big
+				}
+			}
+			NOT = { has_global_flag = form_east_indonesia_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = EIS
+			custom_effect_tooltip = generic_skip_one_line_tt
+			hidden_effect = { set_global_flag = form_east_indonesia_flag set_country_flag = hello_i_am_indonesia_but_eastern }
+			every_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+					OR = {
+						state = 1127
+						state = 667
+						state = 1142
+						state = 721
+						state = 673
+						state = 975
+						state = 668
+						state = 738
+					}
+				}
+				add_core_of = ROOT
+			}
+
+			if = {
+				limit = {
+					OR = {
+						original_tag = MLK
+						original_tag = TNE
+						original_tag = EIS
+						original_tag = BLI
+						original_tag = TML
+						original_tag = MNH
+						original_tag = GOW
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				unlock_decision_tooltip = form_papua
+			}
+		}
+
+		ai_will_do = { base = 200 }
+	}
+
+	# Form Papua
+	form_papua = {
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = WPG
+				original_tag = PNG
+				original_tag = MLK
+				original_tag = TNE
+				original_tag = EIS
+				original_tag = BLI
+				original_tag = TML
+				original_tag = INS
+				original_tag = JVA
+				original_tag = MAL
+				original_tag = SNG
+				original_tag = POK
+				original_tag = KUT
+			}
+		}
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 669
+				state = 1137
+				state = 1096
+				state = 523
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 669
+			controls_state = 1137
+			controls_state = 1096
+			controls_state = 523
+		}
+
+		visible = {
+			if = {
+				limit = {
+					OR = {
+						original_tag = MLK
+						original_tag = TNE
+						original_tag = EIS
+						original_tag = BLI
+						original_tag = TML
+						original_tag = MNH
+						original_tag = GOW
+					}
+				}
+				has_country_flag = hello_i_am_indonesia_but_eastern
+			}
+			if = {
+				limit = { original_tag = INS }
+				669 = { is_core_of = INS }
+				1137 = { is_core_of = INS }
+				has_global_flag = form_majapahit_empire_flag
+			}
+			if = {
+				limit = {
+					OR = {
+						original_tag = MAL
+						original_tag = JVA
+						original_tag = SNG
+						original_tag = SAR
+						original_tag = BRN
+						original_tag = SAB
+						original_tag = POK
+						original_tag = KUT
+					}
+				}
+				has_global_flag = form_majapahit_empire_flag
+			}
+			if = {
+				limit = {
+					OR = {
+						original_tag = WPG
+						original_tag = PNG
+					}
+				}
+				NOT = { has_global_flag = form_papua_flag }
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							original_tag = WPG
+							original_tag = PNG
+						}
+					}
+				}
+				add_stability = -0.075
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			if = {
+				limit = {
+					OR = {
+						original_tag = WPG
+						original_tag = PNG
+					}
+					NOT = {
+						has_global_flag = formed_melanesia_flag
+					}
+				}
+				set_cosmetic_tag = PNG
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = {
+					set_country_flag = hello_i_am_papua_but_big
+					set_global_flag = form_papua_flag
+				}
+			}
+			every_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+					OR = {
+						state = 669
+						state = 1137
+						state = 1096
+						state = 523
+						state = 737
+					}
+				}
+				add_core_of = ROOT
+			}
+			if = {
+				limit = {
+					OR = {
+						original_tag = WPG
+						original_tag = PNG
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				unlock_decision_tooltip = form_east_indonesia
+			}
+		}
+
+		ai_will_do = { base = 200 }
+	}
+}
+
+form_nation_mod_category = {
+	assimilate_chiapas = {
+
+		icon = generic_nationalism
+
+		cost = 25
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		allowed = {
+			OR = {
+				original_tag = GUA
+				original_tag = ELS
+				original_tag = HON
+				original_tag = NIC
+				original_tag = COS
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+                state = 475
+			}
+		}
+
+		available = {
+			has_civil_war = no
+            has_completed_focus = USC_UNIFIED_central_american_unification
+			475 = {
+                compliance > 25
+				is_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+            OR = {
+                has_cosmetic_tag = CRCA
+			    has_cosmetic_tag = USC_UNIFIED
+            }
+            475 = {
+                NOT = {
+					is_core_of = ROOT
+				}
+            }
+		}
+
+        modifier = {
+            political_power_factor = -0.10
+            resistance_damage_to_garrison = 0.05
+            resistance_growth = 0.05
+        }
+
+		remove_effect = {
+			475 = {
+				add_core_of = ROOT
+			} 6017 = {
+				add_core_of = ROOT
+			} 6018 = {
+				add_core_of = ROOT
+			} 6019 = {
+				add_core_of = ROOT
+			} 6020 = {
+				add_core_of = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}		
+	}
+    assimilate_yucatan = {
+
+		icon = generic_nationalism
+
+		cost = 25
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		allowed = {
+			OR = {
+				original_tag = GUA
+				original_tag = ELS
+				original_tag = HON
+				original_tag = NIC
+				original_tag = COS
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+                state = 474
+			}
+		}
+
+		available = {
+			has_civil_war = no
+            has_completed_focus = USC_UNIFIED_central_american_unification
+			474 = {
+                compliance > 25
+				is_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+            OR = {
+                has_cosmetic_tag = CRCA
+                has_cosmetic_tag = USC_UNIFIED
+            }
+            474 = {
+                NOT = {
+					is_core_of = ROOT
+				}
+            }
+		}
+
+        modifier = {
+            political_power_factor = -0.10
+            resistance_damage_to_garrison = 0.05
+            resistance_growth = 0.05
+        }
+
+		remove_effect = {
+			474 = {
+				add_core_of = ROOT
+			} 6014 = {
+				add_core_of = ROOT
+			} 6015 = {
+				add_core_of = ROOT
+			} 6016 = {
+				add_core_of = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}		
+	}
+	assimilate_panama = {
+
+		icon = generic_nationalism
+
+		cost = 35
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		allowed = {
+			OR = {
+				original_tag = GUA
+				original_tag = ELS
+				original_tag = HON
+				original_tag = NIC
+				original_tag = COS
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+                state = 937
+                state = 304
+			}
+		}
+
+		available = {
+			has_civil_war = no
+            has_completed_focus = USC_UNIFIED_central_american_unification
+			937 = {
+                compliance > 25
+				is_controlled_by = ROOT
+			}
+            304 = {
+                compliance > 25
+				is_controlled_by = ROOT
+            }
+		}
+
+		visible = {
+            OR = {
+                has_cosmetic_tag = CRCA
+			    has_cosmetic_tag = USC_UNIFIED
+            }
+            937 = {
+                NOT = {
+					is_core_of = ROOT
+				}
+            }
+            304 = {
+                NOT = {
+					is_core_of = ROOT
+				}
+            }
+		}
+
+        modifier = {
+            political_power_factor = -0.10
+            resistance_damage_to_garrison = 0.05
+            resistance_growth = 0.05
+        }
+
+		remove_effect = {
+			937 = {
+				add_core_of = ROOT
+			} 9332 = {
+				add_core_of = ROOT
+			} 9333 = {
+				add_core_of = ROOT
+			}
+            304 = {
+				add_core_of = ROOT
+			} 3986 = {
+				add_core_of = ROOT
+			} 3987 = {
+				add_core_of = ROOT
+			}
+            685 = {
+				add_core_of = ROOT
+			} 8104 = {
+				add_core_of = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}		
+	}
+
+	integrate_greater_morocco = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = MOR
+		}
+
+		available = {
+			# West Sahara and mauritania
+			controls_state = 699
+			controls_state = 557
+			controls_state = 786
+		}
+
+		visible = {
+			original_tag = MOR
+			NOT = { has_country_flag = country_formed_greater_morocco }
+
+		}
+
+		complete_effect = {
+
+			# Greater morocco
+			699 = { add_core_of = ROOT } 8122 = { add_core_of = ROOT } 8123 = { add_core_of = ROOT } 8124 = { add_core_of = ROOT } 8125 = { add_core_of = ROOT } 8126 = { add_core_of = ROOT }
+			557 = { add_core_of = ROOT } 6715 = { add_core_of = ROOT } 6716 = { add_core_of = ROOT } 6717 = { add_core_of = ROOT } 6718 = { add_core_of = ROOT }
+			786 = { add_core_of = ROOT } 8523 = { add_core_of = ROOT } 8524 = { add_core_of = ROOT } 8525 = { add_core_of = ROOT } 8526 = { add_core_of = ROOT } 8527 = { add_core_of = ROOT } 8528 = { add_core_of = ROOT }
+               add_political_power = 50
+               add_stability = -0.05
+               add_ideas = generic_recent_political_unification
+			add_ideas = generic_recent_army_unification
+			add_ideas = generic_recent_economic_unification
+
+			hidden_effect = {
+				set_country_flag = country_formed_greater_morocco
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+    form_la_plata = {
+        fire_only_once = yes
+        icon = generic_form_nation
+
+        allowed = {
+            OR = {
+                original_tag = BOL
+                original_tag = ARG
+                original_tag = URG
+                original_tag = PAR
+                original_tag = CHL
+            }
+
+        }
+        visible = {
+            if = {
+                limit = {
+                    original_tag = CHL
+                }
+                NOT = { has_country_flag = r56_hide_formables }
+            }
+        }
+        available = { #Argentina, Uruguay, Paraguay
+            ARG = {
+                all_core_state = {
+                    is_controlled_by = ROOT
+                }
+            }
+            URG = {
+                all_core_state = {
+                    is_controlled_by = ROOT
+                }
+            }
+            PAR = {
+                all_core_state = {
+                    is_controlled_by = ROOT
+                }
+            }
+        }
+        complete_effect = {
+            set_cosmetic_tag = PLA
+            if = {
+                limit = {
+                    278 = { is_capital = no }
+                }
+                set_capital = { state = 278 }
+            }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        has_dlc = "La Resistance"
+                    }
+                    every_country = {
+                        every_operative = {
+                            limit = {
+                                OR = {
+                                    has_nationality = BOL
+                                    has_nationality = ARG
+                                    has_nationality = URG
+                                    has_nationality = PAR
+                                    has_nationality = CHL                                    
+                                }
+                                NOT = {
+                                    has_nationality = ROOT
+                                }
+                            }
+                            add_nationality = ROOT
+                        }
+                    }
+                }
+                every_state = { #This has a day of lag, for some reason.
+                    limit = { OR = { is_core_of = ARG is_core_of = PAR is_core_of = URG } }
+                    add_core_of = PREV #ROOT
+                }
+                add_state_core = 506 add_state_core = 6277 add_state_core = 6278 add_state_core = 6279 add_state_core = 6280 add_state_core = 6281
+                news_event = { id = r56.news_event.36 hours = 6 }
+            }
+            add_state_claim = 299 add_state_claim = 3962
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    form_west_african_union = {
+
+        fire_only_once = yes
+
+        icon = generic_form_nation
+
+        allowed = {
+            OR = {
+				tag = MRT
+				tag = GAM
+				tag = MLI
+				tag = GNB
+				tag = GNA
+				tag = SIE
+				tag = LIB
+				tag = IVO
+				tag = VOL
+				tag = GHA
+				tag = TOG
+				tag = DAH
+				tag = NGR
+				tag = NGA
+				tag = BIA
+				tag = SOK # ideally should be able to make a caliphate and core islamic africa
+			}
+        }
+
+        visible = {
+            NOT = {
+                has_cosmetic_tag = ARA_UNIFIED
+                has_cosmetic_tag = MALI_UNITED
+            }
+        }
+
+        available = {
+            is_subject = no
+           	controls_state = 557
+			controls_state = 272
+			controls_state = 701
+			controls_state = 296
+			controls_state = 780
+            controls_state = 899
+            controls_state = 898
+            controls_state = 556
+            controls_state = 700
+            controls_state = 298
+            controls_state = 779
+            controls_state = 778
+            controls_state = 274
+            controls_state = 777
+            controls_state = 776
+            controls_state = 781
+            controls_state = 902
+            controls_state = 558
+            controls_state = 900
+            controls_state = 901
+        }
+
+        highlight_states = {
+            highlight_state_targets = {
+                state = 557
+                state = 272
+                state = 701
+                state = 296
+                state = 780
+                state = 899
+                state = 898
+                state = 556
+                state = 700
+                state = 298
+                state = 779
+                state = 778
+                state = 274
+                state = 777
+                state = 776
+                state = 781
+                state = 902
+                state = 558
+                state = 900
+                state = 901
+            }
+        }
+
+        complete_effect = {
+            set_cosmetic_tag = WAU_UNITED
+            hidden_effect = {
+                if = {
+                    limit = {
+                        has_dlc = "La Resistance"
+                    }
+                    every_country = {
+                        every_operative = {
+                            limit = {
+                                OR = {
+                                    has_nationality = MRT
+                                    has_nationality = GAM
+                                    has_nationality = MLI
+                                    has_nationality = GNB
+                                    has_nationality = GNA
+                                    has_nationality = SIE
+                                    has_nationality = LIB
+                                    has_nationality = IVO
+                                    has_nationality = VOL
+                                    has_nationality = GHA
+                                    has_nationality = TOG
+                                    has_nationality = DAH
+                                    has_nationality = NGR
+                                    has_nationality = NGA                                
+                                }
+                                NOT = {
+                                    has_nationality = ROOT
+                                }
+                            }
+                            add_nationality = ROOT
+                        }
+                    }
+                }
+                every_state = { #This has a day of lag, for some reason.
+                    limit = {
+                        OR = {
+                            state = 557
+                            state = 272
+                            state = 701
+                            state = 296
+                            state = 780
+                            state = 899
+                            state = 898
+                            state = 556
+                            state = 700
+                            state = 298
+                            state = 779
+                            state = 799
+                            state = 778
+                            state = 274
+                            state = 777
+                            state = 776
+                            state = 781
+                            state = 902
+                            state = 558
+                            state = 900
+                            state = 901
+                            state = 786 # Sahara
+                            state = 782 # Sahara
+                            state = 515 # Sahara
+                        }
+                    }
+                    add_core_of = ROOT
+                }
+                news_event = { id = r56.news_event.37 hours = 6 }
+            }
+            add_state_claim = 699 add_state_claim = 8122 add_state_claim = 8123 add_state_claim = 8124 add_state_claim = 8125 add_state_claim = 8126
+            custom_effect_tooltip = form_country_gs_required_coring_states_tt
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+        }
+
+        ai_will_do = {
+            factor = 500
+        }
+    }
+    
+    reform_the_empire_of_mali = {
+
+        fire_only_once = yes
+
+        icon = generic_form_nation
+
+        allowed = {
+           original_tag = MLI
+        }
+
+        visible = {
+            NOT = {
+                has_cosmetic_tag = WAU_UNITED
+            }
+        }
+
+        available = { #
+            is_subject = no
+            has_completed_focus = WAF_continue_expansion
+            controls_state = 898
+            controls_state = 556
+            controls_state = 899
+            controls_state = 272
+            controls_state = 701
+            controls_state = 557
+        }
+
+        highlight_states = {
+            highlight_state_targets = {
+                state = 898
+                state = 556
+                state = 899
+                state = 272
+                state = 701
+                state = 557
+            }
+        }
+
+        complete_effect = {
+            set_cosmetic_tag = MALI_UNITED
+            hidden_effect = {
+                if = {
+                    limit = {
+                        has_dlc = "La Resistance"
+                    }
+                    every_country = {
+                        every_operative = {
+                            limit = {
+                                OR = {
+                                    has_nationality = MLI
+                                    has_nationality = SEN
+                                    has_nationality = GAM
+                                    has_nationality = MRT
+                                }
+                                NOT = {
+                                    has_nationality = ROOT
+                                }
+                            }
+                            add_nationality = ROOT
+                        }
+                    }
+                }
+                every_state = { #This has a day of lag, for some reason.
+                    limit = {
+                        OR = {
+                            state = 898
+                            state = 556
+                            state = 899
+                            state = 272
+                            state = 701
+                            state = 557
+                        }
+                    }
+                    add_core_of = ROOT
+                }
+                news_event = { id = r56.news_event.37 hours = 6 }
+            }
+            add_state_claim = 699 add_state_claim = 8122 add_state_claim = 8123 add_state_claim = 8124 add_state_claim = 8125 add_state_claim = 8126
+            custom_effect_tooltip = form_country_gs_required_coring_states_tt
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+#    form_east_african_union = { # mmh be sure that BBA east african union works
+#        fire_only_once = yes
+#        icon = generic_form_nation
+#
+#        allowed = {
+#            OR = {
+#                original_tag = UGA
+#                original_tag = TZN
+#                original_tag = KEN
+#                original_tag = BRD
+#                original_tag = RWA
+#                original_tag = SSU
+#            }
+#
+#        }
+#        visible = {
+#
+#        }
+#        available = { #Argentina, Uruguay, Paraguay
+#            all_state = {
+#                OR = {
+#                    NOT = { is_core_of = UGA }
+#                    is_controlled_by = ROOT
+#                }
+#            }
+#            all_state = {
+#                OR = {
+#                    NOT = { is_core_of = TZN }
+#                    is_controlled_by = ROOT
+#                }
+#            }
+#            all_state = {
+#                OR = {
+#                    NOT = { is_core_of = KEN }
+#                    is_controlled_by = ROOT
+#                }
+#            }
+#            all_state = {
+#                OR = {
+#                    NOT = { is_core_of = BRD }
+#                    is_controlled_by = ROOT
+#                }
+#            }
+#            all_state = {
+#                OR = {
+#                    NOT = { is_core_of = RWA }
+#                    is_controlled_by = ROOT
+#                }
+#            }
+#        }
+#        complete_effect = {
+#            set_cosmetic_tag = EAU_UNITED
+#            #if = {
+#            #    limit = {
+#            #        278 = { is_capital = no }
+#            #    }
+#            #    set_capital = 278
+#            #}
+#            hidden_effect = {
+#                every_state = { #This has a day of lag, for some reason.
+#                    limit = {
+#                        OR = {
+#                            is_core_of = UGA
+#                            is_core_of = TZN
+#                            is_core_of = KEN
+#                            is_core_of = BRD
+#                            is_core_of = RWA
+#                        }
+#                    }
+#                    add_core_of = PREV #ROOT
+#                }
+#                news_event = { id = r56.news_event.37 hours = 6 }
+#            }
+#            add_ideas = generic_recent_political_unification
+#            add_ideas = generic_recent_army_unification
+#            add_ideas = generic_recent_economic_unification
+#        }
+#
+#        ai_will_do = {
+#            factor = 50
+#        }
+#    }
+
+    reunite_germany = {
+        days_re_enable = 0
+
+        allowed = {
+            OR = {
+                original_tag = WGR
+                original_tag = DDR
+                original_tag = SAX
+                original_tag = HAN
+                original_tag = MEK
+                original_tag = SHL
+                original_tag = WUR
+                original_tag = PRE
+                original_tag = BAY
+                original_tag = BAD
+                original_tag = DNZ
+                original_tag = SAA
+                original_tag = VGE
+				original_tag = RHI
+				original_tag = THU
+            }
+        }
+        visible = {
+            NOT = {
+                country_exists = GER
+            }
+        }
+        fire_only_once = yes
+        available = {
+            is_subject = no
+            42 = { is_controlled_by = ROOT }
+            1053 = { is_controlled_by = ROOT }
+            50 = { is_controlled_by = ROOT }
+            51 = { is_controlled_by = ROOT }
+            52 = { is_controlled_by = ROOT }
+            53 = { is_controlled_by = ROOT }
+            54 = { is_controlled_by = ROOT }
+            55 = { is_controlled_by = ROOT }
+            56 = { is_controlled_by = ROOT }
+            57 = { is_controlled_by = ROOT }
+            58 = { is_controlled_by = ROOT }
+            998 = { is_controlled_by = ROOT }
+            59 = { is_controlled_by = ROOT }
+            989 = { is_controlled_by = ROOT }
+            922 = { is_controlled_by = ROOT }
+            923 = { is_controlled_by = ROOT }
+            #DDR IRL
+            60 = { is_controlled_by = ROOT }
+            61 = { is_controlled_by = ROOT }
+            62 = { is_controlled_by = ROOT }
+            64 = { is_controlled_by = ROOT }
+            65 = { is_controlled_by = ROOT }
+            #119 = { is_controlled_by = ROOT }
+        }
+        icon = generic_form_nation
+        complete_effect = { #Region 7: 42, 50, 51, 52, 53, 54, 55, 989, 922, 923
+            every_state = {
+                limit = { region = 7 }
+                add_core_of = ROOT
+            }
+
+            56 = { add_core_of = ROOT } 1587 = { add_core_of = ROOT } 1588 = { add_core_of = ROOT } 1589 = { add_core_of = ROOT } 1590 = { add_core_of = ROOT } 1591 = { add_core_of = ROOT } 1592 = { add_core_of = ROOT } 1593 = { add_core_of = ROOT } 1594 = { add_core_of = ROOT } 1595 = { add_core_of = ROOT }
+            57 = { add_core_of = ROOT } 1596 = { add_core_of = ROOT } 1597 = { add_core_of = ROOT } 1598 = { add_core_of = ROOT } 1599 = { add_core_of = ROOT } 1600 = { add_core_of = ROOT } 1601 = { add_core_of = ROOT } 1602 = { add_core_of = ROOT } 1603 = { add_core_of = ROOT } 1604 = { add_core_of = ROOT }
+            58 = { add_core_of = ROOT } 1605 = { add_core_of = ROOT } 1606 = { add_core_of = ROOT } 1607 = { add_core_of = ROOT } 1608 = { add_core_of = ROOT } 1609 = { add_core_of = ROOT }
+            998 = { add_core_of = ROOT } 9594 = { add_core_of = ROOT } 9595 = { add_core_of = ROOT }
+            59 = { add_core_of = ROOT } 1610 = { add_core_of = ROOT } 1611 = { add_core_of = ROOT } 1612 = { add_core_of = ROOT } 1613 = { add_core_of = ROOT } 1614 = { add_core_of = ROOT } 1615 = { add_core_of = ROOT } 1616 = { add_core_of = ROOT } 1617 = { add_core_of = ROOT } 1618 = { add_core_of = ROOT } 1619 = { add_core_of = ROOT } 1620 = { add_core_of = ROOT } 1621 = { add_core_of = ROOT } 1622 = { add_core_of = ROOT } 1623 = { add_core_of = ROOT } 1624 = { add_core_of = ROOT } 1625 = { add_core_of = ROOT } 1626 = { add_core_of = ROOT }
+            1053 = { add_core_of = ROOT } 9906 = { add_core_of = ROOT }
+
+            60 = { add_core_of = ROOT } 1627 = { add_core_of = ROOT } 1628 = { add_core_of = ROOT } 1629 = { add_core_of = ROOT } 1630 = { add_core_of = ROOT } 1631 = { add_core_of = ROOT } 1632 = { add_core_of = ROOT } 1633 = { add_core_of = ROOT } 1634 = { add_core_of = ROOT }
+            61 = { add_core_of = ROOT } 1635 = { add_core_of = ROOT } 1636 = { add_core_of = ROOT } 1637 = { add_core_of = ROOT } 1638 = { add_core_of = ROOT } 1639 = { add_core_of = ROOT }
+            62 = { add_core_of = ROOT } 1640 = { add_core_of = ROOT } 1641 = { add_core_of = ROOT } 1642 = { add_core_of = ROOT } 1643 = { add_core_of = ROOT } 1644 = { add_core_of = ROOT } 1645 = { add_core_of = ROOT }
+            64 = { add_core_of = ROOT } 1659 = { add_core_of = ROOT } 1660 = { add_core_of = ROOT } 1661 = { add_core_of = ROOT } 1662 = { add_core_of = ROOT } 1663 = { add_core_of = ROOT } 1664 = { add_core_of = ROOT } 1665 = { add_core_of = ROOT } 1666 = { add_core_of = ROOT } 1667 = { add_core_of = ROOT } 1668 = { add_core_of = ROOT } 1669 = { add_core_of = ROOT } 1670 = { add_core_of = ROOT } 1671 = { add_core_of = ROOT } 1672 = { add_core_of = ROOT } 1673 = { add_core_of = ROOT }
+            65 = { add_core_of = ROOT } 1674 = { add_core_of = ROOT } 1675 = { add_core_of = ROOT } 1676 = { add_core_of = ROOT } 1677 = { add_core_of = ROOT } 1678 = { add_core_of = ROOT } 1679 = { add_core_of = ROOT } 1680 = { add_core_of = ROOT } 1681 = { add_core_of = ROOT } 1682 = { add_core_of = ROOT } 1683 = { add_core_of = ROOT }
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+            set_country_flag = reunited_germany
+            set_global_flag = global_reunited_germany
+            set_cosmetic_tag = GER_REUNITED
+            set_capital = { state = 64 }
+            hidden_effect = {
+                news_event = { id = r56.news_event.39 hours = 6 }
+
+                if = {
+                    limit = {
+                        has_dlc = "La Resistance"
+                    }
+                    every_country = {
+                        every_operative = {
+                            limit = {
+                                OR = {
+
+                                    has_nationality = WGR
+                                    has_nationality = DDR
+                                    has_nationality = SAX
+                                    has_nationality = HAN
+                                    has_nationality = MEK
+                                    has_nationality = SHL
+                                    has_nationality = WUR
+                                    has_nationality = PRE
+                                    has_nationality = BAY
+                                    has_nationality = BAD
+                                    has_nationality = DNZ
+                                    has_nationality = VGE
+									has_nationality = RHI
+									has_nationality = THU
+                                }
+                                NOT = {
+                                    has_nationality = ROOT
+                                }
+                            }
+                            add_nationality = ROOT
+                        }
+                    }
+                }
+
+            }
+        }
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    reintegrate_lands_beyond_the_oder_neisse_line = {
+        days_re_enable = 0
+
+        allowed = {
+            OR = {
+                original_tag = WGR
+                original_tag = SAX
+                original_tag = HAN
+                original_tag = MEK
+                original_tag = SHL
+                original_tag = WUR
+                original_tag = BAY
+                original_tag = BAD
+                original_tag = DNZ
+				original_tag = RHI
+				original_tag = THU		
+            }
+        }
+        visible = { has_country_flag = reunited_germany }
+        fire_only_once = yes
+        available = {
+            is_subject = no
+            63 = { is_controlled_by = ROOT }
+            66 = { is_controlled_by = ROOT }
+            67 = { is_controlled_by = ROOT }
+            68 = { is_controlled_by = ROOT }
+            5 = { is_controlled_by = ROOT }
+            763 = { is_controlled_by = ROOT }
+        }
+        icon = generic_form_nation
+        complete_effect = {
+            every_state = {
+                limit = { region = 8 NOT = { is_core_of = ROOT } }
+                add_core_of = ROOT
+            }
+            5 = { add_core_of = ROOT } 1163 = { add_core_of = ROOT } 1164 = { add_core_of = ROOT } 1165 = { add_core_of = ROOT } 1166 = { add_core_of = ROOT } 1167 = { add_core_of = ROOT } 1168 = { add_core_of = ROOT } 1169 = { add_core_of = ROOT } 1170 = { add_core_of = ROOT } 1171 = { add_core_of = ROOT } 1172 = { add_core_of = ROOT }
+            763 = { add_core_of = ROOT } 8435 = { add_core_of = ROOT } 8436 = { add_core_of = ROOT } 8437 = { add_core_of = ROOT } 8438 = { add_core_of = ROOT } 8439 = { add_core_of = ROOT }
+        }
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+#	DNZ_join_germany = { #Should work but somehow when Germany gains Danzig they Gdynia automatically, check r56_on_action on state control change
+#
+#		icon = ger_reichskommissariats
+#
+#		allowed = {
+#			tag = DNZ
+#		}
+#
+#		available = {
+#            AND = {
+#                GER = {
+#                    has_government = ROOT
+#                    OR = {
+#                        controls_state = 807
+#                        controls_state = 763
+#                    }
+#                    is_puppet = no
+#                }
+#                OR = {
+#                    is_puppet = no
+#                    is_puppet_of = GER
+#                    AND = {
+#                        is_puppet = yes
+#                        OVERLORD = {
+#                            has_war_with = GER
+#                        }
+#                    }
+#                }
+#            }
+#
+#
+#		}
+#        cost = 20
+#		visible = {
+#			tag = DNZ
+#		}
+#		days_remove = 25
+#		complete_effect = {
+#
+#		}
+#
+#		remove_effect = {
+#
+#            POL = { country_event = { id = danzig.6 hours = 1 } }
+#
+#            GER = {
+#                if = {
+#                    limit = {
+#                        DNZ = {
+#                            owns_state = 85
+#                        }
+#
+#                    }
+#                    transfer_state = 85
+#                    85 = {	add_core_of = GER }
+#                }
+#                if = {
+#                    limit = {
+#                        DNZ = {
+#                            owns_state = 807
+#                        }
+#                    }
+#                    transfer_state = 807
+#                    807 = {	add_core_of = GER }
+#                }
+#			}
+#		}
+#
+#		ai_will_do = {
+#			factor = 200
+#		}
+#	}
+    form_idel_ural = {
+        icon = generic_form_nation
+        fire_only_once = yes
+        allowed = { original_tag = TAT }
+
+        available = {
+            is_subject = no
+            controls_state = 652
+            controls_state = 251
+            controls_state = 651
+            controls_state = 582
+            controls_state = 401
+        }
+
+        complete_effect = {
+            652 = { add_core_of = ROOT } 7723 = { add_core_of = ROOT } 7724 = { add_core_of = ROOT } 7725 = { add_core_of = ROOT } 7726 = { add_core_of = ROOT } 7727 = { add_core_of = ROOT } 7728 = { add_core_of = ROOT } 7729 = { add_core_of = ROOT } 7730 = { add_core_of = ROOT } 7731 = { add_core_of = ROOT } 7732 = { add_core_of = ROOT } 7733 = { add_core_of = ROOT } 7734 = { add_core_of = ROOT } 7735 = { add_core_of = ROOT } 7736 = { add_core_of = ROOT } 7737 = { add_core_of = ROOT } 7738 = { add_core_of = ROOT } 7739 = { add_core_of = ROOT } 7740 = { add_core_of = ROOT } 7741 = { add_core_of = ROOT } 7742 = { add_core_of = ROOT } 7743 = { add_core_of = ROOT } 7744 = { add_core_of = ROOT } 7745 = { add_core_of = ROOT } 7746 = { add_core_of = ROOT }
+            251 = { add_core_of = ROOT } 3389 = { add_core_of = ROOT } 3390 = { add_core_of = ROOT } 3391 = { add_core_of = ROOT } 3392 = { add_core_of = ROOT } 3393 = { add_core_of = ROOT } 3394 = { add_core_of = ROOT } 3395 = { add_core_of = ROOT } 3396 = { add_core_of = ROOT } 3397 = { add_core_of = ROOT } 3398 = { add_core_of = ROOT } 3399 = { add_core_of = ROOT } 3400 = { add_core_of = ROOT } 3401 = { add_core_of = ROOT } 3402 = { add_core_of = ROOT } 3403 = { add_core_of = ROOT } 3404 = { add_core_of = ROOT } 3405 = { add_core_of = ROOT } 3406 = { add_core_of = ROOT }
+            651 = { add_core_of = ROOT } 7703 = { add_core_of = ROOT } 7704 = { add_core_of = ROOT } 7705 = { add_core_of = ROOT } 7706 = { add_core_of = ROOT } 7707 = { add_core_of = ROOT } 7708 = { add_core_of = ROOT } 7709 = { add_core_of = ROOT } 7710 = { add_core_of = ROOT } 7711 = { add_core_of = ROOT } 7712 = { add_core_of = ROOT } 7713 = { add_core_of = ROOT } 7714 = { add_core_of = ROOT } 7715 = { add_core_of = ROOT } 7716 = { add_core_of = ROOT } 7717 = { add_core_of = ROOT } 7718 = { add_core_of = ROOT } 7719 = { add_core_of = ROOT } 7720 = { add_core_of = ROOT } 7721 = { add_core_of = ROOT } 7722 = { add_core_of = ROOT }
+            582 = { add_core_of = ROOT } 7047 = { add_core_of = ROOT } 7048 = { add_core_of = ROOT } 7049 = { add_core_of = ROOT } 7050 = { add_core_of = ROOT } 7051 = { add_core_of = ROOT } 7052 = { add_core_of = ROOT } 7053 = { add_core_of = ROOT } 7054 = { add_core_of = ROOT } 7055 = { add_core_of = ROOT } 7056 = { add_core_of = ROOT } 7057 = { add_core_of = ROOT } 7058 = { add_core_of = ROOT } 7059 = { add_core_of = ROOT } 7060 = { add_core_of = ROOT } 7061 = { add_core_of = ROOT } 7062 = { add_core_of = ROOT }
+            401 = { add_core_of = ROOT } 5208 = { add_core_of = ROOT } 5209 = { add_core_of = ROOT } 5210 = { add_core_of = ROOT } 5211 = { add_core_of = ROOT } 5212 = { add_core_of = ROOT } 5213 = { add_core_of = ROOT } 5214 = { add_core_of = ROOT } 5215 = { add_core_of = ROOT } 5216 = { add_core_of = ROOT } 5217 = { add_core_of = ROOT } 5218 = { add_core_of = ROOT } 5219 = { add_core_of = ROOT } 5220 = { add_core_of = ROOT } 5221 = { add_core_of = ROOT } 5222 = { add_core_of = ROOT } 5223 = { add_core_of = ROOT }
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+            set_country_flag = reunited_idel_ural
+            set_cosmetic_tag = IDEL_URAL
+
+        }
+
+        ai_will_do = {
+            factor = 200
+        }
+    }
+
+
+    form_sardinia_piedmont = {
+        icon = generic_form_nation
+        fire_only_once = yes
+        allowed = { original_tag = SAD }
+
+        available = {
+            is_subject = no
+            controls_state = 114
+            controls_state = 158
+        }
+
+        visible = {
+            NOT = {
+                has_cosmetic_tag = ITA_REBORN_SAD
+            }
+        }
+
+        complete_effect = {
+            158 = { add_core_of = ROOT } 2348 = { add_core_of = ROOT } 2349 = { add_core_of = ROOT } 2350 = { add_core_of = ROOT } 2351 = { add_core_of = ROOT } 2352 = { add_core_of = ROOT } 2353 = { add_core_of = ROOT } 2354 = { add_core_of = ROOT } 2355 = { add_core_of = ROOT } 2356 = { add_core_of = ROOT } 2357 = { add_core_of = ROOT } 2358 = { add_core_of = ROOT } 2359 = { add_core_of = ROOT } 2360 = { add_core_of = ROOT } 2361 = { add_core_of = ROOT } 2362 = { add_core_of = ROOT } 2363 = { add_core_of = ROOT }
+
+            set_country_flag = formed_sardinia_piedmont
+            set_cosmetic_tag = SAD_PIEDMONT
+        }
+
+        ai_will_do = {
+            factor = 200
+        }
+    }
+
+	reunite_italy = {
+
+		icon = generic_form_nation
+
+		allowed = {
+
+			OR = {
+                original_tag = SCI
+                original_tag = SAD
+                original_tag = VNZ
+                original_tag = NAP
+                original_tag = TTS
+                original_tag = TOS
+                original_tag = LBV
+                original_tag = PAP
+			}
+		}
+
+		available = {
+			is_subject = no
+			NOT = {
+				has_idea = generic_recent_political_unification
+				has_idea = generic_recent_army_unification
+				has_idea = generic_recent_economic_unification
+			}
+			# Italy
+			custom_trigger_tooltip = {
+				tooltip = form_eu_italy_required_states_tt
+				controls_state = 158
+				controls_state = 159
+				controls_state = 39
+				controls_state = 160
+				controls_state = 161
+				controls_state = 162
+				controls_state = 157
+				controls_state = 2
+				controls_state = 117
+				controls_state = 114
+				controls_state = 156
+				controls_state = 115
+				controls_state = 736
+				controls_state = 163
+            }
+            NOT = {
+                country_exists = ITA
+            }
+		}
+
+        fire_only_once = yes
+
+		visible = {
+
+
+		}
+
+		complete_effect = {
+			# Italy
+			custom_effect_tooltip = form_eu_italy_coring_states_tt
+			hidden_effect = {
+				158 = { add_core_of = ROOT } 2348 = { add_core_of = ROOT } 2349 = { add_core_of = ROOT } 2350 = { add_core_of = ROOT } 2351 = { add_core_of = ROOT } 2352 = { add_core_of = ROOT } 2353 = { add_core_of = ROOT } 2354 = { add_core_of = ROOT } 2355 = { add_core_of = ROOT } 2356 = { add_core_of = ROOT } 2357 = { add_core_of = ROOT } 2358 = { add_core_of = ROOT } 2359 = { add_core_of = ROOT } 2360 = { add_core_of = ROOT } 2361 = { add_core_of = ROOT } 2362 = { add_core_of = ROOT } 2363 = { add_core_of = ROOT }
+				159 = { add_core_of = ROOT } 2364 = { add_core_of = ROOT } 2365 = { add_core_of = ROOT } 2366 = { add_core_of = ROOT } 2367 = { add_core_of = ROOT } 2368 = { add_core_of = ROOT } 2369 = { add_core_of = ROOT } 2370 = { add_core_of = ROOT } 2371 = { add_core_of = ROOT } 2372 = { add_core_of = ROOT }
+				39 = { add_core_of = ROOT } 1444 = { add_core_of = ROOT } 1445 = { add_core_of = ROOT } 1446 = { add_core_of = ROOT } 1447 = { add_core_of = ROOT }
+				160 = { add_core_of = ROOT } 2373 = { add_core_of = ROOT } 2374 = { add_core_of = ROOT } 2375 = { add_core_of = ROOT }
+				161 = { add_core_of = ROOT } 2376 = { add_core_of = ROOT } 2377 = { add_core_of = ROOT } 2378 = { add_core_of = ROOT } 2379 = { add_core_of = ROOT } 2380 = { add_core_of = ROOT } 2381 = { add_core_of = ROOT } 2382 = { add_core_of = ROOT } 2383 = { add_core_of = ROOT }
+				162 = { add_core_of = ROOT } 2384 = { add_core_of = ROOT } 2385 = { add_core_of = ROOT } 2386 = { add_core_of = ROOT } 2387 = { add_core_of = ROOT } 2388 = { add_core_of = ROOT } 2389 = { add_core_of = ROOT } 2390 = { add_core_of = ROOT } 2391 = { add_core_of = ROOT } 2392 = { add_core_of = ROOT } 2393 = { add_core_of = ROOT }
+				157 = { add_core_of = ROOT } 2345 = { add_core_of = ROOT } 2346 = { add_core_of = ROOT } 2347 = { add_core_of = ROOT }
+				2 = { add_core_of = ROOT } 1146 = { add_core_of = ROOT } 1147 = { add_core_of = ROOT } 1148 = { add_core_of = ROOT } 1149 = { add_core_of = ROOT } 1150 = { add_core_of = ROOT } 1151 = { add_core_of = ROOT }
+				117 = { add_core_of = ROOT } 2010 = { add_core_of = ROOT } 2011 = { add_core_of = ROOT } 2012 = { add_core_of = ROOT } 2013 = { add_core_of = ROOT } 2014 = { add_core_of = ROOT } 2015 = { add_core_of = ROOT } 2016 = { add_core_of = ROOT } 2017 = { add_core_of = ROOT }
+				156 = { add_core_of = ROOT } 2341 = { add_core_of = ROOT } 2342 = { add_core_of = ROOT } 2343 = { add_core_of = ROOT } 2344 = { add_core_of = ROOT }
+				115 = { add_core_of = ROOT } 2001 = { add_core_of = ROOT } 2002 = { add_core_of = ROOT } 2003 = { add_core_of = ROOT } 2004 = { add_core_of = ROOT } 2005 = { add_core_of = ROOT } 2006 = { add_core_of = ROOT } 2007 = { add_core_of = ROOT } 2008 = { add_core_of = ROOT } 2009 = { add_core_of = ROOT }
+				736 = { add_core_of = ROOT } 8266 = { add_core_of = ROOT }
+				163 = { add_core_of = ROOT }
+				114 = { add_core_of = ROOT } 1994 = { add_core_of = ROOT } 1995 = { add_core_of = ROOT } 1996 = { add_core_of = ROOT } 1997 = { add_core_of = ROOT } 1998 = { add_core_of = ROOT } 1999 = { add_core_of = ROOT } 2000 = { add_core_of = ROOT }
+				912 = { add_core_of = ROOT } 9186 = { add_core_of = ROOT } 9187 = { add_core_of = ROOT } 9188 = { add_core_of = ROOT } 9189 = { add_core_of = ROOT }
+				911 = { add_core_of = ROOT } 9185 = { add_core_of = ROOT }
+        850 = { add_core_of = ROOT } 8868 = { add_core_of = ROOT }				
+				set_global_flag = italy_reborn
+            }
+            if = {
+                limit = {
+                    original_tag = NAP
+                }
+                set_cosmetic_tag = ITA_REBORN_NAP
+            }
+            if = {
+                limit = {
+                    original_tag = SAD
+                }
+                set_cosmetic_tag = ITA_REBORN_SAD
+            }
+            if = {
+                limit = {
+                    original_tag = SCI
+                }
+                set_cosmetic_tag = ITA_REBORN_SCI
+            }
+            if = {
+                limit = {
+                    original_tag = VNZ
+                }
+                set_cosmetic_tag = ITA_REBORN_VNZ
+            }
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+    unite_the_cossack_hosts = {
+        icon = generic_form_nation
+        fire_only_once = yes
+        allowed = {
+            OR = {
+                original_tag = DON
+                original_tag = KUB
+            }
+        }
+        visible = {
+            NOT = {
+                has_cosmetic_tag = COSSACKS_UNITED
+            }
+        }
+        available = {
+        #   is_subject = no
+            controls_state = 218
+            controls_state = 245
+            controls_state = 265
+            controls_state = 217
+            controls_state = 238
+
+            controls_state = 234
+            controls_state = 235
+            controls_state = 233
+        #    controls_state = 232
+        }
+
+        complete_effect = {
+            218 = { add_core_of = ROOT } 2893 = { add_core_of = ROOT } 2894 = { add_core_of = ROOT } 2895 = { add_core_of = ROOT } 2896 = { add_core_of = ROOT } 2897 = { add_core_of = ROOT } 2898 = { add_core_of = ROOT } 2899 = { add_core_of = ROOT }
+            245 = { add_core_of = ROOT } 3264 = { add_core_of = ROOT } 3265 = { add_core_of = ROOT } 3266 = { add_core_of = ROOT } 3267 = { add_core_of = ROOT } 3268 = { add_core_of = ROOT } 3269 = { add_core_of = ROOT } 3270 = { add_core_of = ROOT } 3271 = { add_core_of = ROOT } 3272 = { add_core_of = ROOT } 3273 = { add_core_of = ROOT } 3274 = { add_core_of = ROOT } 3275 = { add_core_of = ROOT } 3276 = { add_core_of = ROOT } 3277 = { add_core_of = ROOT } 3278 = { add_core_of = ROOT } 3279 = { add_core_of = ROOT } 3280 = { add_core_of = ROOT } 3281 = { add_core_of = ROOT }
+            265 = { add_core_of = ROOT } 3663 = { add_core_of = ROOT } 3664 = { add_core_of = ROOT } 3665 = { add_core_of = ROOT } 3666 = { add_core_of = ROOT } 3667 = { add_core_of = ROOT } 3668 = { add_core_of = ROOT } 3669 = { add_core_of = ROOT } 3670 = { add_core_of = ROOT } 3671 = { add_core_of = ROOT } 3672 = { add_core_of = ROOT } 3673 = { add_core_of = ROOT } 3674 = { add_core_of = ROOT } 3675 = { add_core_of = ROOT } 3676 = { add_core_of = ROOT } 3677 = { add_core_of = ROOT } 3678 = { add_core_of = ROOT } 3679 = { add_core_of = ROOT } 3680 = { add_core_of = ROOT } 3681 = { add_core_of = ROOT }
+            217 = { add_core_of = ROOT } 2879 = { add_core_of = ROOT } 2880 = { add_core_of = ROOT } 2881 = { add_core_of = ROOT } 2882 = { add_core_of = ROOT } 2883 = { add_core_of = ROOT } 2884 = { add_core_of = ROOT } 2885 = { add_core_of = ROOT } 2886 = { add_core_of = ROOT } 2887 = { add_core_of = ROOT } 2888 = { add_core_of = ROOT } 2889 = { add_core_of = ROOT } 2890 = { add_core_of = ROOT } 2891 = { add_core_of = ROOT } 2892 = { add_core_of = ROOT }
+            238 = { add_core_of = ROOT } 3171 = { add_core_of = ROOT } 3172 = { add_core_of = ROOT } 3173 = { add_core_of = ROOT } 3174 = { add_core_of = ROOT } 3175 = { add_core_of = ROOT } 3176 = { add_core_of = ROOT } 3177 = { add_core_of = ROOT } 3178 = { add_core_of = ROOT } 3179 = { add_core_of = ROOT } 3180 = { add_core_of = ROOT } 3181 = { add_core_of = ROOT } 3182 = { add_core_of = ROOT } 3183 = { add_core_of = ROOT } 3184 = { add_core_of = ROOT } 3185 = { add_core_of = ROOT } 3186 = { add_core_of = ROOT }
+
+            234 = { add_core_of = ROOT } 3085 = { add_core_of = ROOT } 3086 = { add_core_of = ROOT } 3087 = { add_core_of = ROOT } 3088 = { add_core_of = ROOT } 3089 = { add_core_of = ROOT } 3090 = { add_core_of = ROOT } 3091 = { add_core_of = ROOT } 3092 = { add_core_of = ROOT } 3093 = { add_core_of = ROOT } 3094 = { add_core_of = ROOT } 3095 = { add_core_of = ROOT } 3096 = { add_core_of = ROOT } 3097 = { add_core_of = ROOT } 3098 = { add_core_of = ROOT } 3099 = { add_core_of = ROOT } 3100 = { add_core_of = ROOT } 3101 = { add_core_of = ROOT } 3102 = { add_core_of = ROOT } 3103 = { add_core_of = ROOT } 3104 = { add_core_of = ROOT } 3105 = { add_core_of = ROOT } 3106 = { add_core_of = ROOT } 3107 = { add_core_of = ROOT } 3108 = { add_core_of = ROOT } 3109 = { add_core_of = ROOT }
+            233 = { add_core_of = ROOT } 3079 = { add_core_of = ROOT } 3080 = { add_core_of = ROOT } 3081 = { add_core_of = ROOT } 3082 = { add_core_of = ROOT } 3083 = { add_core_of = ROOT } 3084 = { add_core_of = ROOT }
+            235 = { add_core_of = ROOT } 3110 = { add_core_of = ROOT } 3111 = { add_core_of = ROOT } 3112 = { add_core_of = ROOT } 3113 = { add_core_of = ROOT } 3114 = { add_core_of = ROOT } 3115 = { add_core_of = ROOT } 3116 = { add_core_of = ROOT } 3117 = { add_core_of = ROOT } 3118 = { add_core_of = ROOT } 3119 = { add_core_of = ROOT } 3120 = { add_core_of = ROOT } 3121 = { add_core_of = ROOT } 3122 = { add_core_of = ROOT } 3123 = { add_core_of = ROOT } 3124 = { add_core_of = ROOT } 3125 = { add_core_of = ROOT } 3126 = { add_core_of = ROOT } 3127 = { add_core_of = ROOT } 3128 = { add_core_of = ROOT } 3129 = { add_core_of = ROOT }
+        #    232 = { add_core_of = ROOT }
+
+            set_cosmetic_tag = COSSACKS_UNITED
+
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+            set_country_flag = cossacks_united
+        }
+
+        ai_will_do = {
+            factor = 200
+        }
+    }
+
+    form_a_dravidian_state = { # Revise those cores slightly in the future. Is Goa relevant? Should Andhra 424 be included?
+        # Dravidar Kazhagam leader of the Dravidian unification movement as part of the Justice party in India - soc dem.
+        # S. P. Adithanar was in Singapore before 1942 but was clearly militant later in life. Closest thing to a fascist?
+        icon = generic_form_nation
+        fire_only_once = yes
+        allowed = { 
+			OR = {
+				original_tag = SRL 
+				original_tag = RAS
+				original_tag = MYS
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+                state = 422
+				state = 423
+				state = 424
+				state = 425
+				state = 1098
+			}
+		}
+        available = {
+            is_subject = no
+            422 = {
+                is_fully_controlled_by = ROOT
+            }
+            423 = {
+                is_fully_controlled_by = ROOT
+            }
+            424 = {
+                is_fully_controlled_by = ROOT
+            }
+            425 = {
+                is_fully_controlled_by = ROOT
+            }
+            1098 = {
+                is_fully_controlled_by = ROOT
+            }
+        }
+
+        complete_effect = {
+            320 = { add_core_of = ROOT }
+            #321 = { add_core_of = ROOT }
+            422 = { add_core_of = ROOT } 5462 = { add_core_of = ROOT } 5463 = { add_core_of = ROOT } 5464 = { add_core_of = ROOT } 5465 = { add_core_of = ROOT } 5466 = { add_core_of = ROOT } 5467 = { add_core_of = ROOT } 5468 = { add_core_of = ROOT }
+            423 = { add_core_of = ROOT } 5469 = { add_core_of = ROOT } 5470 = { add_core_of = ROOT } 5471 = { add_core_of = ROOT } 5472 = { add_core_of = ROOT } 5473 = { add_core_of = ROOT } 5474 = { add_core_of = ROOT } 5475 = { add_core_of = ROOT } 5476 = { add_core_of = ROOT } 5477 = { add_core_of = ROOT } 5478 = { add_core_of = ROOT } 5479 = { add_core_of = ROOT } 5480 = { add_core_of = ROOT } 5481 = { add_core_of = ROOT } 5482 = { add_core_of = ROOT } 5483 = { add_core_of = ROOT } 5484 = { add_core_of = ROOT } 5485 = { add_core_of = ROOT } 5486 = { add_core_of = ROOT } 5487 = { add_core_of = ROOT } 5488 = { add_core_of = ROOT } 5489 = { add_core_of = ROOT }
+            424 = { add_core_of = ROOT } 5490 = { add_core_of = ROOT } 5491 = { add_core_of = ROOT } 5492 = { add_core_of = ROOT } 5493 = { add_core_of = ROOT } 5494 = { add_core_of = ROOT } 5495 = { add_core_of = ROOT } 5496 = { add_core_of = ROOT } 5497 = { add_core_of = ROOT } 5498 = { add_core_of = ROOT } 5499 = { add_core_of = ROOT } 5500 = { add_core_of = ROOT } 5501 = { add_core_of = ROOT } 5502 = { add_core_of = ROOT } 5503 = { add_core_of = ROOT }
+            425 = { add_core_of = ROOT } 5504 = { add_core_of = ROOT } 5505 = { add_core_of = ROOT } 5506 = { add_core_of = ROOT } 5507 = { add_core_of = ROOT } 5508 = { add_core_of = ROOT } 5509 = { add_core_of = ROOT } 5510 = { add_core_of = ROOT } 5511 = { add_core_of = ROOT } 5512 = { add_core_of = ROOT }
+			1098 = { add_core_of = ROOT } 10044 = { add_core_of = ROOT } 10045 = { add_core_of = ROOT } 10046 = { add_core_of = ROOT }
+			#1099 = { add_core_of = ROOT }
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+            set_country_flag = dravidian_united
+            set_cosmetic_tag = DRAVIDIAN_UNITED
+        }
+
+        ai_will_do = {
+            factor = 200
+        }
+    }
+
+    #### FINALIZE UNIFICATION ####
+    political_unification = {
+        visible = {
+            has_idea = generic_recent_political_unification
+        }
+        # fire_only_once = yes
+        available = { 
+            has_idea = generic_recent_political_unification
+        }
+
+        priority = 10 # so it appears at the top always for cleaner aesthetics
+
+        icon = generic_political_discourse
+
+        cost = 75
+
+        days_remove = 90
+
+        modifier = {
+            drift_defence_factor = -0.25
+            political_power_factor = -0.05
+            stability_weekly = -0.001
+        }
+
+        remove_effect = {
+            remove_ideas = generic_recent_political_unification
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    army_unification = {
+        visible = {
+            has_idea = generic_recent_army_unification
+        }
+        # fire_only_once = yes
+        available = {
+            has_idea = generic_recent_army_unification
+        }
+
+        priority = 10 # so it appears at the top always for cleaner aesthetics
+
+        icon = generic_army_support
+        days_remove = 90
+
+        modifier = {
+            military_leader_cost_factor = 0.25
+            command_power_gain = -0.15
+            army_org_factor = -0.05
+            army_morale_factor = -0.10
+        }
+
+        custom_cost_text = decision_cost_CP_25_pp_25_ArmXP_10
+
+        custom_cost_trigger = {
+            command_power > 24
+            has_political_power > 24
+            has_army_experience > 9
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+                add_political_power = -25
+                army_experience = -10
+            }
+        }
+
+        remove_effect = {
+            remove_ideas = generic_recent_army_unification
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    economic_unification = {
+        visible = {
+            has_idea = generic_recent_economic_unification
+        }
+        #fire_only_once = yes
+        available = {
+            has_idea = generic_recent_economic_unification
+        }
+
+        priority = 10 # so it appears at the top always for cleaner aesthetics
+
+        icon = generic_factory
+        
+        cost = 75
+
+        days_remove = 90
+
+        modifier = {
+            consumer_goods_factor = 0.05
+            production_speed_buildings_factor = -0.05
+            production_factory_efficiency_gain_factor = -0.10
+        }
+
+        remove_effect = {
+            remove_ideas = generic_recent_economic_unification
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+}
+
+form_arabia_category = {
+    assert_control_over_the_holy_sites = {
+        icon = generic_form_nation
+        fire_only_once = yes
+        cost = 25
+        days_remove = 90
+
+        allowed = {
+            OR = {
+                original_tag = ADU
+                original_tag = MOR
+                original_tag = ALG
+                original_tag = TUN
+                original_tag = EGY
+                original_tag = PAL
+                original_tag = SUD
+                original_tag = SOM
+                original_tag = SYR
+                original_tag = TUR
+                original_tag = PAL
+                original_tag = JOR
+                #original_tag = IMA #what is this tag?
+                original_tag = IRQ
+                original_tag = PER
+                original_tag = PAK
+                original_tag = AZR
+                original_tag = XSM
+                original_tag = SIK
+                original_tag = KAZ
+                original_tag = INS
+                original_tag = LBA
+                original_tag = KUW
+                original_tag = BOS
+                original_tag = MLD
+                original_tag = MLI
+                original_tag = LEB
+                original_tag = KYR
+                original_tag = MRT
+                original_tag = TAJ
+                original_tag = TMS
+                original_tag = CRI
+                original_tag = UZB
+                original_tag = BAN
+                original_tag = ALB
+            }
+        }
+
+        visible = {
+            NOT = { has_government = communism }
+            controls_state = 679
+        }
+
+        available = {
+            controls_state = 679
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+
+        complete_effect = { }
+
+        remove_effect = {
+            add_stability = 0.05
+        }
+    }
+}
+
+form_hispanoamerica_category = {
+    form_hispanoamerica = {
+        icon = generic_form_nation
+
+        allowed = {
+            OR = {
+                original_tag = ARG
+                original_tag = ECU
+                original_tag = PAR
+                original_tag = CHL
+                original_tag = COL
+                original_tag = PAN
+                original_tag = PRU
+                original_tag = BOL
+                original_tag = URG
+                original_tag = VEN
+            }
+        }
+        fire_only_once = yes
+        available = {
+        
+            any_controlled_state = {
+                is_core_of = ARG
+            }
+            any_controlled_state = {
+                is_core_of = ECU
+            }
+            any_controlled_state = {
+                is_core_of = CHL
+            }
+            any_controlled_state = {
+                is_core_of = COL
+            }
+            any_controlled_state = {
+                is_core_of = PAN
+            }
+            any_controlled_state = {
+                is_core_of = PRU
+            }
+            any_controlled_state = {
+                is_core_of = BOL
+            }
+            any_controlled_state = {
+                is_core_of = URG
+            }
+            any_controlled_state = {
+                is_core_of = VEN
+            }
+            any_controlled_state = {
+                is_core_of = PAR
+            }
+        }
+
+        complete_effect = {
+            set_cosmetic_tag = HIS_UNIFIED
+            every_state = {
+                limit = {
+                    OR = {
+                        is_core_of = ARG is_core_of = ECU is_core_of = PAR is_core_of = CHL is_core_of = COL is_core_of = PAN is_core_of = PRU is_core_of = BOL is_core_of = URG is_core_of = VEN is_core_of = ELS is_core_of = COS is_core_of = GUA is_core_of = HON is_core_of = NIC is_core_of = MEX is_core_of = CUB is_core_of = DOM
+                        state = 311 #Belize
+                        state = 686 #Puerto Rico
+                        state = 695 #Curação
+                    }
+                }
+                add_core_of = PREV
+            }
+
+            every_state = {
+                limit = {
+                    OR = {
+                        region = 53 is_core_of = BAH #Caribbean + Bahamas
+                        state = 366 state = 375 state = 376 state = 377 state = 378 state = 379 state = 380 state = 382 #Mexican old clay
+                        state = 687 state = 299 state = 720 state = 502 state = 503 #Historical claims
+                    }
+                    NOT = { is_core_of = ROOT }
+                }
+                add_claim_by = ROOT
+            }
+
+            hidden_effect = {
+                news_event = { id = r56.news_event.18 hours = 6 }
+                set_global_flag = form_hispanomerica_flag
+
+                if = {
+                    limit = {
+                        has_dlc = "La Resistance"
+                    }
+                    every_country = {
+                        every_operative = {
+                            limit = {
+                                OR = {
+                                    has_nationality = ARG
+                                    has_nationality = ECU
+                                    has_nationality = PAR
+                                    has_nationality = CHL
+                                    has_nationality = COL
+                                    has_nationality = PAN
+                                    has_nationality = BOL
+                                    has_nationality = URG
+                                    has_nationality = VEN
+                                }
+                                NOT = {
+                                    has_nationality = ROOT
+                                }
+                            }
+                            add_nationality = ROOT
+                        }
+                    }
+                }
+            }
+
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+        }
+
+        ai_will_do = {
+            factor = 200
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+        }
+    }
+
+    core_mexican_america = {
+        fire_only_once = yes
+        available = {
+			378 = {
+				is_fully_controlled_by = ROOT
+				compliance > 50
+			}
+			379 = {
+				is_fully_controlled_by = ROOT
+				compliance > 50
+			}
+			377 = {
+				is_fully_controlled_by = ROOT
+				compliance > 50
+			}
+			376 = {
+				is_fully_controlled_by = ROOT
+				compliance > 50
+			}
+            382 = {
+				is_fully_controlled_by = ROOT
+				compliance > 50
+			}
+			380 = {
+				is_fully_controlled_by = ROOT
+				compliance > 50
+			}
+			375 = {
+				is_fully_controlled_by = ROOT
+				compliance > 50
+			}
+        }
+        cost = 100
+        days_remove = 120
+        visible = {
+            has_cosmetic_tag = HIS_UNIFIED
+        }
+		highlight_states = {
+			highlight_state_targets = {
+				state = 378
+                state = 379
+                state = 377
+                state = 376
+                state = 382
+                state = 380
+                state = 375
+			}
+		}
+        complete_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        state = 366 state = 375 state = 376 state = 377 state = 378 state = 379 state = 380 state = 382 #Mexican old clay
+                    }
+                }
+                add_resistance = 15
+            }
+        }
+		remove_effect = {
+            366 = { add_core_of = ROOT } 4526 = { add_core_of = ROOT } 4527 = { add_core_of = ROOT } 4528 = { add_core_of = ROOT } 4529 = { add_core_of = ROOT } 4530 = { add_core_of = ROOT } 4531 = { add_core_of = ROOT } 4532 = { add_core_of = ROOT } 4533 = { add_core_of = ROOT } 4534 = { add_core_of = ROOT } 4535 = { add_core_of = ROOT } 4536 = { add_core_of = ROOT } 4537 = { add_core_of = ROOT } 4538 = { add_core_of = ROOT } 4539 = { add_core_of = ROOT } 4540 = { add_core_of = ROOT }
+            375 = { add_core_of = ROOT } 4654 = { add_core_of = ROOT } 4655 = { add_core_of = ROOT } 4656 = { add_core_of = ROOT } 4657 = { add_core_of = ROOT } 4658 = { add_core_of = ROOT } 4659 = { add_core_of = ROOT } 4660 = { add_core_of = ROOT } 4661 = { add_core_of = ROOT } 4662 = { add_core_of = ROOT } 4663 = { add_core_of = ROOT } 4664 = { add_core_of = ROOT } 4665 = { add_core_of = ROOT } 4666 = { add_core_of = ROOT } 4667 = { add_core_of = ROOT } 4668 = { add_core_of = ROOT } 4669 = { add_core_of = ROOT } 4670 = { add_core_of = ROOT } 4671 = { add_core_of = ROOT } 4672 = { add_core_of = ROOT } 4673 = { add_core_of = ROOT } 4674 = { add_core_of = ROOT } 4675 = { add_core_of = ROOT } 4676 = { add_core_of = ROOT } 4677 = { add_core_of = ROOT } 4678 = { add_core_of = ROOT } 4679 = { add_core_of = ROOT } 4680 = { add_core_of = ROOT } 4681 = { add_core_of = ROOT } 4682 = { add_core_of = ROOT } 4683 = { add_core_of = ROOT } 4684 = { add_core_of = ROOT } 4685 = { add_core_of = ROOT } 4686 = { add_core_of = ROOT } 4687 = { add_core_of = ROOT } 4688 = { add_core_of = ROOT } 4689 = { add_core_of = ROOT } 4690 = { add_core_of = ROOT } 4691 = { add_core_of = ROOT } 4692 = { add_core_of = ROOT } 4693 = { add_core_of = ROOT } 4694 = { add_core_of = ROOT } 4695 = { add_core_of = ROOT } 4696 = { add_core_of = ROOT } 4697 = { add_core_of = ROOT } 4698 = { add_core_of = ROOT } 4699 = { add_core_of = ROOT } 4700 = { add_core_of = ROOT } 4701 = { add_core_of = ROOT }
+            376 = { add_core_of = ROOT } 4702 = { add_core_of = ROOT } 4703 = { add_core_of = ROOT } 4704 = { add_core_of = ROOT } 4705 = { add_core_of = ROOT } 4706 = { add_core_of = ROOT } 4707 = { add_core_of = ROOT } 4708 = { add_core_of = ROOT } 4709 = { add_core_of = ROOT } 4710 = { add_core_of = ROOT } 4711 = { add_core_of = ROOT } 4712 = { add_core_of = ROOT } 4713 = { add_core_of = ROOT } 4714 = { add_core_of = ROOT } 4715 = { add_core_of = ROOT }
+            377 = { add_core_of = ROOT } 4716 = { add_core_of = ROOT } 4717 = { add_core_of = ROOT } 4718 = { add_core_of = ROOT } 4719 = { add_core_of = ROOT } 4720 = { add_core_of = ROOT } 4721 = { add_core_of = ROOT } 4722 = { add_core_of = ROOT } 4723 = { add_core_of = ROOT } 4724 = { add_core_of = ROOT } 4725 = { add_core_of = ROOT } 4726 = { add_core_of = ROOT } 4727 = { add_core_of = ROOT } 4728 = { add_core_of = ROOT }
+            378 = { add_core_of = ROOT } 4729 = { add_core_of = ROOT } 4730 = { add_core_of = ROOT } 4731 = { add_core_of = ROOT } 4732 = { add_core_of = ROOT } 4733 = { add_core_of = ROOT } 4734 = { add_core_of = ROOT } 4735 = { add_core_of = ROOT } 4736 = { add_core_of = ROOT } 4737 = { add_core_of = ROOT } 4738 = { add_core_of = ROOT } 4739 = { add_core_of = ROOT } 4740 = { add_core_of = ROOT } 4741 = { add_core_of = ROOT } 4742 = { add_core_of = ROOT } 4743 = { add_core_of = ROOT } 4744 = { add_core_of = ROOT } 4745 = { add_core_of = ROOT } 4746 = { add_core_of = ROOT } 4747 = { add_core_of = ROOT } 4748 = { add_core_of = ROOT } 4749 = { add_core_of = ROOT } 4750 = { add_core_of = ROOT } 4751 = { add_core_of = ROOT } 4752 = { add_core_of = ROOT } 4753 = { add_core_of = ROOT } 4754 = { add_core_of = ROOT } 4755 = { add_core_of = ROOT } 4756 = { add_core_of = ROOT } 4757 = { add_core_of = ROOT } 4758 = { add_core_of = ROOT } 4759 = { add_core_of = ROOT } 4760 = { add_core_of = ROOT } 4761 = { add_core_of = ROOT } 4762 = { add_core_of = ROOT } 4763 = { add_core_of = ROOT } 4764 = { add_core_of = ROOT } 4765 = { add_core_of = ROOT } 4766 = { add_core_of = ROOT } 4767 = { add_core_of = ROOT } 4768 = { add_core_of = ROOT } 4769 = { add_core_of = ROOT } 4770 = { add_core_of = ROOT } 4771 = { add_core_of = ROOT } 4772 = { add_core_of = ROOT } 4773 = { add_core_of = ROOT } 4774 = { add_core_of = ROOT } 4775 = { add_core_of = ROOT } 4776 = { add_core_of = ROOT } 4777 = { add_core_of = ROOT } 4778 = { add_core_of = ROOT } 4779 = { add_core_of = ROOT } 4780 = { add_core_of = ROOT } 4781 = { add_core_of = ROOT } 4782 = { add_core_of = ROOT } 4783 = { add_core_of = ROOT } 4784 = { add_core_of = ROOT }
+            379 = { add_core_of = ROOT } 4785 = { add_core_of = ROOT } 4786 = { add_core_of = ROOT } 4787 = { add_core_of = ROOT } 4788 = { add_core_of = ROOT } 4789 = { add_core_of = ROOT } 4790 = { add_core_of = ROOT } 4791 = { add_core_of = ROOT } 4792 = { add_core_of = ROOT } 4793 = { add_core_of = ROOT } 4794 = { add_core_of = ROOT } 4795 = { add_core_of = ROOT } 4796 = { add_core_of = ROOT } 4797 = { add_core_of = ROOT }
+            380 = { add_core_of = ROOT } 4798 = { add_core_of = ROOT } 4799 = { add_core_of = ROOT } 4800 = { add_core_of = ROOT } 4801 = { add_core_of = ROOT } 4802 = { add_core_of = ROOT } 4803 = { add_core_of = ROOT } 4804 = { add_core_of = ROOT } 4805 = { add_core_of = ROOT } 4806 = { add_core_of = ROOT } 4807 = { add_core_of = ROOT } 4808 = { add_core_of = ROOT } 4809 = { add_core_of = ROOT }
+            382 = { add_core_of = ROOT } 4822 = { add_core_of = ROOT } 4823 = { add_core_of = ROOT } 4824 = { add_core_of = ROOT } 4825 = { add_core_of = ROOT } 4826 = { add_core_of = ROOT } 4827 = { add_core_of = ROOT } 4828 = { add_core_of = ROOT } 4829 = { add_core_of = ROOT } 4830 = { add_core_of = ROOT } 4831 = { add_core_of = ROOT } 4832 = { add_core_of = ROOT } 4833 = { add_core_of = ROOT } 4834 = { add_core_of = ROOT } 4835 = { add_core_of = ROOT } 4836 = { add_core_of = ROOT } 4837 = { add_core_of = ROOT }
+            hidden_effect = {
+                remove_state_claim = 366 remove_state_claim = 4526 remove_state_claim = 4527 remove_state_claim = 4528 remove_state_claim = 4529 remove_state_claim = 4530 remove_state_claim = 4531 remove_state_claim = 4532 remove_state_claim = 4533 remove_state_claim = 4534 remove_state_claim = 4535 remove_state_claim = 4536 remove_state_claim = 4537 remove_state_claim = 4538 remove_state_claim = 4539 remove_state_claim = 4540
+                remove_state_claim = 375 remove_state_claim = 4654 remove_state_claim = 4655 remove_state_claim = 4656 remove_state_claim = 4657 remove_state_claim = 4658 remove_state_claim = 4659 remove_state_claim = 4660 remove_state_claim = 4661 remove_state_claim = 4662 remove_state_claim = 4663 remove_state_claim = 4664 remove_state_claim = 4665 remove_state_claim = 4666 remove_state_claim = 4667 remove_state_claim = 4668 remove_state_claim = 4669 remove_state_claim = 4670 remove_state_claim = 4671 remove_state_claim = 4672 remove_state_claim = 4673 remove_state_claim = 4674 remove_state_claim = 4675 remove_state_claim = 4676 remove_state_claim = 4677 remove_state_claim = 4678 remove_state_claim = 4679 remove_state_claim = 4680 remove_state_claim = 4681 remove_state_claim = 4682 remove_state_claim = 4683 remove_state_claim = 4684 remove_state_claim = 4685 remove_state_claim = 4686 remove_state_claim = 4687 remove_state_claim = 4688 remove_state_claim = 4689 remove_state_claim = 4690 remove_state_claim = 4691 remove_state_claim = 4692 remove_state_claim = 4693 remove_state_claim = 4694 remove_state_claim = 4695 remove_state_claim = 4696 remove_state_claim = 4697 remove_state_claim = 4698 remove_state_claim = 4699 remove_state_claim = 4700 remove_state_claim = 4701
+                remove_state_claim = 376 remove_state_claim = 4702 remove_state_claim = 4703 remove_state_claim = 4704 remove_state_claim = 4705 remove_state_claim = 4706 remove_state_claim = 4707 remove_state_claim = 4708 remove_state_claim = 4709 remove_state_claim = 4710 remove_state_claim = 4711 remove_state_claim = 4712 remove_state_claim = 4713 remove_state_claim = 4714 remove_state_claim = 4715
+                remove_state_claim = 377 remove_state_claim = 4716 remove_state_claim = 4717 remove_state_claim = 4718 remove_state_claim = 4719 remove_state_claim = 4720 remove_state_claim = 4721 remove_state_claim = 4722 remove_state_claim = 4723 remove_state_claim = 4724 remove_state_claim = 4725 remove_state_claim = 4726 remove_state_claim = 4727 remove_state_claim = 4728
+                remove_state_claim = 378 remove_state_claim = 4729 remove_state_claim = 4730 remove_state_claim = 4731 remove_state_claim = 4732 remove_state_claim = 4733 remove_state_claim = 4734 remove_state_claim = 4735 remove_state_claim = 4736 remove_state_claim = 4737 remove_state_claim = 4738 remove_state_claim = 4739 remove_state_claim = 4740 remove_state_claim = 4741 remove_state_claim = 4742 remove_state_claim = 4743 remove_state_claim = 4744 remove_state_claim = 4745 remove_state_claim = 4746 remove_state_claim = 4747 remove_state_claim = 4748 remove_state_claim = 4749 remove_state_claim = 4750 remove_state_claim = 4751 remove_state_claim = 4752 remove_state_claim = 4753 remove_state_claim = 4754 remove_state_claim = 4755 remove_state_claim = 4756 remove_state_claim = 4757 remove_state_claim = 4758 remove_state_claim = 4759 remove_state_claim = 4760 remove_state_claim = 4761 remove_state_claim = 4762 remove_state_claim = 4763 remove_state_claim = 4764 remove_state_claim = 4765 remove_state_claim = 4766 remove_state_claim = 4767 remove_state_claim = 4768 remove_state_claim = 4769 remove_state_claim = 4770 remove_state_claim = 4771 remove_state_claim = 4772 remove_state_claim = 4773 remove_state_claim = 4774 remove_state_claim = 4775 remove_state_claim = 4776 remove_state_claim = 4777 remove_state_claim = 4778 remove_state_claim = 4779 remove_state_claim = 4780 remove_state_claim = 4781 remove_state_claim = 4782 remove_state_claim = 4783 remove_state_claim = 4784
+                remove_state_claim = 379 remove_state_claim = 4785 remove_state_claim = 4786 remove_state_claim = 4787 remove_state_claim = 4788 remove_state_claim = 4789 remove_state_claim = 4790 remove_state_claim = 4791 remove_state_claim = 4792 remove_state_claim = 4793 remove_state_claim = 4794 remove_state_claim = 4795 remove_state_claim = 4796 remove_state_claim = 4797
+                remove_state_claim = 380 remove_state_claim = 4798 remove_state_claim = 4799 remove_state_claim = 4800 remove_state_claim = 4801 remove_state_claim = 4802 remove_state_claim = 4803 remove_state_claim = 4804 remove_state_claim = 4805 remove_state_claim = 4806 remove_state_claim = 4807 remove_state_claim = 4808 remove_state_claim = 4809
+                remove_state_claim = 382 remove_state_claim = 4822 remove_state_claim = 4823 remove_state_claim = 4824 remove_state_claim = 4825 remove_state_claim = 4826 remove_state_claim = 4827 remove_state_claim = 4828 remove_state_claim = 4829 remove_state_claim = 4830 remove_state_claim = 4831 remove_state_claim = 4832 remove_state_claim = 4833 remove_state_claim = 4834 remove_state_claim = 4835 remove_state_claim = 4836 remove_state_claim = 4837
+            }
+		}
+        ai_will_do = {
+            factor = 200
+        }
+    }
+}
+
+reform_the_mamluks_category = {
+    reform_the_mamluks = {
+        icon = generic_form_nation
+        fire_only_once = yes
+
+        allowed = {
+            OR = {
+                original_tag = EGY
+                original_tag = PAL
+                original_tag = LBA
+                original_tag = LEB
+                original_tag = SYR
+            }
+        }
+
+        visible = {
+            NOT = { has_government = communism }
+        }
+
+        available = {
+            is_subject = no
+            custom_trigger_tooltip = {
+                tooltip = form_country_mamluks_no_arabia_tt
+                NOT = { has_cosmetic_tag = ARA_UNIFIED }
+            }
+            custom_trigger_tooltip = {
+                tooltip = form_country_mamluks_required_states_egyptian_tt
+                controls_state = 907
+                controls_state = 911
+                controls_state = 995
+                controls_state = 447
+                controls_state = 452
+                controls_state = 456
+                controls_state = 457
+                controls_state = 453
+            }
+            custom_trigger_tooltip = {
+                tooltip = form_country_mamluks_required_states_palestinian_tt
+                controls_state = 454
+                controls_state = 1016
+                controls_state = 1017
+                controls_state = 966
+                controls_state = 949
+            }
+            custom_trigger_tooltip = {
+                tooltip = form_country_mamluks_required_states_jordanian_tt
+                controls_state = 455
+                controls_state = 1021
+                controls_state = 1022
+            }
+            custom_trigger_tooltip = {
+                tooltip = form_country_mamluks_required_states_lebanese_tt
+                controls_state = 553
+            }
+            custom_trigger_tooltip = {
+                tooltip = form_country_mamluks_required_states_syrian_tt
+                controls_state = 554
+                controls_state = 677
+                controls_state = 680
+#                controls_state = 799   #Hatay - 56 - Requiring this state is pretty annoying since it (almost) always goes to Turkey.
+            }
+            controls_state = 855
+            controls_state = 679
+            controls_state = 344
+            controls_state = 451
+            controls_state = 663
+            controls_state = 450
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = form_country_gs_required_coring_states_tt
+            set_cosmetic_tag = MAM
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+            hidden_effect = {
+
+                if = {
+                    limit = {
+                        has_dlc = "La Resistance"
+                    }
+                    every_country = {
+                        every_operative = {
+                            limit = {
+                                OR = {
+                                    has_nationality = EGY
+                                    has_nationality = PAL
+                                    has_nationality = LBA
+                                    has_nationality = LEB
+                                    has_nationality = SYR
+                                }
+                                NOT = {
+                                    has_nationality = ROOT
+                                }
+                            }
+                            add_nationality = ROOT
+                        }
+                    }
+                }
+
+
+                add_state_core = 907 add_state_core = 9170 add_state_core = 9171 add_state_core = 9172 add_state_core = 9173 add_state_core = 9174 add_state_core = 9175 add_state_core = 9176 add_state_core = 9177 add_state_core = 9178 add_state_core = 9179
+                add_state_core = 911 add_state_core = 9185
+                add_state_core = 995 add_state_core = 9593
+                add_state_core = 447 add_state_core = 5757 add_state_core = 5758 add_state_core = 5759 add_state_core = 5760 add_state_core = 5761 add_state_core = 5762
+                add_state_core = 452 add_state_core = 5786 add_state_core = 5787 add_state_core = 5788 add_state_core = 5789 add_state_core = 5790 add_state_core = 5791 add_state_core = 5792 add_state_core = 5793
+                add_state_core = 456 add_state_core = 5808 add_state_core = 5809 add_state_core = 5810 add_state_core = 5811 add_state_core = 5812 add_state_core = 5813 add_state_core = 5814 add_state_core = 5815 add_state_core = 5816 add_state_core = 5817 add_state_core = 5818 add_state_core = 5819 add_state_core = 5820 add_state_core = 5821
+                add_state_core = 457 add_state_core = 5822 add_state_core = 5823 add_state_core = 5824 add_state_core = 5825 add_state_core = 5826 add_state_core = 5827 add_state_core = 5828 add_state_core = 5829
+                add_state_core = 453 add_state_core = 5794 add_state_core = 5795 add_state_core = 5796 add_state_core = 5797 add_state_core = 5798 add_state_core = 5799 add_state_core = 5800 add_state_core = 5801
+                add_state_core = 454 add_state_core = 5802 add_state_core = 5803
+                add_state_core = 1016
+                add_state_core = 1017 add_state_core = 9646 add_state_core = 9647 add_state_core = 9648
+                add_state_core = 966 add_state_core = 9457 add_state_core = 9458
+                add_state_core = 949
+                add_state_core = 455 add_state_core = 5804 add_state_core = 5805 add_state_core = 5806 add_state_core = 5807
+                add_state_core = 1021 add_state_core = 9685
+                add_state_core = 1022 add_state_core = 9686 add_state_core = 9687 add_state_core = 9688 add_state_core = 9689 add_state_core = 9690
+                add_state_core = 855 add_state_core = 8878 add_state_core = 8879 add_state_core = 8880 add_state_core = 8881 add_state_core = 8882 add_state_core = 8883 add_state_core = 8884
+                add_state_core = 679 add_state_core = 8039 add_state_core = 8040 add_state_core = 8041 add_state_core = 8042 add_state_core = 8043 add_state_core = 8044
+                add_state_core = 553 add_state_core = 6704 add_state_core = 6705
+                add_state_core = 554 add_state_core = 6706 add_state_core = 6707 add_state_core = 6708 add_state_core = 6709
+                add_state_core = 677 add_state_core = 8028 add_state_core = 8029 add_state_core = 8030 add_state_core = 8031 add_state_core = 8032 add_state_core = 8033
+                add_state_core = 680 add_state_core = 8045 add_state_core = 8046 add_state_core = 8047 add_state_core = 8048 add_state_core = 8049 add_state_core = 8050 add_state_core = 8051 add_state_core = 8052 add_state_core = 8053 add_state_core = 8054 add_state_core = 8055 add_state_core = 8056
+                add_state_core = 799
+                add_state_core = 344 add_state_core = 4208 add_state_core = 4209 add_state_core = 4210 add_state_core = 4211 add_state_core = 4212 add_state_core = 4213
+                add_state_core = 451 add_state_core = 5779 add_state_core = 5780 add_state_core = 5781 add_state_core = 5782 add_state_core = 5783 add_state_core = 5784 add_state_core = 5785
+                add_state_core = 663 add_state_core = 7821 add_state_core = 7822 add_state_core = 7823 add_state_core = 7824 add_state_core = 7825 add_state_core = 7826 add_state_core = 7827 add_state_core = 7828 add_state_core = 7829 add_state_core = 7830 add_state_core = 7831 add_state_core = 7832
+                add_state_core = 450 add_state_core = 5776 add_state_core = 5777 add_state_core = 5778
+            }
+        }
+    }
+}
+
+#Alammania
+EYE_form_alamannia_category = {
+	SWI_form_alamannia = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = SWI
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+                state = 153
+                state = 28
+                state = 42
+                state = 1053
+                state = 50
+                state = 52
+                state = 53
+                state = 54
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 153
+			controls_state = 28
+			controls_state = 42
+            controls_state = 1053
+			controls_state = 50
+			controls_state = 52
+			controls_state = 53
+            controls_state = 1053
+			controls_state = 54
+			controls_state = 923
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = SWI_irredentism
+				controls_state = 153
+				controls_state = 28
+				controls_state = 42
+                controls_state = 1053
+				controls_state = 50
+				controls_state = 52
+				controls_state = 53
+				controls_state = 54
+			}
+			NOT = { has_global_flag = SWI_formed_alamannia }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = SWI_alamannia
+			add_state_core = 153 add_state_core = 2319 add_state_core = 2320 add_state_core = 2321 add_state_core = 2322 add_state_core = 2323
+			add_state_core = 28 add_state_core = 1349 add_state_core = 1350 add_state_core = 1351 add_state_core = 1352 add_state_core = 1353 add_state_core = 1354 add_state_core = 1355
+			add_state_core = 42 add_state_core = 1471 add_state_core = 1472 add_state_core = 1473 add_state_core = 1474 add_state_core = 1475 add_state_core = 1476 add_state_core = 1477
+            add_state_core = 1053 add_state_core = 9906
+			add_state_core = 50 add_state_core = 1534 add_state_core = 1535 add_state_core = 1536 add_state_core = 1537 add_state_core = 1538 add_state_core = 1539 add_state_core = 1540 add_state_core = 1541 add_state_core = 1542 add_state_core = 1543 add_state_core = 1544
+			add_state_core = 52 add_state_core = 1548 add_state_core = 1549 add_state_core = 1550 add_state_core = 1551 add_state_core = 1552 add_state_core = 1553 add_state_core = 1554 add_state_core = 1555 add_state_core = 1556 add_state_core = 1557 add_state_core = 1558
+			add_state_core = 53 add_state_core = 1559 add_state_core = 1560 add_state_core = 1561 add_state_core = 1562 add_state_core = 1563 add_state_core = 1564 add_state_core = 1565 add_state_core = 1566 add_state_core = 1567
+			add_state_core = 54 add_state_core = 1568 add_state_core = 1569 add_state_core = 1570 add_state_core = 1571 add_state_core = 1572 add_state_core = 1573 add_state_core = 1574 add_state_core = 1575 add_state_core = 1576 add_state_core = 1577 add_state_core = 1578
+			add_state_core = 923 add_state_core = 9257 add_state_core = 9258 add_state_core = 9259 add_state_core = 9260 add_state_core = 9261
+			hidden_effect = {
+				set_global_flag = SWI_formed_alamannia
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+form_nation_mod_category = {
+    unite_tanganyika_zanzibar = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+                original_tag = TZN
+                original_tag = ZAN
+            }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+                state = 546
+                state = 1055
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 546
+			controls_state = 1055
+		}
+
+		visible = {
+            OR = {
+                has_government = democratic
+                has_government = communism
+                if = {
+                    limit = {
+                        original_tag = TZN
+                    }
+                    has_government = neutrality
+                }
+            }
+			NOT = { has_global_flag = TZA_formed_tanzania }
+            NOT = { has_cosmetic_tag = east_africa }
+		}
+
+		complete_effect = {
+            add_stability = 0.05
+			set_cosmetic_tag = TZA
+			add_state_core = 546 add_state_core = 6642 add_state_core = 6643 add_state_core = 6644 add_state_core = 6645 add_state_core = 6646 add_state_core = 6647 add_state_core = 6648 add_state_core = 6649 add_state_core = 6650 add_state_core = 6651 add_state_core = 6652 add_state_core = 6653 add_state_core = 6654 add_state_core = 6655 add_state_core = 6656 add_state_core = 6657 add_state_core = 6658
+			add_state_core = 1055
+			hidden_effect = {
+				set_global_flag = TZA_formed_tanzania
+			}
+		}
+
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 250
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+    form_greater_texas = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = TXS
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+                state = 375
+                state = 479
+                state = 480
+                state = 482
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 375
+			controls_state = 479
+            controls_state = 480
+            controls_state = 482
+		}
+
+		visible = {
+			NOT = { has_global_flag = TXS_formed_greater_texas }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = TXS_greater
+			add_state_core = 375 add_state_core = 4654 add_state_core = 4655 add_state_core = 4656 add_state_core = 4657 add_state_core = 4658 add_state_core = 4659 add_state_core = 4660 add_state_core = 4661 add_state_core = 4662 add_state_core = 4663 add_state_core = 4664 add_state_core = 4665 add_state_core = 4666 add_state_core = 4667 add_state_core = 4668 add_state_core = 4669 add_state_core = 4670 add_state_core = 4671 add_state_core = 4672 add_state_core = 4673 add_state_core = 4674 add_state_core = 4675 add_state_core = 4676 add_state_core = 4677 add_state_core = 4678 add_state_core = 4679 add_state_core = 4680 add_state_core = 4681 add_state_core = 4682 add_state_core = 4683 add_state_core = 4684 add_state_core = 4685 add_state_core = 4686 add_state_core = 4687 add_state_core = 4688 add_state_core = 4689 add_state_core = 4690 add_state_core = 4691 add_state_core = 4692 add_state_core = 4693 add_state_core = 4694 add_state_core = 4695 add_state_core = 4696 add_state_core = 4697 add_state_core = 4698 add_state_core = 4699 add_state_core = 4700 add_state_core = 4701
+			add_state_core = 479 add_state_core = 6037 add_state_core = 6038 add_state_core = 6039 add_state_core = 6040 add_state_core = 6041 add_state_core = 6042 add_state_core = 6043
+            add_state_core = 480 add_state_core = 6044 add_state_core = 6045 add_state_core = 6046 add_state_core = 6047 add_state_core = 6048 add_state_core = 6049
+            add_state_core = 482 add_state_core = 6052 add_state_core = 6053 add_state_core = 6054 add_state_core = 6055 add_state_core = 6056 add_state_core = 6057 add_state_core = 6058 add_state_core = 6059 add_state_core = 6060 add_state_core = 6061
+			hidden_effect = {
+				set_global_flag = TXS_formed_greater_texas
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+    form_inuit_union = {
+        icon = generic_form_nation
+
+        allowed = {
+
+            original_tag = GRN
+            
+        }
+		highlight_states = {
+			highlight_state_targets = {
+				state = 463
+				state = 864
+				state = 472
+				state = 683
+				state = 466
+				state = 332
+				state = 101
+				state = 861
+			}
+		}        
+        fire_only_once = yes
+        available = {
+            is_subject = no
+            INU = {
+				exists = no
+			}
+            count_triggers = {
+                amount > 3
+                controls_state = 101
+                controls_state = 463 
+                controls_state = 466
+                controls_state = 864 
+                controls_state = 472 
+                controls_state = 683
+                controls_state = 332
+                controls_state = 861
+            }
+
+        }
+        complete_effect = {
+            set_cosmetic_tag = INU
+            custom_effect_tooltip = form_country_inuit_required_coring_states_tt
+            hidden_effect = {
+                every_state = {
+                    limit = {
+                        OR = {
+                            state = 463
+                            state = 864
+                            state = 472
+                            state = 683
+                            state = 466
+                            state = 332
+                            state = 101
+                            state = 861
+                        }
+                    }
+                    add_core_of = ROOT #ROOT
+                }
+                news_event = { id = r56.news_event.52 hours = 6 }
+
+ 
+            }
+            add_war_support = 0.05
+
+            add_ideas = generic_recent_political_unification
+            add_ideas = generic_recent_army_unification
+            add_ideas = generic_recent_economic_unification
+        }
+
+        ai_will_do = {
+            factor = 200
+            modifier = {
+                factor = 0.1
+                is_historical_focus_on = yes
+            }
+        }
+    } 
+}
+#Circassia
+form_circassia_category = {
+	KBK_form_circassia = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = KBK
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+                state = 827
+                state = 233
+                state = 234
+			}
+		}
+
+		available = {
+			is_subject = no
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			controls_state = 827
+			controls_state = 233
+			controls_state = 234
+		}
+
+		visible = {
+			NOT = { has_global_flag = KBK_formed_circassia }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = CIR_UNIFIED
+			add_state_core = 233 add_state_core = 3079 add_state_core = 3080 add_state_core = 3081 add_state_core = 3082 add_state_core = 3083 add_state_core = 3084
+			add_state_core = 234 add_state_core = 3085 add_state_core = 3086 add_state_core = 3087 add_state_core = 3088 add_state_core = 3089 add_state_core = 3090 add_state_core = 3091 add_state_core = 3092 add_state_core = 3093 add_state_core = 3094 add_state_core = 3095 add_state_core = 3096 add_state_core = 3097 add_state_core = 3098 add_state_core = 3099 add_state_core = 3100 add_state_core = 3101 add_state_core = 3102 add_state_core = 3103 add_state_core = 3104 add_state_core = 3105 add_state_core = 3106 add_state_core = 3107 add_state_core = 3108 add_state_core = 3109
+			news_event = {
+				id = r56_circassia.1
+				days = 6
+			}
+			hidden_effect = {
+				set_global_flag = KBK_formed_circassia
+			}
+			add_ideas = generic_recent_political_unification
+			add_ideas = generic_recent_army_unification
+			add_ideas = generic_recent_economic_unification
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+form_baltic_federation_category = {
+	baltic_integrate_estonia_r56 = {
+		icon = generic_form_nation
+        ai_will_do = { base = 200 }
+		allowed = {
+			OR = {
+				original_tag = LAT
+				original_tag = LIT
+			}
+		}
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = form_country_estonia_required_states_tt
+				all_state = {
+					OR = {
+						NOT = { 
+							state = 813
+							state = 191
+							state = 13
+							state = 812
+							state = 811
+						}
+						is_controlled_by = ROOT 
+					}
+				}
+			}
+		}
+		visible = {
+            has_cosmetic_tag = BAL_UNIFIED
+            NOT = {
+                AND = {
+                    813 = { is_core_of = ROOT }
+                    191 = { is_core_of = ROOT }
+                    13 = { is_core_of = ROOT }
+                    812 = { is_core_of = ROOT }
+                    811 = { is_core_of = ROOT }
+                }
+            }
+        }
+		complete_effect = {
+            every_controlled_state = {
+                limit = {
+					OR = {
+                        state = 813
+                        state = 191
+                        state = 13
+                        state = 812
+                        state = 811
+					}
+                }
+                add_resistance = 5
+				add_dynamic_modifier = {
+					modifier = TUR_lingering_unrest
+					days = 140
+				}
+            }
+		}
+        days_remove = 70
+        remove_effect = {
+			custom_effect_tooltip = form_country_estonia_coring_states_tt
+			hidden_effect = {
+                add_state_core = 813 add_state_core = 8658 add_state_core = 8659 add_state_core = 8660 add_state_core = 8661 add_state_core = 8662
+                add_state_core = 191 add_state_core = 2586 add_state_core = 2587 add_state_core = 2588 add_state_core = 2589
+                add_state_core = 13 add_state_core = 1210 add_state_core = 1211 add_state_core = 1212 add_state_core = 1213 add_state_core = 1214
+                add_state_core = 812 add_state_core = 8655 add_state_core = 8656 add_state_core = 8657
+                add_state_core = 811 add_state_core = 8654
+                if = {
+                    limit = { has_dlc = "La Resistance" }
+                    every_country = {
+                        every_operative = {
+                            limit = {
+								has_nationality = EST
+                                NOT = { has_nationality = ROOT }
+                            }
+                            add_nationality = ROOT
+                        }
+                    }
+                }
+			}
+        }
+	}
+}
+
+form_melanesia_category = {
+
+	form_melanesia = {
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = WPG
+				original_tag = PNG
+				original_tag = BOU
+				original_tag = SOL
+				original_tag = VAN
+				original_tag = FIJ
+				original_tag = MLK
+			}
+			has_dlc = "Thunder at Our Gates"
+		}
+
+		fire_only_once = yes
+
+		on_map_mode = decision_view_only
+
+		highlight_states = {
+		
+			highlight_state_targets = {
+
+				# Melanesia - West Papua New Guinea
+				state = 669
+				state = 1137
+
+				# Melanesia - East Papua New Guinea
+				state = 1096
+				state = 523
+				state = 737
+				state = 1138
+
+				# Melanesia - Solomons
+				state = 634
+
+				# Melanesia - New Hebrides & New Caledonia
+				state = 1141
+				state = 635
+
+				# Melanesia - Fiji
+				state = 636
+			}
+		}
+
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = form_country_melanesia_coring_states_tt
+
+				# Melanesia - West Papua New Guinea
+				controls_state = 669
+				controls_state = 1137
+
+				# Melanesia - East Papua New Guinea
+				controls_state = 1096
+				controls_state = 523 
+				controls_state = 737
+				controls_state = 1138
+
+				# Melanesia - Solomons
+				controls_state = 634
+
+				# Melanesia - New Hebrides & New Caledonia
+				controls_state = 1141
+				controls_state = 635
+
+				# Melanesia - Fiji
+				controls_state = 636
+			}
+		}
+
+        visible = {
+            OR = {
+                original_tag = WPG
+                original_tag = PNG
+                original_tag = BOU
+                original_tag = SOL
+                original_tag = VAN
+                original_tag = FIJ
+                original_tag = MLK
+            }
+            NOT = { has_global_flag = formed_melanesia_flag }
+        }
+
+		complete_effect = {
+			set_cosmetic_tag = MLN
+			set_global_flag = formed_melanesia_flag
+			custom_effect_tooltip = AST_form_australasia_malenesia_core_states_tt
+			hidden_effect = {
+
+				#West Papua New Guinea
+				669 = { add_core_of = ROOT } 7903 = { add_core_of = ROOT } 7904 = { add_core_of = ROOT } 7905 = { add_core_of = ROOT } 7906 = { add_core_of = ROOT } 7907 = { add_core_of = ROOT } 7908 = { add_core_of = ROOT } 7909 = { add_core_of = ROOT } 7910 = { add_core_of = ROOT } 7911 = { add_core_of = ROOT } 7912 = { add_core_of = ROOT } 7913 = { add_core_of = ROOT } 7914 = { add_core_of = ROOT } 7915 = { add_core_of = ROOT } 7916 = { add_core_of = ROOT } 7917 = { add_core_of = ROOT } 7918 = { add_core_of = ROOT } 7919 = { add_core_of = ROOT } 7920 = { add_core_of = ROOT }
+				1137 = { add_core_of = ROOT } 10254 = { add_core_of = ROOT } 10255 = { add_core_of = ROOT } 10256 = { add_core_of = ROOT } 10257 = { add_core_of = ROOT } 10258 = { add_core_of = ROOT } 10259 = { add_core_of = ROOT } 10260 = { add_core_of = ROOT } 10261 = { add_core_of = ROOT }
+
+				#East Papua New Guinea
+				1096 = { add_core_of = ROOT } 10029 = { add_core_of = ROOT } 10030 = { add_core_of = ROOT } 10031 = { add_core_of = ROOT } 10032 = { add_core_of = ROOT } 10033 = { add_core_of = ROOT } 10034 = { add_core_of = ROOT } 10035 = { add_core_of = ROOT } 10036 = { add_core_of = ROOT } 10037 = { add_core_of = ROOT } 10038 = { add_core_of = ROOT } 10039 = { add_core_of = ROOT } 10040 = { add_core_of = ROOT } 10041 = { add_core_of = ROOT } 10042 = { add_core_of = ROOT }
+				523 = { add_core_of = ROOT } 6468 = { add_core_of = ROOT } 6469 = { add_core_of = ROOT } 6470 = { add_core_of = ROOT } 6471 = { add_core_of = ROOT } 6472 = { add_core_of = ROOT } 6473 = { add_core_of = ROOT } 6474 = { add_core_of = ROOT } 6475 = { add_core_of = ROOT } 6476 = { add_core_of = ROOT } 6477 = { add_core_of = ROOT } 6478 = { add_core_of = ROOT } 6479 = { add_core_of = ROOT } 6480 = { add_core_of = ROOT } 6481 = { add_core_of = ROOT } 6482 = { add_core_of = ROOT } 6483 = { add_core_of = ROOT } 6484 = { add_core_of = ROOT } 6485 = { add_core_of = ROOT } 6486 = { add_core_of = ROOT } 6487 = { add_core_of = ROOT } 6488 = { add_core_of = ROOT } 6489 = { add_core_of = ROOT } 6490 = { add_core_of = ROOT } 6491 = { add_core_of = ROOT } 6492 = { add_core_of = ROOT } 6493 = { add_core_of = ROOT } 6494 = { add_core_of = ROOT } 6495 = { add_core_of = ROOT }
+				737 = { add_core_of = ROOT } 8267 = { add_core_of = ROOT } 8268 = { add_core_of = ROOT } 8269 = { add_core_of = ROOT } 8270 = { add_core_of = ROOT } 8271 = { add_core_of = ROOT } 8272 = { add_core_of = ROOT } 8273 = { add_core_of = ROOT } 8274 = { add_core_of = ROOT } 8275 = { add_core_of = ROOT } 8276 = { add_core_of = ROOT } 8277 = { add_core_of = ROOT } 8278 = { add_core_of = ROOT } 8279 = { add_core_of = ROOT } 8280 = { add_core_of = ROOT } 8281 = { add_core_of = ROOT }
+                1138 = { add_core_of = ROOT } 10262 = { add_core_of = ROOT } 10263 = { add_core_of = ROOT } 10264 = { add_core_of = ROOT }
+
+				#Solomons
+				634 = { add_core_of = ROOT } 7655 = { add_core_of = ROOT } 7656 = { add_core_of = ROOT } 7657 = { add_core_of = ROOT } 7658 = { add_core_of = ROOT } 7659 = { add_core_of = ROOT } 7660 = { add_core_of = ROOT } 7661 = { add_core_of = ROOT } 7662 = { add_core_of = ROOT } 7663 = { add_core_of = ROOT } 7664 = { add_core_of = ROOT }
+
+				#New Hebrides & New Caledonia
+				1141 = { add_core_of = ROOT } 10273 = { add_core_of = ROOT } 10274 = { add_core_of = ROOT }
+				635 = { add_core_of = ROOT } 7665 = { add_core_of = ROOT } 7666 = { add_core_of = ROOT } 7667 = { add_core_of = ROOT } 7668 = { add_core_of = ROOT } 7669 = { add_core_of = ROOT }
+
+				#Fiji
+				636 = { add_core_of = ROOT } 7670 = { add_core_of = ROOT } 7671 = { add_core_of = ROOT }
+
+                #Maluku
+                add_state_claim = 668 add_state_claim = 7895 add_state_claim = 7896 add_state_claim = 7897 add_state_claim = 7898 add_state_claim = 7899 add_state_claim = 7900 add_state_claim = 7901 add_state_claim = 7902
+                add_state_claim = 738 add_state_claim = 8282
+
+                #Timor
+                add_state_claim = 721 add_state_claim = 8200 add_state_claim = 8201 add_state_claim = 8202 add_state_claim = 8203
+                add_state_claim = 1142 add_state_claim = 10275 add_state_claim = 10276
+			}
+		}
+
+		ai_will_do = {
+			base = 3
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+}
+
+form_micronesia_category = {
+
+	form_micronesia = {
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = PLU
+				original_tag = FSM
+				original_tag = GUM
+				original_tag = MRS
+				original_tag = KIR
+				original_tag = NRU
+			}
+			has_dlc = "Thunder at Our Gates"
+		}
+
+		fire_only_once = yes
+
+		on_map_mode = decision_view_only
+
+		highlight_states = {
+		
+			highlight_state_targets = {
+
+				# Carolines
+				state = 647 #Palau
+				state = 684 #Caroline Islands
+
+				# Marianas
+				state = 638 #Guam
+				state = 646 #Saipan
+
+				# Marshalls 
+				state = 633 #Marshall Islands
+				state = 632 #Wake Island
+                state = 648 #Marcus Island
+
+				# Gilberts
+				state = 639 #Gilbert Islands
+				state = 725 #Nauru
+			}
+		}
+
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = form_country_micronesia_required_states_tt
+
+                # Carolines
+                controls_state = 647 #Palau
+                controls_state = 684 #Caroline Islands
+
+                # Marianas
+                controls_state = 638 #Guam
+                controls_state = 646 #Saipan
+
+                # Marshalls 
+                controls_state = 633 #Marshall Islands
+                controls_state = 632 #Wake Island
+                controls_state = 648 #Marcus Island
+
+                # Gilberts
+                controls_state = 639 #Gilbert Islands
+                controls_state = 725 #Nauru
+			}
+		}
+
+		visible = {
+			OR = {
+                original_tag = PLU
+                original_tag = FSM
+                original_tag = GUM
+                original_tag = MRS
+                original_tag = KIR
+                original_tag = NRU
+            }
+			NOT = { has_global_flag = formed_micronesia_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = MCR
+			set_global_flag = formed_micronesia_flag
+			custom_effect_tooltip = form_country_micronesia_coring_states_tt
+			hidden_effect = {
+
+				#Carolines
+				647 = { add_core_of = ROOT } 7702 = { add_core_of = ROOT }
+				684 = { add_core_of = ROOT } 8094 = { add_core_of = ROOT } 8095 = { add_core_of = ROOT } 8096 = { add_core_of = ROOT } 8097 = { add_core_of = ROOT } 8098 = { add_core_of = ROOT } 8099 = { add_core_of = ROOT } 8100 = { add_core_of = ROOT } 8101 = { add_core_of = ROOT } 8102 = { add_core_of = ROOT } 8103 = { add_core_of = ROOT }
+
+				#Marianas
+				638 = { add_core_of = ROOT }
+				646 = { add_core_of = ROOT } 7700 = { add_core_of = ROOT } 7701 = { add_core_of = ROOT }
+
+				#Marshalls
+				633 = { add_core_of = ROOT } 7647 = { add_core_of = ROOT } 7648 = { add_core_of = ROOT } 7649 = { add_core_of = ROOT } 7650 = { add_core_of = ROOT } 7651 = { add_core_of = ROOT } 7652 = { add_core_of = ROOT } 7653 = { add_core_of = ROOT } 7654 = { add_core_of = ROOT }
+                632 = { add_core_of = ROOT }
+                648 = { add_core_of = ROOT }
+
+				#Gilberts
+				639 = { add_core_of = ROOT } 7678 = { add_core_of = ROOT } 7679 = { add_core_of = ROOT } 7680 = { add_core_of = ROOT } 7681 = { add_core_of = ROOT }
+				725 = { add_core_of = ROOT }
+			}
+		}
+
+		ai_will_do = {
+			base = 3
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+}

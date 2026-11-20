@@ -1,0 +1,19 @@
+state = {
+	id = 2772
+	name = "STATE_2772"
+	manpower = 46538
+	local_supplies = 5.0
+	state_category = p2s_village
+	resources = {
+		chromium = 1
+		coal = 1
+	}
+	history = {
+		owner = BUL
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = BUL
+	}
+	provinces = { 878 }
+}

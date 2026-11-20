@@ -1,0 +1,25 @@
+state = {
+	id = 75
+	name = "STATE_75"
+	manpower = 1805664
+	local_supplies = 0.0
+	state_category = town
+	resources = {
+		steel = 1
+		oil = 1
+	}
+	history = {
+		owner = CZE
+		victory_points = { 3569 20 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			air_base = 5
+		}
+		add_core_of = CZE
+		add_to_array = {
+			state_victory_points = 3569
+		}
+	}
+	provinces = { 3569 }
+}

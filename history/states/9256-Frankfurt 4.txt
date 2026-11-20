@@ -1,0 +1,18 @@
+state = {
+	id = 9256
+	name = "STATE_9256"
+	manpower = 28487
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = GER
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = GER
+		add_core_of = HES
+		set_demilitarized_zone = yes
+	}
+	provinces = { 3574 }
+}

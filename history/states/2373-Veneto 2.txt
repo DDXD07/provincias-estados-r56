@@ -1,0 +1,25 @@
+state = {
+	id = 2373
+	name = "STATE_2373"
+	manpower = 780063
+	buildings_max_level_factor = 1.000
+	local_supplies = 5.0
+	state_category = rural
+	resources = {
+		steel = 5
+	}
+	history = {
+		owner = ITA
+		victory_points = { 3604 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = ITA
+		add_core_of = VNZ
+		add_to_array = {
+			state_victory_points = 3604
+		}
+	}
+	provinces = { 3604 }
+}

@@ -1,0 +1,26 @@
+state = {
+	id = 6539
+	name = "STATE_6539"
+	manpower = 1310577
+	local_supplies = 0.0
+	state_category = developed_rural
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		add_to_array = {
+			state_victory_points = 7212
+		}
+		buildings = {
+			infrastructure = 4
+			dockyard = 1
+			arms_factory = 1
+		}
+		victory_points = { 7212 10 }
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 1
+			}
+		}
+	}
+	provinces = { 7212 }
+}

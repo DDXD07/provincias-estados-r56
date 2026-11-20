@@ -1,0 +1,24 @@
+state = {
+	id = 72
+	name = "STATE_72"
+	manpower = 114000
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		coal = 4
+	}
+	history = {
+		owner = CZE
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = CZE
+		add_claim_by = SIL
+		add_to_array = {
+			state_victory_points = 9567
+		}
+		victory_points = { 9567 1 }
+	}
+	provinces = { 9567 }
+}

@@ -1,0 +1,341 @@
+ALB_assimilate_the_albanian_territories = {
+	ALB_assimilate_kosovo = {
+		icon = generic_nationalism
+		cost = 25
+		fire_only_once = yes
+		days_remove = 30
+		visible = { 
+			NOT = {
+				802 = { is_core_of = ROOT }
+			}
+		}
+		available = {
+			802 = {
+				is_fully_controlled_by = ROOT
+				compliance > 30
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 802
+			} 
+		}
+		complete_effect = {
+			add_stability = -0.01
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						802 = {
+							is_claimed_by = ROOT
+						}
+					}
+					remove_state_claim = 802 remove_state_claim = 8620 remove_state_claim = 8621
+				}
+			}
+			add_state_core = 802 add_state_core = 8620 add_state_core = 8621
+		}
+		ai_will_do = {
+			factor = 10
+		}		
+	}
+	ALB_promote_the_integration_of_kosovo = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		cost = 25
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			802 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		available = {
+			802 = {
+				is_fully_controlled_by = ROOT
+				resistance < 30
+				compliance < 80
+			}
+			NOT = {
+				OR = {
+					has_decision = ALB_assimilate_kosovo
+					802 = {
+						is_core_of = ROOT
+					}
+				}
+			}			
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 802
+			} 
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			802 = {
+				add_compliance = 10
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}		
+	}	
+	ALB_assimilate_mitrovica = {
+		icon = generic_nationalism
+		cost = 40
+		fire_only_once = yes
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 953
+			} 
+		}
+		available = {
+			953 = {
+				is_fully_controlled_by = ROOT
+				compliance > 50
+			}
+			802 = {
+				is_core_of = ROOT
+			}
+		}
+		visible = { 
+			NOT = {
+				953 = { is_core_of = ROOT }
+			}
+		}
+		complete_effect = {
+			add_stability = -0.02
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						953 = {
+							is_claimed_by = ROOT
+						}
+					}
+					remove_state_claim = 953 remove_state_claim = 9420
+				}
+			}
+			add_state_core = 953 add_state_core = 9420
+		}
+		ai_will_do = {
+			factor = 10
+		}		
+	}	
+	ALB_promote_the_integration_of_mitrovica = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		cost = 25
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			953 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		available = {
+			953 = {
+				is_fully_controlled_by = ROOT
+				resistance < 30
+				compliance < 80
+			}
+			NOT = {
+				OR = {
+					has_decision = ALB_assimilate_mitrovica
+					953 = {
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 953
+			} 
+		}
+		remove_effect = {
+			953 = {
+				add_compliance = 10
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}		
+	}		
+	ALB_assimilate_debar = {
+		icon = generic_nationalism
+		cost = 25
+		fire_only_once = yes
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 950
+			} 
+		}
+		visible = { 
+			NOT = {
+				950 = { is_core_of = ROOT }
+			}
+		}
+		available = {
+			950 = {
+				is_fully_controlled_by = ROOT
+				compliance > 30
+			}
+		}
+		complete_effect = {
+			add_stability = -0.01
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						950 = {
+							is_claimed_by = ROOT
+						}
+					}
+					remove_state_claim = 950 remove_state_claim = 9415
+				}
+			}
+			add_state_core = 950 add_state_core = 9415
+		}
+		ai_will_do = {
+			factor = 10
+		}		
+	}
+	ALB_promote_the_integration_of_debar = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		cost = 25
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			950 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		available = {
+			950 = {
+				is_fully_controlled_by = ROOT
+				resistance < 30
+				compliance < 80
+			}
+			NOT = {
+				OR = {
+					has_decision = ALB_assimilate_debar
+					950 = {
+						is_core_of = ROOT
+					}
+				}
+			}			
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 950
+			} 
+		}
+		remove_effect = {
+			950 = {
+				add_compliance = 10
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}		
+	}			
+}
+
+political_actions = {
+	ALB_question_of_the_capital = {
+		icon = GFX_decision_eng_trade_unions_support
+		fire_only_once = yes
+		allowed = {
+			original_tag = ALB
+		}
+		available = {
+			is_subject = no
+			has_cosmetic_tag = EGY_ALB_united
+			NOT = {
+				has_idea = generic_recent_political_unification
+			}
+			44 = { is_fully_controlled_by = ALB }
+			447 = { is_fully_controlled_by = ALB }
+			907 = { is_fully_controlled_by = ALB }
+		}
+		visible = {
+			has_global_flag = form_egypt_albania_flag
+		}
+		complete_effect = {
+			country_event = albania.15
+		}
+	}
+}
+
+ALB_form_egypt_albania_category = {
+	ALB_form_egypt_albania = {
+		icon = generic_form_nation
+		allowed = {
+			original_tag = ALB
+		}
+		available = {
+			is_subject = no
+			# Egypt
+			custom_trigger_tooltip = {
+                tooltip = form_country_mamluks_required_states_egyptian_tt
+                controls_state = 907
+                controls_state = 447
+                controls_state = 452
+                controls_state = 456
+                controls_state = 457
+                controls_state = 453
+            }
+			#Albania
+			custom_trigger_tooltip = {
+				tooltip = form_rumelia_albania_required_states_tt
+				controls_state = 44
+				controls_state = 805
+				controls_state = 910
+			}
+		}
+		visible = {
+			has_completed_focus = ALB_liberate_our_homeland
+			NOT = { has_global_flag = form_egypt_albania_flag }
+		}
+		complete_effect = {
+			custom_effect_tooltip = form_country_gs_required_coring_states_tt
+			set_cosmetic_tag = EGY_ALB_united
+			hidden_effect = {
+				add_state_core = 910 add_state_core = 9183 add_state_core = 9184
+				add_state_core = 44 add_state_core = 1486 add_state_core = 1487 add_state_core = 1488 add_state_core = 1489 add_state_core = 1490 add_state_core = 1491
+				add_state_core = 805 add_state_core = 8628 add_state_core = 8629
+				add_state_core = 452 add_state_core = 5786 add_state_core = 5787 add_state_core = 5788 add_state_core = 5789 add_state_core = 5790 add_state_core = 5791 add_state_core = 5792 add_state_core = 5793
+				add_state_core = 447 add_state_core = 5757 add_state_core = 5758 add_state_core = 5759 add_state_core = 5760 add_state_core = 5761 add_state_core = 5762
+				add_state_core = 907 add_state_core = 9170 add_state_core = 9171 add_state_core = 9172 add_state_core = 9173 add_state_core = 9174 add_state_core = 9175 add_state_core = 9176 add_state_core = 9177 add_state_core = 9178 add_state_core = 9179
+				add_state_core = 456 add_state_core = 5808 add_state_core = 5809 add_state_core = 5810 add_state_core = 5811 add_state_core = 5812 add_state_core = 5813 add_state_core = 5814 add_state_core = 5815 add_state_core = 5816 add_state_core = 5817 add_state_core = 5818 add_state_core = 5819 add_state_core = 5820 add_state_core = 5821
+				add_state_core = 457 add_state_core = 5822 add_state_core = 5823 add_state_core = 5824 add_state_core = 5825 add_state_core = 5826 add_state_core = 5827 add_state_core = 5828 add_state_core = 5829
+				add_state_core = 453 add_state_core = 5794 add_state_core = 5795 add_state_core = 5796 add_state_core = 5797 add_state_core = 5798 add_state_core = 5799 add_state_core = 5800 add_state_core = 5801
+				add_state_core = 911 add_state_core = 9185
+				add_state_core = 995 add_state_core = 9593
+				set_global_flag = form_egypt_albania_flag
+			}
+			add_ideas = generic_recent_political_unification
+			add_ideas = generic_recent_army_unification
+			add_ideas = generic_recent_economic_unification				
+		}
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

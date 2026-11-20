@@ -1,0 +1,39 @@
+state = {
+	id = 835
+	name = "STATE_835"
+	manpower = 583332
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = rural
+	history = {
+		set_variable = {
+			ETH_state_development_production_speed = -0.3
+		}
+		set_variable = {
+			ETH_state_development_local_building_slots_factor = -0.3
+		}
+		set_variable = {
+			ETH_text_chitet_var = 3
+		}
+		add_dynamic_modifier = {
+			modifier = ETH_state_development_dynamic_modifier
+		}
+		add_dynamic_modifier = {
+			modifier = ETH_state_decentralization_dynamic_modifier
+			scope = ETH
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			air_base = 1
+		}
+		victory_points = { 13298 3 }
+		owner = ETH
+		add_core_of = ETH
+		add_core_of = SOM
+		add_to_array = {
+			state_victory_points = 13298
+		}
+	}
+	provinces = { 13298 }
+}

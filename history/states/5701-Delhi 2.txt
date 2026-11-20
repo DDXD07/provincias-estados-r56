@@ -1,0 +1,16 @@
+state = {
+	id = 5701
+	name = "STATE_5701"
+	manpower = 9943
+	buildings_max_level_factor = 1.000
+	local_supplies = 1.000
+	state_category = rural
+	history = {
+		owner = RAJ
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = RAJ
+	}
+	provinces = { 2032 }
+}

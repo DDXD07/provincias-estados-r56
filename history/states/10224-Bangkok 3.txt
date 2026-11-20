@@ -1,0 +1,19 @@
+state = {
+	id = 10224
+	name = "STATE_10224"
+	manpower = 236133
+	local_supplies = 1
+	state_category = pastoral
+	history = {
+		owner = SIA
+		add_core_of = SIA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 10250 2 }
+		add_to_array = {
+			state_victory_points = 10250
+		}
+	}
+	provinces = { 10250 }
+}

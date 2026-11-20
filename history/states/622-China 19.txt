@@ -1,0 +1,28 @@
+state = {
+	id = 622
+	name = "STATE_622"
+	manpower = 766799
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = developed_rural
+	resources = {
+		steel = 1
+		tungsten = 1
+		coal = 5
+	}
+	history = {
+		owner = PRC
+		add_core_of = PRC
+		add_core_of = CHI
+		add_to_array = {
+			state_victory_points = 12356
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = { 12356 1 }
+	}
+	provinces = { 12356 }
+}

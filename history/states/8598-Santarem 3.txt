@@ -1,0 +1,19 @@
+state = {
+	id = 8598
+	name = "STATE_8598"
+	manpower = 72057
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		chromium = 3
+	}
+	history = {
+		owner = POR
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POR
+	}
+	provinces = { 3926 }
+}

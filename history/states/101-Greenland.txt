@@ -1,0 +1,24 @@
+state = {
+	id = 101
+	name = "STATE_101"
+	manpower = 6749
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	history = {
+		owner = DEN
+		buildings = {
+			infrastructure = 1
+			10245 = {
+				naval_base = 1
+			}
+		}
+		add_claim_by = DEN
+		add_core_of = GRN
+		add_to_array = {
+			state_victory_points = 10245
+		}
+		victory_points = { 10245 1 }
+	}
+	provinces = { 10245 }
+}

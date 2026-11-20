@@ -1,0 +1,37 @@
+state = {
+	id = 10133
+	name = "STATE_10133"
+	manpower = 2028383
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = SIC
+		add_core_of = CHI
+		add_core_of = PRC
+		add_core_of = SIC
+		add_to_array = {
+			state_victory_points = 11972
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 11972 1 }
+		1938.10.25 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				remove_core_of = SIC
+			}
+			owner = CHI
+			controller = CHI
+		}
+		1939.1.1 = {
+			buildings = {
+				infrastructure = 3
+			}
+		}
+	}
+	provinces = { 11972 }
+}

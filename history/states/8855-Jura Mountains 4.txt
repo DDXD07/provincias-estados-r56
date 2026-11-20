@@ -1,0 +1,18 @@
+state = {
+	id = 8855
+	name = "STATE_8855"
+	manpower = 86138
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		aluminium = 4
+	}
+	history = {
+		owner = SWI
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SWI
+	}
+	provinces = { 9622 }
+}

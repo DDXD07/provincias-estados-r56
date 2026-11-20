@@ -1,0 +1,24 @@
+state = {
+	id = 667
+	name = "STATE_667"
+	manpower = 206572
+	buildings_max_level_factor = 1
+	local_supplies = 3.0
+	state_category = pastoral
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = EIS
+		buildings = {
+			infrastructure = 1
+			4301 = {
+				naval_base = 1
+			}
+		}
+		add_to_array = {
+			state_victory_points = 4301
+		}
+		victory_points = { 4301 3 }
+	}
+	provinces = { 4301 }
+}

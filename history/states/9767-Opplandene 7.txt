@@ -1,0 +1,18 @@
+state = {
+	id = 9767
+	name = "STATE_9767"
+	manpower = 8136
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		aluminium = 1
+	}
+	history = {
+		owner = NOR
+		add_core_of = NOR
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 9227 }
+}

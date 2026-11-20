@@ -1,0 +1,21 @@
+state = {
+	id = 2016
+	name = "STATE_2016"
+	manpower = 86531
+	local_supplies = 13.0
+	state_category = p2s_village
+	resources = {
+		aluminium = 1
+		steel = 1
+	}
+	history = {
+		owner = ITA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ITA
+		add_core_of = TTS
+		add_core_of = NAP
+	}
+	provinces = { 9826 }
+}

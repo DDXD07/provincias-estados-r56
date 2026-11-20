@@ -1,0 +1,17 @@
+state = {
+	id = 1747
+	name = "STATE_1747"
+	manpower = 57384
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = ROM
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ROM
+		add_core_of = SZK
+		add_core_of = TRA
+	}
+	provinces = { 9704 }
+}

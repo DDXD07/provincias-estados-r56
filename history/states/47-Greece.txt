@@ -1,0 +1,31 @@
+state = {
+	id = 47
+	name = "STATE_47"
+	manpower = 1658788
+	local_supplies = 0.0
+	state_category = large_city
+	resources = {
+		chromium = 1
+		aluminium = 3
+		tungsten = 1
+	}
+	history = {
+		owner = GRE
+		victory_points = { 4109 20 }
+		buildings = {
+			dockyard = 2
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 5
+			air_base = 4
+			4109 = {
+				naval_base = 9
+			}
+		}
+		add_core_of = GRE
+		add_to_array = {
+			state_victory_points = 4109
+		}
+	}
+	provinces = { 4109 }
+}

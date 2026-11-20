@@ -1,0 +1,16 @@
+state = {
+	id = 1165
+	name = "STATE_1165"
+	manpower = 65164
+	local_supplies = 12.0
+	state_category = pastoral
+	history = {
+		owner = GER
+		controller = GER
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = GER
+	}
+	provinces = { 3351 }
+}

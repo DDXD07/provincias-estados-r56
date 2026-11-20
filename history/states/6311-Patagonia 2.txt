@@ -1,0 +1,18 @@
+state = {
+	id = 6311
+	name = "STATE_6311"
+	manpower = 17451
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		oil = 1
+	}
+	history = {
+		owner = ARG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ARG
+	}
+	provinces = { 2149 }
+}

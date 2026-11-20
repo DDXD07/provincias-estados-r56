@@ -1,0 +1,19 @@
+state = {
+	id = 2999
+	name = "STATE_2999"
+	manpower = 65168
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 2
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+	}
+	provinces = { 6423 }
+}

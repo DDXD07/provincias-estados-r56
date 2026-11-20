@@ -1,0 +1,26 @@
+state = {
+	id = 362
+	name = "STATE_362"
+	manpower = 964774
+	buildings_max_level_factor = 1.000
+	local_supplies = 11.0
+	state_category = developed_rural
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 10
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_to_array = {
+			state_victory_points = 3823
+		}
+		victory_points = { 3823 15 }
+	}
+	provinces = { 3823 }
+}

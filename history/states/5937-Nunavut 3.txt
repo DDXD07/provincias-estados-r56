@@ -1,0 +1,20 @@
+state = {
+	id = 5937
+	name = "STATE_5937"
+	manpower = 205172
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = CAN
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = CAN
+		add_core_of = QUE
+		add_to_array = {
+			state_victory_points = 7291
+		}
+		victory_points = { 7291 3 }
+	}
+	provinces = { 7291 }
+}

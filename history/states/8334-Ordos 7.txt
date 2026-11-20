@@ -1,0 +1,21 @@
+state = {
+	id = 8334
+	name = "STATE_8334"
+	manpower = 45455
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = SHX
+		add_core_of = SHX
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 1959 }
+}

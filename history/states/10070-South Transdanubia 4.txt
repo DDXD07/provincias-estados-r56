@@ -1,0 +1,18 @@
+state = {
+	id = 10070
+	name = "STATE_10070"
+	manpower = 45784
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		aluminium = 3
+	}
+	history = {
+		owner = HUN
+		add_core_of = HUN
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 9624 }
+}

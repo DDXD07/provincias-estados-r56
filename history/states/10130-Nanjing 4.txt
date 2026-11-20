@@ -1,0 +1,20 @@
+state = {
+	id = 10130
+	name = "STATE_10130"
+	manpower = 196649
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		set_state_flag = CHI_jinling_arsenal_organization_flag
+		buildings = {
+			infrastructure = 2
+		}
+		1938.10.25 = {
+			controller = JAP
+		}
+	}
+	provinces = { 1099 }
+}

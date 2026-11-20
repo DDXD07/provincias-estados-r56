@@ -1,0 +1,16 @@
+state = {
+	id = 4010
+	name = "STATE_4010"
+	manpower = 13302
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		add_core_of = BLZ
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 13435 }
+}

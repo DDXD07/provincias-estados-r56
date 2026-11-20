@@ -1,0 +1,24 @@
+state = {
+	id = 1487
+	name = "STATE_1487"
+	manpower = 115922
+	buildings_max_level_factor = 1.000
+	local_supplies = 5.0
+	state_category = p2s_village
+	history = {
+		owner = ALB
+		victory_points = { 13304 2 }
+		buildings = {
+			infrastructure = 2
+			13304 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = ALB
+		add_claim_by = ITA
+		add_to_array = {
+			state_victory_points = 13304
+		}
+	}
+	provinces = { 13304 }
+}

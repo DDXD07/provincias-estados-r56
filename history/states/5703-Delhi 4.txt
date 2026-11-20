@@ -1,0 +1,16 @@
+state = {
+	id = 5703
+	name = "STATE_5703"
+	manpower = 9942
+	buildings_max_level_factor = 1.000
+	local_supplies = 1.000
+	state_category = pastoral
+	history = {
+		owner = RAJ
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = RAJ
+	}
+	provinces = { 11955 }
+}

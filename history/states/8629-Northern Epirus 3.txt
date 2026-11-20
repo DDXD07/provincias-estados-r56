@@ -1,0 +1,18 @@
+state = {
+	id = 8629
+	name = "STATE_8629"
+	manpower = 9548
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = ALB
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = ALB
+		add_claim_by = GRE
+		add_claim_by = ITA
+	}
+	provinces = { 13234 }
+}

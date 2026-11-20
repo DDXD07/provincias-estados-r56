@@ -1,0 +1,28 @@
+state = {
+	id = 994
+	name = "STATE_994"
+	manpower = 1589601
+	buildings_max_level_factor = 1.000
+	local_supplies = 1.000
+	state_category = large_town
+	history = {
+		owner = CUB
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 2
+			air_base = 1
+			7622 = {
+				naval_base = 3
+				coastal_bunker = 1
+				bunker = 1
+			}
+		}
+		add_core_of = CUB
+		add_to_array = {
+			state_victory_points = 7622
+		}
+		victory_points = { 7622 5 }
+	}
+	provinces = { 7622 }
+}

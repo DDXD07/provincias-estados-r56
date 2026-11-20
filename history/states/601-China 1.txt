@@ -1,0 +1,22 @@
+state = {
+	id = 601
+	name = "STATE_601"
+	manpower = 59502
+	buildings_max_level_factor = 1.000
+	local_supplies = 1.0
+	state_category = rural
+	history = {
+		owner = TIB
+		add_core_of = TIB
+		add_claim_by = CHI
+		add_to_array = {
+			state_victory_points = 10856
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = { 10856 1 }
+	}
+	provinces = { 10856 }
+}

@@ -1,0 +1,22 @@
+state = {
+	id = 507
+	name = "STATE_507"
+	manpower = 22832
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = CHL
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = CHL
+		add_to_array = {
+			state_victory_points = 5201
+		}
+		victory_points = { 5201 1 }
+	}
+	provinces = { 5201 }
+}

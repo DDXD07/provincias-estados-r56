@@ -1,0 +1,25 @@
+state = {
+	id = 7524
+	name = "STATE_7524"
+	manpower = 1160099
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = SHX
+		add_core_of = SHX
+		add_core_of = CHI
+		add_core_of = PRC
+		set_state_flag = CHI_taiyuan_arsenal_organization_flag
+		add_to_array = {
+			state_victory_points = 10507
+		}
+		victory_points = { 10507 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 10507 }
+}

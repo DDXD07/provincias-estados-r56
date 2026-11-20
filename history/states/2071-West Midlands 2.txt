@@ -1,0 +1,23 @@
+state = {
+	id = 2071
+	name = "STATE_2071"
+	manpower = 181242
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 5
+		coal = 2
+	}
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = { 11345 1 }
+		add_core_of = ENG
+		add_to_array = {
+			state_victory_points = 11345
+		}
+	}
+	provinces = { 11345 }
+}

@@ -1,0 +1,24 @@
+state = {
+	id = 1534
+	name = "STATE_1534"
+	manpower = 397622
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		aluminium = 1
+	}
+	history = {
+		owner = GER
+		victory_points = { 11499 3 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = GER
+		add_core_of = WUR
+		add_to_array = {
+			state_victory_points = 11499
+		}
+	}
+	provinces = { 11499 }
+}

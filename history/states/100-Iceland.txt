@@ -1,0 +1,27 @@
+state = {
+	id = 100
+	name = "STATE_100"
+	manpower = 45059
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = developed_rural
+	history = {
+		owner = ICE
+		victory_points = { 12674 3 }
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			dockyard = 1
+			arms_factory = 1
+			12674 = {
+				naval_base = 2
+			}
+		}
+		add_claim_by = DEN
+		add_core_of = ICE
+		add_to_array = {
+			state_victory_points = 12674
+		}
+	}
+	provinces = { 12674 }
+}

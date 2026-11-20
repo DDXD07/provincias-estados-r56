@@ -1,0 +1,19 @@
+state = {
+	id = 2415
+	name = "STATE_2415"
+	manpower = 31827
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = SPR
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SPR
+	}
+	provinces = { 11737 }
+}

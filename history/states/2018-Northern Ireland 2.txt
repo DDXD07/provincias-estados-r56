@@ -1,0 +1,22 @@
+state = {
+	id = 2018
+	name = "STATE_2018"
+	manpower = 199756
+	buildings_max_level_factor = 1
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = ENG
+		victory_points = { 385 1 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ENG
+		add_core_of = IRE
+		add_core_of = NIR
+		add_to_array = {
+			state_victory_points = 385
+		}
+	}
+	provinces = { 385 }
+}

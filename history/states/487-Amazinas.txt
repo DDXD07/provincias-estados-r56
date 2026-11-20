@@ -1,0 +1,20 @@
+state = {
+	id = 487
+	name = "STATE_487"
+	manpower = 80519
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = BOL
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		add_core_of = BOL
+		add_to_array = {
+			state_victory_points = 10924
+		}
+		victory_points = { 10924 1 }
+	}
+	provinces = { 10924 }
+}

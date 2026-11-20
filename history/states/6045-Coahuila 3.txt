@@ -1,0 +1,18 @@
+state = {
+	id = 6045
+	name = "STATE_6045"
+	manpower = 37968
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = MEX
+	}
+	provinces = { 12811 }
+}

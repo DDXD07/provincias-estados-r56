@@ -1,0 +1,22 @@
+state = {
+	id = 2567
+	name = "STATE_2567"
+	manpower = 101287
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		victory_points = { 11965 1 }
+		owner = GRE
+		buildings = {
+			infrastructure = 2
+			11965 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = GRE
+		add_to_array = {
+			state_victory_points = 11965
+		}
+	}
+	provinces = { 11965 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 4022
+	name = "STATE_4022"
+	manpower = 462413
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = ELS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ELS
+		add_to_array = {
+			state_victory_points = 13093
+		}
+		victory_points = { 13093 1 }
+	}
+	provinces = { 13093 }
+}

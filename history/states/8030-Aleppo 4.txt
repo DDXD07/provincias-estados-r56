@@ -1,0 +1,16 @@
+state = {
+	id = 8030
+	name = "STATE_8030"
+	manpower = 77977
+	buildings_max_level_factor = 1.000
+	local_supplies = 2.0
+	state_category = pastoral
+	history = {
+		owner = FRA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SYR
+	}
+	provinces = { 7140 }
+}

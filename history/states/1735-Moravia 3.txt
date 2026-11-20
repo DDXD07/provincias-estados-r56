@@ -1,0 +1,19 @@
+state = {
+	id = 1735
+	name = "STATE_1735"
+	manpower = 132123
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = CZE
+		victory_points = { 6576 1 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = CZE
+		add_to_array = {
+			state_victory_points = 6576
+		}
+	}
+	provinces = { 6576 }
+}

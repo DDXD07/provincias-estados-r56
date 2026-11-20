@@ -1,0 +1,149 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+# building_target
+
+SIA_avoid_alliances_with_starting_majors_r56 = {	#Neutral, playing Britain and Japan off of each other - hates joining major factions
+	allowed = { original_tag = SIA }
+	enable = {
+		is_subject = no
+		NOT = {
+			ENG = { has_completed_focus = ENG_revisit_colonial_policy }
+			JAP = { has_government = communism }
+			RAJ = { is_subject = no }
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = alliance
+		id = USA
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance
+		id = ENG
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance
+		id = FRA
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance
+		id = SOV
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance
+		id = GER
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance
+		id = ITA
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance
+		id = JAP
+		value = -100
+	}
+	ai_strategy = {
+		type = befriend
+		id = USA
+		value = 12
+	}
+	ai_strategy = {
+		type = befriend
+		id = ENG
+		value = 12
+	}
+	ai_strategy = {
+		type = befriend
+		id = GER
+		value = 12
+	}
+	ai_strategy = {
+		type = befriend
+		id = ITA
+		value = 12
+	}
+	ai_strategy = {
+		type = befriend
+		id = JAP
+		value = 12
+	}
+	ai_strategy = {
+		type = ignore
+		id = SOV
+		value = 10
+	}
+}
+
+SIA_junior_partner_ai_r56 = {	#We are a base for attacks between India/China/Malaya, and are in danger of being naval-invaded
+	allowed = { original_tag = SIA }
+	enable = {
+		surrender_progress < 0.21 #if this strat is leading to a losing war let generic front control take the wheel again
+		OR = {
+			has_war = no
+			has_war_with_major = yes
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = -50
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.1
+		states = { 1134 10223 10224 }	#Bangkok
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.1
+		states = { 1133 10218 10219 10220 10221 10222 }	#Eastern Siam
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.08
+		states = { 289 3911 3912 3913 3914 3915 3916 3917 3918 3919 3920 3921 3922 3923 }	#Western Siam
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.08
+		states = { 724 8212 8213 8214 8215 8216 8217 8218 8219 8220 8221 8222 8223 8224 8225 8226 }	#Kra Isthmus
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.05
+		states = { 741 8287 8288 8289 8290 8291 8292 8293 8294 8295 8296 8297 8298 8299 8300 8301 8302 8303 8304 8305 8306 }	#Cambodia
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.03
+		states = { 1020 9671 9672 9673 9674 9675 9676 9677 9678 9679 9680 9681 9682 9683 9684 }	#Bago
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.03
+		states = { 914 9192 9193 9194 }	#Kedah
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.03
+		states = { 960 9440 9441 9442 9443 9444 }	#Terengganu
+	}
+}
+

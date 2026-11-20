@@ -1,0 +1,19 @@
+state = {
+	id = 1934
+	name = "STATE_1934"
+	manpower = 46237
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		aluminium = 4
+	}
+	history = {
+		owner = YUG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = YUG
+		add_core_of = CRO
+	}
+	provinces = { 3868 }
+}

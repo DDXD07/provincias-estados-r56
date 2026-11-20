@@ -1,0 +1,16 @@
+state = {
+	id = 9591
+	name = "STATE_9591"
+	manpower = 144510
+	buildings_max_level_factor = 1.000
+	local_supplies = 1.000
+	state_category = p2s_village
+	history = {
+		owner = CUB
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CUB
+	}
+	provinces = { 4600 }
+}

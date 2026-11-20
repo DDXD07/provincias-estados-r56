@@ -1,0 +1,21 @@
+state = {
+	id = 176
+	name = "STATE_176"
+	manpower = 272540
+	buildings_max_level_factor = 1.000
+	local_supplies = 9.0
+	state_category = rural
+	history = {
+		owner = SPR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = { 885 3 }
+		add_core_of = SPR
+		add_to_array = {
+			state_victory_points = 885
+		}
+	}
+	provinces = { 885 }
+}

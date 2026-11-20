@@ -1,0 +1,23 @@
+state = {
+	id = 6063
+	name = "STATE_6063"
+	manpower = 28352
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		tungsten = 1
+	}
+	history = {
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 4977 1 }
+		add_core_of = MEX
+		add_to_array = {
+			state_victory_points = 4977
+		}
+	}
+	provinces = { 4977 }
+}

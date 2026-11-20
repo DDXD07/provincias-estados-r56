@@ -1,0 +1,32 @@
+state = {
+	id = 1215
+	name = "STATE_1215"
+	manpower = 792301
+	local_supplies = 0.0
+	state_category = developed_rural
+	history = {
+		owner = FRA
+		victory_points = { 3552 10 }
+		buildings = {
+			infrastructure = 4
+			dockyard = 3
+			3552 = {
+				naval_base = 10
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+				naval_supply_hub = 1
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = FRA
+		add_core_of = BRI
+		add_to_array = {
+			state_victory_points = 3552
+		}
+	}
+	provinces = { 3552 }
+}

@@ -1,0 +1,2815 @@
+﻿add_namespace = wtt_japan
+add_namespace = goe_japan
+
+#Jakob ID 1-100
+#Drikus ID 101-200
+#Gabriel ID 201-300
+
+ ##  #   # ### ###  #    ##  ###  ###  
+#  # #   # #   #  # #   #  # #  # #  # 
+#  #  # #  ##  ###  #   #  # ###  #  # 
+#  #  # #  #   #  # #   #  # #  # #  # 
+ ##    #   ### #  # ###  ##  #  # ###  
+
+#Japans asks to take overlordship if country has capitulated
+country_event = {
+	id = wtt_japan.1
+	title = wtt_japan.1.t
+	desc = wtt_japan.1.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	is_triggered_only = yes
+	
+	#Accept transfer puppet
+	#Checking for puppet in decision that fires event.
+	option = {
+		name = wtt_japan.1.a
+		ai_chance = {
+			base = 10
+		}
+		if = {
+			limit = { ROOT = { tag = HOL }
+			}
+			FROM = { puppet = INS }
+		}
+
+		if = {
+			limit = { ROOT = { tag = ENG }
+			}
+			FROM = { puppet = MAL }
+		}
+
+		if = {
+			limit = { 
+				ROOT = { 
+					tag = FRA 
+				}
+				FRI = {
+					NOT = {
+						exists = yes
+					}
+				} 
+			}
+			if = {
+				limit = {
+					670 = {
+						is_fully_controlled_by = FRA
+					}
+				}
+				if = {	#56 - Support for the Siam Rework
+					limit = {
+						NOT = { has_war_with = SIA }
+						SIA = {
+							OR = {
+								has_country_flag = SIA_is_claiming_small_border_states_and_laos
+								has_country_flag = SIA_is_claiming_all_of_laos_and_cambodia
+							}
+						}
+						FROM = {
+							NOT = { has_war_with = SIA }
+							has_country_flag = JAP_is_supporting_siams_territorial_aspirations_r56
+						}
+					}
+					SIA = { transfer_state = 670 transfer_state = 7921 transfer_state = 7922 transfer_state = 7923 transfer_state = 7924 transfer_state = 7925 transfer_state = 7926 transfer_state = 7927 transfer_state = 7928 transfer_state = 7929 transfer_state = 7930 transfer_state = 7931 transfer_state = 7932 transfer_state = 7933 transfer_state = 7934 transfer_state = 7935 transfer_state = 7936 transfer_state = 7937 transfer_state = 7938 transfer_state = 7939 transfer_state = 7940 transfer_state = 7941 transfer_state = 7942 transfer_state = 7943 transfer_state = 7944 transfer_state = 7945 transfer_state = 7946 transfer_state = 7947 transfer_state = 7948 }	#Laos
+				}
+				else = {
+					FROM = { transfer_state = 670 transfer_state = 7921 transfer_state = 7922 transfer_state = 7923 transfer_state = 7924 transfer_state = 7925 transfer_state = 7926 transfer_state = 7927 transfer_state = 7928 transfer_state = 7929 transfer_state = 7930 transfer_state = 7931 transfer_state = 7932 transfer_state = 7933 transfer_state = 7934 transfer_state = 7935 transfer_state = 7936 transfer_state = 7937 transfer_state = 7938 transfer_state = 7939 transfer_state = 7940 transfer_state = 7941 transfer_state = 7942 transfer_state = 7943 transfer_state = 7944 transfer_state = 7945 transfer_state = 7946 transfer_state = 7947 transfer_state = 7948 }	#Laos
+				}
+			}
+			if = {
+				limit = {
+					671 = {
+						is_fully_controlled_by = FRA
+					}
+				}
+				FROM = { transfer_state = 671 transfer_state = 7949 transfer_state = 7950 transfer_state = 7951 transfer_state = 7952 transfer_state = 7953 transfer_state = 7954 transfer_state = 7955 transfer_state = 7956 transfer_state = 7957 transfer_state = 7958 transfer_state = 7959 transfer_state = 7960 transfer_state = 7961 transfer_state = 7962 transfer_state = 7963 transfer_state = 7964 transfer_state = 7965 }
+			}
+			if = {
+				limit = {
+					286 = {
+						is_fully_controlled_by = FRA
+					}
+				}
+				FROM = { transfer_state = 286 transfer_state = 3859 transfer_state = 3860 transfer_state = 3861 transfer_state = 3862 transfer_state = 3863 transfer_state = 3864 transfer_state = 3865 transfer_state = 3866 transfer_state = 3867 transfer_state = 3868 transfer_state = 3869 transfer_state = 3870 }
+			}
+			if = {
+				limit = {
+					741 = {
+						is_fully_controlled_by = FRA
+					}
+				}
+				if = {	#56 - Support for the Siam Rework
+					limit = {
+						NOT = { has_war_with = SIA }
+						SIA = { has_country_flag = SIA_is_claiming_all_of_laos_and_cambodia }
+						FROM = {
+							NOT = { has_war_with = SIA }
+							has_country_flag = JAP_is_supporting_siams_territorial_aspirations_r56
+						}
+					}
+					SIA = { transfer_state = 741 transfer_state = 8287 transfer_state = 8288 transfer_state = 8289 transfer_state = 8290 transfer_state = 8291 transfer_state = 8292 transfer_state = 8293 transfer_state = 8294 transfer_state = 8295 transfer_state = 8296 transfer_state = 8297 transfer_state = 8298 transfer_state = 8299 transfer_state = 8300 transfer_state = 8301 transfer_state = 8302 transfer_state = 8303 transfer_state = 8304 transfer_state = 8305 transfer_state = 8306 }	#Cambodia
+				}
+				else = {
+					FROM = { transfer_state = 741 transfer_state = 8287 transfer_state = 8288 transfer_state = 8289 transfer_state = 8290 transfer_state = 8291 transfer_state = 8292 transfer_state = 8293 transfer_state = 8294 transfer_state = 8295 transfer_state = 8296 transfer_state = 8297 transfer_state = 8298 transfer_state = 8299 transfer_state = 8300 transfer_state = 8301 transfer_state = 8302 transfer_state = 8303 transfer_state = 8304 transfer_state = 8305 transfer_state = 8306 }	#Cambodia
+				}
+			}
+			if = {
+				limit = {
+					924 = {
+						is_fully_controlled_by = FRA
+					}
+				}
+				if = {	#56 - Support for the Siam Rework
+					limit = {
+						NOT = { has_war_with = SIA }
+						FROM = {
+							NOT = { has_war_with = SIA }
+							has_country_flag = JAP_is_supporting_siams_territorial_aspirations_r56
+						}
+					}
+					SIA = { transfer_state = 924 }	#Champasak
+				}
+				else = {
+					FROM = { transfer_state = 924 }	#Champasak
+				}
+			}
+			if = {
+				limit = {
+					925 = {
+						is_fully_controlled_by = FRA
+					}
+				}
+				if = {	#56 - Support for the Siam Rework
+					limit = {
+						NOT = { has_war_with = SIA }
+						FROM = {
+							NOT = { has_war_with = SIA }
+							has_country_flag = JAP_is_supporting_siams_territorial_aspirations_r56
+						}
+					}
+					SIA = { transfer_state = 925 transfer_state = 9262 transfer_state = 9263 transfer_state = 9264 transfer_state = 9265 transfer_state = 9266 transfer_state = 9267 transfer_state = 9268 }	#Batambang
+				}
+				else = {
+					FROM = { transfer_state = 925 transfer_state = 9262 transfer_state = 9263 transfer_state = 9264 transfer_state = 9265 transfer_state = 9266 transfer_state = 9267 transfer_state = 9268 }	#Batambang
+				}
+			}
+			if = {
+				limit = {
+					926 = {
+						is_fully_controlled_by = FRA
+					}
+				}
+				if = {	#56 - Support for the Siam Rework
+					limit = {
+						NOT = { has_war_with = SIA }
+						FROM = {
+							NOT = { has_war_with = SIA }
+							has_country_flag = JAP_is_supporting_siams_territorial_aspirations_r56
+						}
+					}
+					SIA = { transfer_state = 926 transfer_state = 9269 transfer_state = 9270 }	#Luang Prabang
+				}
+				else = {
+					FROM = { transfer_state = 926 transfer_state = 9269 transfer_state = 9270 }	#Luang Prabang
+				}
+			}
+			if = {
+				limit = {
+					927 = {
+						is_fully_controlled_by = FRA
+					}
+				}
+				FROM = { transfer_state = 927 transfer_state = 9271 transfer_state = 9272 transfer_state = 9273 transfer_state = 9274 transfer_state = 9275 transfer_state = 9276 transfer_state = 9277 transfer_state = 9278 transfer_state = 9279 transfer_state = 9280 transfer_state = 9281 transfer_state = 9282 transfer_state = 9283 transfer_state = 9284 transfer_state = 9285 transfer_state = 9286 transfer_state = 9287 transfer_state = 9288 transfer_state = 9289 transfer_state = 9290 transfer_state = 9291 transfer_state = 9292 }
+			}
+			if = {
+				limit = {
+					928 = {
+						is_fully_controlled_by = FRA
+					}
+				}
+				FROM = { transfer_state = 928 transfer_state = 9293 transfer_state = 9294 transfer_state = 9295 transfer_state = 9296 transfer_state = 9297 transfer_state = 9298 transfer_state = 9299 }
+			}
+		}
+		if = {
+			limit = { 
+				OR = {
+					ROOT = {
+						tag = FRI	 
+					}
+					AND = {
+						ROOT = {
+							tag = FRA
+							FRI = {
+								is_puppet_of = FRA
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					670 = {
+						is_fully_controlled_by = FRI
+					}
+				}
+				if = {	#56 - Support for the Siam Rework
+					limit = {
+						NOT = { has_war_with = SIA }
+						SIA = {
+							OR = {
+								has_country_flag = SIA_is_claiming_small_border_states_and_laos
+								has_country_flag = SIA_is_claiming_all_of_laos_and_cambodia
+							}
+						}
+						FROM = {
+							NOT = { has_war_with = SIA }
+							has_country_flag = JAP_is_supporting_siams_territorial_aspirations_r56
+						}
+					}
+					SIA = { transfer_state = 670 transfer_state = 7921 transfer_state = 7922 transfer_state = 7923 transfer_state = 7924 transfer_state = 7925 transfer_state = 7926 transfer_state = 7927 transfer_state = 7928 transfer_state = 7929 transfer_state = 7930 transfer_state = 7931 transfer_state = 7932 transfer_state = 7933 transfer_state = 7934 transfer_state = 7935 transfer_state = 7936 transfer_state = 7937 transfer_state = 7938 transfer_state = 7939 transfer_state = 7940 transfer_state = 7941 transfer_state = 7942 transfer_state = 7943 transfer_state = 7944 transfer_state = 7945 transfer_state = 7946 transfer_state = 7947 transfer_state = 7948 }	#Laos
+				}
+				else = {
+					FROM = { transfer_state = 670 transfer_state = 7921 transfer_state = 7922 transfer_state = 7923 transfer_state = 7924 transfer_state = 7925 transfer_state = 7926 transfer_state = 7927 transfer_state = 7928 transfer_state = 7929 transfer_state = 7930 transfer_state = 7931 transfer_state = 7932 transfer_state = 7933 transfer_state = 7934 transfer_state = 7935 transfer_state = 7936 transfer_state = 7937 transfer_state = 7938 transfer_state = 7939 transfer_state = 7940 transfer_state = 7941 transfer_state = 7942 transfer_state = 7943 transfer_state = 7944 transfer_state = 7945 transfer_state = 7946 transfer_state = 7947 transfer_state = 7948 }	#Laos
+				}
+			}
+			if = {
+				limit = {
+					671 = {
+						is_fully_controlled_by = FRI
+					}
+				}
+				FROM = { transfer_state = 671 transfer_state = 7949 transfer_state = 7950 transfer_state = 7951 transfer_state = 7952 transfer_state = 7953 transfer_state = 7954 transfer_state = 7955 transfer_state = 7956 transfer_state = 7957 transfer_state = 7958 transfer_state = 7959 transfer_state = 7960 transfer_state = 7961 transfer_state = 7962 transfer_state = 7963 transfer_state = 7964 transfer_state = 7965 }
+			}
+			if = {
+				limit = {
+					286 = {
+						is_fully_controlled_by = FRI
+					}
+				}
+				FROM = { transfer_state = 286 transfer_state = 3859 transfer_state = 3860 transfer_state = 3861 transfer_state = 3862 transfer_state = 3863 transfer_state = 3864 transfer_state = 3865 transfer_state = 3866 transfer_state = 3867 transfer_state = 3868 transfer_state = 3869 transfer_state = 3870 }
+			}
+			if = {
+				limit = {
+					741 = {
+						is_fully_controlled_by = FRI
+					}
+				}
+				if = {	#56 - Support for the Siam Rework
+					limit = {
+						NOT = { has_war_with = SIA }
+						SIA = { has_country_flag = SIA_is_claiming_all_of_laos_and_cambodia }
+						FROM = {
+							NOT = { has_war_with = SIA }
+							has_country_flag = JAP_is_supporting_siams_territorial_aspirations_r56
+						}
+					}
+					SIA = { transfer_state = 741 transfer_state = 8287 transfer_state = 8288 transfer_state = 8289 transfer_state = 8290 transfer_state = 8291 transfer_state = 8292 transfer_state = 8293 transfer_state = 8294 transfer_state = 8295 transfer_state = 8296 transfer_state = 8297 transfer_state = 8298 transfer_state = 8299 transfer_state = 8300 transfer_state = 8301 transfer_state = 8302 transfer_state = 8303 transfer_state = 8304 transfer_state = 8305 transfer_state = 8306 }	#Cambodia
+				}
+				else = {
+					FROM = { transfer_state = 741 transfer_state = 8287 transfer_state = 8288 transfer_state = 8289 transfer_state = 8290 transfer_state = 8291 transfer_state = 8292 transfer_state = 8293 transfer_state = 8294 transfer_state = 8295 transfer_state = 8296 transfer_state = 8297 transfer_state = 8298 transfer_state = 8299 transfer_state = 8300 transfer_state = 8301 transfer_state = 8302 transfer_state = 8303 transfer_state = 8304 transfer_state = 8305 transfer_state = 8306 }	#Cambodia
+				}
+			}
+			if = {
+				limit = {
+					924 = {
+						is_fully_controlled_by = FRI
+					}
+				}
+				if = {	#56 - Support for the Siam Rework
+					limit = {
+						NOT = { has_war_with = SIA }
+						FROM = {
+							NOT = { has_war_with = SIA }
+							has_country_flag = JAP_is_supporting_siams_territorial_aspirations_r56
+						}
+					}
+					SIA = { transfer_state = 924 }	#Champasak
+				}
+				else = {
+					FROM = { transfer_state = 924 }	#Champasak
+				}
+			}
+			if = {
+				limit = {
+					925 = {
+						is_fully_controlled_by = FRI
+					}
+				}
+				if = {	#56 - Support for the Siam Rework
+					limit = {
+						NOT = { has_war_with = SIA }
+						FROM = {
+							NOT = { has_war_with = SIA }
+							has_country_flag = JAP_is_supporting_siams_territorial_aspirations_r56
+						}
+					}
+					SIA = { transfer_state = 925 transfer_state = 9262 transfer_state = 9263 transfer_state = 9264 transfer_state = 9265 transfer_state = 9266 transfer_state = 9267 transfer_state = 9268 }	#Batambang
+				}
+				else = {
+					FROM = { transfer_state = 925 transfer_state = 9262 transfer_state = 9263 transfer_state = 9264 transfer_state = 9265 transfer_state = 9266 transfer_state = 9267 transfer_state = 9268 }	#Batambang
+				}
+			}
+			if = {
+				limit = {
+					926 = {
+						is_fully_controlled_by = FRI
+					}
+				}
+				if = {	#56 - Support for the Siam Rework
+					limit = {
+						NOT = { has_war_with = SIA }
+						FROM = {
+							NOT = { has_war_with = SIA }
+							has_country_flag = JAP_is_supporting_siams_territorial_aspirations_r56
+						}
+					}
+					SIA = { transfer_state = 926 transfer_state = 9269 transfer_state = 9270 }	#Luang Prabang
+				}
+				else = {
+					FROM = { transfer_state = 926 transfer_state = 9269 transfer_state = 9270 }	#Luang Prabang
+				}
+			}
+			if = {
+				limit = {
+					927 = {
+						is_fully_controlled_by = FRI
+					}
+				}
+				FROM = { transfer_state = 927 transfer_state = 9271 transfer_state = 9272 transfer_state = 9273 transfer_state = 9274 transfer_state = 9275 transfer_state = 9276 transfer_state = 9277 transfer_state = 9278 transfer_state = 9279 transfer_state = 9280 transfer_state = 9281 transfer_state = 9282 transfer_state = 9283 transfer_state = 9284 transfer_state = 9285 transfer_state = 9286 transfer_state = 9287 transfer_state = 9288 transfer_state = 9289 transfer_state = 9290 transfer_state = 9291 transfer_state = 9292 }
+			}
+			if = {
+				limit = {
+					928 = {
+						is_fully_controlled_by = FRI
+					}
+				}
+				FROM = { transfer_state = 928 transfer_state = 9293 transfer_state = 9294 transfer_state = 9295 transfer_state = 9296 transfer_state = 9297 transfer_state = 9298 transfer_state = 9299 }
+			}
+		}		
+		FROM = { country_event = { id = wtt_japan.2 days = 1 } }
+	}
+
+	#Refuse
+	option = {
+		name = wtt_japan.1.b
+		ai_chance = {
+			base = 0
+		}
+		FROM = { country_event = { id = wtt_japan.3 days = 1 } }
+	}
+}
+
+#Answer from wtt_japan.1 - FROM accepts
+country_event = {
+	id = wtt_japan.2
+	title = wtt_japan.2.t
+	desc = wtt_japan.2.desc
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	#Accept transfer puppet
+	#Checking for puppet in decision that fires event.
+	option = {
+		name = wtt_japan.2.a
+		ai_chance = {
+			base = 10
+		}
+		effect_tooltip = {
+			if = {
+				limit = { FROM = { tag = HOL }
+				}
+				puppet = INS
+			}
+
+			if = {
+				limit = { FROM = { tag = ENG }
+				}
+				puppet = MAL
+			}
+
+			if = {
+				limit = { FROM = { tag = FRA } }
+				if = {
+					limit = { 670 = { is_fully_controlled_by = ROOT } }
+					transfer_state = 670 transfer_state = 7921 transfer_state = 7922 transfer_state = 7923 transfer_state = 7924 transfer_state = 7925 transfer_state = 7926 transfer_state = 7927 transfer_state = 7928 transfer_state = 7929 transfer_state = 7930 transfer_state = 7931 transfer_state = 7932 transfer_state = 7933 transfer_state = 7934 transfer_state = 7935 transfer_state = 7936 transfer_state = 7937 transfer_state = 7938 transfer_state = 7939 transfer_state = 7940 transfer_state = 7941 transfer_state = 7942 transfer_state = 7943 transfer_state = 7944 transfer_state = 7945 transfer_state = 7946 transfer_state = 7947 transfer_state = 7948
+				}
+				if = {
+					limit = { 671 = { is_fully_controlled_by = ROOT } }
+					transfer_state = 671 transfer_state = 7949 transfer_state = 7950 transfer_state = 7951 transfer_state = 7952 transfer_state = 7953 transfer_state = 7954 transfer_state = 7955 transfer_state = 7956 transfer_state = 7957 transfer_state = 7958 transfer_state = 7959 transfer_state = 7960 transfer_state = 7961 transfer_state = 7962 transfer_state = 7963 transfer_state = 7964 transfer_state = 7965
+				}
+				if = {
+					limit = { 286 = { is_fully_controlled_by = ROOT } }
+					transfer_state = 286 transfer_state = 3859 transfer_state = 3860 transfer_state = 3861 transfer_state = 3862 transfer_state = 3863 transfer_state = 3864 transfer_state = 3865 transfer_state = 3866 transfer_state = 3867 transfer_state = 3868 transfer_state = 3869 transfer_state = 3870
+				}
+				if = {
+					limit = { 741 = { is_fully_controlled_by = ROOT }
+					}
+					transfer_state = 741 transfer_state = 8287 transfer_state = 8288 transfer_state = 8289 transfer_state = 8290 transfer_state = 8291 transfer_state = 8292 transfer_state = 8293 transfer_state = 8294 transfer_state = 8295 transfer_state = 8296 transfer_state = 8297 transfer_state = 8298 transfer_state = 8299 transfer_state = 8300 transfer_state = 8301 transfer_state = 8302 transfer_state = 8303 transfer_state = 8304 transfer_state = 8305 transfer_state = 8306
+				}
+				if = {
+					limit = { 924 = { is_fully_controlled_by = ROOT }
+					}
+					transfer_state = 924
+				}
+				if = {
+					limit = { 925 = { is_fully_controlled_by = ROOT }
+					}
+					transfer_state = 925 transfer_state = 9262 transfer_state = 9263 transfer_state = 9264 transfer_state = 9265 transfer_state = 9266 transfer_state = 9267 transfer_state = 9268
+				}
+				if = {
+					limit = { 926 = { is_fully_controlled_by = ROOT }
+					}
+					transfer_state = 926 transfer_state = 9269 transfer_state = 9270
+				}
+				if = {
+					limit = { 927 = { is_fully_controlled_by = ROOT }
+					}
+					transfer_state = 927 transfer_state = 9271 transfer_state = 9272 transfer_state = 9273 transfer_state = 9274 transfer_state = 9275 transfer_state = 9276 transfer_state = 9277 transfer_state = 9278 transfer_state = 9279 transfer_state = 9280 transfer_state = 9281 transfer_state = 9282 transfer_state = 9283 transfer_state = 9284 transfer_state = 9285 transfer_state = 9286 transfer_state = 9287 transfer_state = 9288 transfer_state = 9289 transfer_state = 9290 transfer_state = 9291 transfer_state = 9292
+				}
+				if = {
+					limit = { 928 = { is_fully_controlled_by = ROOT }
+					}
+					transfer_state = 928 transfer_state = 9293 transfer_state = 9294 transfer_state = 9295 transfer_state = 9296 transfer_state = 9297 transfer_state = 9298 transfer_state = 9299
+				}
+			}
+
+			if = {
+				limit = {
+					FRI = {
+						OR = {
+							is_puppet_of = FROM
+							is_subject_of = FROM
+						}
+						controls_state = 671
+						controls_state = 286
+						controls_state = 927
+						controls_state = 928
+						VIN = {
+							exists = no
+						}												
+					}
+				}
+				VIN = {
+					transfer_state = 671 transfer_state = 7949 transfer_state = 7950 transfer_state = 7951 transfer_state = 7952 transfer_state = 7953 transfer_state = 7954 transfer_state = 7955 transfer_state = 7956 transfer_state = 7957 transfer_state = 7958 transfer_state = 7959 transfer_state = 7960 transfer_state = 7961 transfer_state = 7962 transfer_state = 7963 transfer_state = 7964 transfer_state = 7965
+					transfer_state = 286 transfer_state = 3859 transfer_state = 3860 transfer_state = 3861 transfer_state = 3862 transfer_state = 3863 transfer_state = 3864 transfer_state = 3865 transfer_state = 3866 transfer_state = 3867 transfer_state = 3868 transfer_state = 3869 transfer_state = 3870
+					transfer_state = 927 transfer_state = 9271 transfer_state = 9272 transfer_state = 9273 transfer_state = 9274 transfer_state = 9275 transfer_state = 9276 transfer_state = 9277 transfer_state = 9278 transfer_state = 9279 transfer_state = 9280 transfer_state = 9281 transfer_state = 9282 transfer_state = 9283 transfer_state = 9284 transfer_state = 9285 transfer_state = 9286 transfer_state = 9287 transfer_state = 9288 transfer_state = 9289 transfer_state = 9290 transfer_state = 9291 transfer_state = 9292
+					transfer_state = 928 transfer_state = 9293 transfer_state = 9294 transfer_state = 9295 transfer_state = 9296 transfer_state = 9297 transfer_state = 9298 transfer_state = 9299
+				}
+				ROOT = {
+					puppet = VIN
+				}
+			}
+			if = {
+				limit = {
+					FRI = {
+						OR = {
+							is_puppet_of = FROM
+							is_subject_of = FROM
+						}
+						OR = {
+							controls_state = 670
+							controls_state = 924
+							controls_state = 926
+						}
+						LAO = {
+							exists = no
+						}
+					}
+				}
+				release = LAO
+				ROOT = {
+					puppet = LAO
+				}
+			}			
+			if = {
+				limit = {
+					FRI = {
+						OR = {
+							is_puppet_of = FROM
+							is_subject_of = FROM
+						}
+						OR = {
+							controls_state = 741
+							controls_state = 925
+						}
+						CAM = {
+							exists = no
+						}
+					}
+				}
+				release = CAM
+				ROOT = {
+					puppet = CAM
+				}
+			}
+			hidden_effect = {
+				news_event = { id = wtt_news.25 hours = 6 }
+			}		
+		}		
+	}
+}
+
+#Answer from wtt_japan.1 - FROM refuses
+country_event = {
+	id = wtt_japan.3
+	title = wtt_japan.3.t
+	desc = wtt_japan.3.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = wtt_japan.3.a
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+#  #  ##  #  #     ##   ##   ##  ###  ###  ##  ## ###  ##  #  #     ###   ##   ##  ### 
+## # #  # ## #    #  # #    #    #  # #   #   #    #  #  # ## #     #  # #  # #  #  #  
+# ## #  # # ## ## #### # ## # ## ###  ##   #   #   #  #  # # ##     ###  #### #     #  
+#  # #  # #  #    #  # #  # #  # #  # #     #   #  #  #  # #  #     #    #  # #  #  #  
+#  #  ##  #  #    #  #  ##   ##  #  # ### ##  ##  ###  ##  #  #     #    #  #  ##   #  
+
+
+#Japan propose NAP to ROOT
+country_event = {
+	id = wtt_japan.11
+	title = wtt_japan.11.t
+	desc = wtt_japan.11.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	#Accept NAP
+	option = {
+		name = wtt_japan.11.a
+		ai_chance = {
+			base = 10
+		}
+
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+		FROM = { country_event = { id = wtt_japan.12 days = 1 } }
+	}
+
+
+	#Refuse NAP
+	option = {
+		name = wtt_japan.11.b
+		ai_chance = {
+			base = 0
+		}
+		FROM = { country_event = { id = wtt_japan.13 days = 1 } }	
+	}
+}
+
+#Japan propose NAP to ROOT
+country_event = {
+	id = wtt_japan.12
+	title = wtt_japan.12.t
+	desc = wtt_japan.12.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.12.a
+		ai_chance = {
+			base = 10
+		}
+
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+
+	}
+}
+
+#Japan propose NAP to ROOT
+country_event = {
+	id = wtt_japan.13
+	title = wtt_japan.13.t
+	desc = wtt_japan.13.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.13.a
+		ai_chance = {
+			base = 10
+		}
+	}
+
+}
+
+ ##  ### #  # ### ###   ##  #    ##     ###  ##      #   #  ##  #  # 
+#    #   ## # #   #  # #  # #   #        #  #  #     ## ## #  # ## # 
+# ## ##  # ## ##  ###  #### #    #       #  #  #     # # # #### # ## 
+#  # #   #  # #   #  # #  # #     #      #  #  #     #   # #  # #  # 
+ ##  ### #  # ### #  # #  # ### ##       #   ##      #   # #  # #  # 
+
+
+#Japan propse all samurai generals go to MAN
+country_event = {
+	id = wtt_japan.21
+	title = wtt_japan.21.t
+	desc = wtt_japan.21.desc
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	#Accept generals
+	option = {
+		name = wtt_japan.21.a
+		ai_chance = {
+			base = 10
+		}
+		FROM = {		
+			every_army_leader = {
+				limit = { 
+					OR = {
+						has_trait = JAP_samurai_lineage
+						has_trait = JAP_royal_lineage
+					}
+				}
+				set_nationality = ROOT
+			}
+		}		
+		FROM = { 
+			country_event = { 
+				id = wtt_japan.22 
+				hours = 6
+			} 
+		}
+	}
+}
+
+#MAN Answers Japan yes
+country_event = {
+	id = wtt_japan.22
+	title = wtt_japan.22.t
+	desc = wtt_japan.22.desc
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.22.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+### #   # ###  ### ###  ###  ##  #       ###  ##  #   # ### #   #   # 
+ #  ## ## #  # #   #  #  #  #  # #       #   #  # ## ##  #  #    # #  
+ #  # # # ###  ##  ###   #  #### #       ##  #### # # #  #  #     #   
+ #  #   # #    #   #  #  #  #  # #       #   #  # #   #  #  #     #   
+### #   # #    ### #  # ### #  # ###     #   #  # #   # ### ###   #   
+
+#Event to JAP with choice of what to do
+country_event = {
+	id = wtt_japan.31
+	title = wtt_japan.31.t
+	desc = wtt_japan.31.desc
+	picture = GFX_report_event_jap_imperial_family
+
+	is_triggered_only = yes
+	
+	#Exile them
+	option = {
+		name = wtt_japan.31.a
+		trigger = {
+			country_exists = MAN
+		}
+		ai_chance = {
+			base = 5
+		}
+
+		MAN = {
+			country_event = { 
+				id = wtt_japan.32 
+				hours = 3
+			}
+			effect_tooltip = {
+				add_ideas = MAN_exiled_imperial_family
+			}
+		}
+
+	}
+
+	#Execute them
+	option = {
+		name = wtt_japan.31.b
+		ai_chance = {
+			base = 5
+		}
+
+		add_stability = -0.2
+
+	}
+}
+
+#Event to MAN. Exiled imperial family comes knocking
+country_event = {
+	id = wtt_japan.32
+	title = wtt_japan.32.t
+	desc = wtt_japan.32.desc
+	picture = GFX_report_event_jap_imperial_family
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.32.a
+		ai_chance = {
+			base = 10
+		}
+
+		add_ideas = MAN_exiled_imperial_family
+
+	}
+
+}
+
+#Event from Communist China: turn over Manchuria OR ELSE
+country_event = {
+	id = wtt_japan.40
+	title = wtt_japan.40.t
+	desc = wtt_japan.40.desc
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.40.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				controls_state = 610
+			}
+			FROM = {
+				transfer_state = 610 transfer_state = 7471 transfer_state = 7472 transfer_state = 7473 transfer_state = 7474 transfer_state = 7475 transfer_state = 7476 transfer_state = 7477 transfer_state = 7478 transfer_state = 7479 transfer_state = 7480 transfer_state = 7481 transfer_state = 7482 transfer_state = 7483 transfer_state = 7484 transfer_state = 7485
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 609
+			}
+			FROM = {
+				transfer_state = 609 transfer_state = 7463 transfer_state = 7464 transfer_state = 7465 transfer_state = 7466 transfer_state = 7467 transfer_state = 7468 transfer_state = 7469 transfer_state = 7470
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 716
+			}
+			FROM = {
+				transfer_state = 716 transfer_state = 8150 transfer_state = 8151 transfer_state = 8152 transfer_state = 8153 transfer_state = 8154 transfer_state = 8155 transfer_state = 8156 transfer_state = 8157 transfer_state = 8158 transfer_state = 8159 transfer_state = 8160 transfer_state = 8161 transfer_state = 8162 transfer_state = 8163 transfer_state = 8164 transfer_state = 8165 transfer_state = 8166 transfer_state = 8167 transfer_state = 8168 transfer_state = 8169 transfer_state = 8170
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 745
+			}
+			FROM = {
+				transfer_state = 745 transfer_state = 8328
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 328
+			}
+			FROM = {
+				transfer_state = 328 transfer_state = 4083 transfer_state = 4084 transfer_state = 4085 transfer_state = 4086 transfer_state = 4087 transfer_state = 4088 transfer_state = 4089 transfer_state = 4090 transfer_state = 4091 transfer_state = 4092 transfer_state = 4093 transfer_state = 4094 transfer_state = 4095 transfer_state = 4096 transfer_state = 4097
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 717
+			}
+			FROM = {
+				transfer_state = 717 transfer_state = 8171 transfer_state = 8172 transfer_state = 8173 transfer_state = 8174 transfer_state = 8175 transfer_state = 8176 transfer_state = 8177 transfer_state = 8178 transfer_state = 8179 transfer_state = 8180 transfer_state = 8181 transfer_state = 8182 transfer_state = 8183 transfer_state = 8184 transfer_state = 8185 transfer_state = 8186 transfer_state = 8187 transfer_state = 8188 transfer_state = 8189 transfer_state = 8190
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 714
+			}
+			FROM = {
+				transfer_state = 714 transfer_state = 8132 transfer_state = 8133 transfer_state = 8134
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 715
+			}
+			FROM = {
+				transfer_state = 715 transfer_state = 8135 transfer_state = 8136 transfer_state = 8137 transfer_state = 8138 transfer_state = 8139 transfer_state = 8140 transfer_state = 8141 transfer_state = 8142 transfer_state = 8143 transfer_state = 8144 transfer_state = 8145 transfer_state = 8146 transfer_state = 8147 transfer_state = 8148 transfer_state = 8149
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 761
+			}
+			FROM = {
+				transfer_state = 761 transfer_state = 8421 transfer_state = 8422 transfer_state = 8423 transfer_state = 8424 transfer_state = 8425 transfer_state = 8426 transfer_state = 8427 transfer_state = 8428 transfer_state = 8429 transfer_state = 8430 transfer_state = 8431 transfer_state = 8432 transfer_state = 8433
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 611
+			}
+			FROM = {
+				transfer_state = 611 transfer_state = 7486 transfer_state = 7487 transfer_state = 7488 transfer_state = 7489 transfer_state = 7490 transfer_state = 7491 transfer_state = 7492 transfer_state = 7493 transfer_state = 7494
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 612
+			}
+			FROM = {
+				transfer_state = 612 transfer_state = 7495 transfer_state = 7496 transfer_state = 7497 transfer_state = 7498 transfer_state = 7499 transfer_state = 7500 transfer_state = 7501 transfer_state = 7502 transfer_state = 7503 transfer_state = 7504 transfer_state = 7505 transfer_state = 7506 transfer_state = 7507
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 941
+			}
+			FROM = {
+				transfer_state = 941 transfer_state = 9336 transfer_state = 9337 transfer_state = 9338 transfer_state = 9339 transfer_state = 9340 transfer_state = 9341 transfer_state = 9342 transfer_state = 9343 transfer_state = 9344 transfer_state = 9345 transfer_state = 9346 transfer_state = 9347 transfer_state = 9348 transfer_state = 9349 transfer_state = 9350 transfer_state = 9351
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 942
+			}
+			FROM = {
+				transfer_state = 942 transfer_state = 9352 transfer_state = 9353 transfer_state = 9354 transfer_state = 9355 transfer_state = 9356 transfer_state = 9357 transfer_state = 9358
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 943
+			}
+			FROM = {
+				transfer_state = 943 transfer_state = 9359 transfer_state = 9360 transfer_state = 9361 transfer_state = 9362 transfer_state = 9363 transfer_state = 9364 transfer_state = 9365 transfer_state = 9366 transfer_state = 9367 transfer_state = 9368 transfer_state = 9369 transfer_state = 9370 transfer_state = 9371 transfer_state = 9372 transfer_state = 9373 transfer_state = 9374 transfer_state = 9375 transfer_state = 9376 transfer_state = 9377 transfer_state = 9378 transfer_state = 9379
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 944
+			}
+			FROM = {
+				transfer_state = 944 transfer_state = 9380 transfer_state = 9381 transfer_state = 9382 transfer_state = 9383 transfer_state = 9384 transfer_state = 9385
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 945
+			}
+			FROM = {
+				transfer_state = 945 transfer_state = 9386 transfer_state = 9387 transfer_state = 9388 transfer_state = 9389 transfer_state = 9390 transfer_state = 9391 transfer_state = 9392 transfer_state = 9393
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 946
+			}
+			FROM = {
+				transfer_state = 946 transfer_state = 9394 transfer_state = 9395 transfer_state = 9396 transfer_state = 9397 transfer_state = 9398 transfer_state = 9399 transfer_state = 9400 transfer_state = 9401 transfer_state = 9402
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 947
+			}
+			FROM = {
+				transfer_state = 947 transfer_state = 9403 transfer_state = 9404 transfer_state = 9405 transfer_state = 9406 transfer_state = 9407 transfer_state = 9408 transfer_state = 9409 transfer_state = 9410 transfer_state = 9411
+			}
+		}
+	}
+	option = {
+		name = wtt_japan.40.b
+		ai_chance = {
+			base = 0
+		}
+		JAP = {
+			remove_from_faction = FROM
+		}
+	}
+}
+
+#Event to MAN. Japan sends guns
+country_event = {
+	id = wtt_japan.41
+	title = wtt_japan.41.t
+	desc = wtt_japan.41.desc
+	picture = GFX_report_event_bul_artillery
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.41.a
+		ai_chance = {
+			base = 10
+		}
+		effect_tooltip = {
+			JAP = { 
+				send_equipment = {
+					target = MAN
+					equipment = infantry_equipment
+					amount = 2000
+					old_prioritised = yes
+				}
+			}
+		}
+	}
+}
+
+# Liberate Manchuria notification event
+country_event = {
+	id = wtt_japan.101
+	title = wtt_japan.101.t
+	desc = wtt_japan.101.desc
+	picture = GFX_report_event_japanese_soldiers_03
+
+	is_triggered_only = yes
+	
+	# Yes we will ally
+	option = {
+		name = wtt_japan.101.a
+		ai_chance = {
+			base = 1
+		}
+		JAP = {
+			add_to_faction = ROOT
+			country_event = { id = wtt_japan.102 days = 1 }
+		}
+	}
+
+	# No ty
+	option = {
+		name = wtt_japan.101.b
+		ai_chance = {
+			base = 0
+		}
+		JAP = {
+			country_event = { id = wtt_japan.103 days = 1 }
+		}
+	}
+}
+
+# Liberate Manchuria alliance notification event for Japan
+country_event = {
+	id = wtt_japan.102
+	title = wtt_japan.101.t
+	desc = wtt_japan.102.desc
+	picture = GFX_report_event_japanese_soldiers_03
+
+	is_triggered_only = yes
+	
+	option = {
+		name = excellent
+		effect_tooltip = { add_to_faction = FROM }
+	}
+}
+
+# Liberate Manchuria alliance rejected notification event for Japan
+country_event = {
+	id = wtt_japan.103
+	title = wtt_japan.101.t
+	desc = wtt_japan.103.desc
+	picture = GFX_report_event_japanese_soldiers_03
+
+	is_triggered_only = yes
+	
+	option = {
+		name = unfortunate
+	}
+}
+
+# Event for USA - Root demanding full sovereignty for the Phillipines
+country_event = {
+	id = wtt_japan.104
+	title = wtt_japan.104.t
+	desc = wtt_japan.104.desc
+	picture = GFX_report_event_japanese_parade
+
+	is_triggered_only = yes
+	
+	# They deserve freedom
+	option = {
+		name = wtt_japan.104.a
+		ai_chance = {
+			base = 1
+		}
+
+		set_autonomy = { 
+			target = PHI 
+			autonomy_state = autonomy_free 
+		}
+
+		JAP = { country_event = { id = wtt_japan.105 days = 1 } }
+		"PHI" = { country_event = { id = wtt_japan.107 days = 1 } }
+	}
+
+	# Never!
+	option = {
+		name = wtt_japan.104.b
+		ai_chance = {
+			base = 0
+		}
+		JAP = { country_event = { id = wtt_japan.106 days = 1 } }
+	}
+}
+
+# Notification event for Japan upon USA giving full sovereignty to the Phillipines
+country_event = {
+	id = wtt_japan.105
+	title = wtt_japan.104.t
+	desc = wtt_japan.105.desc
+	picture = GFX_report_event_generic_usa_treaty
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.105.a
+		ai_chance = {
+			base = 1
+		}
+		effect_tooltip = {
+			FROM = { set_autonomy = { target = PHI autonomy_state = autonomy_free } }
+		}
+	}
+}
+
+# Notification event for Japan upon USA denying full sovereignty to the Phillipines
+country_event = {
+	id = wtt_japan.106
+	title = wtt_japan.104.t
+	desc = wtt_japan.106.desc
+	picture = GFX_report_event_generic_usa_treaty
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.106.a
+		ai_chance = {
+			base = 1
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+		}
+	}
+}
+
+# Notification event for Phillipines upon USA giving full sovereignty to the Phillipines
+country_event = {
+	id = wtt_japan.107
+	title = wtt_japan.104.t
+	desc = wtt_japan.107.desc
+	picture = GFX_report_event_generic_usa_treaty
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.107.a
+		ai_chance = {
+			base = 1
+		}
+		effect_tooltip = {
+			FROM = { set_autonomy = { target = PHI autonomy_state = autonomy_free } }
+		}
+		IF = {
+			limit = {
+				JAP = {
+					is_faction_leader = yes
+				}
+			}
+			JAP = {
+				add_to_faction = ROOT
+			}
+		}
+		hidden_effect = {
+			news_event = { id = wtt_news.26 hours = 6 }
+		}
+	}
+}
+
+# Coup placing Hirohito back in full control of the country
+country_event = {
+	id = wtt_japan.108
+	title = wtt_japan.108.t
+	desc = wtt_japan.108.desc
+	picture = GFX_report_event_japanese_parade
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.108.a
+
+		set_cosmetic_tag = JAP_shogunate
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+			long_name = JAP_neutrality_party_kodoha_long
+			name = JAP_neutrality_party_kodoha
+		}	
+
+		add_popularity = { ideology = neutrality popularity = 0.2 }
+		add_timed_idea = { idea = JAP_military_purges days = 90 }
+
+		if = { #MM: I honestly have no idea about how this works, so checking just in case
+			limit = {
+				JAP_emperor_hirohito = {
+					is_country_leader = yes
+				}
+			}
+			remove_country_leader_role = {
+				character = JAP_emperor_hirohito
+				ideology = fascism_ideology
+			}
+		}
+		add_country_leader_role = {
+			character = JAP_emperor_hirohito
+			country_leader = {
+				ideology = absolute_monarchism
+				expire = "1989.1.1"
+				traits = {
+					warrior_code
+					emperor_showa
+					r56_trait_opposed_to_communism
+				}
+				id = 700 #Hirohito
+			}
+			promote_leader = yes
+		}
+
+		hidden_effect = { news_event = { id = wtt_news.27 hours = 6 } }
+
+	}
+
+}
+
+### ###  ### ###   ##  ###  ### ### ### ###     ###   ##   ##  ### 
+ #  #  #  #  #  # #  # #  #  #   #   #  #       #  # #  # #  #  #  
+ #  ###   #  ###  #### ###   #   #   #  ##      ###  #### #     #  
+ #  #  #  #  #    #  # #  #  #   #   #  #       #    #  # #  #  #  
+ #  #  # ### #    #  # #  #  #  ###  #  ###     #    #  #  ##   #  
+
+ # Event for Germany to accept Tripartite Pact
+country_event = {
+	id = wtt_japan.109
+	title = wtt_japan.109.t
+	desc = wtt_japan.109.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			FROM = { save_event_target_as = JAP_initiator }
+			save_event_target_as = GER_fascism
+			random_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				save_event_target_as = ITA_fascism
+			}
+		}
+	}
+	
+	option = {
+		name = wtt_japan.109.a #accept
+		ai_chance = {
+			base = 10
+		}
+
+		event_target:ITA_fascism = {
+			country_event = { id = wtt_japan.110 hours = 6 }
+		}
+	}
+
+	option = {
+		name = wtt_japan.109.b #refuse
+		ai_chance = {
+			base = 0
+		}
+
+		event_target:JAP_initiator = { country_event = { id = wtt_japan.112 hours = 6 } }
+		event_target:ITA_fascism = { country_event = { id = wtt_japan.112 hours = 6 } }
+	}
+}
+
+ # Event for Italy to accept Tripartite Pact
+country_event = {
+	id = wtt_japan.110
+	title = wtt_japan.109.t
+	desc = wtt_japan.110.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.109.a ##accept
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					ITA_is_historical_ai = yes
+					ITA_is_alt_fascist_balbo_ai = yes
+				}
+			}
+		}
+		event_target:JAP_initiator = {
+			give_guarantee = event_target:ITA_fascism
+			give_guarantee = event_target:GER_fascism
+			diplomatic_relation = {
+			    country = event_target:ITA_fascism
+			    relation = non_aggression_pact
+			    active = yes
+			}
+			diplomatic_relation = {
+			    country = event_target:GER_fascism
+			    relation = non_aggression_pact
+			    active = yes
+			}
+		}
+		event_target:GER_fascism = {
+			give_guarantee = event_target:ITA_fascism
+			give_guarantee = event_target:JAP_initiator
+			diplomatic_relation = {
+			    country = event_target:ITA_fascism
+			    relation = non_aggression_pact
+			    active = yes
+			}
+		}
+		event_target:ITA_fascism = {
+			give_guarantee = event_target:JAP_initiator
+			give_guarantee = event_target:GER_fascism
+		}
+		event_target:JAP_initiator = { country_event = { id = wtt_japan.111 hours = 6 } }
+		event_target:GER_fascism = { country_event = { id = wtt_japan.113 hours = 6 } }
+	}
+
+	option = {
+		name = wtt_japan.109.b ##refuse
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					ITA_is_historical_ai = yes
+					ITA_is_alt_fascist_balbo_ai = yes
+				}
+			}
+		}
+		
+		event_target:GER_fascism = { country_event = { id = wtt_japan.112 hours = 6 } }
+		event_target:JAP_initiator = { country_event = { id = wtt_japan.112 hours = 6 } }
+	}
+}
+
+ #Notification event that Tripartite Pact has been signed
+country_event = {
+	id = wtt_japan.111
+	title = wtt_japan.111.t
+	desc = wtt_japan.111.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = excellent
+		ai_chance = {
+			base = 10
+		}
+		effect_tooltip = {
+			event_target:JAP_initiator = {
+				give_guarantee = event_target:ITA_fascism
+				give_guarantee = event_target:GER_fascism
+			}
+			event_target:GER_fascism = {
+				give_guarantee = event_target:ITA_fascism
+				give_guarantee = event_target:JAP_initiator
+			}
+			event_target:ITA_fascism = {
+				give_guarantee = event_target:JAP_initiator
+				give_guarantee = event_target:GER_fascism
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_literally_china = yes
+				}
+				event_target:ITA_fascism = {
+					add_ai_strategy = {
+						type = alliance
+						id = PREV
+						value = -500
+					}
+				}
+				event_target:GER_fascism = {
+					add_ai_strategy = {
+						type = alliance
+						id = PREV
+						value = -500
+					}
+				}
+			}
+		}
+	}
+}
+
+ #Notification event that FROM has rejected Tripartite Pact
+country_event = {
+	id = wtt_japan.112
+	title = wtt_japan.112.t
+	desc = wtt_japan.112.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = unfortunate
+	}
+}
+
+ #Notification event for GER that ITA has accepted Tripartite Pact
+country_event = {
+	id = wtt_japan.113
+	title = wtt_japan.113.t
+	desc = wtt_japan.113.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = excellent
+		effect_tooltip = {
+			event_target:JAP_initiator = {
+				give_guarantee = event_target:ITA_fascism
+				give_guarantee = event_target:GER_fascism
+			}
+			event_target:GER_fascism = {
+				give_guarantee = event_target:ITA_fascism
+				give_guarantee = event_target:JAP_initiator
+			}
+			event_target:ITA_fascism = {
+				give_guarantee = event_target:JAP_initiator
+				give_guarantee = event_target:GER_fascism
+			}
+		}
+	}
+}
+
+###  ### #   #  ##   ##  ###   ##  ### ###  ##       ##   ##  #  # ###  
+#  # #   ## ## #  # #  # #  # #  #  #   #  #  #     #  # #  # #  # #  # 
+#  # ##  # # # #  # #    ###  ####  #   #  #        #    #  # #  # ###  
+#  # #   #   # #  # #  # #  # #  #  #   #  #  #     #  # #  # #  # #    
+###  ### #   #  ##   ##  #  # #  #  #  ###  ##       ##   ##   ##  #    
+
+#Democratic Coup event
+country_event = {
+	id = wtt_japan.114
+	title = wtt_japan.114.t
+	desc = wtt_japan.114.desc
+	picture = GFX_report_event_japanese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.114.a
+		if = {
+			limit = {
+				MAN = { 
+					is_subject_of = ROOT
+					has_idea = MAN_kwantung_veto
+				}
+			}
+			MAN = { remove_ideas = MAN_kwantung_veto }
+		}
+		if = {
+			limit = {
+				controls_state = 609
+				controls_state = 745
+				MAN = {
+					is_subject_of = ROOT
+				}
+			}
+			MAN = {
+				transfer_state = 609 transfer_state = 7463 transfer_state = 7464 transfer_state = 7465 transfer_state = 7466 transfer_state = 7467 transfer_state = 7468 transfer_state = 7469 transfer_state = 7470
+				transfer_state = 745 transfer_state = 8328
+				hidden_effect = {	#no cores, but rather a governmental transition
+					745 = {
+						add_compliance = 35
+					}
+					609 = {
+						add_compliance = 30
+					}
+					
+				}
+				add_stability = 0.05
+			}
+		}
+		else_if = {
+			limit = {
+				controls_state = 609
+				controls_state = 745
+				CHI = {
+					exists = yes
+				}
+			}
+			CHI = {
+				transfer_state = 609 transfer_state = 7463 transfer_state = 7464 transfer_state = 7465 transfer_state = 7466 transfer_state = 7467 transfer_state = 7468 transfer_state = 7469 transfer_state = 7470
+				transfer_state = 745 transfer_state = 8328
+			}
+		}
+		else_if = {
+			limit = {
+				controls_state = 609
+				controls_state = 745
+				CHI = {
+					exists = no
+				}
+				PRC = {
+					exists = yes
+				}
+			}
+			PRC = {
+				transfer_state = 609 transfer_state = 7463 transfer_state = 7464 transfer_state = 7465 transfer_state = 7466 transfer_state = 7467 transfer_state = 7468 transfer_state = 7469 transfer_state = 7470
+				transfer_state = 745 transfer_state = 8328
+			}
+		}
+		if = {	#they will get the puppet first, then become independent
+			limit = {
+				MAN = { is_subject_of = ROOT }
+			}
+			set_autonomy = { target = MAN autonomy_state = autonomy_free }
+			if = {
+				limit = {
+					MEN = { is_subject_of = ROOT }
+				}
+				MAN = { puppet = MEN }
+			}
+			MAN = {
+				set_cosmetic_tag = MAN_kwantung_army
+				hidden_effect = {
+					set_country_flag = MAN_kwantung_army_took_control_flag
+				}
+			}
+		}
+		if = {
+			limit = {
+				MAN = { has_idea = MAN_kwantung_veto }
+			}
+			MAN = { remove_ideas = MAN_kwantung_veto }
+		}
+		if = {
+			limit = {
+				any_state = {
+					is_controlled_by = ROOT
+					is_core_of = KOR
+				}
+			}
+			release = KOR
+			KOR = {
+				transfer_state = 525 transfer_state = 6505 transfer_state = 6506 transfer_state = 6507 transfer_state = 6508 transfer_state = 6509 transfer_state = 6510 transfer_state = 6511
+				transfer_state = 527 transfer_state = 6515 transfer_state = 6516 transfer_state = 6517 transfer_state = 6518 transfer_state = 6519 transfer_state = 6520 transfer_state = 6521 transfer_state = 6522 transfer_state = 6523 transfer_state = 6524 transfer_state = 6525 transfer_state = 6526 transfer_state = 6527 transfer_state = 6528 transfer_state = 6529
+				transfer_state = 917 transfer_state = 9210 transfer_state = 9211 transfer_state = 9212 transfer_state = 9213 transfer_state = 9214 transfer_state = 9215 transfer_state = 9216 transfer_state = 9217 transfer_state = 9218
+				transfer_state = 918 transfer_state = 9219 transfer_state = 9220 transfer_state = 9221 transfer_state = 9222 transfer_state = 9223 transfer_state = 9224 transfer_state = 9225 transfer_state = 9226 transfer_state = 9227 transfer_state = 9228 transfer_state = 9229 transfer_state = 9230 transfer_state = 9231 transfer_state = 9232
+				transfer_state = 919 transfer_state = 9233 transfer_state = 9234 transfer_state = 9235 transfer_state = 9236 transfer_state = 9237 transfer_state = 9238 transfer_state = 9239 transfer_state = 9240 transfer_state = 9241 transfer_state = 9242
+				transfer_state = 920 transfer_state = 9243 transfer_state = 9244 transfer_state = 9245 transfer_state = 9246 transfer_state = 9247 transfer_state = 9248 transfer_state = 9249 transfer_state = 9250
+			}			
+			set_autonomy = { target = KOR autonomy_state = autonomy_free }			
+		}
+		add_popularity = { ideology = democratic popularity = 0.1 }
+		set_politics = { ruling_party = democratic elections_allowed = yes }
+		add_stability = 0.25
+		start_civil_war = {
+			ruling_party = democratic
+			ideology = fascism
+			size = 0.35
+		}
+		random_other_country = {
+			limit = {
+				original_tag = JAP
+				has_government = fascism
+			}
+			create_country_leader = {
+				name = "Hideki Tojo"
+				picture = "gfx/leaders/JAP/Portrait_Japan_Generic_land_2.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					army_connections
+				}
+			}
+			add_war_support = 0.8
+			add_stability = 0.15
+			add_ideas = war_economy
+			add_ideas = extensive_conscription
+			set_cosmetic_tag = JAP2
+		}
+	}
+}
+
+###  ###  ###    ### #   # ###  ### ### #   # ###     #   #  ##  ###  
+#  # #  # #      #   ## ## #  #  #   #  #   # #       #   # #  # #  # 
+###  ###  ##  ## ##  # # # ###   #   #   # #  ##      # # # #### ###  
+#    #  # #      #   #   # #     #   #   # #  #       # # # #  # #  # 
+#    #  # ###    ### #   # #     #  ###   #   ###      # #  #  # #  # 
+
+#German notification event that Japan has gone to war with USSR despite mol-rib pact
+country_event = {
+	id = wtt_japan.115
+	title = wtt_japan.115.t
+	desc = wtt_japan.115.desc
+	picture = GFX_report_event_japanese_parade
+
+	is_triggered_only = yes
+	
+	# Join the war
+	option = {
+		name = wtt_japan.115.a
+		add_to_war = { targeted_alliance = JAP enemy = SOV hostility_reason = asked_to_join }
+		JAP = { country_event = { id = wtt_japan.116 hours = 6 } }
+	}
+
+	# Keep the NAP
+	option = {
+		name = wtt_japan.115.b
+		add_opinion_modifier = { target = JAP modifier = unilateral_war }
+		reverse_add_opinion_modifier = { target = JAP modifier = betrayed_alliance }
+		JAP = { country_event = { id = wtt_japan.117 hours = 6 } }
+	}
+}
+
+#Japanese notification event that Germany has decided to join war against SOV
+country_event = {
+	id = wtt_japan.116
+	title = wtt_japan.116.t
+	desc = wtt_japan.116.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.116.a
+	}
+}
+
+#Japanese notification event that Germany has decided to not join war against SOV
+country_event = {
+	id = wtt_japan.117
+	title = wtt_japan.117.t
+	desc = wtt_japan.117.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.117.a
+	}
+}
+
+ ##   ##  #   # #   # #  # #  # ###  ## ###      ##  ### #   # ### #       #   #  ##  ###  
+#  # #  # ## ## ## ## #  # ## #  #  #    #      #  #  #  #   #  #  #       #   # #  # #  # 
+#    #  # # # # # # # #  # # ##  #   #   #      #     #   # #   #  #       # # # #### ###  
+#  # #  # #   # #   # #  # #  #  #    #  #      #  #  #   # #   #  #       # # # #  # #  # 
+ ##   ##  #   # #   #  ##  #  # ### ##   #       ##  ###   #   ### ###      # #  #  # #  # 
+
+# Event for SOV: Japan offering South Sakhalin in exchange for Soviet assistance
+country_event = {
+	id = wtt_japan.118
+	title = wtt_japan.118.t
+	desc = wtt_japan.118.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	# Accept
+	option = {
+		name = wtt_japan.118.a
+		ai_chance = {
+			base = 10
+		}
+
+		FROM = { 
+			country_event = { 
+				id = wtt_japan.119 
+				hours = 6 
+			} 
+		}
+
+		hidden_effect = { set_country_flag = sent_volunteers_to_JAP }
+
+		add_manpower = -105000
+		custom_effect_tooltip = wtt_japan_118_TT
+		if = {
+			limit = {
+				owns_state = 655	#if North Sakhalin has been ceded, dont take the south
+			}
+			effect_tooltip = {
+				transfer_state = 537 transfer_state = 6599 transfer_state = 6600
+			}
+		}
+
+	}
+
+	# Decline
+	option = {
+		name = wtt_japan.118.b
+		ai_chance = {
+			base = 0
+		}
+
+		FROM = { 
+			country_event = { 
+				id = wtt_japan.120 
+				hours = 6 
+			} 
+		}
+		custom_effect_tooltip = wtt_japan_118_TT
+
+	}
+}
+
+# Event for JAP: SOV accepted
+country_event = {
+	id = wtt_japan.119
+	title = wtt_japan.119.t
+	desc = wtt_japan.119.desc
+	picture = GFX_report_event_soviet_soldiers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.119.a
+		if = {
+			limit = {
+				NOT = {
+					owns_state = 655
+				}
+			}
+			FROM = { transfer_state = 537 transfer_state = 6599 transfer_state = 6600 }
+		}
+
+		remove_resource_rights = 655
+
+		division_template = { 
+			name = "Soviet Volunteers"
+			division_names_group = SOV_INF_01
+			is_locked = yes
+			template_counter = 118
+			regiments = { 
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 3 y = 0 }
+
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 3 y = 1 }
+
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 2 }
+				infantry = { x = 3 y = 2 }
+			}
+			support = {
+				recon = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2 }
+			}
+		}
+
+		random_owned_controlled_state = {
+			prioritize = { 535 }
+			custom_effect_tooltip = wtt_japan.119.TT
+			hidden_effect = {
+				create_unit = { 
+					division = "name = \"1. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"2. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"3. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"4. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"5. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"6. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"7. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"8. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+			}
+
+		}
+
+	}
+
+}
+
+# Event for JAP: SOV declined
+country_event = {
+	id = wtt_japan.120
+	title = wtt_japan.120.t
+	desc = wtt_japan.120.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.120.a
+	}
+}
+
+# Event for MAN: Commie JAP took Tokyo
+country_event = {
+	id = wtt_japan.121
+	title = wtt_japan.121.t
+	desc = wtt_japan.121.desc
+	picture = GFX_report_event_japanese_army_parade
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	# Annex them!
+	option = {
+		name = wtt_japan.121.a
+		ai_chance = {
+			base = 10
+		}
+		event_target:jap_civ_loser = { delete_unit_template_and_units = { division_template = "Japanese Loyalist Regiment" } }
+		FROM = {
+			delete_unit_template_and_units = { division_template = "Japanese People's Regiment" }
+			delete_unit_template_and_units = { division_template = "Soviet Volunteers" }
+			transfer_state = 529 transfer_state = 6539 transfer_state = 6540 transfer_state = 6541 transfer_state = 6542 transfer_state = 6543 transfer_state = 6544
+			transfer_state = 530 transfer_state = 6545 transfer_state = 6546 transfer_state = 6547 transfer_state = 6548 transfer_state = 6549 transfer_state = 6550
+			transfer_state = 528 transfer_state = 6530 transfer_state = 6531 transfer_state = 6532 transfer_state = 6533 transfer_state = 6534 transfer_state = 6535 transfer_state = 6536 transfer_state = 6537 transfer_state = 6538
+			transfer_state = 282 transfer_state = 3792 transfer_state = 3793 transfer_state = 3794 transfer_state = 3795 transfer_state = 3796 transfer_state = 3797 transfer_state = 3798 transfer_state = 3799 transfer_state = 3800 transfer_state = 3801
+			transfer_state = 531 transfer_state = 6551 transfer_state = 6552 transfer_state = 6553 transfer_state = 6554 transfer_state = 6555 transfer_state = 6556 transfer_state = 6557 transfer_state = 6558 transfer_state = 6559 transfer_state = 6560
+			transfer_state = 533 transfer_state = 6569 transfer_state = 6570 transfer_state = 6571 transfer_state = 6572 transfer_state = 6573 transfer_state = 6574 transfer_state = 6575 transfer_state = 6576 transfer_state = 6577 transfer_state = 6578
+			transfer_state = 536 transfer_state = 6588 transfer_state = 6589 transfer_state = 6590 transfer_state = 6591 transfer_state = 6592 transfer_state = 6593 transfer_state = 6594 transfer_state = 6595 transfer_state = 6596 transfer_state = 6597 transfer_state = 6598
+			transfer_state = 555 transfer_state = 6710 transfer_state = 6711
+			#transfer_state = 1018	#56 - Shanland which is in Myanmar
+			transfer_state = 526 transfer_state = 6512 transfer_state = 6513 transfer_state = 6514
+			transfer_state = 1107 transfer_state = 10085 transfer_state = 10086 transfer_state = 10087 transfer_state = 10088
+			transfer_state = 1105 transfer_state = 10073 transfer_state = 10074 transfer_state = 10075 transfer_state = 10076 transfer_state = 10077 transfer_state = 10078 transfer_state = 10079
+			transfer_state = 537 transfer_state = 6599 transfer_state = 6600
+			country_event = { id = wtt_japan.122 }
+		}
+		if = {
+			limit = {
+				SOV = { has_country_flag = sent_volunteers_to_JAP }
+			}
+			effect_tooltip = {
+				SOV = { add_manpower = 105000 }
+			}
+			country_event = { id = wtt_japan.124 }
+		}
+		annex_country = { target = event_target:jap_civ_loser transfer_troops = yes }
+		set_cosmetic_tag = MAN_kwantung_army
+		hidden_effect = {
+			set_country_flag = MAN_kwantung_army_took_control_flag
+		}
+	}
+
+	# This is not our fight.
+	option = {
+		name = wtt_japan.121.b
+		ai_chance = {
+			base = 0
+		}
+		FROM = {
+			annex_country = { target = event_target:jap_civ_loser }
+			country_event = { id = wtt_japan.123 }
+		}
+		if = {
+			limit = {
+				SOV = { has_country_flag = sent_volunteers_to_JAP }
+			}
+			effect_tooltip = {
+				SOV = { add_manpower = 105000 }
+			}
+			country_event = { id = wtt_japan.124 }
+		}
+	}
+}
+
+# Event for JAP: MAN takes rest of Japan but war is over
+country_event = {
+	id = wtt_japan.122
+	title = wtt_japan.122.t
+	desc = wtt_japan.122.desc
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	# Annex them!
+	option = {
+		name = wtt_japan.122.a
+		effect_tooltip = {
+			transfer_state = 529 transfer_state = 6539 transfer_state = 6540 transfer_state = 6541 transfer_state = 6542 transfer_state = 6543 transfer_state = 6544
+			transfer_state = 530 transfer_state = 6545 transfer_state = 6546 transfer_state = 6547 transfer_state = 6548 transfer_state = 6549 transfer_state = 6550
+			transfer_state = 528 transfer_state = 6530 transfer_state = 6531 transfer_state = 6532 transfer_state = 6533 transfer_state = 6534 transfer_state = 6535 transfer_state = 6536 transfer_state = 6537 transfer_state = 6538
+			transfer_state = 282 transfer_state = 3792 transfer_state = 3793 transfer_state = 3794 transfer_state = 3795 transfer_state = 3796 transfer_state = 3797 transfer_state = 3798 transfer_state = 3799 transfer_state = 3800 transfer_state = 3801
+			transfer_state = 533 transfer_state = 6569 transfer_state = 6570 transfer_state = 6571 transfer_state = 6572 transfer_state = 6573 transfer_state = 6574 transfer_state = 6575 transfer_state = 6576 transfer_state = 6577 transfer_state = 6578
+			transfer_state = 536 transfer_state = 6588 transfer_state = 6589 transfer_state = 6590 transfer_state = 6591 transfer_state = 6592 transfer_state = 6593 transfer_state = 6594 transfer_state = 6595 transfer_state = 6596 transfer_state = 6597 transfer_state = 6598
+			transfer_state = 555 transfer_state = 6710 transfer_state = 6711
+			#transfer_state = 1018	#56 - Shanland which is in Myanmar
+			transfer_state = 526 transfer_state = 6512 transfer_state = 6513 transfer_state = 6514
+			transfer_state = 1107 transfer_state = 10085 transfer_state = 10086 transfer_state = 10087 transfer_state = 10088
+			transfer_state = 1105 transfer_state = 10073 transfer_state = 10074 transfer_state = 10075 transfer_state = 10076 transfer_state = 10077 transfer_state = 10078 transfer_state = 10079
+			transfer_state = 531 transfer_state = 6551 transfer_state = 6552 transfer_state = 6553 transfer_state = 6554 transfer_state = 6555 transfer_state = 6556 transfer_state = 6557 transfer_state = 6558 transfer_state = 6559 transfer_state = 6560
+			transfer_state = 537 transfer_state = 6599 transfer_state = 6600
+			FROM = { annex_country = { target = event_target:jap_civ_loser transfer_troops = yes } }
+		}
+	}
+}
+
+# Event for JAP: MAN does not take rest of Japan but war is over
+country_event = {
+	id = wtt_japan.123
+	title = wtt_japan.123.t
+	desc = wtt_japan.123.desc
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	# Annex them!
+	option = {
+		name = wtt_japan.123.a
+		effect_tooltip = {
+			annex_country = { target = event_target:jap_civ_loser }
+		}
+	}
+}
+
+# Event for SOV: war is over, volunteers return home.
+country_event = {
+	id = wtt_japan.124
+	title = wtt_japan.124.t
+	desc = wtt_japan.124.desc
+	picture = GFX_report_event_soviet_soldiers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = excellent
+		SOV = { add_manpower = 90143 }
+	}
+}
+
+#   #  ##  #  #  ##  #  # #  # ###  ###  ##  
+## ## #  # ## # #  # #  # #  # #  #  #  #  # 
+# # # #### # ## #    #### #  # ###   #  #### 
+#   # #  # #  # #  # #  # #  # #  #  #  #  # 
+#   # #  # #  #  ##  #  #  ##  #  # ### #  # 
+
+# Notification event that SOV returns Manchuria
+country_event = {
+	id = wtt_japan.125
+	title = wtt_japan.125.t
+	desc = wtt_japan.125.desc
+	picture = GFX_report_event_soviet_soldiers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = excellent
+		effect_tooltip = {
+			transfer_state = 328 transfer_state = 4083 transfer_state = 4084 transfer_state = 4085 transfer_state = 4086 transfer_state = 4087 transfer_state = 4088 transfer_state = 4089 transfer_state = 4090 transfer_state = 4091 transfer_state = 4092 transfer_state = 4093 transfer_state = 4094 transfer_state = 4095 transfer_state = 4096 transfer_state = 4097
+			transfer_state = 609 transfer_state = 7463 transfer_state = 7464 transfer_state = 7465 transfer_state = 7466 transfer_state = 7467 transfer_state = 7468 transfer_state = 7469 transfer_state = 7470
+			transfer_state = 610 transfer_state = 7471 transfer_state = 7472 transfer_state = 7473 transfer_state = 7474 transfer_state = 7475 transfer_state = 7476 transfer_state = 7477 transfer_state = 7478 transfer_state = 7479 transfer_state = 7480 transfer_state = 7481 transfer_state = 7482 transfer_state = 7483 transfer_state = 7484 transfer_state = 7485
+			transfer_state = 714 transfer_state = 8132 transfer_state = 8133 transfer_state = 8134
+			transfer_state = 715 transfer_state = 8135 transfer_state = 8136 transfer_state = 8137 transfer_state = 8138 transfer_state = 8139 transfer_state = 8140 transfer_state = 8141 transfer_state = 8142 transfer_state = 8143 transfer_state = 8144 transfer_state = 8145 transfer_state = 8146 transfer_state = 8147 transfer_state = 8148 transfer_state = 8149
+			transfer_state = 716 transfer_state = 8150 transfer_state = 8151 transfer_state = 8152 transfer_state = 8153 transfer_state = 8154 transfer_state = 8155 transfer_state = 8156 transfer_state = 8157 transfer_state = 8158 transfer_state = 8159 transfer_state = 8160 transfer_state = 8161 transfer_state = 8162 transfer_state = 8163 transfer_state = 8164 transfer_state = 8165 transfer_state = 8166 transfer_state = 8167 transfer_state = 8168 transfer_state = 8169 transfer_state = 8170
+			transfer_state = 717 transfer_state = 8171 transfer_state = 8172 transfer_state = 8173 transfer_state = 8174 transfer_state = 8175 transfer_state = 8176 transfer_state = 8177 transfer_state = 8178 transfer_state = 8179 transfer_state = 8180 transfer_state = 8181 transfer_state = 8182 transfer_state = 8183 transfer_state = 8184 transfer_state = 8185 transfer_state = 8186 transfer_state = 8187 transfer_state = 8188 transfer_state = 8189 transfer_state = 8190
+			transfer_state = 761 transfer_state = 8421 transfer_state = 8422 transfer_state = 8423 transfer_state = 8424 transfer_state = 8425 transfer_state = 8426 transfer_state = 8427 transfer_state = 8428 transfer_state = 8429 transfer_state = 8430 transfer_state = 8431 transfer_state = 8432 transfer_state = 8433
+			transfer_state = 941 transfer_state = 9336 transfer_state = 9337 transfer_state = 9338 transfer_state = 9339 transfer_state = 9340 transfer_state = 9341 transfer_state = 9342 transfer_state = 9343 transfer_state = 9344 transfer_state = 9345 transfer_state = 9346 transfer_state = 9347 transfer_state = 9348 transfer_state = 9349 transfer_state = 9350 transfer_state = 9351
+			transfer_state = 942 transfer_state = 9352 transfer_state = 9353 transfer_state = 9354 transfer_state = 9355 transfer_state = 9356 transfer_state = 9357 transfer_state = 9358
+			transfer_state = 943 transfer_state = 9359 transfer_state = 9360 transfer_state = 9361 transfer_state = 9362 transfer_state = 9363 transfer_state = 9364 transfer_state = 9365 transfer_state = 9366 transfer_state = 9367 transfer_state = 9368 transfer_state = 9369 transfer_state = 9370 transfer_state = 9371 transfer_state = 9372 transfer_state = 9373 transfer_state = 9374 transfer_state = 9375 transfer_state = 9376 transfer_state = 9377 transfer_state = 9378 transfer_state = 9379
+			transfer_state = 944 transfer_state = 9380 transfer_state = 9381 transfer_state = 9382 transfer_state = 9383 transfer_state = 9384 transfer_state = 9385
+			transfer_state = 945 transfer_state = 9386 transfer_state = 9387 transfer_state = 9388 transfer_state = 9389 transfer_state = 9390 transfer_state = 9391 transfer_state = 9392 transfer_state = 9393
+			transfer_state = 946 transfer_state = 9394 transfer_state = 9395 transfer_state = 9396 transfer_state = 9397 transfer_state = 9398 transfer_state = 9399 transfer_state = 9400 transfer_state = 9401 transfer_state = 9402
+			transfer_state = 947 transfer_state = 9403 transfer_state = 9404 transfer_state = 9405 transfer_state = 9406 transfer_state = 9407 transfer_state = 9408 transfer_state = 9409 transfer_state = 9410 transfer_state = 9411
+		}
+	}
+}
+
+ ## #  # ###  ###  ### #  # ###  ### ###  
+#   #  # #  # #  # #   ## # #  # #   #  # 
+ #  #  # ###  ###  ##  # ## #  # ##  ###  
+  # #  # #  # #  # #   #  # #  # #   #  # 
+##   ##  #  # #  # ### #  # ###  ### #  # 
+
+# Event for China that Japan wants to surrender
+country_event = {
+	id = wtt_japan.126
+	title = wtt_japan.126.t
+	desc = wtt_japan.126.desc
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	# We accept their surrender.
+	option = {
+		name = wtt_japan.126.a
+		effect_tooltip = {
+			if = {
+				limit = {
+					NOT = {
+						MAN = {
+							controls_state = 525
+							controls_state = 527
+							controls_state = 917
+							controls_state = 918
+							controls_state = 919
+							controls_state = 921
+						}
+					}
+				}
+				FROM = { release = KOR }
+				KOR = {
+					transfer_state = 525 transfer_state = 6505 transfer_state = 6506 transfer_state = 6507 transfer_state = 6508 transfer_state = 6509 transfer_state = 6510 transfer_state = 6511
+					transfer_state = 527 transfer_state = 6515 transfer_state = 6516 transfer_state = 6517 transfer_state = 6518 transfer_state = 6519 transfer_state = 6520 transfer_state = 6521 transfer_state = 6522 transfer_state = 6523 transfer_state = 6524 transfer_state = 6525 transfer_state = 6526 transfer_state = 6527 transfer_state = 6528 transfer_state = 6529
+					transfer_state = 917 transfer_state = 9210 transfer_state = 9211 transfer_state = 9212 transfer_state = 9213 transfer_state = 9214 transfer_state = 9215 transfer_state = 9216 transfer_state = 9217 transfer_state = 9218
+					transfer_state = 918 transfer_state = 9219 transfer_state = 9220 transfer_state = 9221 transfer_state = 9222 transfer_state = 9223 transfer_state = 9224 transfer_state = 9225 transfer_state = 9226 transfer_state = 9227 transfer_state = 9228 transfer_state = 9229 transfer_state = 9230 transfer_state = 9231 transfer_state = 9232
+					transfer_state = 919 transfer_state = 9233 transfer_state = 9234 transfer_state = 9235 transfer_state = 9236 transfer_state = 9237 transfer_state = 9238 transfer_state = 9239 transfer_state = 9240 transfer_state = 9241 transfer_state = 9242
+					transfer_state = 920 transfer_state = 9243 transfer_state = 9244 transfer_state = 9245 transfer_state = 9246 transfer_state = 9247 transfer_state = 9248 transfer_state = 9249 transfer_state = 9250
+				}				
+			}
+			if = {
+				limit = {
+					524 = {
+						is_controlled_by = JAP
+					}
+				}
+				event_target:WTT_current_china_leader = {
+					set_country_flag = r56_we_won_lol
+					transfer_state = 524 transfer_state = 6496 transfer_state = 6497 transfer_state = 6498 transfer_state = 6499 transfer_state = 6500 transfer_state = 6501 transfer_state = 6502 transfer_state = 6503 transfer_state = 6504
+				}
+			}
+			if = {
+				limit = {
+					event_target:WTT_current_china_leader = { #Chinese United Front
+						is_faction_leader = yes
+					}
+				}
+				every_country = {
+					limit = {
+						OR = {
+							AND = {
+								tag = MAN
+								is_in_faction_with = event_target:WTT_current_china_leader
+							}
+							is_literally_china = yes
+						}
+						has_war_with = ROOT
+						is_in_faction_with = event_target:WTT_current_china_leader
+					}
+					every_controlled_state = {
+						limit = {
+							OWNER = {
+								OR = {
+									original_tag = JAP
+									is_subject_of = JAP
+									is_in_faction_with = JAP
+								}
+							}
+						}
+						CONTROLLER = {
+							transfer_state = PREV
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						is_literally_china = yes
+						has_war_with = ROOT
+						is_in_faction_with = event_target:WTT_current_china_leader
+					}
+					white_peace = ROOT
+				
+					add_ai_strategy = {
+						type = support
+						id = ROOT
+						value = -200
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = ROOT
+						value = -200
+					}						
+				}
+			}
+			else = {
+				every_other_country = {
+					limit = {
+						OR = {
+							AND = {
+								tag = MAN
+								is_in_faction_with = event_target:WTT_current_china_leader
+							}
+							is_literally_china = yes
+						}
+						has_war_with = ROOT
+					}
+					every_controlled_state = {
+						limit = {
+							OWNER = {
+								OR = {
+									original_tag = JAP
+									is_subject_of = JAP
+									is_in_faction_with = JAP
+								}
+							}
+						}
+						CONTROLLER = {
+							transfer_state = PREV
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						OR = {
+							AND = {
+								tag = MAN
+								is_in_faction_with = event_target:WTT_current_china_leader
+							}
+							is_literally_china = yes
+						}
+						has_war_with = ROOT
+					}
+					white_peace = ROOT
+					hidden_effect = {
+						if = {
+							limit = {
+								original_tag = PRC
+								has_government = communism
+							}
+						}
+						country_event = {
+							id = SEA_PRC_misc_events.9
+							days = 15
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = { id = wtt_japan.127 }
+		}
+		set_country_flag = achievement_JAP_sue_for_peace_CHI_completed
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	# No surrender! We want total victory!
+	option = {
+		name = wtt_japan.126.b
+		FROM = {
+			country_event = { id = wtt_japan.128 }
+		}
+		
+		ai_chance = { # If Japan has lots of major enemies, the AI will not make a separate peace
+			base = 10
+			modifier = {
+				add = 50
+				USA = {
+					has_war_with = JAP
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+			modifier = {
+				add = 40
+				ENG = {
+					has_war_with = JAP
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+			modifier = {
+				add = 30
+				SOV = {
+					has_war_with = JAP
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+			modifier = {
+				add = 20
+				FRA = {
+					has_war_with = JAP
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+			modifier = {
+				add = 10
+				GER = {
+					has_war_with = JAP
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+			modifier = {
+				add = 10
+				HOL = {
+					has_war_with = JAP
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+			modifier = {
+				add = 10
+				ITA = {
+					has_war_with = JAP
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+
+# Event for Japan that China has accepted
+country_event = {
+	id = wtt_japan.127
+	title = wtt_japan.127.t
+	desc = wtt_japan.127.desc
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	# They have accepted.
+	option = {
+		name = wtt_japan.127.a
+		if = {
+			limit = {
+				NOT = {
+					MAN = {
+						controls_state = 525
+						controls_state = 527
+						controls_state = 917
+						controls_state = 918
+						controls_state = 919
+						controls_state = 920
+					}
+				}
+			}
+			release = KOR
+			KOR = {
+				transfer_state = 525 transfer_state = 6505 transfer_state = 6506 transfer_state = 6507 transfer_state = 6508 transfer_state = 6509 transfer_state = 6510 transfer_state = 6511
+				transfer_state = 527 transfer_state = 6515 transfer_state = 6516 transfer_state = 6517 transfer_state = 6518 transfer_state = 6519 transfer_state = 6520 transfer_state = 6521 transfer_state = 6522 transfer_state = 6523 transfer_state = 6524 transfer_state = 6525 transfer_state = 6526 transfer_state = 6527 transfer_state = 6528 transfer_state = 6529
+				transfer_state = 917 transfer_state = 9210 transfer_state = 9211 transfer_state = 9212 transfer_state = 9213 transfer_state = 9214 transfer_state = 9215 transfer_state = 9216 transfer_state = 9217 transfer_state = 9218
+				transfer_state = 918 transfer_state = 9219 transfer_state = 9220 transfer_state = 9221 transfer_state = 9222 transfer_state = 9223 transfer_state = 9224 transfer_state = 9225 transfer_state = 9226 transfer_state = 9227 transfer_state = 9228 transfer_state = 9229 transfer_state = 9230 transfer_state = 9231 transfer_state = 9232
+				transfer_state = 919 transfer_state = 9233 transfer_state = 9234 transfer_state = 9235 transfer_state = 9236 transfer_state = 9237 transfer_state = 9238 transfer_state = 9239 transfer_state = 9240 transfer_state = 9241 transfer_state = 9242
+				transfer_state = 920 transfer_state = 9243 transfer_state = 9244 transfer_state = 9245 transfer_state = 9246 transfer_state = 9247 transfer_state = 9248 transfer_state = 9249 transfer_state = 9250
+			}
+			#KMT victory grants power to Korean government in exile in China
+		}
+		if = {
+			limit = {
+				524 = { #Taiwan
+					controller = {
+						OR = {
+							original_tag = JAP
+							is_ally_with = JAP
+						}
+					}
+				}
+			}
+			event_target:WTT_current_china_leader = {
+				transfer_state = 524 transfer_state = 6496 transfer_state = 6497 transfer_state = 6498 transfer_state = 6499 transfer_state = 6500 transfer_state = 6501 transfer_state = 6502 transfer_state = 6503 transfer_state = 6504
+			}
+		}
+		if = {
+			limit = {
+				event_target:WTT_current_china_leader = { #Chinese United Front
+					is_faction_leader = yes
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							original_tag = MAN
+							is_in_faction_with = event_target:WTT_current_china_leader
+						}
+						is_literally_china = yes
+					}
+					has_war_with = ROOT
+					is_in_faction_with = event_target:WTT_current_china_leader
+				}
+				every_controlled_state = {
+					limit = {
+						OWNER = {
+							OR = {
+								original_tag = JAP
+								is_subject_of = JAP
+								is_in_faction_with = JAP
+							}
+						}
+					}
+					CONTROLLER = {
+						transfer_state = PREV
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						AND = {
+							original_tag = MAN
+							is_in_faction_with = event_target:WTT_current_china_leader
+						}
+						is_literally_china = yes
+					}
+					has_war_with = ROOT
+					is_in_faction_with = event_target:WTT_current_china_leader
+				}
+				white_peace = ROOT
+			}
+		}
+		if = {
+			limit = {
+				RNG = {
+					exists = yes
+					is_ally_with = JAP
+				}
+			}
+			event_target:WTT_current_china_leader = {
+				annex_country = {
+					target = RNG 
+					transfer_troops = no
+				}	
+			}
+		}
+		else = {
+			every_other_country = {
+				limit = {
+					OR = {
+						AND = {
+							original_tag = MAN
+							is_in_faction_with = event_target:WTT_current_china_leader
+						}
+						is_literally_china = yes
+					}
+					has_war_with = ROOT
+				}
+				every_controlled_state = {
+					limit = {
+						OWNER = {
+							OR = {
+								original_tag = JAP
+								is_subject_of = JAP
+								is_in_faction_with = JAP
+							}
+						}
+					}
+					CONTROLLER = {
+						transfer_state = PREV
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						AND = {
+							original_tag = MAN
+							is_in_faction_with = event_target:WTT_current_china_leader
+						}
+						is_literally_china = yes
+					}
+					has_war_with = ROOT
+				}
+				white_peace = ROOT
+			}
+		}
+		hidden_effect = {
+			set_truce = {
+				target = PRC
+				days = 730
+			}
+			set_truce = {
+				target = CHI
+				days = 730
+			}
+			set_truce = {
+				target = XSM
+				days = 730
+			}
+			set_truce = {
+				target = SHX
+				days = 730
+			}
+			set_truce = {
+				target = GXC
+				days = 730
+			}
+			set_truce = {
+				target = YUN
+				days = 730
+			}
+			set_truce = {
+				target = SIK
+				days = 730
+			}
+			set_truce = {
+				target = XIC
+				days = 730
+			}
+			set_truce = {
+				target = SND
+				days = 730
+			}
+			set_truce = {
+				target = GDC
+				days = 730
+			}
+			set_truce = {
+				target = SIC
+				days = 730
+			}
+			set_truce = {
+				target = KHM
+				days = 730
+			}
+			set_truce = {
+				target = NXM
+				days = 730
+			}
+			set_truce = {
+				target = GSM
+				days = 730
+			}
+		}
+	}
+}
+
+# Event for Japan that China has rejected
+country_event = {
+	id = wtt_japan.128
+	title = wtt_japan.128.t
+	desc = wtt_japan.128.desc
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	# They have rejected our surrender offer.
+	option = {
+		name = wtt_japan.128.a
+	}
+}
+
+# Event for MAN that Japan wants to surrender
+country_event = {
+	id = wtt_japan.129
+	title = wtt_japan.126.t
+	desc = wtt_japan.126.desc
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	# We accept their surrender.
+	option = {
+		name = wtt_japan.126.a
+		ai_chance = {
+			factor = 1
+		}
+		effect_tooltip = {
+			if = {
+				limit = {
+					NOT = {
+						any_country = {
+							is_literally_china = yes
+							controls_state = 525
+							controls_state = 527
+							controls_state = 917
+							controls_state = 918
+							controls_state = 919
+							controls_state = 920
+						}
+					}
+				}
+				FROM = { release = KOR }
+				KOR = {
+					transfer_state = 525 transfer_state = 6505 transfer_state = 6506 transfer_state = 6507 transfer_state = 6508 transfer_state = 6509 transfer_state = 6510 transfer_state = 6511
+					transfer_state = 527 transfer_state = 6515 transfer_state = 6516 transfer_state = 6517 transfer_state = 6518 transfer_state = 6519 transfer_state = 6520 transfer_state = 6521 transfer_state = 6522 transfer_state = 6523 transfer_state = 6524 transfer_state = 6525 transfer_state = 6526 transfer_state = 6527 transfer_state = 6528 transfer_state = 6529
+					transfer_state = 917 transfer_state = 9210 transfer_state = 9211 transfer_state = 9212 transfer_state = 9213 transfer_state = 9214 transfer_state = 9215 transfer_state = 9216 transfer_state = 9217 transfer_state = 9218
+					transfer_state = 918 transfer_state = 9219 transfer_state = 9220 transfer_state = 9221 transfer_state = 9222 transfer_state = 9223 transfer_state = 9224 transfer_state = 9225 transfer_state = 9226 transfer_state = 9227 transfer_state = 9228 transfer_state = 9229 transfer_state = 9230 transfer_state = 9231 transfer_state = 9232
+					transfer_state = 919 transfer_state = 9233 transfer_state = 9234 transfer_state = 9235 transfer_state = 9236 transfer_state = 9237 transfer_state = 9238 transfer_state = 9239 transfer_state = 9240 transfer_state = 9241 transfer_state = 9242
+					transfer_state = 920 transfer_state = 9243 transfer_state = 9244 transfer_state = 9245 transfer_state = 9246 transfer_state = 9247 transfer_state = 9248 transfer_state = 9249 transfer_state = 9250
+				}				
+			}
+			if = {
+				limit = {
+					524 = {
+						is_controlled_by = JAP
+					}
+				}
+				transfer_state = 524 transfer_state = 6496 transfer_state = 6497 transfer_state = 6498 transfer_state = 6499 transfer_state = 6500 transfer_state = 6501 transfer_state = 6502 transfer_state = 6503 transfer_state = 6504
+			}
+			MAN = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							is_owned_by = JAP
+							AND = {
+								is_owned_by = MEN
+								MEN = { is_subject_of = JAP }
+							}
+						}
+						NOT = {
+							state = 525
+							state = 527
+							state = 917
+							state = 918
+							state = 919
+							state = 920
+						}
+					}
+					every_country = {
+						limit = {
+							original_tag = MAN
+							controls_state = PREV
+						}
+						transfer_state = PREV
+					}
+				}
+				white_peace = JAP
+			}
+		}
+		FROM = {
+			country_event = { id = wtt_japan.130 }
+		}
+	}
+
+	# No surrender! We want total victory!
+	option = {
+		name = wtt_japan.126.b
+		ai_chance = {
+			factor = 0
+		}
+		FROM = {
+			country_event = { id = wtt_japan.128 }
+		}
+	}
+}
+
+# Event for Japan that MAN has accepted
+country_event = {
+	id = wtt_japan.130
+	title = wtt_japan.127.t
+	desc = wtt_japan.127.desc
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	# They have accepted.
+	option = {
+		name = wtt_japan.127.a
+		if = {
+			limit = {
+				NOT = {
+					any_country = {
+						is_literally_china = yes
+						controls_state = 525
+						controls_state = 527
+						controls_state = 917
+						controls_state = 918
+						controls_state = 919
+						controls_state = 920
+					}
+				}
+			}
+			release = KOR
+			KOR = {
+				transfer_state = 525 transfer_state = 6505 transfer_state = 6506 transfer_state = 6507 transfer_state = 6508 transfer_state = 6509 transfer_state = 6510 transfer_state = 6511
+				transfer_state = 527 transfer_state = 6515 transfer_state = 6516 transfer_state = 6517 transfer_state = 6518 transfer_state = 6519 transfer_state = 6520 transfer_state = 6521 transfer_state = 6522 transfer_state = 6523 transfer_state = 6524 transfer_state = 6525 transfer_state = 6526 transfer_state = 6527 transfer_state = 6528 transfer_state = 6529
+				transfer_state = 917 transfer_state = 9210 transfer_state = 9211 transfer_state = 9212 transfer_state = 9213 transfer_state = 9214 transfer_state = 9215 transfer_state = 9216 transfer_state = 9217 transfer_state = 9218
+				transfer_state = 918 transfer_state = 9219 transfer_state = 9220 transfer_state = 9221 transfer_state = 9222 transfer_state = 9223 transfer_state = 9224 transfer_state = 9225 transfer_state = 9226 transfer_state = 9227 transfer_state = 9228 transfer_state = 9229 transfer_state = 9230 transfer_state = 9231 transfer_state = 9232
+				transfer_state = 919 transfer_state = 9233 transfer_state = 9234 transfer_state = 9235 transfer_state = 9236 transfer_state = 9237 transfer_state = 9238 transfer_state = 9239 transfer_state = 9240 transfer_state = 9241 transfer_state = 9242
+				transfer_state = 920 transfer_state = 9243 transfer_state = 9244 transfer_state = 9245 transfer_state = 9246 transfer_state = 9247 transfer_state = 9248 transfer_state = 9249 transfer_state = 9250
+			}			
+			#KMT victory grants power to Korean government in exile in China
+			
+		}
+		if = {
+			limit = {
+				524 = {
+					is_controlled_by = JAP
+				}
+			}
+			MAN = { transfer_state = 524 transfer_state = 6496 transfer_state = 6497 transfer_state = 6498 transfer_state = 6499 transfer_state = 6500 transfer_state = 6501 transfer_state = 6502 transfer_state = 6503 transfer_state = 6504 }
+		}
+		MAN = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						is_owned_by = JAP
+						AND = {
+							is_owned_by = MEN
+							MEN = { is_subject_of = JAP }
+						}
+					}
+				}
+				MAN = {
+					transfer_state = PREV
+				}
+			}
+			white_peace = ROOT
+		}
+		every_other_country = {
+			limit = {
+				is_in_faction_with = JAP
+			}
+			white_peace = MAN
+		}
+
+	}
+}
+
+###   ##  ###  ###  ### ###       ##   ##  #  # ### #   ###  ##  ###  ## 
+#  # #  # #  # #  # #   #  #     #  # #  # ## # #   #    #  #  #  #  #   
+###  #  # ###  #  # ##  ###      #    #  # # ## ##  #    #  #     #   #  
+#  # #  # #  # #  # #   #  #     #  # #  # #  # #   #    #  #  #  #    # 
+###   ##  #  # ###  ### #  #      ##   ##  #  # #   ### ###  ##   #  ##  
+
+add_namespace = japan_border_conflict
+
+#initial border incident against Soviet Union
+country_event = {
+	id = japan_border_conflict.1
+	title = japan_border_conflict.1.t
+	desc = japan_border_conflict.1.desc
+	picture = GFX_report_event_japan_army_mountainside
+
+	is_triggered_only = yes
+
+	option = {
+		name = japan_border_conflict.1.a
+	}
+}
+#Japan wins
+country_event = {
+	id = japan_border_conflict.2
+	title = japan_border_conflict.2.t
+	desc = japan_border_conflict.2.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = japan_border_conflict.2.a
+		trigger = {
+			original_tag = JAP
+		}
+		add_tech_bonus = {
+			name = sov_jap_border_conflict_won
+			category = armor
+			bonus = 1.0
+		}
+		add_doctrine_cost_reduction = {
+			name = sov_jap_border_conflict_won
+			cost_reduction = 0.35
+			uses = 1
+			category = land_doctrine
+		}
+		hidden_effect = {
+			#set_country_flag = JAP_did_the_border_war_flag
+			set_country_flag = JAP_win_the_border_war_flag #R56
+		}
+	}
+	option = {
+		name = japan_border_conflict.2.b
+		trigger = {
+			original_tag = SOV
+		}
+		army_experience = 20
+	}
+}
+#Japan loses
+country_event = {
+	id = japan_border_conflict.3
+	title = japan_border_conflict.3.t
+	desc = japan_border_conflict.3.desc
+	picture = GFX_report_event_japanese_soldiers_03
+
+	is_triggered_only = yes
+
+	option = {
+		name = japan_border_conflict.3.a
+		trigger = {
+			original_tag = JAP
+		}
+		army_experience = 25
+		hidden_effect = {
+			#set_country_flag = JAP_did_the_border_war_flag
+			set_country_flag = JAP_lose_the_border_war_flag #R56
+		}
+	}
+	option = {
+		name = japan_border_conflict.3.b
+		trigger = {
+			original_tag = SOV
+		}
+		add_doctrine_cost_reduction = {
+			name = sov_jap_border_conflict_won
+			cost_reduction = 0.35
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+
+#stalemate
+country_event = { 
+	id = japan_border_conflict.4
+	title = japan_border_conflict.4.t
+	desc = japan_border_conflict.4.desc
+	picture = GFX_report_event_japanese_army_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = japan_border_conflict.4.a
+		trigger = {
+			original_tag = JAP
+		}
+		army_experience = 50
+	}
+	option = {
+		name = japan_border_conflict.3.b
+		trigger = {
+			original_tag = SOV
+		}
+		army_experience = 50
+	}
+}
+
+#japan escalates
+country_event = {
+	id = japan_border_conflict.5
+	title = japan_border_conflict.5.t
+	desc = japan_border_conflict.5.desc
+	picture = GFX_report_event_japanese_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = japan_border_conflict.5.a
+		
+	}
+	
+}
+
+#Soviet escalates
+country_event = {
+	id = japan_border_conflict.6
+	title = japan_border_conflict.6.t
+	desc = japan_border_conflict.6.desc
+	picture = GFX_report_event_SOV_tank_column
+
+	is_triggered_only = yes
+
+	option = {
+		name = japan_border_conflict.6.a
+		
+	}
+	
+}
+
+#japan escalates
+country_event = {
+	id = goe_japan.1
+	title = goe_japan.1.t
+	desc = goe_japan.1.desc
+	picture = GFX_report_event_JAP_the_azad_hind
+
+	fire_only_once = yes
+	trigger = {
+		original_tag = JAP
+		OR = {
+			AND = {
+				has_war_with = RAJ
+				OR = {
+					RAJ = { is_subject = yes }
+					RAJ = { is_in_faction_with = ENG }
+					RAJ = { NOT = { has_completed_focus = RAJ_forward_bloc } }
+				}
+			}
+			AND = {
+				has_war_with = BRM
+				OR = {
+					BRM = { is_in_faction_with = ENG }
+					BRM = { is_subject_of = ENG }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = goe_japan.1.a
+		ai_chance = {
+			base = 10
+		}
+
+		add_timed_idea = {
+			idea = idea_RAJ_azad_hind_fervor
+			days = 70
+		}
+
+		division_template = {
+			name = "Azad Hind Legion"
+			is_locked = no
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 0 y = 3 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				
+			}
+			support = {
+				
+			}
+		}
+
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			prioritize = { 282 } #optional: to pick those states first if they fulfill the limit
+			create_unit = {
+				division = "name = \"Azad Hind Legion\" division_template = \"Azad Hind Legion\" start_experience_factor = 0.2 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = JAP
+				prioritize_location = 1182 # optional 
+				allow_spawning_on_enemy_provs = no 
+				country_score = {} # optional 
+				count = 6 
+			}
+		}
+
+
+	}
+
+	option = {
+		name = goe_japan.1.b
+		ai_chance = {
+			base = 0
+		}
+
+	}
+}

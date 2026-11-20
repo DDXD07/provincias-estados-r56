@@ -1,0 +1,28 @@
+state = {
+	id = 278
+	name = "STATE_278"
+	manpower = 3021381
+	local_supplies = 0.0
+	state_category = metropolis
+	history = {
+		victory_points = { 12364 30 }
+		owner = ARG
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 6
+			dockyard = 1
+			air_base = 4
+			12364 = {
+				naval_base = 7
+				bunker = 1
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = ARG
+		add_to_array = {
+			state_victory_points = 12364
+		}
+	}
+	provinces = { 12364 }
+}

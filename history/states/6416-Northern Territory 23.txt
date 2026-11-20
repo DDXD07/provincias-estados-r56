@@ -1,0 +1,16 @@
+state = {
+	id = 6416
+	name = "STATE_6416"
+	manpower = 371
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = wasteland
+	history = {
+		owner = AST
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = AST
+	}
+	provinces = { 10518 }
+}

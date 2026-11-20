@@ -1,0 +1,28 @@
+state = {
+	id = 7463
+	name = "STATE_7463"
+	manpower = 1391999
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = JAP
+		add_core_of = CHI
+		add_core_of = PRC
+		1936.1.1 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				add_core_of = HBC
+				add_to_array = {
+					state_victory_points = 1052
+				}
+			}
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = { 1052 1 }
+	}
+	provinces = { 1052 }
+}

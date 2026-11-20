@@ -1,0 +1,33 @@
+state = {
+	id = 7546
+	name = "STATE_7546"
+	manpower = 67351
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = XSM
+		add_core_of = XSM
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 1
+		}
+		1936.1.1 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				NXM = {
+					transfer_state = PREV
+				}
+				add_core_of = NXM
+				remove_core_of = XSM
+			}
+		}
+	}
+	provinces = { 12750 }
+}

@@ -1,0 +1,25 @@
+state = {
+	id = 10137
+	name = "STATE_10137"
+	manpower = 1967855
+	local_supplies = 4.0
+	state_category = p2s_village
+	history = {
+		owner = SND
+		add_core_of = SND
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 4181
+		}
+		victory_points = { 4181 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		1938.10.25 = {
+			owner = CHI
+			controller = JAP
+		}
+	}
+	provinces = { 4181 }
+}

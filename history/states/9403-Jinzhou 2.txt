@@ -1,0 +1,25 @@
+state = {
+	id = 9403
+	name = "STATE_9403"
+	manpower = 1092032
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = MAN
+		add_core_of = MAN
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 6837
+		}
+		buildings = {
+			infrastructure = 2
+			6837 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 6837 1 }
+	}
+	provinces = { 6837 }
+}

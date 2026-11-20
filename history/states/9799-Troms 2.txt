@@ -1,0 +1,19 @@
+state = {
+	id = 9799
+	name = "STATE_9799"
+	manpower = 12919
+	local_supplies = 0.000
+	state_category = pastoral
+	resources = {
+		tungsten = 1
+	}
+	history = {
+		owner = NOR
+		add_core_of = NOR
+		add_core_of = SMI
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 6130 }
+}

@@ -1,0 +1,23 @@
+state = {
+	id = 380
+	name = "STATE_380"
+	manpower = 223448
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		tungsten = 5
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 4865
+		}
+		victory_points = { 4865 5 }
+	}
+	provinces = { 4865 13153 }
+}

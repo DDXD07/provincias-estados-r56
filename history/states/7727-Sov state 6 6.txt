@@ -1,0 +1,20 @@
+state = {
+	id = 7727
+	name = "STATE_7727"
+	manpower = 52795
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_claim_by = TAT
+	}
+	provinces = { 1210 }
+}

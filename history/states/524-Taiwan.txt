@@ -1,0 +1,25 @@
+state = {
+	id = 524
+	name = "STATE_524"
+	manpower = 2682115
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = JAP
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 7186
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			air_base = 6
+		}
+		victory_points = { 7186 5 }
+	}
+	provinces = { 7186 }
+}

@@ -1,0 +1,18 @@
+state = {
+	id = 8459
+	name = "STATE_8459"
+	manpower = 266667
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		rubber = 1
+	}
+	history = {
+		owner = FRA
+		add_core_of = RCG
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 3109 }
+}

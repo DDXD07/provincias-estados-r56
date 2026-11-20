@@ -1,0 +1,22 @@
+state = {
+	id = 10207
+	name = "STATE_10207"
+	manpower = 47932
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		tungsten = 10
+		rubber = 29
+	}
+	history = {
+		owner = MAL
+		add_core_of = MAL
+		buildings = {
+			4412 = {
+				naval_base = 2
+			}
+			infrastructure = 1
+		}
+	}
+	provinces = { 4412 }
+}

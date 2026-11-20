@@ -1,0 +1,24 @@
+state = {
+	id = 771
+	name = "STATE_771"
+	manpower = 396459
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		chromium = 2
+	}
+	history = {
+		owner = ENG
+		add_core_of = ZAM
+		add_core_of = KAT
+		add_to_array = {
+			state_victory_points = 5199
+		}
+		victory_points = { 5199 2 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 5199 }
+}

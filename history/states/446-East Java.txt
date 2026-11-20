@@ -1,0 +1,25 @@
+state = {
+	id = 446
+	name = "STATE_446"
+	manpower = 7833636
+	local_supplies = 5.000
+	state_category = developed_rural
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_claim_by = JVA
+		add_to_array = {
+			state_victory_points = 13520
+		}
+		victory_points = { 13520 10 }
+		buildings = {
+			industrial_complex = 2
+			infrastructure = 3
+			13520 = {
+				naval_base = 3
+				naval_supply_hub = 1
+			}
+		}
+	}
+	provinces = { 13520 }
+}

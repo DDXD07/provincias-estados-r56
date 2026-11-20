@@ -1,0 +1,20 @@
+state = {
+	id = 9519
+	name = "STATE_9519"
+	manpower = 1579302
+	buildings_max_level_factor = 1.000
+	local_supplies = 3.000
+	state_category = pastoral
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_to_array = {
+			state_victory_points = 4434
+		}
+		victory_points = { 4434 2 }
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = { 4434 }
+}

@@ -1,0 +1,23 @@
+state = {
+	id = 665
+	name = "STATE_665"
+	manpower = 106955
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = FRA
+		add_core_of = TUN
+		add_to_array = {
+			state_victory_points = 7005
+		}
+		victory_points = { 7005 1 }
+		buildings = {
+			infrastructure = 2
+			7005 = {
+				bunker = 1
+			}
+		}
+	}
+	provinces = { 7005 13179 }
+}

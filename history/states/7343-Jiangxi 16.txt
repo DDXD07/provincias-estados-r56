@@ -1,0 +1,22 @@
+state = {
+	id = 7343
+	name = "STATE_7343"
+	manpower = 439456
+	buildings_max_level_factor = 1.000
+	local_supplies = 2.0
+	state_category = p2s_village
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		set_state_flag = CHI_sinaw_organization_flag
+		set_state_flag = CHI_central_nachang_aircraft_manufacturing_factory_organization_flag
+		buildings = {
+			infrastructure = 1
+		}
+		1938.10.25 = {
+			controller = JAP
+		}
+	}
+	provinces = { 7653 }
+}

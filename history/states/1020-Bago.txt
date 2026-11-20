@@ -1,0 +1,23 @@
+state = {
+	id = 1020
+	name = "STATE_1020"
+	manpower = 36013
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	resources = {
+		tungsten = 9
+	}
+	history = {
+		owner = RAJ
+		add_core_of = BRM
+		add_to_array = {
+			state_victory_points = 1403
+		}
+		victory_points = { 1403 2 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 1403 }
+}

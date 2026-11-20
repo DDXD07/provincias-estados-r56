@@ -1,0 +1,17 @@
+state = {
+	id = 9008
+	name = "STATE_9008"
+	manpower = 1632
+	buildings_max_level_factor = 1
+	local_supplies = 0.0
+	state_category = wasteland
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		add_core_of = YAK
+	}
+	provinces = { 2877 }
+}

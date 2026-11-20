@@ -1,0 +1,20 @@
+state = {
+	id = 869
+	name = "STATE_869"
+	manpower = 857140
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	history = {
+		victory_points = { 1488 4 }
+		buildings = {
+			infrastructure = 1
+		}
+		owner = SIA
+		add_core_of = SIA
+		add_to_array = {
+			state_victory_points = 1488
+		}
+	}
+	provinces = { 1488 }
+}

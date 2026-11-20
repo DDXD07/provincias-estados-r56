@@ -1,0 +1,24 @@
+state = {
+	id = 947
+	name = "STATE_947"
+	manpower = 1820053
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = developed_rural
+	history = {
+		owner = MAN
+		add_core_of = MAN
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 9835
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = { 9835 2 }
+	}
+	provinces = { 9835 }
+}

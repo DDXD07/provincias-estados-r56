@@ -1,0 +1,22 @@
+state = {
+	id = 805
+	name = "STATE_805"
+	manpower = 66828
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = ALB
+		victory_points = { 914 3 }
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = ALB
+		add_claim_by = GRE
+		add_claim_by = ITA
+		add_to_array = {
+			state_victory_points = 914
+		}
+	}
+	provinces = { 914 }
+}

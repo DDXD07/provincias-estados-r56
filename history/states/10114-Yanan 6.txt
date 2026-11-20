@@ -1,0 +1,21 @@
+state = {
+	id = 10114
+	name = "STATE_10114"
+	manpower = 389233
+	buildings_max_level_factor = 1
+	local_supplies = 0
+	state_category = p2s_village
+	history = {
+		owner = XIC
+		add_core_of = PRC
+		add_core_of = CHI
+		add_core_of = XIC
+		buildings = {
+			infrastructure = 1
+			5007 = {
+				bunker = 2
+			}
+		}
+	}
+	provinces = { 5007 }
+}

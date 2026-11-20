@@ -1,0 +1,21 @@
+state = {
+	id = 8434
+	name = "STATE_8434"
+	manpower = 83334
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		steel = 3
+		aluminium = 2
+		coal = 11
+	}
+	history = {
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+		add_core_of = SIL
+	}
+	provinces = { 506 }
+}

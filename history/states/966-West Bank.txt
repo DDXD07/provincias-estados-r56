@@ -1,0 +1,22 @@
+state = {
+	id = 966
+	name = "STATE_966"
+	manpower = 164714
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = MPL
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = { 7985 3 }
+		add_core_of = PAL
+		add_claim_by = ISR
+		add_to_array = {
+			state_victory_points = 7985
+		}
+		set_compliance = 50
+	}
+	provinces = { 7985 }
+}

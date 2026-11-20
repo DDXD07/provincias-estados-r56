@@ -1,0 +1,19 @@
+state = {
+	id = 1986
+	name = "STATE_1986"
+	manpower = 45615
+	buildings_max_level_factor = 1.000
+	local_supplies = 12.0
+	state_category = p2s_village
+	resources = {
+		tungsten = 8
+	}
+	history = {
+		owner = POR
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POR
+	}
+	provinces = { 799 }
+}

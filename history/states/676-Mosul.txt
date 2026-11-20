@@ -1,0 +1,21 @@
+state = {
+	id = 676
+	name = "STATE_676"
+	manpower = 929295
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = IRQ
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = { 10106 5 }
+		add_core_of = IRQ
+		add_claim_by = KUR
+		add_to_array = {
+			state_victory_points = 10106
+		}
+	}
+	provinces = { 10106 }
+}

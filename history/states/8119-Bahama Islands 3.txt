@@ -1,0 +1,18 @@
+state = {
+	id = 8119
+	name = "STATE_8119"
+	manpower = 7299
+	local_supplies = 0.0
+	state_category = small_island
+	history = {
+		add_core_of = BAH
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+			7245 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces = { 7245 }
+}

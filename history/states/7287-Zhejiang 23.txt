@@ -1,0 +1,19 @@
+state = {
+	id = 7287
+	name = "STATE_7287"
+	manpower = 684861
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+		1938.10.25 = {
+			controller = JAP
+		}
+	}
+	provinces = { 7058 }
+}

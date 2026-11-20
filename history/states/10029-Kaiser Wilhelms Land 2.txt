@@ -1,0 +1,23 @@
+state = {
+	id = 10029
+	name = "STATE_10029"
+	manpower = 66479
+	buildings_max_level_factor = 1
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		add_core_of = PNG
+		owner = AST
+		add_to_array = {
+			state_victory_points = 12154
+		}
+		buildings = {
+			infrastructure = 2
+			12154 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 12154 2 }
+	}
+	provinces = { 12154 }
+}

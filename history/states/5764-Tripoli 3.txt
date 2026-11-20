@@ -1,0 +1,19 @@
+state = {
+	id = 5764
+	name = "STATE_5764"
+	manpower = 43982
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = ITA
+		victory_points = { 9980 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LBA
+		add_to_array = {
+			state_victory_points = 9980
+		}
+	}
+	provinces = { 9980 }
+}

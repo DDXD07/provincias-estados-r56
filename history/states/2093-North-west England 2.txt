@@ -1,0 +1,24 @@
+state = {
+	id = 2093
+	name = "STATE_2093"
+	manpower = 857771
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 9
+		aluminium = 1
+		coal = 9
+	}
+	history = {
+		owner = ENG
+		victory_points = { 6318 5 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = ENG
+		add_to_array = {
+			state_victory_points = 6318
+		}
+	}
+	provinces = { 6318 }
+}

@@ -1,0 +1,25 @@
+state = {
+	id = 92
+	name = "STATE_92"
+	manpower = 672162
+	buildings_max_level_factor = 1.000
+	local_supplies = 9.0
+	state_category = developed_rural
+	resources = {
+		coal = 1
+	}
+	history = {
+		victory_points = { 11399 1 }
+		owner = POL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 1
+		}
+		add_core_of = POL
+		add_to_array = {
+			state_victory_points = 11399
+		}
+	}
+	provinces = { 11399 }
+}

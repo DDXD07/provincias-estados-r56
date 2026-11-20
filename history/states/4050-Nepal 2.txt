@@ -1,0 +1,24 @@
+state = {
+	id = 4050
+	name = "STATE_4050"
+	manpower = 713255
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		chromium = 1
+		steel = 1
+	}
+	history = {
+		owner = NEP
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 5310 1 }
+		add_core_of = NEP
+		add_to_array = {
+			state_victory_points = 5310
+		}
+	}
+	provinces = { 5310 }
+}

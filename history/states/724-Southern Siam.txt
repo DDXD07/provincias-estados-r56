@@ -1,0 +1,25 @@
+state = {
+	id = 724
+	name = "STATE_724"
+	manpower = 295835
+	local_supplies = 1
+	state_category = rural
+	resources = {
+		rubber = 4
+		tungsten = 1
+		chromium = 1
+	}
+	history = {
+		owner = SIA
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			12230 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 12230 1 }
+		add_core_of = SIA
+	}
+	provinces = { 12230 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 969
+	name = "STATE_969"
+	manpower = 119480
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = SWE
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SWE
+		add_to_array = {
+			state_victory_points = 6310
+		}
+		victory_points = { 6310 1 }
+	}
+	provinces = { 6310 }
+}

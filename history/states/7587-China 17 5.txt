@@ -1,0 +1,22 @@
+state = {
+	id = 7587
+	name = "STATE_7587"
+	manpower = 1201958
+	buildings_max_level_factor = 1.000
+	local_supplies = 2.0
+	state_category = p2s_village
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 1
+		}
+		1938.10.25 = {
+			buildings = {
+				infrastructure = 2
+			}
+		}
+	}
+	provinces = { 7019 }
+}

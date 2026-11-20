@@ -1,0 +1,25 @@
+state = {
+	id = 10262
+	name = "STATE_10262"
+	manpower = 18000
+	buildings_max_level_factor = 1
+	local_supplies = 0.0
+	state_category = small_island
+	history = {
+		owner = AST
+		add_core_of = PNG
+		add_core_of = BOU
+		add_core_of = SOL
+		buildings = {
+			infrastructure = 1
+			4226 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 4226 1 }
+		add_to_array = {
+			state_victory_points = 4226
+		}
+	}
+	provinces = { 4226 }
+}

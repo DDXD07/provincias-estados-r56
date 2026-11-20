@@ -1,0 +1,17 @@
+state = {
+	id = 9162
+	name = "STATE_9162"
+	manpower = 392733
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = ENG
+		add_core_of = NGA
+		add_core_of = SOK
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 1932 }
+}

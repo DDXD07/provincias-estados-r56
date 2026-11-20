@@ -1,0 +1,29 @@
+state = {
+	id = 122
+	name = "STATE_122"
+	manpower = 1154612
+	local_supplies = 0.0
+	state_category = developed_rural
+	resources = {
+		steel = 1
+		coal = 6
+	}
+	history = {
+		owner = ENG
+		victory_points = { 377 5 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			377 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = ENG
+		add_core_of = WLS
+		add_to_array = {
+			state_victory_points = 377
+		}
+	}
+	provinces = { 377 }
+}

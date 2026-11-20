@@ -1,0 +1,26 @@
+state = {
+	id = 1351
+	name = "STATE_1351"
+	manpower = 39909
+	local_supplies = 14.0
+	state_category = p2s_village
+	resources = {
+		steel = 6
+		coal = 1
+	}
+	history = {
+		owner = FRA
+		add_dynamic_modifier = {
+			modifier = FRA_maginot_line_dynamic_modifier
+		}
+		buildings = {
+			infrastructure = 4
+			3629 = {
+				bunker = 10
+			}
+		}
+		add_core_of = FRA
+		add_core_of = ALS
+	}
+	provinces = { 3629 }
+}

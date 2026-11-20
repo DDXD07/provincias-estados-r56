@@ -1,0 +1,21 @@
+state = {
+	id = 9417
+	name = "STATE_9417"
+	manpower = 82124
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		rubber = 12
+		steel = 1
+		aluminium = 1
+	}
+	history = {
+		owner = MAL
+		add_core_of = MAL
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 10313 }
+}

@@ -1,0 +1,16 @@
+state = {
+	id = 10278
+	name = "STATE_10278"
+	manpower = 233821
+	local_supplies = 2.0
+	state_category = p2s_village
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = JVA
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 1209 }
+}

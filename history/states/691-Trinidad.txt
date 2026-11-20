@@ -1,0 +1,25 @@
+state = {
+	id = 691
+	name = "STATE_691"
+	manpower = 358493
+	local_supplies = 1.0
+	state_category = rural
+	resources = {
+		oil = 13
+	}
+	history = {
+		add_core_of = TRI
+		owner = ENG
+		add_to_array = {
+			state_victory_points = 3284
+		}
+		victory_points = { 3284 2 }
+		buildings = {
+			infrastructure = 2
+			3284 = {
+				naval_base = 2
+			}
+		}
+	}
+	provinces = { 3284 }
+}

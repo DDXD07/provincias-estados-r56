@@ -1,0 +1,23 @@
+state = {
+	id = 5802
+	name = "STATE_5802"
+	manpower = 123463
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = MPL
+		buildings = {
+			infrastructure = 3
+			1065 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 1065 2 }
+		add_core_of = ISR
+		add_to_array = {
+			state_victory_points = 1065
+		}
+	}
+	provinces = { 1065 }
+}

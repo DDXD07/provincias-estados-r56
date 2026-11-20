@@ -1,0 +1,20 @@
+state = {
+	id = 1101
+	name = "STATE_1101"
+	manpower = 9132175
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = RAJ
+		add_core_of = RAJ
+		add_core_of = KHL
+		add_to_array = {
+			state_victory_points = 10729
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 10729 3 }
+	}
+	provinces = { 10729 }
+}

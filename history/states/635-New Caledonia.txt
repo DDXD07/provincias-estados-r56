@@ -1,0 +1,23 @@
+state = {
+	id = 635
+	name = "STATE_635"
+	manpower = 19124
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = small_island
+	resources = {
+		chromium = 11
+	}
+	history = {
+		owner = FRA
+		add_core_of = VAN
+		victory_points = { 4268 1 }
+		buildings = {
+			infrastructure = 2
+			4268 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces = { 4268 }
+}

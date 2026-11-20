@@ -1,0 +1,26 @@
+state = {
+	id = 960
+	name = "STATE_960"
+	manpower = 103433
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		rubber = 23
+	}
+	history = {
+		owner = MAL
+		victory_points = { 7329 1 }
+		buildings = {
+			infrastructure = 2
+			7329 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = MAL
+		add_to_array = {
+			state_victory_points = 7329
+		}
+	}
+	provinces = { 7329 }
+}

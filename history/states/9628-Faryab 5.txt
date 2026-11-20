@@ -1,0 +1,17 @@
+state = {
+	id = 9628
+	name = "STATE_9628"
+	manpower = 168848
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = AFG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = AFG
+		add_claim_by = TMS
+		add_claim_by = UZB
+	}
+	provinces = { 10896 }
+}

@@ -1,0 +1,21 @@
+state = {
+	id = 2357
+	name = "STATE_2357"
+	manpower = 93441
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 2
+	}
+	history = {
+		owner = ITA
+		buildings = {
+			infrastructure = 4
+			11721 = {
+				bunker = 1
+			}
+		}
+		add_core_of = ITA
+	}
+	provinces = { 11721 }
+}

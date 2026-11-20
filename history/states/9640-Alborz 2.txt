@@ -1,0 +1,21 @@
+state = {
+	id = 9640
+	name = "STATE_9640"
+	manpower = 321670
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = AFG
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 12248 3 }
+		add_core_of = AFG
+		add_claim_by = TAJ
+		add_claim_by = UZB
+		add_to_array = {
+			state_victory_points = 12248
+		}
+	}
+	provinces = { 12248 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 8255
+	name = "STATE_8255"
+	manpower = 8187
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = small_island
+	history = {
+		owner = ENG
+		add_core_of = TON
+		buildings = {
+			infrastructure = 2
+			13420 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces = { 13420 }
+}

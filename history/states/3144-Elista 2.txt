@@ -1,0 +1,16 @@
+state = {
+	id = 3144
+	name = "STATE_3144"
+	manpower = 6329
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		add_core_of = KAL
+	}
+	provinces = { 759 }
+}

@@ -1,0 +1,25 @@
+state = {
+	id = 67
+	name = "STATE_67"
+	manpower = 734689
+	local_supplies = 4.0
+	state_category = rural
+	resources = {
+		steel = 4
+		aluminium = 1
+		coal = 5
+	}
+	history = {
+		victory_points = { 11467 5 }
+		owner = GER
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = GER
+		add_core_of = SIL
+		add_to_array = {
+			state_victory_points = 11467
+		}
+	}
+	provinces = { 11467 }
+}

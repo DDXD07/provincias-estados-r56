@@ -1,0 +1,21 @@
+state = {
+	id = 4025
+	name = "STATE_4025"
+	manpower = 109674
+	buildings_max_level_factor = 1
+	local_supplies = 0.000
+	state_category = p2s_village
+	resources = {
+		steel = 9
+		chromium = 7
+		oil = 1
+	}
+	history = {
+		owner = CUB
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CUB
+	}
+	provinces = { 7546 }
+}

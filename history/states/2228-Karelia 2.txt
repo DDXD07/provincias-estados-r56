@@ -1,0 +1,21 @@
+state = {
+	id = 2228
+	name = "STATE_2228"
+	manpower = 54603
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = FIN
+		add_core_of = FIN
+		add_core_of = KAR
+		add_to_array = {
+			state_victory_points = 3187
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = { 3187 1 }
+	}
+	provinces = { 3187 }
+}

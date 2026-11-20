@@ -1,0 +1,20 @@
+state = {
+	id = 1017
+	name = "STATE_1017"
+	manpower = 34311
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = MPL
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 4088 2 }
+		add_core_of = ISR
+		add_to_array = {
+			state_victory_points = 4088
+		}
+	}
+	provinces = { 4088 }
+}

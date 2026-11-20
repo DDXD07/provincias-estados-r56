@@ -1,0 +1,21 @@
+state = {
+	id = 7702
+	name = "STATE_7702"
+	manpower = 4464
+	local_supplies = 0.0
+	state_category = small_island
+	resources = {
+		aluminium = 2
+	}
+	history = {
+		owner = JAP
+		add_core_of = PLU
+		buildings = {
+			infrastructure = 3
+		}
+		strategic_province_location = {
+			defensible_coastline = 4357
+		}
+	}
+	provinces = { 4357 }
+}

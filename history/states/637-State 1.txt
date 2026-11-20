@@ -1,0 +1,21 @@
+state = {
+	id = 637
+	name = "STATE_637"
+	manpower = 38888
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = wasteland
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		add_core_of = FER
+		add_to_array = {
+			state_victory_points = 4728
+		}
+		victory_points = { 4728 1 }
+	}
+	provinces = { 4728 }
+}

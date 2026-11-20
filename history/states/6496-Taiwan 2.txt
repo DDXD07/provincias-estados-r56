@@ -1,0 +1,27 @@
+state = {
+	id = 6496
+	name = "STATE_6496"
+	manpower = 731487
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = JAP
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 12068
+		}
+		buildings = {
+			infrastructure = 3
+			12068 = {
+				naval_base = 10
+				naval_supply_hub = 1
+			}
+		}
+		victory_points = { 12068 1 }
+	}
+	provinces = { 12068 }
+}

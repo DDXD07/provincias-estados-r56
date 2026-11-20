@@ -1,0 +1,18 @@
+state = {
+	id = 5594
+	name = "STATE_5594"
+	manpower = 639466
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		add_core_of = BAN
+		owner = RAJ
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = PAK
+		add_core_of = RAJ
+	}
+	provinces = { 4162 }
+}

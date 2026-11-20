@@ -1,0 +1,21 @@
+state = {
+	id = 9455
+	name = "STATE_9455"
+	manpower = 98577
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = DEN
+		victory_points = { 13317 1 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = DEN
+		add_core_of = SHL
+		add_to_array = {
+			state_victory_points = 13317
+		}
+	}
+	provinces = { 13317 }
+}

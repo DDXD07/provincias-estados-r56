@@ -1,0 +1,16 @@
+state = {
+	id = 2427
+	name = "STATE_2427"
+	manpower = 53033
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = SPR
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SPR
+	}
+	provinces = { 11884 }
+}

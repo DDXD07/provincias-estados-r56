@@ -1,0 +1,26 @@
+state = {
+	id = 4656
+	name = "STATE_4656"
+	manpower = 149351
+	local_supplies = 9.0
+	state_category = p2s_village
+	resources = {
+		oil = 10
+		aluminium = 2
+		coal = 1
+	}
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_core_of = TXS
+		add_to_array = {
+			state_victory_points = 3972
+		}
+		victory_points = { 3972 1 }
+	}
+	provinces = { 3972 }
+}

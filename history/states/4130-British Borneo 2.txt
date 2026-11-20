@@ -1,0 +1,22 @@
+state = {
+	id = 4130
+	name = "STATE_4130"
+	manpower = 33547
+	local_supplies = 1.0
+	state_category = pastoral
+	resources = {
+		rubber = 3
+		oil = 1
+		coal = 1
+	}
+	history = {
+		owner = MAL
+		add_core_of = MAL
+		add_core_of = SAR
+		add_claim_by = BRN
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 4396 }
+}

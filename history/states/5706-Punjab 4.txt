@@ -1,0 +1,20 @@
+state = {
+	id = 5706
+	name = "STATE_5706"
+	manpower = 1171286
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		victory_points = { 10898 1 }
+		owner = RAJ
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = PAK
+		add_core_of = RAJ
+		add_to_array = {
+			state_victory_points = 10898
+		}
+	}
+	provinces = { 10898 }
+}

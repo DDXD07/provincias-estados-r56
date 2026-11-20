@@ -1,0 +1,19 @@
+state = {
+	id = 8266
+	name = "STATE_8266"
+	manpower = 101857
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = ITA
+		add_core_of = ITA
+		add_core_of = YUG
+		add_core_of = SLV
+		add_claim_by = VNZ
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 11595 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 8171
+	name = "STATE_8171"
+	manpower = 110675
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = MAN
+		add_core_of = MAN
+		add_core_of = CHI
+		add_core_of = PRC
+		add_claim_by = GUK
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 1732 }
+}

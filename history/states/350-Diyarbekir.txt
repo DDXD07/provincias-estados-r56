@@ -1,0 +1,20 @@
+state = {
+	id = 350
+	name = "STATE_350"
+	manpower = 314562
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = TUR
+		victory_points = { 4512 5 }
+		buildings = {
+			infrastructure = 2
+			air_base = 2
+		}
+		add_core_of = KUR
+		add_to_array = {
+			state_victory_points = 4512
+		}
+	}
+	provinces = { 4512 }
+}

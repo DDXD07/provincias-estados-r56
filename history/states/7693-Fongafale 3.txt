@@ -1,0 +1,15 @@
+state = {
+	id = 7693
+	name = "STATE_7693"
+	manpower = 667
+	local_supplies = 0.0
+	state_category = tiny_island
+	history = {
+		owner = ENG
+		add_core_of = TUV
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 13057 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 6040
+	name = "STATE_6040"
+	manpower = 13346
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		oil = 1
+	}
+	history = {
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = MEX
+	}
+	provinces = { 12721 }
+}

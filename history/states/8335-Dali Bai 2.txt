@@ -1,0 +1,18 @@
+state = {
+	id = 8335
+	name = "STATE_8335"
+	manpower = 62501
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = YUN
+		add_core_of = YUN
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 12789 }
+}

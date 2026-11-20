@@ -1,0 +1,19 @@
+state = {
+	id = 6252
+	name = "STATE_6252"
+	manpower = 70745
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		aluminium = 1
+		coal = 1
+	}
+	history = {
+		owner = BRA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = BRA
+	}
+	provinces = { 4575 }
+}

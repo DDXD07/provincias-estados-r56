@@ -1,0 +1,21 @@
+state = {
+	id = 7135
+	name = "STATE_7135"
+	manpower = 12114
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		chromium = 1
+		tungsten = 1
+	}
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		add_core_of = KAZ
+	}
+	provinces = { 1818 }
+}

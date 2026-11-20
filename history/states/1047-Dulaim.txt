@@ -1,0 +1,15 @@
+state = {
+	id = 1047
+	name = "STATE_1047"
+	manpower = 11266
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = IRQ
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = IRQ
+	}
+	provinces = { 1631 }
+}

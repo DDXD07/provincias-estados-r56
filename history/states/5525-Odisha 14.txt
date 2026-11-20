@@ -1,0 +1,18 @@
+state = {
+	id = 5525
+	name = "STATE_5525"
+	manpower = 427000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		steel = 1
+		chromium = 1
+	}
+	history = {
+		owner = RAJ
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 1101 }
+}

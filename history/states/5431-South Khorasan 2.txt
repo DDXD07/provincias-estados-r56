@@ -1,0 +1,19 @@
+state = {
+	id = 5431
+	name = "STATE_5431"
+	manpower = 120664
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = AFG
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 2062 1 }
+		add_core_of = AFG
+		add_to_array = {
+			state_victory_points = 2062
+		}
+	}
+	provinces = { 2062 }
+}

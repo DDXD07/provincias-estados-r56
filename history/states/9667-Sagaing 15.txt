@@ -1,0 +1,16 @@
+state = {
+	id = 9667
+	name = "STATE_9667"
+	manpower = 37551
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = RAJ
+		add_core_of = BRM
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 10386 }
+}

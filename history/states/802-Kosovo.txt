@@ -1,0 +1,23 @@
+state = {
+	id = 802
+	name = "STATE_802"
+	manpower = 322036
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		victory_points = { 9874 3 }
+		owner = YUG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = KOS
+		add_claim_by = ALB
+		add_to_array = {
+			state_victory_points = 9874
+		}
+	}
+	provinces = { 9874 }
+}

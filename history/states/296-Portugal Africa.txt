@@ -1,0 +1,25 @@
+state = {
+	id = 296
+	name = "STATE_296"
+	manpower = 273675
+	local_supplies = 0.0
+	state_category = enclave
+	resources = {
+		rubber = 1
+	}
+	history = {
+		owner = POR
+		add_core_of = GNB
+		add_to_array = {
+			state_victory_points = 12891
+		}
+		victory_points = { 12891 1 }
+		buildings = {
+			infrastructure = 1
+			12891 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces = { 12891 }
+}

@@ -1,0 +1,22 @@
+state = {
+	id = 6723
+	name = "STATE_6723"
+	manpower = 105227
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		steel = 1
+	}
+	history = {
+		owner = ITA
+		add_core_of = SOM
+		add_to_array = {
+			state_victory_points = 2063
+		}
+		victory_points = { 2063 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 2063 }
+}

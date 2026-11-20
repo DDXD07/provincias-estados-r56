@@ -1,0 +1,19 @@
+state = {
+	id = 624
+	name = "STATE_624"
+	manpower = 186283
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		steel = 2
+	}
+	history = {
+		owner = PHI
+		add_core_of = PHI
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+	provinces = { 10306 }
+}

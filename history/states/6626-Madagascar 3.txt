@@ -1,0 +1,15 @@
+state = {
+	id = 6626
+	name = "STATE_6626"
+	manpower = 307885
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		add_core_of = MAD
+		owner = FRA
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = { 8246 }
+}

@@ -1,0 +1,27 @@
+state = {
+	id = 42
+	name = "STATE_42"
+	manpower = 235054
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		steel = 2
+		coal = 2
+	}
+	history = {
+		owner = GER
+		victory_points = { 11560 3 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = GER
+		add_core_of = RHI
+		add_to_array = {
+			state_victory_points = 11560
+		}
+		set_demilitarized_zone = yes
+	}
+	provinces = { 11560 }
+}

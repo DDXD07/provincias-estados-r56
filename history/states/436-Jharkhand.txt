@@ -1,0 +1,22 @@
+state = {
+	id = 436
+	name = "STATE_436"
+	manpower = 6824142
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		chromium = 1
+		coal = 1
+	}
+	history = {
+		owner = RAJ
+		add_to_array = {
+			state_victory_points = 4950
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 4950 5 }
+	}
+	provinces = { 4950 }
+}

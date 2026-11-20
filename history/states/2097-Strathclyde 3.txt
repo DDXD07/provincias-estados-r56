@@ -1,0 +1,25 @@
+state = {
+	id = 2097
+	name = "STATE_2097"
+	manpower = 161266
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		steel = 2
+		coal = 3
+	}
+	history = {
+		add_core_of = SCO
+		owner = ENG
+		victory_points = { 9237 1 }
+		buildings = {
+			infrastructure = 4
+			dockyard = 2
+		}
+		add_core_of = ENG
+		add_to_array = {
+			state_victory_points = 9237
+		}
+	}
+	provinces = { 9237 }
+}

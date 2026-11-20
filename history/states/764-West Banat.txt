@@ -1,0 +1,22 @@
+state = {
+	id = 764
+	name = "STATE_764"
+	manpower = 409904
+	local_supplies = 2.0
+	state_category = pastoral
+	history = {
+		owner = YUG
+		controller = YUG
+		victory_points = { 11787 3 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = TRA
+		add_to_array = {
+			state_victory_points = 11787
+		}
+	}
+	provinces = { 11787 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 8552
+	name = "STATE_8552"
+	manpower = 79817
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	resources = {
+		coal = 1
+	}
+	history = {
+		owner = SPR
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SPR
+	}
+	provinces = { 9703 }
+}

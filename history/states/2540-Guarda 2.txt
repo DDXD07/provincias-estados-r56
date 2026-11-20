@@ -1,0 +1,22 @@
+state = {
+	id = 2540
+	name = "STATE_2540"
+	manpower = 263682
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		tungsten = 19
+	}
+	history = {
+		owner = POR
+		victory_points = { 9787 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = POR
+		add_to_array = {
+			state_victory_points = 9787
+		}
+	}
+	provinces = { 9787 }
+}

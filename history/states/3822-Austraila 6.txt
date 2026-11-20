@@ -1,0 +1,22 @@
+state = {
+	id = 3822
+	name = "STATE_3822"
+	manpower = 51262
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = AST
+		buildings = {
+			infrastructure = 3
+			7520 = {
+				coastal_bunker = 1
+			}
+		}
+		victory_points = { 7520 1 }
+		add_core_of = AST
+		add_to_array = {
+			state_victory_points = 7520
+		}
+	}
+	provinces = { 7520 }
+}

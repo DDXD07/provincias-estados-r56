@@ -1,0 +1,18 @@
+state = {
+	id = 10105
+	name = "STATE_10105"
+	manpower = 182436
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		chromium = 4
+	}
+	history = {
+		owner = PHI
+		add_core_of = PHI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 4423 }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 3729
+	name = "STATE_3729"
+	manpower = 68256
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		victory_points = { 722 1 }
+		owner = CAN
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = CAN
+		add_to_array = {
+			state_victory_points = 722
+		}
+	}
+	provinces = { 722 }
+}

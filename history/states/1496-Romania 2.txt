@@ -1,0 +1,23 @@
+state = {
+	id = 1496
+	name = "STATE_1496"
+	manpower = 588366
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		oil = 4
+	}
+	history = {
+		owner = ROM
+		victory_points = { 3663 5 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ROM
+		add_to_array = {
+			state_victory_points = 3663
+		}
+	}
+	provinces = { 3663 }
+}

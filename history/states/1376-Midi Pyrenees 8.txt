@@ -1,0 +1,17 @@
+state = {
+	id = 1376
+	name = "STATE_1376"
+	manpower = 60834
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = p2s_village
+	history = {
+		owner = FRA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = OCC
+		add_core_of = FRA
+	}
+	provinces = { 929 }
+}

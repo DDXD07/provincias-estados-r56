@@ -1,0 +1,23 @@
+state = {
+	id = 492
+	name = "STATE_492"
+	manpower = 838762
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = rural
+	history = {
+		owner = PRU
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 1
+		}
+		add_core_of = PRU
+		add_to_array = {
+			state_victory_points = 2210
+		}
+		victory_points = { 2210 5 }
+	}
+	provinces = { 2210 }
+}

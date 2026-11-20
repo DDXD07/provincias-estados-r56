@@ -1,0 +1,26 @@
+state = {
+	id = 1118
+	name = "STATE_1118"
+	manpower = 257248
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = HBC
+		add_core_of = HBC
+		add_core_of = MEN
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 6904
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 6904 3 }
+		1938.10.25 = {
+			owner = CHI
+			controller = MEN
+		}
+	}
+	provinces = { 6904 }
+}

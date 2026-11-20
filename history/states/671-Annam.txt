@@ -1,0 +1,25 @@
+state = {
+	id = 671
+	name = "STATE_671"
+	manpower = 4574749
+	local_supplies = 0.0
+	state_category = rural
+	resources = {
+		tungsten = 2
+	}
+	history = {
+		add_core_of = VIN
+		add_core_of = FRI
+		owner = FRI
+		add_to_array = {
+			state_victory_points = 4075
+		}
+		victory_points = { 4075 15 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+		}
+	}
+	provinces = { 4075 }
+}

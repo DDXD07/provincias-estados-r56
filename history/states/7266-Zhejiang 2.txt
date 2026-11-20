@@ -1,0 +1,28 @@
+state = {
+	id = 7266
+	name = "STATE_7266"
+	manpower = 2054583
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		add_to_array = {
+			state_victory_points = 1055
+		}
+		victory_points = { 1055 1 }
+		buildings = {
+			infrastructure = 2
+			1055 = {
+				naval_base = 3
+				coastal_bunker = 1
+				bunker = 1
+			}
+		}
+		1938.10.25 = {
+			controller = JAP
+		}
+	}
+	provinces = { 1055 }
+}

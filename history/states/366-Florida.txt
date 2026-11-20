@@ -1,0 +1,25 @@
+state = {
+	id = 366
+	name = "STATE_366"
+	manpower = 342579
+	local_supplies = 10.0
+	state_category = developed_rural
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			air_base = 8
+			1843 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_to_array = {
+			state_victory_points = 1843
+		}
+		victory_points = { 1843 3 }
+	}
+	provinces = { 1843 }
+}

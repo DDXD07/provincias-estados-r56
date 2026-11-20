@@ -1,0 +1,1250 @@
+political_actions = {
+	QUE_move_insitutions_to_quebec = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			controls_state = 468		
+		}
+		
+		fire_only_once = yes	
+		visible = {
+			
+		}
+
+		highlight_states = { 
+			highlight_state_targets = { state = 468 }
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		cost = 10
+
+		complete_effect = {			
+			add_victory_points = {
+				province = 12149
+				value = 20
+			}
+			set_country_flag = QUE_capital_quebec
+			add_stability = 0.03													
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	QUE_recall_norman_bethune = {
+
+		icon = generic_political_address
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			OR = {
+				has_government = communism
+				has_completed_focus = QUE_collectivism	
+			}
+			date < 1939.11.12
+		}
+		
+		fire_only_once = yes	
+		visible = {
+			has_completed_focus = QUE_collectivism
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			set_country_flag = QUE_recalled_norman
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = QUE_norman_bethune
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}	
+
+	QUE_cement_the_steel_trade = {
+
+		icon = GFX_decision_generic_shovels
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			controls_state = 860
+			has_completed_focus = QUE_advatageous_foreign_trade_deal
+			NOT = {
+				has_war_with = USA
+			}
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		fire_only_once = yes	
+		visible = {
+			has_completed_focus = QUE_advatageous_foreign_trade_deal
+		}
+		days_remove = 80
+
+		cost = 50
+
+		remove_effect = {			
+			random_owned_controlled_state = {
+				prioritize = { 860 }
+				add_extra_state_shared_building_slots = 2			
+				add_building_construction = {
+					type = steel_mill
+					level = 2
+					instant_build = yes
+				}	
+			}
+			give_resource_rights = { receiver = USA state = 860 }
+			add_opinion_modifier = {
+				target = USA
+				modifier = USA_friend_modifier
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = QUE
+					modifier = USA_friend_modifier
+				}
+			}													
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}	
+}
+
+#QUE_resignation_pm = {
+#	QUE_taschereau_resignation = {
+#		activation = {
+#			NOT = {
+#				has_country_flag = QUE_resignation
+#			}
+#			has_government = democratic
+#		}
+#		available = {
+#			has_country_flag = QUE_resignation
+#		}
+#		visible = {
+#			has_country_flag = QUE_resignation
+#		}
+#		icon = mission_icon     # For GFX_decision_mission_icon
+#		priority = 10
+#		is_good = yes
+#		days_mission_timeout = 180
+#		selectable_mission = no
+#		complete_effect = {
+#		}
+#		timeout_effect = {
+#			country_event = quebec.1
+#		}
+#	}
+#}
+
+QUE_find_an_alliance_category = {
+	QUE_join_demo_from_factionname = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			has_capitulated = no
+			is_subject = no
+			is_in_faction = no
+			NOT = {
+				has_idea = ROOT_diplomatic_effort
+			}
+		}
+
+		visible = {
+			is_subject = no
+			has_completed_focus = QUE_democratic_diplomacy
+			is_in_faction = no			
+		}
+
+		target_trigger = {
+			FROM = {
+				capital_scope = {
+					is_core_of = FROM
+					OR = {
+						is_on_continent = Europe
+						is_on_continent = North_America
+					}
+				}
+				is_faction_leader = yes
+				is_subject = no
+				has_capitulated = no
+				NOT = {
+					has_war_with = ROOT
+				}
+				has_government = democratic
+			}
+		}
+
+		fire_only_once = yes
+		cost = 25
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				ROOT = {
+					has_government = democratic
+					has_government = neutrality
+				}
+				factor = 10
+			}
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			add_ideas = ROOT_diplomatic_effort
+		}
+
+		remove_effect = {
+			remove_ideas = ROOT_diplomatic_effort
+			if = {
+				limit = {
+					FROM = {
+						is_faction_leader = yes
+					}
+				}
+				FROM = {
+					country_event = generic.2
+				}								
+			}	
+		}
+	}		
+}
+
+QUE_reclaim_our_cores = {
+	QUE_core_labrador = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			332 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+			
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			332 = { add_core_of = QUE } 4126 = { add_core_of = QUE } 4127 = { add_core_of = QUE } 4128 = { add_core_of = QUE } 4129 = { add_core_of = QUE }												
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	QUE_core_newfoundland = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			331 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+			
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			331 = { add_core_of = QUE } 4122 = { add_core_of = QUE } 4123 = { add_core_of = QUE } 4124 = { add_core_of = QUE } 4125 = { add_core_of = QUE }												
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	QUE_core_new_brunswick = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			465 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+			
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			465 = { add_core_of = QUE } 5910 = { add_core_of = QUE } 5911 = { add_core_of = QUE } 5912 = { add_core_of = QUE } 5913 = { add_core_of = QUE } 5914 = { add_core_of = QUE } 5915 = { add_core_of = QUE } 5916 = { add_core_of = QUE }												
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	QUE_core_nova_scotia = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			464 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}			
+		}
+		
+		fire_only_once = yes	
+		visible = {
+			
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			464 = { add_core_of = QUE } 5903 = { add_core_of = QUE } 5904 = { add_core_of = QUE } 5905 = { add_core_of = QUE } 5906 = { add_core_of = QUE } 5907 = { add_core_of = QUE } 5908 = { add_core_of = QUE } 5909 = { add_core_of = QUE }												
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
+
+QUE_integrate_conquered_land_fascism = {
+	QUE_integrate_maritimes = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			464 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+				is_core_of = QUE
+			}	
+			465 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+				is_core_of = QUE
+			}	
+			331 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+				is_core_of = QUE
+			}
+			332 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+				is_core_of = QUE
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+			NOT = {
+			464 = {
+				is_core_of = QUE
+			}	
+			465 = {
+				is_core_of = QUE
+			}	
+			331 = {
+				is_core_of = QUE
+			}
+			332 = {
+				is_core_of = QUE
+			}
+			}
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			464 = { add_core_of = QUE } 5903 = { add_core_of = QUE } 5904 = { add_core_of = QUE } 5905 = { add_core_of = QUE } 5906 = { add_core_of = QUE } 5907 = { add_core_of = QUE } 5908 = { add_core_of = QUE } 5909 = { add_core_of = QUE }	
+			465 = { add_core_of = QUE } 5910 = { add_core_of = QUE } 5911 = { add_core_of = QUE } 5912 = { add_core_of = QUE } 5913 = { add_core_of = QUE } 5914 = { add_core_of = QUE } 5915 = { add_core_of = QUE } 5916 = { add_core_of = QUE }
+			331 = { add_core_of = QUE } 4122 = { add_core_of = QUE } 4123 = { add_core_of = QUE } 4124 = { add_core_of = QUE } 4125 = { add_core_of = QUE }
+			332 = { add_core_of = QUE } 4126 = { add_core_of = QUE } 4127 = { add_core_of = QUE } 4128 = { add_core_of = QUE } 4129 = { add_core_of = QUE }											
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	QUE_integrate_ontario = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			276 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}	
+			682 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}	
+			866 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+			
+		}
+
+		cost = 50
+
+		complete_effect = {			
+			276 = { add_core_of = QUE } 3727 = { add_core_of = QUE } 3728 = { add_core_of = QUE } 3729 = { add_core_of = QUE } 3730 = { add_core_of = QUE } 3731 = { add_core_of = QUE } 3732 = { add_core_of = QUE } 3733 = { add_core_of = QUE } 3734 = { add_core_of = QUE } 3735 = { add_core_of = QUE } 3736 = { add_core_of = QUE } 3737 = { add_core_of = QUE } 3738 = { add_core_of = QUE } 3739 = { add_core_of = QUE } 3740 = { add_core_of = QUE } 3741 = { add_core_of = QUE } 3742 = { add_core_of = QUE } 3743 = { add_core_of = QUE } 3744 = { add_core_of = QUE } 3745 = { add_core_of = QUE } 3746 = { add_core_of = QUE } 3747 = { add_core_of = QUE } 3748 = { add_core_of = QUE } 3749 = { add_core_of = QUE } 3750 = { add_core_of = QUE } 3751 = { add_core_of = QUE } 3752 = { add_core_of = QUE } 3753 = { add_core_of = QUE } 3754 = { add_core_of = QUE } 3755 = { add_core_of = QUE } 3756 = { add_core_of = QUE } 3757 = { add_core_of = QUE } 3758 = { add_core_of = QUE } 3759 = { add_core_of = QUE } 3760 = { add_core_of = QUE }	
+			682 = { add_core_of = QUE } 8071 = { add_core_of = QUE } 8072 = { add_core_of = QUE } 8073 = { add_core_of = QUE } 8074 = { add_core_of = QUE } 8075 = { add_core_of = QUE } 8076 = { add_core_of = QUE } 8077 = { add_core_of = QUE } 8078 = { add_core_of = QUE } 8079 = { add_core_of = QUE } 8080 = { add_core_of = QUE } 8081 = { add_core_of = QUE } 8082 = { add_core_of = QUE } 8083 = { add_core_of = QUE } 8084 = { add_core_of = QUE } 8085 = { add_core_of = QUE } 8086 = { add_core_of = QUE } 8087 = { add_core_of = QUE } 8088 = { add_core_of = QUE } 8089 = { add_core_of = QUE } 8090 = { add_core_of = QUE } 8091 = { add_core_of = QUE } 8092 = { add_core_of = QUE }
+			866 = { add_core_of = QUE } 8926 = { add_core_of = QUE } 8927 = { add_core_of = QUE } 8928 = { add_core_of = QUE }									
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	QUE_integrate_prairies = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			467 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}	
+			867 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}	
+			469 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			865 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			470 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			472 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}			
+			683 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+			
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			467 = { add_core_of = QUE } 5926 = { add_core_of = QUE } 5927 = { add_core_of = QUE } 5928 = { add_core_of = QUE } 5929 = { add_core_of = QUE } 5930 = { add_core_of = QUE } 5931 = { add_core_of = QUE } 5932 = { add_core_of = QUE } 5933 = { add_core_of = QUE } 5934 = { add_core_of = QUE } 5935 = { add_core_of = QUE }	
+			867 = { add_core_of = QUE } 8929 = { add_core_of = QUE } 8930 = { add_core_of = QUE } 8931 = { add_core_of = QUE } 8932 = { add_core_of = QUE } 8933 = { add_core_of = QUE } 8934 = { add_core_of = QUE }
+			469 = { add_core_of = QUE } 5950 = { add_core_of = QUE } 5951 = { add_core_of = QUE } 5952 = { add_core_of = QUE } 5953 = { add_core_of = QUE } 5954 = { add_core_of = QUE } 5955 = { add_core_of = QUE } 5956 = { add_core_of = QUE } 5957 = { add_core_of = QUE } 5958 = { add_core_of = QUE } 5959 = { add_core_of = QUE } 5960 = { add_core_of = QUE } 5961 = { add_core_of = QUE } 5962 = { add_core_of = QUE }
+			865 = { add_core_of = QUE } 8922 = { add_core_of = QUE } 8923 = { add_core_of = QUE } 8924 = { add_core_of = QUE } 8925 = { add_core_of = QUE }
+			470 = { add_core_of = QUE } 5963 = { add_core_of = QUE } 5964 = { add_core_of = QUE } 5965 = { add_core_of = QUE } 5966 = { add_core_of = QUE } 5967 = { add_core_of = QUE } 5968 = { add_core_of = QUE } 5969 = { add_core_of = QUE } 5970 = { add_core_of = QUE } 5971 = { add_core_of = QUE } 5972 = { add_core_of = QUE } 5973 = { add_core_of = QUE } 5974 = { add_core_of = QUE } 5975 = { add_core_of = QUE } 5976 = { add_core_of = QUE } 5977 = { add_core_of = QUE } 5978 = { add_core_of = QUE }
+			472 = { add_core_of = QUE } 5986 = { add_core_of = QUE } 5987 = { add_core_of = QUE } 5988 = { add_core_of = QUE } 5989 = { add_core_of = QUE } 5990 = { add_core_of = QUE } 5991 = { add_core_of = QUE } 5992 = { add_core_of = QUE }
+			683 = { add_core_of = QUE } 8093 = { add_core_of = QUE }						
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	QUE_integrate_pacific_coast = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			473 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}	
+			471 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}	
+			740 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			739 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			864 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+			
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			473 = { add_core_of = QUE } 5993 = { add_core_of = QUE } 5994 = { add_core_of = QUE } 5995 = { add_core_of = QUE } 5996 = { add_core_of = QUE } 5997 = { add_core_of = QUE } 5998 = { add_core_of = QUE } 5999 = { add_core_of = QUE } 6000 = { add_core_of = QUE } 6001 = { add_core_of = QUE } 6002 = { add_core_of = QUE } 6003 = { add_core_of = QUE } 6004 = { add_core_of = QUE } 6005 = { add_core_of = QUE } 6006 = { add_core_of = QUE } 6007 = { add_core_of = QUE } 6008 = { add_core_of = QUE } 6009 = { add_core_of = QUE } 6010 = { add_core_of = QUE } 6011 = { add_core_of = QUE } 6012 = { add_core_of = QUE } 6013 = { add_core_of = QUE }	
+			471 = { add_core_of = QUE } 5979 = { add_core_of = QUE } 5980 = { add_core_of = QUE } 5981 = { add_core_of = QUE } 5982 = { add_core_of = QUE } 5983 = { add_core_of = QUE } 5984 = { add_core_of = QUE } 5985 = { add_core_of = QUE }
+			740 = { add_core_of = QUE } 8283 = { add_core_of = QUE } 8284 = { add_core_of = QUE } 8285 = { add_core_of = QUE } 8286 = { add_core_of = QUE }	
+			739 = { add_core_of = QUE }
+			864 = { add_core_of = QUE } 8920 = { add_core_of = QUE } 8921 = { add_core_of = QUE }									
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
+
+QUE_integrate_american_land_fascism = {
+	QUE_core_new_england = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			357 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}	
+			921 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}	
+			990 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			991 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			992 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			993 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			357 = { add_core_of = QUE } 4370 = { add_core_of = QUE } 4371 = { add_core_of = QUE } 4372 = { add_core_of = QUE } 4373 = { add_core_of = QUE } 4374 = { add_core_of = QUE } 4375 = { add_core_of = QUE } 4376 = { add_core_of = QUE } 4377 = { add_core_of = QUE } 4378 = { add_core_of = QUE } 4379 = { add_core_of = QUE } 4380 = { add_core_of = QUE }	
+			921 = { add_core_of = QUE } 9251 = { add_core_of = QUE } 9252 = { add_core_of = QUE } 9253 = { add_core_of = QUE }
+			990 = { add_core_of = QUE } 9576 = { add_core_of = QUE } 9577 = { add_core_of = QUE }
+			991 = { add_core_of = QUE } 9578 = { add_core_of = QUE } 9579 = { add_core_of = QUE } 9580 = { add_core_of = QUE } 9581 = { add_core_of = QUE } 9582 = { add_core_of = QUE } 9583 = { add_core_of = QUE }
+			992 = { add_core_of = QUE }	
+			993 = { add_core_of = QUE } 9584 = { add_core_of = QUE } 9585 = { add_core_of = QUE } 9586 = { add_core_of = QUE } 9587 = { add_core_of = QUE }										
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	QUE_core_new_york = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			358 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			360 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			359 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			358 = { add_core_of = QUE } 4381 = { add_core_of = QUE } 4382 = { add_core_of = QUE } 4383 = { add_core_of = QUE } 4384 = { add_core_of = QUE } 4385 = { add_core_of = QUE } 4386 = { add_core_of = QUE } 4387 = { add_core_of = QUE } 4388 = { add_core_of = QUE } 4389 = { add_core_of = QUE } 4390 = { add_core_of = QUE } 4391 = { add_core_of = QUE } 4392 = { add_core_of = QUE } 4393 = { add_core_of = QUE } 4394 = { add_core_of = QUE } 4395 = { add_core_of = QUE } 4396 = { add_core_of = QUE } 4397 = { add_core_of = QUE } 4398 = { add_core_of = QUE } 4399 = { add_core_of = QUE } 4400 = { add_core_of = QUE } 4401 = { add_core_of = QUE } 4402 = { add_core_of = QUE } 4403 = { add_core_of = QUE } 4404 = { add_core_of = QUE } 4405 = { add_core_of = QUE } 4406 = { add_core_of = QUE } 4407 = { add_core_of = QUE } 4408 = { add_core_of = QUE } 4409 = { add_core_of = QUE } 4410 = { add_core_of = QUE } 4411 = { add_core_of = QUE } 4412 = { add_core_of = QUE }					
+			360 = { add_core_of = QUE } 4420 = { add_core_of = QUE } 4421 = { add_core_of = QUE } 4422 = { add_core_of = QUE } 4423 = { add_core_of = QUE } 4424 = { add_core_of = QUE } 4425 = { add_core_of = QUE } 4426 = { add_core_of = QUE } 4427 = { add_core_of = QUE } 4428 = { add_core_of = QUE } 4429 = { add_core_of = QUE } 4430 = { add_core_of = QUE } 4431 = { add_core_of = QUE } 4432 = { add_core_of = QUE } 4433 = { add_core_of = QUE } 4434 = { add_core_of = QUE } 4435 = { add_core_of = QUE } 4436 = { add_core_of = QUE } 4437 = { add_core_of = QUE } 4438 = { add_core_of = QUE } 4439 = { add_core_of = QUE } 4440 = { add_core_of = QUE } 4441 = { add_core_of = QUE } 4442 = { add_core_of = QUE } 4443 = { add_core_of = QUE } 4444 = { add_core_of = QUE } 4445 = { add_core_of = QUE } 4446 = { add_core_of = QUE } 4447 = { add_core_of = QUE } 4448 = { add_core_of = QUE } 4449 = { add_core_of = QUE } 4450 = { add_core_of = QUE } 4451 = { add_core_of = QUE } 4452 = { add_core_of = QUE } 4453 = { add_core_of = QUE }			
+			359 = { add_core_of = QUE } 4413 = { add_core_of = QUE } 4414 = { add_core_of = QUE } 4415 = { add_core_of = QUE } 4416 = { add_core_of = QUE } 4417 = { add_core_of = QUE } 4418 = { add_core_of = QUE } 4419 = { add_core_of = QUE }								
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	QUE_core_great_lakes = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			393 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			261 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			396 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}			
+			395 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}			
+			394 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			393 = { add_core_of = QUE } 4997 = { add_core_of = QUE } 4998 = { add_core_of = QUE } 4999 = { add_core_of = QUE } 5000 = { add_core_of = QUE } 5001 = { add_core_of = QUE } 5002 = { add_core_of = QUE } 5003 = { add_core_of = QUE } 5004 = { add_core_of = QUE } 5005 = { add_core_of = QUE } 5006 = { add_core_of = QUE } 5007 = { add_core_of = QUE } 5008 = { add_core_of = QUE } 5009 = { add_core_of = QUE } 5010 = { add_core_of = QUE } 5011 = { add_core_of = QUE } 5012 = { add_core_of = QUE } 5013 = { add_core_of = QUE } 5014 = { add_core_of = QUE } 5015 = { add_core_of = QUE } 5016 = { add_core_of = QUE } 5017 = { add_core_of = QUE } 5018 = { add_core_of = QUE } 5019 = { add_core_of = QUE }
+			261 = { add_core_of = QUE } 3593 = { add_core_of = QUE } 3594 = { add_core_of = QUE } 3595 = { add_core_of = QUE } 3596 = { add_core_of = QUE } 3597 = { add_core_of = QUE } 3598 = { add_core_of = QUE } 3599 = { add_core_of = QUE } 3600 = { add_core_of = QUE } 3601 = { add_core_of = QUE } 3602 = { add_core_of = QUE } 3603 = { add_core_of = QUE } 3604 = { add_core_of = QUE } 3605 = { add_core_of = QUE } 3606 = { add_core_of = QUE } 3607 = { add_core_of = QUE } 3608 = { add_core_of = QUE } 3609 = { add_core_of = QUE } 3610 = { add_core_of = QUE } 3611 = { add_core_of = QUE } 3612 = { add_core_of = QUE } 3613 = { add_core_of = QUE } 3614 = { add_core_of = QUE } 3615 = { add_core_of = QUE }
+			396 = { add_core_of = QUE } 5060 = { add_core_of = QUE } 5061 = { add_core_of = QUE } 5062 = { add_core_of = QUE } 5063 = { add_core_of = QUE } 5064 = { add_core_of = QUE } 5065 = { add_core_of = QUE } 5066 = { add_core_of = QUE } 5067 = { add_core_of = QUE } 5068 = { add_core_of = QUE } 5069 = { add_core_of = QUE } 5070 = { add_core_of = QUE } 5071 = { add_core_of = QUE } 5072 = { add_core_of = QUE } 5073 = { add_core_of = QUE } 5074 = { add_core_of = QUE } 5075 = { add_core_of = QUE }
+			395 = { add_core_of = QUE } 5037 = { add_core_of = QUE } 5038 = { add_core_of = QUE } 5039 = { add_core_of = QUE } 5040 = { add_core_of = QUE } 5041 = { add_core_of = QUE } 5042 = { add_core_of = QUE } 5043 = { add_core_of = QUE } 5044 = { add_core_of = QUE } 5045 = { add_core_of = QUE } 5046 = { add_core_of = QUE } 5047 = { add_core_of = QUE } 5048 = { add_core_of = QUE } 5049 = { add_core_of = QUE } 5050 = { add_core_of = QUE } 5051 = { add_core_of = QUE } 5052 = { add_core_of = QUE } 5053 = { add_core_of = QUE } 5054 = { add_core_of = QUE } 5055 = { add_core_of = QUE } 5056 = { add_core_of = QUE } 5057 = { add_core_of = QUE } 5058 = { add_core_of = QUE } 5059 = { add_core_of = QUE }
+			394 = { add_core_of = QUE } 5020 = { add_core_of = QUE } 5021 = { add_core_of = QUE } 5022 = { add_core_of = QUE } 5023 = { add_core_of = QUE } 5024 = { add_core_of = QUE } 5025 = { add_core_of = QUE } 5026 = { add_core_of = QUE } 5027 = { add_core_of = QUE } 5028 = { add_core_of = QUE } 5029 = { add_core_of = QUE } 5030 = { add_core_of = QUE } 5031 = { add_core_of = QUE } 5032 = { add_core_of = QUE } 5033 = { add_core_of = QUE } 5034 = { add_core_of = QUE } 5035 = { add_core_of = QUE } 5036 = { add_core_of = QUE }
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	QUE_core_midwest = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			392 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			391 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			384 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}			
+			390 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}			
+			389 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			388 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			381 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			392 = { add_core_of = QUE } 4982 = { add_core_of = QUE } 4983 = { add_core_of = QUE } 4984 = { add_core_of = QUE } 4985 = { add_core_of = QUE } 4986 = { add_core_of = QUE } 4987 = { add_core_of = QUE } 4988 = { add_core_of = QUE } 4989 = { add_core_of = QUE } 4990 = { add_core_of = QUE } 4991 = { add_core_of = QUE } 4992 = { add_core_of = QUE } 4993 = { add_core_of = QUE } 4994 = { add_core_of = QUE } 4995 = { add_core_of = QUE } 4996 = { add_core_of = QUE }
+			391 = { add_core_of = QUE } 4963 = { add_core_of = QUE } 4964 = { add_core_of = QUE } 4965 = { add_core_of = QUE } 4966 = { add_core_of = QUE } 4967 = { add_core_of = QUE } 4968 = { add_core_of = QUE } 4969 = { add_core_of = QUE } 4970 = { add_core_of = QUE } 4971 = { add_core_of = QUE } 4972 = { add_core_of = QUE } 4973 = { add_core_of = QUE } 4974 = { add_core_of = QUE } 4975 = { add_core_of = QUE } 4976 = { add_core_of = QUE } 4977 = { add_core_of = QUE } 4978 = { add_core_of = QUE } 4979 = { add_core_of = QUE } 4980 = { add_core_of = QUE } 4981 = { add_core_of = QUE }
+			384 = { add_core_of = QUE } 4852 = { add_core_of = QUE } 4853 = { add_core_of = QUE } 4854 = { add_core_of = QUE } 4855 = { add_core_of = QUE } 4856 = { add_core_of = QUE } 4857 = { add_core_of = QUE } 4858 = { add_core_of = QUE } 4859 = { add_core_of = QUE } 4860 = { add_core_of = QUE } 4861 = { add_core_of = QUE } 4862 = { add_core_of = QUE } 4863 = { add_core_of = QUE }
+			390 = { add_core_of = QUE } 4952 = { add_core_of = QUE } 4953 = { add_core_of = QUE } 4954 = { add_core_of = QUE } 4955 = { add_core_of = QUE } 4956 = { add_core_of = QUE } 4957 = { add_core_of = QUE } 4958 = { add_core_of = QUE } 4959 = { add_core_of = QUE } 4960 = { add_core_of = QUE } 4961 = { add_core_of = QUE } 4962 = { add_core_of = QUE }
+			389 = { add_core_of = QUE } 4941 = { add_core_of = QUE } 4942 = { add_core_of = QUE } 4943 = { add_core_of = QUE } 4944 = { add_core_of = QUE } 4945 = { add_core_of = QUE } 4946 = { add_core_of = QUE } 4947 = { add_core_of = QUE } 4948 = { add_core_of = QUE } 4949 = { add_core_of = QUE } 4950 = { add_core_of = QUE } 4951 = { add_core_of = QUE }
+			388 = { add_core_of = QUE } 4919 = { add_core_of = QUE } 4920 = { add_core_of = QUE } 4921 = { add_core_of = QUE } 4922 = { add_core_of = QUE } 4923 = { add_core_of = QUE } 4924 = { add_core_of = QUE } 4925 = { add_core_of = QUE } 4926 = { add_core_of = QUE } 4927 = { add_core_of = QUE } 4928 = { add_core_of = QUE } 4929 = { add_core_of = QUE } 4930 = { add_core_of = QUE } 4931 = { add_core_of = QUE } 4932 = { add_core_of = QUE } 4933 = { add_core_of = QUE } 4934 = { add_core_of = QUE } 4935 = { add_core_of = QUE } 4936 = { add_core_of = QUE } 4937 = { add_core_of = QUE } 4938 = { add_core_of = QUE } 4939 = { add_core_of = QUE } 4940 = { add_core_of = QUE }
+			381 = { add_core_of = QUE } 4810 = { add_core_of = QUE } 4811 = { add_core_of = QUE } 4812 = { add_core_of = QUE } 4813 = { add_core_of = QUE } 4814 = { add_core_of = QUE } 4815 = { add_core_of = QUE } 4816 = { add_core_of = QUE } 4817 = { add_core_of = QUE } 4818 = { add_core_of = QUE } 4819 = { add_core_of = QUE } 4820 = { add_core_of = QUE } 4821 = { add_core_of = QUE }
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	QUE_core_west = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			387 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			385 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			386 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}			
+		}
+		
+		fire_only_once = yes	
+		visible = {
+		}
+
+		cost = 25
+
+		complete_effect = {			
+			387 = { add_core_of = QUE } 4907 = { add_core_of = QUE } 4908 = { add_core_of = QUE } 4909 = { add_core_of = QUE } 4910 = { add_core_of = QUE } 4911 = { add_core_of = QUE } 4912 = { add_core_of = QUE } 4913 = { add_core_of = QUE } 4914 = { add_core_of = QUE } 4915 = { add_core_of = QUE } 4916 = { add_core_of = QUE } 4917 = { add_core_of = QUE } 4918 = { add_core_of = QUE }
+			385 = { add_core_of = QUE } 4864 = { add_core_of = QUE } 4865 = { add_core_of = QUE } 4866 = { add_core_of = QUE } 4867 = { add_core_of = QUE } 4868 = { add_core_of = QUE } 4869 = { add_core_of = QUE } 4870 = { add_core_of = QUE } 4871 = { add_core_of = QUE } 4872 = { add_core_of = QUE } 4873 = { add_core_of = QUE } 4874 = { add_core_of = QUE } 4875 = { add_core_of = QUE } 4876 = { add_core_of = QUE } 4877 = { add_core_of = QUE } 4878 = { add_core_of = QUE } 4879 = { add_core_of = QUE } 4880 = { add_core_of = QUE } 4881 = { add_core_of = QUE } 4882 = { add_core_of = QUE } 4883 = { add_core_of = QUE } 4884 = { add_core_of = QUE } 4885 = { add_core_of = QUE }
+			386 = { add_core_of = QUE } 4886 = { add_core_of = QUE } 4887 = { add_core_of = QUE } 4888 = { add_core_of = QUE } 4889 = { add_core_of = QUE } 4890 = { add_core_of = QUE } 4891 = { add_core_of = QUE } 4892 = { add_core_of = QUE } 4893 = { add_core_of = QUE } 4894 = { add_core_of = QUE } 4895 = { add_core_of = QUE } 4896 = { add_core_of = QUE } 4897 = { add_core_of = QUE } 4898 = { add_core_of = QUE } 4899 = { add_core_of = QUE } 4900 = { add_core_of = QUE } 4901 = { add_core_of = QUE } 4902 = { add_core_of = QUE } 4903 = { add_core_of = QUE } 4904 = { add_core_of = QUE } 4905 = { add_core_of = QUE } 4906 = { add_core_of = QUE }
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
+
+QUE_ontario_new_france = {
+	QUE_snatch_ontario = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			276 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}	
+			682 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}	
+			866 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+			
+		}
+
+		cost = 50
+
+		complete_effect = {			
+			276 = { add_core_of = QUE } 3727 = { add_core_of = QUE } 3728 = { add_core_of = QUE } 3729 = { add_core_of = QUE } 3730 = { add_core_of = QUE } 3731 = { add_core_of = QUE } 3732 = { add_core_of = QUE } 3733 = { add_core_of = QUE } 3734 = { add_core_of = QUE } 3735 = { add_core_of = QUE } 3736 = { add_core_of = QUE } 3737 = { add_core_of = QUE } 3738 = { add_core_of = QUE } 3739 = { add_core_of = QUE } 3740 = { add_core_of = QUE } 3741 = { add_core_of = QUE } 3742 = { add_core_of = QUE } 3743 = { add_core_of = QUE } 3744 = { add_core_of = QUE } 3745 = { add_core_of = QUE } 3746 = { add_core_of = QUE } 3747 = { add_core_of = QUE } 3748 = { add_core_of = QUE } 3749 = { add_core_of = QUE } 3750 = { add_core_of = QUE } 3751 = { add_core_of = QUE } 3752 = { add_core_of = QUE } 3753 = { add_core_of = QUE } 3754 = { add_core_of = QUE } 3755 = { add_core_of = QUE } 3756 = { add_core_of = QUE } 3757 = { add_core_of = QUE } 3758 = { add_core_of = QUE } 3759 = { add_core_of = QUE } 3760 = { add_core_of = QUE }	
+			682 = { add_core_of = QUE } 8071 = { add_core_of = QUE } 8072 = { add_core_of = QUE } 8073 = { add_core_of = QUE } 8074 = { add_core_of = QUE } 8075 = { add_core_of = QUE } 8076 = { add_core_of = QUE } 8077 = { add_core_of = QUE } 8078 = { add_core_of = QUE } 8079 = { add_core_of = QUE } 8080 = { add_core_of = QUE } 8081 = { add_core_of = QUE } 8082 = { add_core_of = QUE } 8083 = { add_core_of = QUE } 8084 = { add_core_of = QUE } 8085 = { add_core_of = QUE } 8086 = { add_core_of = QUE } 8087 = { add_core_of = QUE } 8088 = { add_core_of = QUE } 8089 = { add_core_of = QUE } 8090 = { add_core_of = QUE } 8091 = { add_core_of = QUE } 8092 = { add_core_of = QUE }
+			866 = { add_core_of = QUE } 8926 = { add_core_of = QUE } 8927 = { add_core_of = QUE } 8928 = { add_core_of = QUE }									
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
+
+QUE_new_france_restoration = {
+	QUE_obtain_new_england = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			357 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}	
+			921 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}	
+			990 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			991 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			992 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			993 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+		}
+
+		cost = 50
+
+		complete_effect = {			
+			357 = { add_core_of = QUE } 4370 = { add_core_of = QUE } 4371 = { add_core_of = QUE } 4372 = { add_core_of = QUE } 4373 = { add_core_of = QUE } 4374 = { add_core_of = QUE } 4375 = { add_core_of = QUE } 4376 = { add_core_of = QUE } 4377 = { add_core_of = QUE } 4378 = { add_core_of = QUE } 4379 = { add_core_of = QUE } 4380 = { add_core_of = QUE }	
+			921 = { add_core_of = QUE } 9251 = { add_core_of = QUE } 9252 = { add_core_of = QUE } 9253 = { add_core_of = QUE }
+			990 = { add_core_of = QUE } 9576 = { add_core_of = QUE } 9577 = { add_core_of = QUE }
+			991 = { add_core_of = QUE } 9578 = { add_core_of = QUE } 9579 = { add_core_of = QUE } 9580 = { add_core_of = QUE } 9581 = { add_core_of = QUE } 9582 = { add_core_of = QUE } 9583 = { add_core_of = QUE }
+			992 = { add_core_of = QUE }	
+			993 = { add_core_of = QUE } 9584 = { add_core_of = QUE } 9585 = { add_core_of = QUE } 9586 = { add_core_of = QUE } 9587 = { add_core_of = QUE }										
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	QUE_obtain_new_york = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			358 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			360 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			359 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+		}
+
+		cost = 50
+
+		complete_effect = {			
+			358 = { add_core_of = QUE } 4381 = { add_core_of = QUE } 4382 = { add_core_of = QUE } 4383 = { add_core_of = QUE } 4384 = { add_core_of = QUE } 4385 = { add_core_of = QUE } 4386 = { add_core_of = QUE } 4387 = { add_core_of = QUE } 4388 = { add_core_of = QUE } 4389 = { add_core_of = QUE } 4390 = { add_core_of = QUE } 4391 = { add_core_of = QUE } 4392 = { add_core_of = QUE } 4393 = { add_core_of = QUE } 4394 = { add_core_of = QUE } 4395 = { add_core_of = QUE } 4396 = { add_core_of = QUE } 4397 = { add_core_of = QUE } 4398 = { add_core_of = QUE } 4399 = { add_core_of = QUE } 4400 = { add_core_of = QUE } 4401 = { add_core_of = QUE } 4402 = { add_core_of = QUE } 4403 = { add_core_of = QUE } 4404 = { add_core_of = QUE } 4405 = { add_core_of = QUE } 4406 = { add_core_of = QUE } 4407 = { add_core_of = QUE } 4408 = { add_core_of = QUE } 4409 = { add_core_of = QUE } 4410 = { add_core_of = QUE } 4411 = { add_core_of = QUE } 4412 = { add_core_of = QUE }					
+			360 = { add_core_of = QUE } 4420 = { add_core_of = QUE } 4421 = { add_core_of = QUE } 4422 = { add_core_of = QUE } 4423 = { add_core_of = QUE } 4424 = { add_core_of = QUE } 4425 = { add_core_of = QUE } 4426 = { add_core_of = QUE } 4427 = { add_core_of = QUE } 4428 = { add_core_of = QUE } 4429 = { add_core_of = QUE } 4430 = { add_core_of = QUE } 4431 = { add_core_of = QUE } 4432 = { add_core_of = QUE } 4433 = { add_core_of = QUE } 4434 = { add_core_of = QUE } 4435 = { add_core_of = QUE } 4436 = { add_core_of = QUE } 4437 = { add_core_of = QUE } 4438 = { add_core_of = QUE } 4439 = { add_core_of = QUE } 4440 = { add_core_of = QUE } 4441 = { add_core_of = QUE } 4442 = { add_core_of = QUE } 4443 = { add_core_of = QUE } 4444 = { add_core_of = QUE } 4445 = { add_core_of = QUE } 4446 = { add_core_of = QUE } 4447 = { add_core_of = QUE } 4448 = { add_core_of = QUE } 4449 = { add_core_of = QUE } 4450 = { add_core_of = QUE } 4451 = { add_core_of = QUE } 4452 = { add_core_of = QUE } 4453 = { add_core_of = QUE }			
+			359 = { add_core_of = QUE } 4413 = { add_core_of = QUE } 4414 = { add_core_of = QUE } 4415 = { add_core_of = QUE } 4416 = { add_core_of = QUE } 4417 = { add_core_of = QUE } 4418 = { add_core_of = QUE } 4419 = { add_core_of = QUE }								
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	QUE_obtain_great_lakes = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			393 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			261 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			396 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}			
+			395 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}			
+			394 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+		}
+
+		cost = 50
+
+		complete_effect = {			
+			393 = { add_core_of = QUE } 4997 = { add_core_of = QUE } 4998 = { add_core_of = QUE } 4999 = { add_core_of = QUE } 5000 = { add_core_of = QUE } 5001 = { add_core_of = QUE } 5002 = { add_core_of = QUE } 5003 = { add_core_of = QUE } 5004 = { add_core_of = QUE } 5005 = { add_core_of = QUE } 5006 = { add_core_of = QUE } 5007 = { add_core_of = QUE } 5008 = { add_core_of = QUE } 5009 = { add_core_of = QUE } 5010 = { add_core_of = QUE } 5011 = { add_core_of = QUE } 5012 = { add_core_of = QUE } 5013 = { add_core_of = QUE } 5014 = { add_core_of = QUE } 5015 = { add_core_of = QUE } 5016 = { add_core_of = QUE } 5017 = { add_core_of = QUE } 5018 = { add_core_of = QUE } 5019 = { add_core_of = QUE }
+			261 = { add_core_of = QUE } 3593 = { add_core_of = QUE } 3594 = { add_core_of = QUE } 3595 = { add_core_of = QUE } 3596 = { add_core_of = QUE } 3597 = { add_core_of = QUE } 3598 = { add_core_of = QUE } 3599 = { add_core_of = QUE } 3600 = { add_core_of = QUE } 3601 = { add_core_of = QUE } 3602 = { add_core_of = QUE } 3603 = { add_core_of = QUE } 3604 = { add_core_of = QUE } 3605 = { add_core_of = QUE } 3606 = { add_core_of = QUE } 3607 = { add_core_of = QUE } 3608 = { add_core_of = QUE } 3609 = { add_core_of = QUE } 3610 = { add_core_of = QUE } 3611 = { add_core_of = QUE } 3612 = { add_core_of = QUE } 3613 = { add_core_of = QUE } 3614 = { add_core_of = QUE } 3615 = { add_core_of = QUE }
+			396 = { add_core_of = QUE } 5060 = { add_core_of = QUE } 5061 = { add_core_of = QUE } 5062 = { add_core_of = QUE } 5063 = { add_core_of = QUE } 5064 = { add_core_of = QUE } 5065 = { add_core_of = QUE } 5066 = { add_core_of = QUE } 5067 = { add_core_of = QUE } 5068 = { add_core_of = QUE } 5069 = { add_core_of = QUE } 5070 = { add_core_of = QUE } 5071 = { add_core_of = QUE } 5072 = { add_core_of = QUE } 5073 = { add_core_of = QUE } 5074 = { add_core_of = QUE } 5075 = { add_core_of = QUE }
+			395 = { add_core_of = QUE } 5037 = { add_core_of = QUE } 5038 = { add_core_of = QUE } 5039 = { add_core_of = QUE } 5040 = { add_core_of = QUE } 5041 = { add_core_of = QUE } 5042 = { add_core_of = QUE } 5043 = { add_core_of = QUE } 5044 = { add_core_of = QUE } 5045 = { add_core_of = QUE } 5046 = { add_core_of = QUE } 5047 = { add_core_of = QUE } 5048 = { add_core_of = QUE } 5049 = { add_core_of = QUE } 5050 = { add_core_of = QUE } 5051 = { add_core_of = QUE } 5052 = { add_core_of = QUE } 5053 = { add_core_of = QUE } 5054 = { add_core_of = QUE } 5055 = { add_core_of = QUE } 5056 = { add_core_of = QUE } 5057 = { add_core_of = QUE } 5058 = { add_core_of = QUE } 5059 = { add_core_of = QUE }
+			394 = { add_core_of = QUE } 5020 = { add_core_of = QUE } 5021 = { add_core_of = QUE } 5022 = { add_core_of = QUE } 5023 = { add_core_of = QUE } 5024 = { add_core_of = QUE } 5025 = { add_core_of = QUE } 5026 = { add_core_of = QUE } 5027 = { add_core_of = QUE } 5028 = { add_core_of = QUE } 5029 = { add_core_of = QUE } 5030 = { add_core_of = QUE } 5031 = { add_core_of = QUE } 5032 = { add_core_of = QUE } 5033 = { add_core_of = QUE } 5034 = { add_core_of = QUE } 5035 = { add_core_of = QUE } 5036 = { add_core_of = QUE }
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	QUE_obtain_midwest = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			392 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			391 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			373 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+		}
+
+		cost = 50
+
+		complete_effect = {			
+			392 = { add_core_of = QUE } 4982 = { add_core_of = QUE } 4983 = { add_core_of = QUE } 4984 = { add_core_of = QUE } 4985 = { add_core_of = QUE } 4986 = { add_core_of = QUE } 4987 = { add_core_of = QUE } 4988 = { add_core_of = QUE } 4989 = { add_core_of = QUE } 4990 = { add_core_of = QUE } 4991 = { add_core_of = QUE } 4992 = { add_core_of = QUE } 4993 = { add_core_of = QUE } 4994 = { add_core_of = QUE } 4995 = { add_core_of = QUE } 4996 = { add_core_of = QUE }
+			391 = { add_core_of = QUE } 4963 = { add_core_of = QUE } 4964 = { add_core_of = QUE } 4965 = { add_core_of = QUE } 4966 = { add_core_of = QUE } 4967 = { add_core_of = QUE } 4968 = { add_core_of = QUE } 4969 = { add_core_of = QUE } 4970 = { add_core_of = QUE } 4971 = { add_core_of = QUE } 4972 = { add_core_of = QUE } 4973 = { add_core_of = QUE } 4974 = { add_core_of = QUE } 4975 = { add_core_of = QUE } 4976 = { add_core_of = QUE } 4977 = { add_core_of = QUE } 4978 = { add_core_of = QUE } 4979 = { add_core_of = QUE } 4980 = { add_core_of = QUE } 4981 = { add_core_of = QUE }
+			373 = { add_core_of = QUE } 4622 = { add_core_of = QUE } 4623 = { add_core_of = QUE } 4624 = { add_core_of = QUE } 4625 = { add_core_of = QUE } 4626 = { add_core_of = QUE } 4627 = { add_core_of = QUE } 4628 = { add_core_of = QUE } 4629 = { add_core_of = QUE } 4630 = { add_core_of = QUE } 4631 = { add_core_of = QUE } 4632 = { add_core_of = QUE } 4633 = { add_core_of = QUE } 4634 = { add_core_of = QUE } 4635 = { add_core_of = QUE } 4636 = { add_core_of = QUE } 4637 = { add_core_of = QUE } 4638 = { add_core_of = QUE }
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	QUE_obtain_east_coast = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			361 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			1023 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			816 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			362 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			369 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			363 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			368 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+		}
+
+		cost = 50
+
+		complete_effect = {			
+			361 = { add_core_of = QUE } 4454 = { add_core_of = QUE } 4455 = { add_core_of = QUE } 4456 = { add_core_of = QUE } 4457 = { add_core_of = QUE } 4458 = { add_core_of = QUE } 4459 = { add_core_of = QUE } 4460 = { add_core_of = QUE }
+			1023 = { add_core_of = QUE } 9691 = { add_core_of = QUE }
+			816 = { add_core_of = QUE } 8673 = { add_core_of = QUE } 8674 = { add_core_of = QUE } 8675 = { add_core_of = QUE } 8676 = { add_core_of = QUE } 8677 = { add_core_of = QUE } 8678 = { add_core_of = QUE } 8679 = { add_core_of = QUE } 8680 = { add_core_of = QUE } 8681 = { add_core_of = QUE } 8682 = { add_core_of = QUE } 8683 = { add_core_of = QUE } 8684 = { add_core_of = QUE }
+			362 = { add_core_of = QUE } 4461 = { add_core_of = QUE } 4462 = { add_core_of = QUE } 4463 = { add_core_of = QUE } 4464 = { add_core_of = QUE } 4465 = { add_core_of = QUE } 4466 = { add_core_of = QUE } 4467 = { add_core_of = QUE } 4468 = { add_core_of = QUE } 4469 = { add_core_of = QUE } 4470 = { add_core_of = QUE } 4471 = { add_core_of = QUE } 4472 = { add_core_of = QUE } 4473 = { add_core_of = QUE } 4474 = { add_core_of = QUE } 4475 = { add_core_of = QUE } 4476 = { add_core_of = QUE } 4477 = { add_core_of = QUE }
+			369 = { add_core_of = QUE } 4570 = { add_core_of = QUE } 4571 = { add_core_of = QUE } 4572 = { add_core_of = QUE } 4573 = { add_core_of = QUE } 4574 = { add_core_of = QUE } 4575 = { add_core_of = QUE } 4576 = { add_core_of = QUE } 4577 = { add_core_of = QUE } 4578 = { add_core_of = QUE } 4579 = { add_core_of = QUE } 4580 = { add_core_of = QUE } 4581 = { add_core_of = QUE } 4582 = { add_core_of = QUE }
+			363 = { add_core_of = QUE } 4478 = { add_core_of = QUE } 4479 = { add_core_of = QUE } 4480 = { add_core_of = QUE } 4481 = { add_core_of = QUE } 4482 = { add_core_of = QUE } 4483 = { add_core_of = QUE } 4484 = { add_core_of = QUE } 4485 = { add_core_of = QUE } 4486 = { add_core_of = QUE } 4487 = { add_core_of = QUE } 4488 = { add_core_of = QUE } 4489 = { add_core_of = QUE } 4490 = { add_core_of = QUE } 4491 = { add_core_of = QUE } 4492 = { add_core_of = QUE } 4493 = { add_core_of = QUE } 4494 = { add_core_of = QUE } 4495 = { add_core_of = QUE } 4496 = { add_core_of = QUE }
+			368 = { add_core_of = QUE } 4556 = { add_core_of = QUE } 4557 = { add_core_of = QUE } 4558 = { add_core_of = QUE } 4559 = { add_core_of = QUE } 4560 = { add_core_of = QUE } 4561 = { add_core_of = QUE } 4562 = { add_core_of = QUE } 4563 = { add_core_of = QUE } 4564 = { add_core_of = QUE } 4565 = { add_core_of = QUE } 4566 = { add_core_of = QUE } 4567 = { add_core_of = QUE } 4568 = { add_core_of = QUE } 4569 = { add_core_of = QUE }
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	QUE_obtain_south = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = QUE
+		}
+
+		available = {
+			364 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			365 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			367 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			370 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			366 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+			372 = {
+				is_owned_by = ROOT
+				compliance > 30
+				resistance < 10	
+			}
+		}
+		
+		fire_only_once = yes	
+		visible = {
+		}
+
+		cost = 50
+
+		complete_effect = {			
+			364 = { add_core_of = QUE } 4497 = { add_core_of = QUE } 4498 = { add_core_of = QUE } 4499 = { add_core_of = QUE } 4500 = { add_core_of = QUE } 4501 = { add_core_of = QUE } 4502 = { add_core_of = QUE } 4503 = { add_core_of = QUE } 4504 = { add_core_of = QUE } 4505 = { add_core_of = QUE } 4506 = { add_core_of = QUE } 4507 = { add_core_of = QUE }
+			365 = { add_core_of = QUE } 4508 = { add_core_of = QUE } 4509 = { add_core_of = QUE } 4510 = { add_core_of = QUE } 4511 = { add_core_of = QUE } 4512 = { add_core_of = QUE } 4513 = { add_core_of = QUE } 4514 = { add_core_of = QUE } 4515 = { add_core_of = QUE } 4516 = { add_core_of = QUE } 4517 = { add_core_of = QUE } 4518 = { add_core_of = QUE } 4519 = { add_core_of = QUE } 4520 = { add_core_of = QUE } 4521 = { add_core_of = QUE } 4522 = { add_core_of = QUE } 4523 = { add_core_of = QUE } 4524 = { add_core_of = QUE } 4525 = { add_core_of = QUE }
+			367 = { add_core_of = QUE } 4541 = { add_core_of = QUE } 4542 = { add_core_of = QUE } 4543 = { add_core_of = QUE } 4544 = { add_core_of = QUE } 4545 = { add_core_of = QUE } 4546 = { add_core_of = QUE } 4547 = { add_core_of = QUE } 4548 = { add_core_of = QUE } 4549 = { add_core_of = QUE } 4550 = { add_core_of = QUE } 4551 = { add_core_of = QUE } 4552 = { add_core_of = QUE } 4553 = { add_core_of = QUE } 4554 = { add_core_of = QUE } 4555 = { add_core_of = QUE }
+			370 = { add_core_of = QUE } 4583 = { add_core_of = QUE } 4584 = { add_core_of = QUE } 4585 = { add_core_of = QUE } 4586 = { add_core_of = QUE } 4587 = { add_core_of = QUE } 4588 = { add_core_of = QUE } 4589 = { add_core_of = QUE } 4590 = { add_core_of = QUE } 4591 = { add_core_of = QUE } 4592 = { add_core_of = QUE } 4593 = { add_core_of = QUE } 4594 = { add_core_of = QUE } 4595 = { add_core_of = QUE }
+			366 = { add_core_of = QUE } 4526 = { add_core_of = QUE } 4527 = { add_core_of = QUE } 4528 = { add_core_of = QUE } 4529 = { add_core_of = QUE } 4530 = { add_core_of = QUE } 4531 = { add_core_of = QUE } 4532 = { add_core_of = QUE } 4533 = { add_core_of = QUE } 4534 = { add_core_of = QUE } 4535 = { add_core_of = QUE } 4536 = { add_core_of = QUE } 4537 = { add_core_of = QUE } 4538 = { add_core_of = QUE } 4539 = { add_core_of = QUE } 4540 = { add_core_of = QUE }
+			372 = { add_core_of = QUE } 4609 = { add_core_of = QUE } 4610 = { add_core_of = QUE } 4611 = { add_core_of = QUE } 4612 = { add_core_of = QUE } 4613 = { add_core_of = QUE } 4614 = { add_core_of = QUE } 4615 = { add_core_of = QUE } 4616 = { add_core_of = QUE } 4617 = { add_core_of = QUE } 4618 = { add_core_of = QUE } 4619 = { add_core_of = QUE } 4620 = { add_core_of = QUE } 4621 = { add_core_of = QUE }
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
+
+
+# QUE_resignation_pm = {	#duplicate with trigger of event
+# 	QUE_taschereau_resignation = {
+# 		activation = {
+# 			 NOT {
+# 				has_country_flag = QUE_resignation
+# 			}
+# 		}
+# 		available = {
+# 			has_country_flag = QUE_resignation
+# 		}
+# 		visible = {
+# 			has_country_flag = QUE_resignation
+# 		}
+# 		icon = mission_icon     # For GFX_decision_mission_icon
+# 		priority = 10
+# 		is_good = yes
+# 		days_mission_timeout = 180
+# 		selectable_mission = no
+# 		complete_effect = {
+# 		}
+# 		timeout_effect = {
+# 			country_event = quebec.1
+# 		}
+# 	}
+# }

@@ -1,0 +1,27 @@
+state = {
+	id = 447
+	name = "STATE_447"
+	manpower = 2315540
+	local_supplies = 0.0
+	state_category = large_town
+	history = {
+		owner = EGY
+		victory_points = { 4076 10 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+			dockyard = 1
+			air_base = 6
+			4076 = {
+				naval_base = 8
+				naval_supply_hub = 1
+			}
+		}
+		add_core_of = EGY
+		add_to_array = {
+			state_victory_points = 4076
+		}
+	}
+	provinces = { 4076 }
+}

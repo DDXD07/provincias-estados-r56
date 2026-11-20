@@ -1,0 +1,23 @@
+state = {
+	id = 1933
+	name = "STATE_1933"
+	manpower = 138707
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		aluminium = 3
+	}
+	history = {
+		owner = YUG
+		victory_points = { 6889 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = YUG
+		add_core_of = CRO
+		add_to_array = {
+			state_victory_points = 6889
+		}
+	}
+	provinces = { 6889 }
+}

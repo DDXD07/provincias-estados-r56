@@ -1,0 +1,16 @@
+state = {
+	id = 1719
+	name = "STATE_1719"
+	manpower = 42071
+	local_supplies = 3.0
+	state_category = p2s_village
+	history = {
+		owner = CZE
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = CZE
+		add_core_of = SLO
+	}
+	provinces = { 11539 }
+}

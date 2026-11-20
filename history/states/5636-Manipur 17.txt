@@ -1,0 +1,24 @@
+state = {
+	id = 5636
+	name = "STATE_5636"
+	manpower = 456643
+	buildings_max_level_factor = 1.000
+	local_supplies = 9.000
+	state_category = p2s_village
+	history = {
+		owner = RAJ
+		add_core_of = RJP
+		buildings = {
+			infrastructure = 1
+			4915 = {
+				landmark_taj_mahal = {
+					level = 1
+					allowed = {
+						has_dlc = "Graveyard of Empires"
+					}
+				}
+			}
+		}
+	}
+	provinces = { 4915 }
+}

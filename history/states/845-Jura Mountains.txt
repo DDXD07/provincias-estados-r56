@@ -1,0 +1,24 @@
+state = {
+	id = 845
+	name = "STATE_845"
+	manpower = 947510
+	local_supplies = 0.0
+	state_category = town
+	resources = {
+		aluminium = 5
+	}
+	history = {
+		owner = SWI
+		victory_points = { 6666 5 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		add_core_of = SWI
+		add_to_array = {
+			state_victory_points = 6666
+		}
+	}
+	provinces = { 6666 13124 }
+}

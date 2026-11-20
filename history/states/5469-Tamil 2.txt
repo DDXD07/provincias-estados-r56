@@ -1,0 +1,23 @@
+state = {
+	id = 5469
+	name = "STATE_5469"
+	manpower = 4373824
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = pastoral
+	resources = {
+		rubber = 1
+	}
+	history = {
+		owner = RAJ
+		add_core_of = RAS
+		add_to_array = {
+			state_victory_points = 10246
+		}
+		victory_points = { 10246 3 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = { 10246 }
+}

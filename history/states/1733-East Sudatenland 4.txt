@@ -1,0 +1,23 @@
+state = {
+	id = 1733
+	name = "STATE_1733"
+	manpower = 51251
+	local_supplies = 2.0
+	state_category = p2s_village
+	resources = {
+		coal = 3
+	}
+	history = {
+		owner = CZE
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = CZE
+		add_claim_by = SIL
+		1938.9.30 = {
+			owner = GER
+			controller = GER
+		}
+	}
+	provinces = { 3414 }
+}

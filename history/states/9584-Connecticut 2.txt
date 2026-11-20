@@ -1,0 +1,25 @@
+state = {
+	id = 9584
+	name = "STATE_9584"
+	manpower = 491764
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = developed_rural
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			dockyard = 1
+			6909 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = USA
+		add_to_array = {
+			state_victory_points = 6909
+		}
+		victory_points = { 6909 2 }
+	}
+	provinces = { 6909 }
+}

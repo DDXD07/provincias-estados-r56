@@ -1,0 +1,24 @@
+state = {
+	id = 2002
+	name = "STATE_2002"
+	manpower = 586142
+	local_supplies = 0.0
+	state_category = pastoral
+	history = {
+		owner = ITA
+		victory_points = { 4014 5 }
+		buildings = {
+			infrastructure = 3
+			4014 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = ITA
+		add_core_of = SCI
+		add_core_of = TTS
+		add_to_array = {
+			state_victory_points = 4014
+		}
+	}
+	provinces = { 4014 }
+}

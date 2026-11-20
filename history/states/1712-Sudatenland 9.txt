@@ -1,0 +1,19 @@
+state = {
+	id = 1712
+	name = "STATE_1712"
+	manpower = 83847
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = p2s_village
+	history = {
+		owner = CZE
+		buildings = {
+			infrastructure = 3
+			9555 = {
+				bunker = 1
+			}
+		}
+		add_core_of = CZE
+	}
+	provinces = { 9555 }
+}

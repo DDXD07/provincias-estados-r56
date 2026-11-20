@@ -1,0 +1,24 @@
+state = {
+	id = 3027
+	name = "STATE_3027"
+	manpower = 235465
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+	state_category = pastoral
+	resources = {
+		oil = 6
+	}
+	history = {
+		owner = SOV
+		victory_points = { 11674 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = AZR
+		add_to_array = {
+			state_victory_points = 11674
+		}
+	}
+	provinces = { 11674 }
+}
